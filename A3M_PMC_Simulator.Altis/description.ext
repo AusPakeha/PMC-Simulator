@@ -1,0 +1,101 @@
+/*
+  /$$$$$$   /$$$$$$  /$$      /$$       /$$$$$$$  /$$      /$$  /$$$$$$         /$$$$$$  /$$                         /$$             /$$
+ /$$__  $$ /$$__  $$| $$$    /$$$      | $$__  $$| $$$    /$$$ /$$__  $$       /$$__  $$|__/                        | $$            | $$
+| $$  \ $$|__/  \ $$| $$$$  /$$$$      | $$  \ $$| $$$$  /$$$$| $$  \__/      | $$  \__/ /$$ /$$$$$$/$$$$  /$$   /$$| $$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$
+| $$$$$$$$   /$$$$$/| $$ $$/$$ $$      | $$$$$$$/| $$ $$/$$ $$| $$            |  $$$$$$ | $$| $$_  $$_  $$| $$  | $$| $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
+| $$__  $$  |___  $$| $$  $$$| $$      | $$____/ | $$  $$$| $$| $$             \____  $$| $$| $$ \ $$ \ $$| $$  | $$| $$  /$$$$$$$  | $$    | $$  \ $$| $$  \__/
+| $$  | $$ /$$  \ $$| $$\  $ | $$      | $$      | $$\  $ | $$| $$    $$       /$$  \ $$| $$| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$  | $$| $$
+| $$  | $$|  $$$$$$/| $$ \/  | $$      | $$      | $$ \/  | $$|  $$$$$$/      |  $$$$$$/| $$| $$ | $$ | $$|  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$
+|__/  |__/ \______/ |__/     |__/      |__/      |__/     |__/ \______/        \______/ |__/|__/ |__/ |__/ \______/ |__/ \_______/   \___/   \______/ |__/
+
+
+
+Admin Panel V 1.0 by Cody Salazar AKA Fr33d0m
+www.A3MilSim.com
+
+License:
+
+You can do whatever you were going to do anyway. Just give me the credit i'm due, and don't steal my shit. I'll be pissed.
+If you want to repay me for all my hard work, come and play arma with me! I hang out at a MilSim unit known as A3M (A3 MilSim)
+Come and visit us at ts3.a3milsim.com
+
+www.A3MilSim.com (A3 MilSim)
+All Rights Reserved
+
+For Information and Inquiries, EMAIL: salazar@a3milsim.com
+
+Credits & Thanks:
+
+My wife, for not only supporting my modding ventures, but actually jumping in and helping with mods when she can. What a gal!
+
+Sgt. Lucht and Sgt. Scanlon, of the U.S. Army, for realism consulting.
+
+All my patient internal testers!!
+
+And last, but definitely not least, the A3 community, who through over 250+ encouraging messages highly encouraged me to continue this project. I'm glad you like it,
+and I hope you enjoy the things I have in the works!
+
+
+################################## LET US BEGIN #################################### */
+
+
+overviewText = "PMC Simulator is a multiplayer mode designed to simulate working as a Private Military Contractor in a conflict zone. You will be required to carry out security and paramilitary operations pursuant to your contracts with OPSG, and you will be paid based on performance per operation.";
+overviewTextLocked = "If this mission is locked, something is wrong!";
+overviewPicture = "images\Loadimg.paa";
+
+author = "Cody S. AkA. A3M Fr33d0m";
+OnLoadName = "PMC Simulator Mod";
+OnLoadMission = "Orion Private Security Group";
+onLoadIntro = "Full Gameplay Manual Available in briefing!";
+
+respawn = 3;
+respawnDelay = 10;
+
+disabledAI = 1;
+
+enableDebugConsole = 1;
+scriptedPlayer = 1;
+
+loadscreen = "images\Loadimg.paa";
+
+class Header {
+	gameType = Sandbox;
+	minPlayers = 1;
+	maxPlayers = 43;
+};
+
+#include "dialogs\A3M_Normals.hpp"
+#include "dialogs\FleetMgmt.hpp"
+#include "dialogs\MissionSelector.hpp"
+#include "dialogs\Gunstore_Dialog.hpp"
+#include "dialogs\BankAccount.hpp"
+#include "dialogs\AdminPanel.hpp"
+#include "dialogs\2ABCT_M4R.hpp"
+#include "dialogs\HomePage.hpp"
+#include "dialogs\WpnLkr.hpp"
+#include "dialogs\A3M_AIR.hpp"
+#include "dialogs\PrgBar.hpp"
+
+#include "params.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgNotifications.hpp"
+#include "RscTitles.hpp"
+#include "CfgSounds.hpp"
+#include "INC_undercover\cfgFunctions.hpp"
+
+class Extended_InitPost_EventHandlers {
+    class CAManBase {
+		init = "_this call (compile preprocessFileLineNumbers 'postInitXEH.sqf')";
+	};
+};
+
+
+class CfgRemoteExec
+{
+  class Functions
+  {
+    mode = 2;
+    jip = 1;
+    #include "INC_undercover\functionsWhitelist.hpp"
+  };
+};

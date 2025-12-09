@@ -1,0 +1,126 @@
+EOS_Spawn = compile preprocessfilelinenumbers "eos\core\eos_launch.sqf";Bastion_Spawn=compile preprocessfilelinenumbers "eos\core\b_launch.sqf";null=[] execVM "eos\core\spawn_fnc.sqf";onplayerConnected {[] execVM "eos\Functions\EOS_Markers.sqf";};
+/* EOS 1.98 by BangaBob 
+GROUP SIZES
+ 0 = 1
+ 1 = 2,4
+ 2 = 4,8
+ 3 = 8,12
+ 4 = 12,16
+ 5 = 16,20
+
+EXAMPLE CALL - EOS
+ null = [["MARKERNAME","MARKERNAME2"],[2,1,70],[0,1],[1,2,30],[2,60],[2],[1,0,10],[1,0,250,WEST]] call EOS_Spawn;
+ null=[["M1","M2","M3"],[HOUSE GROUPS,SIZE OF GROUPS,PROBABILITY],[PATROL GROUPS,SIZE OF GROUPS,PROBABILITY],[LIGHT VEHICLES,SIZE OF CARGO,PROBABILITY],[ARMOURED VEHICLES,PROBABILITY], [STATIC VEHICLES,PROBABILITY],[HELICOPTERS,SIZE OF HELICOPTER CARGO,PROBABILITY],[FACTION,MARKERTYPE,DISTANCE,SIDE,HEIGHTLIMIT,DEBUG]] call EOS_Spawn;
+
+EXAMPLE CALL - BASTION
+ null = [["BAS_zone_1"],[3,1],[2,1],[2],[0,0],[0,0,EAST,false,false],[10,2,120,TRUE,TRUE]] call Bastion_Spawn;
+ null=[["M1","M2","M3"],[PATROL GROUPS,SIZE OF GROUPS],[LIGHT VEHICLES,SIZE OF CARGO],[ARMOURED VEHICLES],[HELICOPTERS,SIZE OF HELICOPTER CARGO],[FACTION,MARKERTYPE,SIDE,HEIGHTLIMIT,DEBUG],[INITIAL PAUSE, NUMBER OF WAVES, DELAY BETWEEN WAVES, INTEGRATE EOS, SHOW HINTS]] call Bastion_Spawn;
+*/
+VictoryColor="colorGreen";	// Colour of marker after completion
+hostileColor="colorRed";	// Default colour when enemies active
+bastionColor="colorOrange";	// Colour for bastion marker
+EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
+EOS_KILLCOUNTER=FALSE;		// Counts killed units
+
+null = [["EOSzone1"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone2"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone3"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone4"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone5"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone6"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone7"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone8"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone9"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone10"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone11"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone12"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone13"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone14"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone15"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone16"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone17"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone18"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone19"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone20"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone21"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone22"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone23"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone24"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone25"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone26"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone27"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone28"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone29"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone30"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone31"],[3,2,50],[2,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone32"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone33"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone34"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone35"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+
+null = [["EOSzone36"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone37"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone38"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone39"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone40"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone41"],[3,2,50],[2,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone42"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone43"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone44"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone45"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone46"],[9,3,70],[5,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone47"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone48"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone49"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone50"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone51"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone52"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone53"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone54"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone55"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone56"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone57"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone58"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone59"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone60"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone61"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone62"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone63"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone64"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone65"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[5,1,250,EAST,FALSE,FALSE]] call EOS_Spawn;
+
+null = [["EOSzone1"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone2"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone3"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone4"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone5"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone6"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone7"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone8"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone9"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone10"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone11"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone12"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone13"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone14"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone15"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone16"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone17"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone18"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone19"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone20"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone21"],[3,2,50],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone22"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone23"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone24"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone25"],[3,1,70],[1,3,50],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone26"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone27"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone28"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone29"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone30"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone31"],[3,2,50],[2,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone32"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone33"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone34"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
+null = [["EOSzone35"],[3,1,70],[1,2,70],[1,2,30],[0,0],[2, 30],[0,0,0],[3,1,250,CIVILIAN,FALSE,FALSE]] call EOS_Spawn;
