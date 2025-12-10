@@ -8,6 +8,7 @@ class CfgFunctions {
         };
         class fleet {
             class ACE3support {};
+            class buyVehicle {};
             class EFheli {};
             class EFwheeled {};
             class handleModClick {};
