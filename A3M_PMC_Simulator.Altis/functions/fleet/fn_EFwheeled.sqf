@@ -217,7 +217,4 @@ switch (TheSelection) do {
             clearMagazineCargoGlobal _MATV;
         };
     };
-    default {
-        hint "Something went wrong...Couldn't find case for selection!"
-    };
 };

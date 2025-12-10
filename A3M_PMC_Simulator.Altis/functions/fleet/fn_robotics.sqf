@@ -102,4 +102,7 @@ switch (TheSelection) do {
             [] call DoTotal;
         };
     };
+    default {
+        hint"Something went wrong...Couldn't find case for selection!"
+    };
 };

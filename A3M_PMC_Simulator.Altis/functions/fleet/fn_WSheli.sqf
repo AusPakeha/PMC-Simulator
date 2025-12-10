@@ -1,7 +1,7 @@
 private _rank = rank player;
 
 switch (TheSelection) do {
-    case 40: {
+    case 5: {
         if ((B_DefenseBudget < B_ION_Heli_Light_02_dynamicLoadout_lxWS) or ( _rank != B_MaxRank)) then {
             hint format ["You cannot do this, either due to financial reasons (Cost of This Item is %2) or due to the fact that you are not authorized to spend from the company account. Items in fleet management can only be purchased by company officers. ", B_MaxRank, B_ION_Heli_Light_02_dynamicLoadout_lxWS]
         } else {
@@ -18,11 +18,11 @@ switch (TheSelection) do {
             clearMagazineCargoGlobal _MATV;
         };
     };
-    case 41: {
+    case 6: {
         if ((B_DefenseBudget < B_ION_Heli_Light_02_unarmed_lxWS) or ( _rank != B_MaxRank)) then {
             hint format ["You cannot do this, either due to financial reasons (Cost of This Item is %2) or due to the fact that you are not authorized to spend from the company account. Items in fleet management can only be purchased by company officers. ", B_MaxRank, B_ION_Heli_Light_02_unarmed_lxWS]
         } else {
-            _MATV = "B_ION_Heli_Light_02_unarmed_lxWS" createVehicle (getMarkerPos"chspaw n");
+            _MATV = "B_ION_Heli_Light_02_unarmed_lxWS" createVehicle (getMarkerPos "chspawn");
             B_DefenseBudget = (B_DefenseBudget - B_ION_Heli_Light_02_unarmed_lxWS);
             publicVariable "B_DefenseBudget";
             B_TotalCost = (B_TotalCost + B_ION_Heli_Light_02_unarmed_lxWS);
@@ -31,7 +31,7 @@ switch (TheSelection) do {
 
             [] call DoBudget;
             [] call DoTotal;
-            
+
             clearWeaponCargoGlobal _MATV;
             clearMagazineCargoGlobal _MATV;
         };

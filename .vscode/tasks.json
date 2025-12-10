@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open last Arma 3 RPT",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$rptPath = Join-Path $env:LOCALAPPDATA 'Arma 3'; $latestRpt = Get-ChildItem -Path $rptPath -Filter '*.rpt' -File | Sort-Object LastWriteTime -Descending | Select-Object -First 1; if ($latestRpt) { & $latestRpt.FullName } else { Write-Host 'No RPT file found' }"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    }
+  ]
+}
