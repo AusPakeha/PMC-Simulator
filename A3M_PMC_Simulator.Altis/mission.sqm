@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=578;
+	toggles=1602;
 	class ItemIDProvider
 	{
 		nextID=3285;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=33;
+		nextID=38;
 	};
 	class Camera
 	{
-		pos[]={20957.699,21.379929,19257.713};
-		dir[]={0.84303015,-0.48861319,0.224949};
-		up[]={0.47209454,0.87250739,0.12597069};
-		aside[]={0.25781852,-7.9744495e-07,-0.96621799};
+		pos[]={20966.275,24.289515,19276.141};
+		dir[]={-0.095271386,-0.47889516,-0.8726871};
+		up[]={-0.051972266,0.87787211,-0.47606665};
+		aside[]={-0.99409366,3.7252903e-09,0.10852536};
 	};
 };
 binarizationWanted=0;
@@ -559,6 +559,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -578,19 +591,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=1;
 				};
 			};
 		};
@@ -3357,7 +3357,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk2,[0.0,0.0,0.57]]; this setDir 180; this setObjectTexture [0, ""images\LoginScreen.paa""]; [this, ""Access Internet"", ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", ""player distance _target < 2"", ""_caller distance _target < 2"", {}, {}, {execVM ""scripts\homepage.sqf""}, {}, [], 2, 0, true, false] call BIS_fnc_holdActionAdd;";
+				init="this attachTo [desk2,[0.0,0.0,0.57]]; this setDir 180; this setObjectTexture [0, ""images\LoginScreen.paa""];";
 				name="laptop2";
 			};
 			id=226;
@@ -7080,19 +7080,36 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19651.5,17.43639,15803.8};
+				position[]={19651.5,17.436127,15803.8};
 				angles[]={0,3.964725,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk3,[0.0,0.0,0.57]]; this addAction [""Access Internet"", { [laptop3] execVM ""scripts\homepage.sqf""}]; ";
+				init="this attachTo [desk3,[0.0,0.0,0.57]];";
 				name="laptop3";
 			};
 			id=433;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.70112038;
+			atlOffset=0.70085716;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="images\LoginScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item418
 		{
@@ -7930,19 +7947,37 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22704.426,15.956708,6930.7754};
-				angles[]={6.278985,1.268734,6.2746229};
+				position[]={22704.426,15.956747,6930.7754};
+				angles[]={6.2789788,1.2687322,6.2746158};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk4,[0.0,0.0,0.57]]; this addAction [""Access Internet"", { [laptop4] execVM ""scripts\homepage.sqf""}]; ";
+				init="this attachTo [desk4,[0.0,0.0,0.57]];";
 				name="laptop4";
 			};
 			id=488;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.82110214;
+			atlOffset=5.7220459e-06;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="images\LoginScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item466
 		{
@@ -8001,19 +8036,36 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14187.468,55.761898,22161.258};
-				angles[]={6.2819405,5.7969961,0.0024168694};
+				position[]={14187.468,55.761826,22161.258};
+				angles[]={6.2819457,5.796989,0.0024085543};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk5,[0.0,0.0,0.57]]; this addAction [""Access Internet"", { [laptop5] execVM ""scripts\homepage.sqf""}]; ";
+				init="this attachTo [desk5,[0.0,0.0,0.57]];";
 				name="laptop5";
 			};
 			id=492;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.82197952;
+			atlOffset=0.82190704;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="images\LoginScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item470
 		{
@@ -8072,19 +8124,36 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2618.1631,7.1830235,22246.695};
-				angles[]={0.0023161219,4.1997161,0.009251642};
+				position[]={2618.1636,7.1830101,22246.695};
+				angles[]={0.002321288,4.1997161,0.0092502441};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk6,[0.0,0.0,0.57]]; this addAction [""Access Internet"", { [laptop6] execVM ""scripts\homepage.sqf""}]; ";
+				init="this attachTo [desk6,[0.0,0.0,0.57]];";
 				name="laptop6";
 			};
 			id=496;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.82234859;
+			atlOffset=0.82233524;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="images\LoginScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item474
 		{
@@ -8127,19 +8196,36 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7024.9424,144.77603,17020.516};
-				angles[]={0.0032204373,4.467659,0.012010203};
+				position[]={7024.9419,144.77605,17020.516};
+				angles[]={0.003228859,4.467659,0.012007865};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk7,[0.0,0.0,0.57]]; this addAction [""Access Internet"", { [laptop7] execVM ""scripts\homepage.sqf""}]; ";
+				init="this attachTo [desk7,[0.0,0.0,0.57]];";
 				name="laptop7";
 			};
 			id=499;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.80670166;
+			atlOffset=0.80671692;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="images\LoginScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item477
 		{
@@ -8182,8 +8268,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2612.4297,6.7710938,22241.512};
-				angles[]={0.0093286335,1.0401115,6.2578602};
+				position[]={2612.4299,6.7710881,22241.512};
+				angles[]={0.0093200579,1.0401115,6.2578607};
 			};
 			side="Empty";
 			flags=4;
@@ -8191,7 +8277,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this addAction [""Open Private Stash"", { cunt= execVM ""scripts\locker.sqf"" }]; ";
-				name="deliveries_5_1_2_1";
+				name="deliveries_1";
 			};
 			id=506;
 			type="Box_NATO_AmmoVeh_F";
@@ -8220,8 +8306,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7029.6621,142.42116,17006.055};
-				angles[]={6.1663857,4.3532009,0.0040116427};
+				position[]={7029.6621,142.42107,17006.055};
+				angles[]={6.166388,4.3532,0.0040142573};
 			};
 			side="Empty";
 			flags=4;
@@ -8229,11 +8315,10 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this addAction [""Open Private Stash"", { cunt= execVM ""scripts\locker.sqf"" }]; ";
-				name="deliveries_5_1_2_2";
+				name="deliveries_2";
 			};
 			id=508;
 			type="Box_NATO_AmmoVeh_F";
-			atlOffset=9.1552734e-05;
 		};
 		class Item482
 		{
@@ -8260,7 +8345,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14178.655,54.817108,22162.691};
-				angles[]={0.037316564,4.2033472,0.012000273};
+				angles[]={0.037315138,4.2033463,0.012007865};
 			};
 			side="Empty";
 			flags=4;
@@ -8268,7 +8353,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init=" this addAction [""Open Private Stash"", { cunt= execVM ""scripts\locker.sqf"" }]; ";
-				name="deliveries_5_1_2_2_1";
+				name="deliveries_3";
 			};
 			id=510;
 			type="Box_NATO_AmmoVeh_F";
@@ -10905,7 +10990,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this setObjectTexture [0, ""images\BeachGirl.paa""]; [this, ""Access Internet"", ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", ""player distance _target < 2"", ""_caller distance _target < 2"", {}, {}, {execVM ""scripts\homepage.sqf""}, {}, [], 2, 0, true, false] call BIS_fnc_holdActionAdd;";
+				init="this setObjectTexture [0, ""images\BeachGirl.paa""];";
 				name="LuchtComp";
 			};
 			id=661;
@@ -19684,7 +19769,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19654.32,17.548634,15808.175};
+				position[]={19654.32,17.548956,15808.175};
 				angles[]={0,3.9002175,0};
 			};
 			side="Empty";
@@ -19692,11 +19777,11 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this addAction [""Open Private Stash"", { cunt= execVM ""scripts\locker.sqf"" }]; ";
-				name="deliveries_5_1_1_2_1_2";
+				name="deliveries_5";
 			};
 			id=1475;
 			type="A3M_WeapLocker";
-			atlOffset=0.37267876;
+			atlOffset=0.3730011;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19760,8 +19845,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[_this, ""Open Private Stash"", ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", ""player distance _target < 2"", ""_caller distance _target < 2"", {}, {}, {execVM ""scripts\locker.sqf""}, {}, [], 2, 0, true, false] call BIS_fnc_holdActionAdd;";
-				name="deliveries_5_1_2_2_4";
+				name="deliveries_6";
 			};
 			id=1483;
 			type="A3M_WeapLocker";
@@ -20298,19 +20382,36 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12905.561,4.8372049,9834.5723};
+				position[]={12905.561,4.8372245,9834.5723};
 				angles[]={6.2749648,2.916131,0.0043458696};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachTo [desk8,[0.0,0.0,0.57]]; this addAction [""Access Internet"", { [laptop8] execVM ""scripts\homepage.sqf""}]; ";
+				init="this attachTo [desk8,[0.0,0.0,0.57]]; ";
 				name="laptop8";
 			};
 			id=1683;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.81821799;
+			atlOffset=0.81823754;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="images\LoginScreen.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1057
 		{
@@ -20335,8 +20436,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12905.929,4.4459019,9827.21};
-				angles[]={0.039979152,4.3906384,6.2113094};
+				position[]={12905.929,4.4461207,9827.21};
+				angles[]={0.039985489,4.3906374,6.2113123};
 			};
 			side="Empty";
 			flags=4;
@@ -20344,11 +20445,11 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this addAction [""Open Private Stash"", { cunt= execVM ""scripts\locker.sqf"" }]; ";
-				name="deliveries_5_1_2_2_3";
+				name="deliveries_4";
 			};
 			id=1685;
 			type="Box_NATO_AmmoVeh_F";
-			atlOffset=-0.0012187958;
+			atlOffset=-0.00099992752;
 		};
 		class Item1059
 		{

@@ -32,7 +32,7 @@ _globalSuspicionModifier = 1;           //Scales the level of suspicion of enemi
 
 //-------------------------Civilian Disguise settings-------------------------
 
-_civFactions = ["CIV_F","CIV_IDAP_F","DSF_Civilians"]; //Array of factions whose vests are safe for undercover units to wear
+_civFactions = ["CIV_F","CIV_IDAP_F"]; //Array of factions whose vests are safe for undercover units to wear
 
 //(Array of classnames) Safe vests (on top of the specific factions above - useful if faction has randomisation script or to add items that are not used by the faction)
 _civilianVests = [
@@ -62,21 +62,6 @@ _civilianVests = [
 
 //(Array of classnames) Safe uniforms (on top of the specific factions above - useful if faction has randomisation script or to add items that are not used by the faction)
 _civilianUniforms = [
-"DSF_dishda_black", // [DSF] Dishdasha - Black
-"DSF_dishda_blk_jacket", // [DSF] Dishdasha & Black Jacket
-"DSF_dishda_des2_jacket", // [DSF] Dishdasha & Desert Jacket (2)
-"DSF_dishda_des_jacket", // [DSF] Dishdasha & Desert Jacket
-"DSF_dishda_jacket", // [DSF] Dishdasha & Jacket
-"DSF_dishda_vest", // [DSF] Dishdasha & Vest
-"DSF_dishda_vestA", // [DSF] Dishdasha & Vest 2 
-"DSF_dishda_vestE", // [DSF] Dishdasha & Vest 3
-"DSF_dishda_vestB",// [DSF] Dishdasha & Vest 3
-"DSF_dishda_vestC",// [DSF] Dishdasha & Vest 3
-"DSF_dishda_vestD",// [DSF] Dishdasha & Vest 3
-"DSF_dishda_wood_jacket",// [DSF] Dishdasha & Woodland Jacket
-"DSF_dishdaw_des2_jacket",// [DSF] Dishdasha (White) & Desert (2) Jacket
-"DSF_dishdaw_des_jacket",// [DSF] Dishdasha (White) & Desert Jacket
-"DSF_dishdaw_wood_jacket",// [DSF] Dishdasha (White) & Woodland Jacket
 "U_C_IDAP_MAN_cargo_F", // Aid Worker Clothes (Cargo) [IDAP]
 "U_C_IDAP_MAN_Jeans_F", // Aid Worker Clothes (Jeans) [IDAP]
 "U_C_IDAP_MAN_casual_F", // Aid Worker Clothes (Polo) [IDAP]
@@ -147,13 +132,6 @@ _civilianUniforms = [
 
 //(Array of classnames) Safe headgear (will automatically include civilian headgear classes - useful if faction has randomisation script or to add items that are not used by the faction)
 _civilianHeadgear = [
-"DSF_Beanie_black", // [DSF] Beanie (Black)
-"DSF_Beanie_coyote", // [DSF] Beanie (Coyote)
-"DSF_Beanie_khaki", // [DSF] Beanie (Khaki)
-"DSF_Beanie_tan", // [DSF] Beanie (Tan)
-"DSF_pakol_black", // [DSF] Pakol - Black
-"DSF_pakol_brown", // [DSF] Pakol - Brown
-"DSF_pakol_grey", // [DSF] Pakol - Grey
 "H_Bandanna_gry", // Bandana (Black)
 "H_Bandanna_blu", // Bandana (Blue)
 "H_Bandanna_cbr", // Bandana (Coyote)
@@ -292,7 +270,7 @@ _noOffRoad = true; //Civilian vehicles driving at speed more than 50 meters from
 
 
 //-------------------------Enemy Disguise settings-------------------------
-_incogFactions = ["DSF_PMF"]; //Array of enemy factions whose items and vehicles will allow the player to impersonate the enemy
+_incogFactions = [""]; //Array of enemy factions whose items and vehicles will allow the player to impersonate the enemy
 
  //Names of additional markers for areas that would be considered trespassing (any with "INC_tre" - case sensitive - somewhere in the marker name will automatically be included)
 _trespassMarkers = [];
@@ -304,25 +282,22 @@ _incognitoVests = [
 
 //(Array of classnames) Safe headgear (will automatically include incog headgear classes - useful if faction has randomisation script or to add items that are not used by the faction)
 _incognitoHeadgear = [
-"DSF_SWAT_Helmet" // [DSF] Black Helmet
+"" // [DSF] Black Helmet
 ];
 
 //(Array of classnames) Safe backpacks (will automatically include incog backpack classes - useful if faction has randomisation script or to add items that are not used by the faction)
 _incognitoBackpacks = [
-"B_AssaultPack_cbr", 
+"B_AssaultPack_cbr",
 "B_FieldPack_taiga_RPG_AT_F", // Field Pack (Taiga)
 "G_FieldPack_Medic", // Tactical Backpack (Black)
 "I_FieldPack_oli_Repair", // Field Pack (Olive)
 "I_Carryall_oli_EXP", // Carryall Backpack (Olive)
 "I_Carryall_oli_Eng", // Carryall Backpack (Olive)
-"DSF_RPG7_GP_Backpack", // Kitbag (Coyote) (1st DSF Bag in list)
-"DSF_RPG7_Backpack", // Kitbag (Coyote) (4th DSF Bag in list)
-"DSF_AA_Backpack" // Kitbag (Coyote) (5th DSF Bag in list
 ];
 
 //(Array of classnames) Safe uniforms (on top of the specific factions above - useful if faction has randomisation script or to add items that are not used by the faction)
 _incognitoUniforms = [
-"DSF_SWAT_BDU" // [DSF] Black Uniform
+"" // [DSF] Black Uniform
 ];
 
 _incogVehArray = [
@@ -366,7 +341,7 @@ _highSecVehicles = [
 ];                  // (Array of classnames) Vehicles that can enter high security areas without raising suspicion (uniforms will still be noticed according to how open the vehicle is)
 
 _highSecurityUniforms = [
-"DSF_SWAT_BDU" // [DSF] Black Uniform
+"" // [DSF] Black Uniform
 ];             // (Array of classnames) Uniforms that allow entry into high security areas (defined by high security markers)
 
 _highSecItemCheck = true;               // Check for disallowed items that aren't in the permitted list? Each non-permitted item will incur a suspicion penality. Set to false if high security checks just include uniform only.

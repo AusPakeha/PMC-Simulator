@@ -31,5 +31,8 @@ class CfgFunctions {
             class WSsupport {};
             class WSwheeled {};
         };
+        class store {
+            class buyButton {};
+        };
     };
 };

@@ -86,7 +86,11 @@ if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
 
 // ///////////////////////////////////////////////////////////////////////////////////
 // Initial Budget for side - Change in ParamsArray!
+<<<<<<< HEAD
 B_InitialBudget = paramsArray select 1;
+=======
+B_initialbudget = paramsArray select 1;
+>>>>>>> 4ec6165b0144e6d3de028acd461f04b20627d996
 // rating to Purchase values
 B_vaslimit = 0;
 B_Mlimit = 3500;

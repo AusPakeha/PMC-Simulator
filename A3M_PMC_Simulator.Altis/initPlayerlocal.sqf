@@ -8,6 +8,7 @@ if (player getVariable ["isSneaky", false]) then {
 };
 
 for "_i" from 1 to 8 do {
+<<<<<<< HEAD
 	_laptop = missionNamespace getVariable [format ["laptop%1", _i], objNull];
 	if (!isNull _laptop) then {
 		[
@@ -83,3 +84,53 @@ for "_i" from 1 to 8 do {
 	true,
 	false
 ] call BIS_fnc_holdActionAdd;
+=======
+    _laptop = missionNamespace getVariable [format ["laptop%1", _i], objNull];
+    if (!isNull _laptop) then {
+        [
+            _laptop,
+            "Access Internet",
+            "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+            "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+            "_this distance _target < 3",
+            "_caller distance _target < 3",
+            {},
+            {},
+            { _this execVM "scripts\homepage.sqf" },
+            {},
+            [],
+            2,
+            0,
+            false,
+            false
+        ] call BIS_fnc_holdActionAdd;
+    };
+};
+
+[LuchtComp,"Access Internet","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","_this distance _target < 3","_caller distance _target < 3",{},{},{ _this execVM "scripts\homepage.sqf" },{},[],2,0,false,false] call BIS_fnc_holdActionAdd;
+
+for "_i" from 1 to 6 do {
+    _laptop = missionNamespace getVariable [format ["deliveries%1", _i], objNull];
+    if (!isNull _laptop) then {
+        [
+            _laptop,
+            "Open Private Stash",
+            "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+            "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+            "_this distance _target < 3",
+            "_caller distance _target < 3",
+            {},
+            {},
+            { _this execVM "scripts\locker.sqf" },
+            {},
+            [],
+            2,
+            0,
+            false,
+            false
+        ] call BIS_fnc_holdActionAdd;
+    };
+};
+
+[CmdLocker,"Open Private Stash","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","_this distance _target < 3","_caller distance _target < 3",{},{},{ _this execVM "scripts\locker.sqf" },{},[],2,0,false,false] call BIS_fnc_holdActionAdd;
+>>>>>>> 4ec6165b0144e6d3de028acd461f04b20627d996

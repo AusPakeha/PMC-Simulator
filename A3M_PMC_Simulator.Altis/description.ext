@@ -43,7 +43,7 @@ overviewText = "PMC Simulator is a multiplayer mode designed to simulate working
 overviewTextLocked = "If this mission is locked, something is wrong!";
 overviewPicture = "images\Loadimg.paa";
 
-author = "Cody S. AkA. A3M Fr33d0m";
+author = "PMC Revival";
 OnLoadName = "PMC Simulator Mod";
 OnLoadMission = "Orion Private Security Group";
 onLoadIntro = "Full Gameplay Manual Available in briefing!";
@@ -84,6 +84,10 @@ class Header {
 #include "INC_undercover\cfgFunctions.hpp"
 
 #include "configs\CfgFleet.hpp"
+<<<<<<< HEAD
+=======
+#include "configs\CfgStore.hpp"
+>>>>>>> 4ec6165b0144e6d3de028acd461f04b20627d996
 
 class Extended_InitPost_EventHandlers {
     class CAManBase {
