@@ -1,7 +1,7 @@
 private _rank = rank player;
 
 switch (TheSelection) do {
-    case 40: {
+    case 5: {
         _rank = rank player;
         if ((B_DefenseBudget < EF_B_Heli_Transport_01_MJTF_Wdl) or ( _rank != B_MaxRank)) then {
             hint format ["You cannot do this, either due to financial reasons (Cost of This Item is %2) or due to the fact that you are not authorized to spend from the company account. Items in fleet management can only be purchased by company officers. ", B_MaxRank, EF_B_Heli_Transport_01_MJTF_Wdl]
@@ -20,7 +20,7 @@ switch (TheSelection) do {
             clearMagazineCargoGlobal _MATV;
         };
     };
-    case 41: {
+    case 6: {
         _rank = rank player;
         if ((B_DefenseBudget < EF_B_Heli_Transport_01_pylons_MJTF_Wdl) or ( _rank != B_MaxRank)) then {
             hint format ["You cannot do this, either due to financial reasons (Cost of This Item is %2) or due to the fact that you are not authorized to spend from the company account. Items in fleet management can only be purchased by company officers. ", B_MaxRank, EF_B_Heli_Transport_01_pylons_MJTF_Wdl]
