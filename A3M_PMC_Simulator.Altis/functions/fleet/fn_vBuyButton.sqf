@@ -39,11 +39,11 @@ private _categories = [
 
 {
     _x params ["_vanillaFlag", "_vanillaFunc", "_mods"];
-    
+
     if (_vanillaFlag == 1) then {
         // Try vanilla function first
         _this call (missionNamespace getVariable _vanillaFunc);
-        
+
         // Also check mod functions in case selection is for a mod item
         {
             _x params ["_modFlag", "_modFunc"];

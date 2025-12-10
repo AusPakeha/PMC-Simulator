@@ -8,6 +8,7 @@ class CfgFunctions {
         };
         class fleet {
             class ACE3support {};
+            class buyVehicle {};
             class EFheli {};
             class EFwheeled {};
             class handleModClick {};
@@ -29,6 +30,9 @@ class CfgFunctions {
             class WSrobotics {};
             class WSsupport {};
             class WSwheeled {};
+        };
+        class store {
+            class buyButton {};
         };
     };
 };

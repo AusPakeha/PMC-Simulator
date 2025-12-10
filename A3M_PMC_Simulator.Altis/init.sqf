@@ -33,7 +33,7 @@ and I hope you enjoy the things I have in the works!
 
 Original laptop code:
 
-this addAction ["Access Internet", { [laptop1] execVM "scripts\homepage.sqf"}]; 
+this addAction ["Access Internet", { [laptop1] execVM "scripts\homepage.sqf"}];
 
 Updated laptop code attempts:
 
@@ -43,7 +43,7 @@ Updated laptop code attempts:
 [laptop2, "Access Internet", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", "player distance _target < 2", "_caller distance _target < 2", {}, {}, {execVM "scripts\homepage.sqf"}, {}, [], 2, 0, true, false] call BIS_fnc_holdActionAdd;
 [LuchtComp, "Access Internet", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", "player distance _target < 2", "_caller distance _target < 2", {}, {}, {execVM "scripts\homepage.sqf"}, {}, [], 2, 0, true, false] call BIS_fnc_holdActionAdd;
 
-[laptop1,"Access Internet","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","_this distance _target < 3","_caller distance _target < 3",{},{},{ _this execVM "scripts\homepage.sqf" },{},[],2,0,true,false] remoteExec ["BIS_fnc_holdActionAdd", 0, laptop1];	
+[laptop1,"Access Internet","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa","_this distance _target < 3","_caller distance _target < 3",{},{},{ _this execVM "scripts\homepage.sqf" },{},[],2,0,true,false] remoteExec ["BIS_fnc_holdActionAdd", 0, laptop1];
 ################################## LET US BEGIN #################################### */
 
 // Set Initial Variable - Dedi Server Detection
@@ -265,17 +265,17 @@ if (isDedicated) then {
     };
 };
 
-[] execVM "scripts\GF_Blood_Stains_LITE\GF_Bleeding_LITE\GF_Set_Bleeding.sqf";	
+[] execVM "scripts\GF_Blood_Stains_LITE\GF_Bleeding_LITE\GF_Set_Bleeding.sqf";
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_Blood_Pool_LITE\GF_Set_Blood_Pool.sqf";
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_Blood_Shot_LITE\GF_Set_Blood_Shot.sqf";
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_Particles\GF_Blood_Particle_Bleeding\GF_Set_Blood_Particle_Bleeding.sqf";
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_SFX\GF_SFX_Killed_LITE\GF_SFX_Killed.sqf";
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_SFX\GF_SFX_Screaming\GF_Set_SFX_Screaming.sqf";
 
-[] execVM "GF_Cleanup\GF_Cleanup.sqf";
+[] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
 
 
-//	GF Cleanup script , Call with radio alpha , hit in game 0,0,1 
+//	GF Cleanup script , Call with radio alpha , hit in game 0,0,1
 _radio_1 = createTrigger["EmptyDetector",[0,0]];
 _radio_1 setTriggerActivation["Alpha","PRESENT",true];
 _radio_1 setTriggerStatements["this","execVM 'scripts\GF_Cleanup\GF_Cleanup.sqf'",""];
