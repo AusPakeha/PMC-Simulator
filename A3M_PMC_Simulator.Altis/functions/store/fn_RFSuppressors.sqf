@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Sound Suppressor (12.7 mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_127x55_small_RF ];
-            Wallet= (wallet - suppressor_127x55_small_RF);
+            Wallet = (Wallet - suppressor_127x55_small_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Large Sound Suppressor (12.7 mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_127x55_big_RF ];
-            Wallet= (wallet - suppressor_127x55_big_RF);
+            Wallet = (Wallet - suppressor_127x55_big_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Sound Suppressor (12.7 mm, Wood) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_127x55_small_wood_RF ];
-            Wallet= (wallet - suppressor_127x55_small_wood_RF);
+            Wallet = (Wallet - suppressor_127x55_small_wood_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Large Sound Suppressor (12.7 mm, Wood) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_127x55_big_wood_RF ];
-            Wallet= (wallet - suppressor_127x55_big_wood_RF);
+            Wallet = (Wallet - suppressor_127x55_big_wood_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Sound Suppressor (12.7 mm, Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_127x55_small_desert_RF ];
-            Wallet= (wallet - suppressor_127x55_small_desert_RF);
+            Wallet = (Wallet - suppressor_127x55_small_desert_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Large Sound Suppressor (12.7 mm, Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_127x55_big_desert_RF ];
-            Wallet= (wallet - suppressor_127x55_big_desert_RF);
+            Wallet = (Wallet - suppressor_127x55_big_desert_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tactical Sound Suppressor (6.5 mm, Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_65_black_RF ];
-            Wallet= (wallet - suppressor_65_black_RF);
+            Wallet = (Wallet - suppressor_65_black_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tactical Sound Suppressor (6.5 mm, Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_65_green_RF ];
-            Wallet= (wallet - suppressor_65_green_RF);
+            Wallet = (Wallet - suppressor_65_green_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tactical Sound Suppressor (6.5 mm, Khaki) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_65_khaki_RF ];
-            Wallet= (wallet - suppressor_65_khaki_RF);
+            Wallet = (Wallet - suppressor_65_khaki_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tactical Sound Suppressor (6.5 mm, Sand) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_65_sand_RF ];
-            Wallet= (wallet - suppressor_65_sand_RF);
+            Wallet = (Wallet - suppressor_65_sand_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tactical Sound Suppressor (6.5 mm, Tan) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", suppressor_65_tan_RF ];
-            Wallet= (wallet - suppressor_65_tan_RF);
+            Wallet = (Wallet - suppressor_65_tan_RF);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

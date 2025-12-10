@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Assault Pack (Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_AssaultPack_coy ];
-			Wallet= (wallet - EF_B_AssaultPack_coy);
+			Wallet = (Wallet - EF_B_AssaultPack_coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Carryall Backpack (Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_Carryall_coy ];
-			Wallet= (wallet - EF_B_Carryall_coy);
+			Wallet = (Wallet - EF_B_Carryall_coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Kitbag (Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_Kitbag_coy ];
-			Wallet= (wallet - EF_B_Kitbag_coy);
+			Wallet = (Wallet - EF_B_Kitbag_coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Tactical Backpack (Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_TacticalPack_coy ];
-			Wallet= (wallet - EF_B_TacticalPack_coy);
+			Wallet = (Wallet - EF_B_TacticalPack_coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Raider Pack (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_RadierPack_black ];
-			Wallet= (wallet - EF_B_RadierPack_black);
+			Wallet = (Wallet - EF_B_RadierPack_black);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Raider Pack (Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_RadierPack_coy ];
-			Wallet= (wallet - EF_B_RadierPack_coy);
+			Wallet = (Wallet - EF_B_RadierPack_coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Raider Pack (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_B_RadierPack_olive ];
-			Wallet= (wallet - EF_B_RadierPack_olive);
+			Wallet = (Wallet - EF_B_RadierPack_olive);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

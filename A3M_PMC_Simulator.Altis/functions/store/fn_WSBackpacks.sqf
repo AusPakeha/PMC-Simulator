@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Assault Pack (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_AssaultPack_desert_lxWS ];
-			Wallet= (wallet - B_AssaultPack_desert_lxWS);
+			Wallet = (Wallet - B_AssaultPack_desert_lxWS);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Carryall Backpack (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_Carryall_desert_lxWS ];
-			Wallet= (wallet - B_Carryall_desert_lxWS);
+			Wallet = (Wallet - B_Carryall_desert_lxWS);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Kitbag (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_Kitbag_desert_lxWS ];
-			Wallet= (wallet - B_Kitbag_desert_lxWS);
+			Wallet = (Wallet - B_Kitbag_desert_lxWS);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Portable Shield Bag (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_shield_backpack_lxWS ];
-			Wallet= (wallet - B_shield_backpack_lxWS);
+			Wallet = (Wallet - B_shield_backpack_lxWS);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

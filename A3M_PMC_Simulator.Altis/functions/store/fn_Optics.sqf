@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACO (Red) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Aco ];
-            Wallet= (wallet - optic_Aco);
+            Wallet = (Wallet - optic_Aco);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACO (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_ACO_grn ];
-            Wallet= (wallet - optic_ACO_grn);
+            Wallet = (Wallet - optic_ACO_grn);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have orderedACO Mini Pic (Fits SMG) (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_ACO_grn_smg ];
-            Wallet= (wallet - optic_ACO_grn_smg);
+            Wallet = (Wallet - optic_ACO_grn_smg);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have orderedACO Mini Pic (Fits SMG) (Red) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Aco_smg ];
-            Wallet= (wallet - optic_Aco_smg);
+            Wallet = (Wallet - optic_Aco_smg);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ARCOfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Arco ];
-            Wallet= (wallet - optic_Arco);
+            Wallet = (Wallet - optic_Arco);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered DMS for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_DMS ];
-            Wallet= (wallet - optic_DMS);
+            Wallet = (Wallet - optic_DMS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered RCO for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Hamr ];
-            Wallet= (wallet - optic_Hamr);
+            Wallet = (Wallet - optic_Hamr);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered a Holosight for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Holosight ];
-            Wallet= (wallet - optic_Holosight);
+            Wallet = (Wallet - optic_Holosight);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -118,7 +118,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MK17 Holosight SMG for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Holosight_smg ];
-            Wallet= (wallet - optic_Holosight_smg);
+            Wallet = (Wallet - optic_Holosight_smg);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -132,7 +132,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered LRPSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_LRPS ];
-            Wallet= (wallet - optic_LRPS);
+            Wallet = (Wallet - optic_LRPS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -146,7 +146,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MRCOfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_MRCO ];
-            Wallet= (wallet - optic_MRCO);
+            Wallet = (Wallet - optic_MRCO);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -160,7 +160,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MRD for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_MRD ];
-            Wallet= (wallet - optic_MRD);
+            Wallet = (Wallet - optic_MRD);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -174,7 +174,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Nightstalkerfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Nightstalker ];
-            Wallet= (wallet - optic_Nightstalker);
+            Wallet = (Wallet - optic_Nightstalker);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -188,7 +188,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered NVS for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_NVS ];
-            Wallet= (wallet - optic_NVS);
+            Wallet = (Wallet - optic_NVS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -202,7 +202,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered SOS for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_SOS ];
-            Wallet= (wallet - optic_SOS);
+            Wallet = (Wallet - optic_SOS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -216,7 +216,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered TWS for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_tws ];
-            Wallet= (wallet - optic_tws);
+            Wallet = (Wallet - optic_tws);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -230,7 +230,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered TWS MG for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_tws_mg];
-            Wallet= (wallet - optic_tws_mg);
+            Wallet = (Wallet - optic_tws_mg);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -244,7 +244,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Yorris J2 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", optic_Yorris];
-            Wallet= (wallet - optic_Yorris);
+            Wallet = (Wallet - optic_Yorris);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

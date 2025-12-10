@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Army Combat Uniform OCPfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_uniform_cu_ocp_patchless ];
-            Wallet= (wallet - rhs_uniform_cu_ocp_patchless);
+            Wallet = (Wallet - rhs_uniform_cu_ocp_patchless);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Army Combat Uniform UCPfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_uniform_cu_ucp_patchless ];
-            Wallet= (wallet - rhs_uniform_cu_ucp_patchless);
+            Wallet = (Wallet - rhs_uniform_cu_ucp_patchless);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Flame Resistant Organizational Gear MARPAT (Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_uniform_FROG01_wd ];
-            Wallet= (wallet - rhs_uniform_FROG01_wd);
+            Wallet = (Wallet - rhs_uniform_FROG01_wd);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Flame Resistant Organizational Gear MARPAT (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_uniform_FROG01_d ];
-            Wallet= (wallet - rhs_uniform_FROG01_d);
+            Wallet = (Wallet - rhs_uniform_FROG01_d);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Flame Resistant Organizational Gear M81for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_uniform_FROG01_m81 ];
-            Wallet= (wallet - rhs_uniform_FROG01_m81);
+            Wallet = (Wallet - rhs_uniform_FROG01_m81);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

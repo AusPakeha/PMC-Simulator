@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5 x 39mm Caseless Green (30 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_65x39_caseless_green];
-			Wallet= (wallet - M_30Rnd_65x39_caseless_green);
+			Wallet = (Wallet - M_30Rnd_65x39_caseless_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5 x 39mm Caseless (30 rds) Tracer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_65x39_caseless_green_mag_Tracer ];
-			Wallet= (wallet - M_30Rnd_65x39_caseless_green_mag_Tracer);
+			Wallet = (Wallet - M_30Rnd_65x39_caseless_green_mag_Tracer);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 5.56 x 45mm STANAG (30 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_556x45_Stanag ];
-			Wallet= (wallet - M_30Rnd_556x45_Stanag);
+			Wallet = (Wallet - M_30Rnd_556x45_Stanag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 5.56 x 45mm STANAG (30 rds) Tracer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_556x45_Stanag_Tracer_Green ];
-			Wallet= (wallet - M_30Rnd_556x45_Stanag_Tracer_Green);
+			Wallet = (Wallet - M_30Rnd_556x45_Stanag_Tracer_Green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5x39 Caseless Mag (30 rds)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_65x39_caseless_mag ];
-			Wallet= (wallet - M_30Rnd_65x39_caseless_mag);
+			Wallet = (Wallet - M_30Rnd_65x39_caseless_mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5x39 Caseless Mag (30 rds) Tracer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_65x39_caseless_mag_Tracer ];
-			Wallet= (wallet - M_30Rnd_65x39_caseless_mag_Tracer);
+			Wallet = (Wallet - M_30Rnd_65x39_caseless_mag_Tracer);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered .45 ACP SMG (30 rds)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_45ACP_Mag_SMG_01];
-			Wallet= (wallet - M_30Rnd_45ACP_Mag_SMG_01);
+			Wallet = (Wallet - M_30Rnd_45ACP_Mag_SMG_01);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered .45 ACP SMG (30 rds) Tracer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_45ACP_Mag_SMG_01_Tracer_Green ];
-			Wallet= (wallet - M_30Rnd_45ACP_Mag_SMG_01_Tracer_Green);
+			Wallet = (Wallet - M_30Rnd_45ACP_Mag_SMG_01_Tracer_Green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5 x 39mm Caseless High Vol (100 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_100Rnd_65x39_caseless_mag ];
-			Wallet= (wallet - M_100Rnd_65x39_caseless_mag);
+			Wallet = (Wallet - M_100Rnd_65x39_caseless_mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5 x 39mm Caseless High Vol (100 rds) Tracer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_100Rnd_65x39_caseless_mag_Tracer ];
-			Wallet= (wallet - M_100Rnd_65x39_caseless_mag_Tracer);
+			Wallet = (Wallet - M_100Rnd_65x39_caseless_mag_Tracer);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 7.62x51mm Ammo Belt (150 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_150Rnd_762x51_Box ];
-			Wallet= (wallet - M_150Rnd_762x51_Box);
+			Wallet = (Wallet - M_150Rnd_762x51_Box);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 7.62x51mm Ammo Belt (150 rds) Tracerfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_150Rnd_762x51_Box_Tracer ];
-			Wallet= (wallet - M_150Rnd_762x51_Box_Tracer);
+			Wallet = (Wallet - M_150Rnd_762x51_Box_Tracer);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5 x 39mm Cased High Vol (200 Rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_200Rnd_65x39_cased_Box];
-			Wallet= (wallet - M_200Rnd_65x39_cased_Box);
+			Wallet = (Wallet - M_200Rnd_65x39_cased_Box);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 6.5 x 39mm Cased High Vol (200 Rds) Tracer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_200Rnd_65x39_cased_Box_Tracer ];
-			Wallet= (wallet - M_200Rnd_65x39_cased_Box_Tracer);
+			Wallet = (Wallet - M_200Rnd_65x39_cased_Box_Tracer);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -201,7 +201,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 5.56x45mm Underwater (20 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_20Rnd_556x45_UW_mag ];
-			Wallet= (wallet - M_20Rnd_556x45_UW_mag);
+			Wallet = (Wallet - M_20Rnd_556x45_UW_mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -215,7 +215,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 7.62 x 51mm (20 rds)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_20Rnd_762x51_Mag ];
-			Wallet= (wallet - M_20Rnd_762x51_Mag);
+			Wallet = (Wallet - M_20Rnd_762x51_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -229,7 +229,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 9x21mm (16 Rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_16Rnd_9x21_Mag];
-			Wallet= (wallet - M_16Rnd_9x21_Mag);
+			Wallet = (Wallet - M_16Rnd_9x21_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -243,7 +243,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 9x21mm SMG (30 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_30Rnd_9x21_Mag];
-			Wallet= (wallet - M_30Rnd_9x21_Mag);
+			Wallet = (Wallet - M_30Rnd_9x21_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -257,7 +257,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered .45 +P JHP (11 Rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_11Rnd_45ACP_Mag ];
-			Wallet= (wallet - M_11Rnd_45ACP_Mag);
+			Wallet = (Wallet - M_11Rnd_45ACP_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -271,7 +271,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered .45 FMJ (6 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_6Rnd_45ACP_Cylinder ];
-			Wallet= (wallet - M_6Rnd_45ACP_Cylinder);
+			Wallet = (Wallet - M_6Rnd_45ACP_Cylinder);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -285,7 +285,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 7.62x51 (10 rds)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_10Rnd_762x51_Mag ];
-			Wallet= (wallet - M_10Rnd_762x51_Mag);
+			Wallet = (Wallet - M_10Rnd_762x51_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -299,7 +299,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered .45 +P JHP Black Talons (9 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_9Rnd_45ACP_Mag];
-			Wallet= (wallet - M_9Rnd_45ACP_Mag);
+			Wallet = (Wallet - M_9Rnd_45ACP_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -313,7 +313,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered .408 Lapua (7 rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_7Rnd_408_Mag ];
-			Wallet= (wallet - M_7Rnd_408_Mag);
+			Wallet = (Wallet - M_7Rnd_408_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -327,7 +327,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 12.7x108mm APDS (5 Rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_5Rnd_127x108_APDS_Mag ];
-			Wallet= (wallet - M_5Rnd_127x108_APDS_Mag);
+			Wallet = (Wallet - M_5Rnd_127x108_APDS_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -341,7 +341,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 12.7x108mm AP FMJ (5 Rds) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_5Rnd_127x108_Mag ];
-			Wallet= (wallet - M_5Rnd_127x108_Mag);
+			Wallet = (Wallet - M_5Rnd_127x108_Mag);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

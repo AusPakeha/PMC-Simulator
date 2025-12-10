@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Black, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Rifleman_Black ];
-            Wallet= (wallet - EF_V_CCR_Rifleman_Black);
+            Wallet = (Wallet - EF_V_CCR_Rifleman_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Black, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Scout_Black ];
-            Wallet= (wallet - EF_V_CCR_Scout_Black);
+            Wallet = (Wallet - EF_V_CCR_Scout_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Black, Support) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Support_Black ];
-            Wallet= (wallet - EF_V_CCR_Support_Black);
+            Wallet = (Wallet - EF_V_CCR_Support_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Black, Team Leader) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_TL_Black ];
-            Wallet= (wallet - EF_V_CCR_TL_Black);
+            Wallet = (Wallet - EF_V_CCR_TL_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Coyote Brown, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Rifleman_Coy ];
-            Wallet= (wallet - EF_V_CCR_Rifleman_Coy);
+            Wallet = (Wallet - EF_V_CCR_Rifleman_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Coyote Brown, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Scout_Coy ];
-            Wallet= (wallet - EF_V_CCR_Scout_Coy);
+            Wallet = (Wallet - EF_V_CCR_Scout_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Coyote Brown, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Rifleman_Coy ];
-            Wallet= (wallet - EF_V_CCR_Rifleman_Coy);
+            Wallet = (Wallet - EF_V_CCR_Rifleman_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Coyote Brown, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Scout_Coy ];
-            Wallet= (wallet - EF_V_CCR_Scout_Coy);
+            Wallet = (Wallet - EF_V_CCR_Scout_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Coyote Brown, Support) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Support_Coy ];
-            Wallet= (wallet - EF_V_CCR_Support_Coy);
+            Wallet = (Wallet - EF_V_CCR_Support_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Coyote Brown, Team Leader) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_TL_Coy ];
-            Wallet= (wallet - EF_V_CCR_TL_Coy);
+            Wallet = (Wallet - EF_V_CCR_TL_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Olive, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Rifleman_Olive ];
-            Wallet= (wallet - EF_V_CCR_Rifleman_Olive);
+            Wallet = (Wallet - EF_V_CCR_Rifleman_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Olive, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Scout_Olive ];
-            Wallet= (wallet - EF_V_CCR_Scout_Olive);
+            Wallet = (Wallet - EF_V_CCR_Scout_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Olive, Support) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_Support_Olive ];
-            Wallet= (wallet - EF_V_CCR_Support_Olive);
+            Wallet = (Wallet - EF_V_CCR_Support_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Commando Chest Rig (Olive, Team Leader) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_TL_Olive ];
-            Wallet= (wallet - EF_V_CCR_TL_Olive);
+            Wallet = (Wallet - EF_V_CCR_TL_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -201,7 +201,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -215,7 +215,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Diver) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Diver_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Diver_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Diver_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -229,7 +229,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Diver, No Rebreather) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Diver_NoReb_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Diver_NoReb_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Diver_NoReb_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -243,7 +243,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Rifleman_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Rifleman_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Rifleman_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -257,7 +257,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Sailor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Sailor_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Sailor_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Sailor_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -271,7 +271,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Scout_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Scout_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Scout_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -285,7 +285,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Support) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Support_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_Support_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_Support_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -299,7 +299,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Black, Team Leader) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_TL_Black ];
-            Wallet= (wallet - EF_V_CCR_AAV_TL_Black);
+            Wallet = (Wallet - EF_V_CCR_AAV_TL_Black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -313,7 +313,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -327,7 +327,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Diver) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Diver_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Diver_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Diver_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -341,7 +341,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Diver, No Rebreather) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Diver_NoReb_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Diver_NoReb_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Diver_NoReb_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -355,7 +355,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Rifleman_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Rifleman_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Rifleman_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -369,7 +369,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Sailor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Sailor_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Sailor_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Sailor_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -383,7 +383,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Scout_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Scout_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Scout_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -397,7 +397,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Support) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Support_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_Support_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_Support_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -411,7 +411,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Coyote Brown, Team Leader) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_TL_Coy ];
-            Wallet= (wallet - EF_V_CCR_AAV_TL_Coy);
+            Wallet = (Wallet - EF_V_CCR_AAV_TL_Coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -425,7 +425,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -439,7 +439,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Diver) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Diver_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Diver_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Diver_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -453,7 +453,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Diver, No Rebreather) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Diver_NoReb_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Diver_NoReb_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Diver_NoReb_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -467,7 +467,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Rifleman) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Rifleman_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Rifleman_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Rifleman_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -481,7 +481,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Sailor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Sailor_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Sailor_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Sailor_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -495,7 +495,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Scout) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Scout_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Scout_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Scout_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -509,7 +509,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Support) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_Support_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_Support_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_Support_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -523,7 +523,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Amphibious Assault Vest (Olive, Team Leader) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_V_CCR_AAV_TL_Olive ];
-            Wallet= (wallet - EF_V_CCR_AAV_TL_Olive);
+            Wallet = (Wallet - EF_V_CCR_AAV_TL_Olive);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

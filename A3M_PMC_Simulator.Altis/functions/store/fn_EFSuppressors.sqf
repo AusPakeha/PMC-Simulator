@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MXAR Sound Suppressor (6.5mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ef_snds_mxar ];
-            Wallet= (wallet - ef_snds_mxar);
+            Wallet = (Wallet - ef_snds_mxar);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MXAR Sound Suppressor (6.5mm, Sand) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ef_snds_mxar_sand ];
-            Wallet= (wallet - ef_snds_mxar_sand);
+            Wallet = (Wallet - ef_snds_mxar_sand);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MXAR Sound Suppressor (6.5mm, Coyote) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ef_snds_mxar_coy ];
-            Wallet= (wallet - ef_snds_mxar_coy);
+            Wallet = (Wallet - ef_snds_mxar_coy);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MXAR Sound Suppressor (6.5mm, Khaki) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ef_snds_mxar_khk ];
-            Wallet= (wallet - ef_snds_mxar_khk);
+            Wallet = (Wallet - ef_snds_mxar_khk);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

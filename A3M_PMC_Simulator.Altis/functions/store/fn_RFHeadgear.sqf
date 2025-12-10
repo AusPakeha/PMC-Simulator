@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, Taiga) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_taiga_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_taiga_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_taiga_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, Geometric) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_geo_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_geo_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_geo_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, Hex) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_hex_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_hex_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_hex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, Khaki) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_khaki_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_khaki_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_khaki_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, MTP) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_mtp_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_mtp_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_mtp_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, Tropic) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_tna_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_tna_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_tna_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Avenger Helmet (Shape Breaker, Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetAggressor_sb_wdl_RF ];
-			Wallet= (wallet - H_HelmetAggressor_sb_wdl_RF);
+			Wallet = (Wallet - H_HelmetAggressor_sb_wdl_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Black_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Black_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Black_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Black, No Visor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Simple_Black_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Simple_Black_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Simple_Black_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Black, Visor Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_VisorUp_Black_RF ];
-			Wallet= (wallet - H_HelmetHeavy_VisorUp_Black_RF);
+			Wallet = (Wallet - H_HelmetHeavy_VisorUp_Black_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Green Hex) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_GHex_RF ];
-			Wallet= (wallet - H_HelmetHeavy_GHex_RF);
+			Wallet = (Wallet - H_HelmetHeavy_GHex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Green Hex, No Visor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Simple_GHex_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Simple_GHex_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Simple_GHex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Green Hex, Visor Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_VisorUp_GHex_RF ];
-			Wallet= (wallet - H_HelmetHeavy_VisorUp_GHex_RF);
+			Wallet = (Wallet - H_HelmetHeavy_VisorUp_GHex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Hex) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Hex_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Hex_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Hex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -201,7 +201,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Hex, No Visor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Simple_Hex_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Simple_Hex_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Simple_Hex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -215,7 +215,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Hex, Visor Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_VisorUp_Hex_RF ];
-			Wallet= (wallet - H_HelmetHeavy_VisorUp_Hex_RF);
+			Wallet = (Wallet - H_HelmetHeavy_VisorUp_Hex_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -229,7 +229,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Olive_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Olive_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Olive_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -243,7 +243,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Olive, No Visor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Simple_Olive_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Simple_Olive_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Simple_Olive_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -257,7 +257,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Olive, Visor Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_VisorUp_Olive_RF ];
-			Wallet= (wallet - H_HelmetHeavy_VisorUp_Olive_RF);
+			Wallet = (Wallet - H_HelmetHeavy_VisorUp_Olive_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -271,7 +271,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Sand) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Sand_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Sand_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Sand_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -285,7 +285,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Sand, No Visor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Simple_Sand_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Simple_Sand_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Simple_Sand_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -299,7 +299,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (Sand, Visor Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_VisorUp_Sand_RF ];
-			Wallet= (wallet - H_HelmetHeavy_VisorUp_Sand_RF);
+			Wallet = (Wallet - H_HelmetHeavy_VisorUp_Sand_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -313,7 +313,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (White) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_White_RF ];
-			Wallet= (wallet - H_HelmetHeavy_White_RF);
+			Wallet = (Wallet - H_HelmetHeavy_White_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -327,7 +327,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (White, No Visor) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_Simple_White_RF ];
-			Wallet= (wallet - H_HelmetHeavy_Simple_White_RF);
+			Wallet = (Wallet - H_HelmetHeavy_Simple_White_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -341,7 +341,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Heavy Combat Helmet (White, Visor Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_HelmetHeavy_VisorUp_White_RF ];
-			Wallet= (wallet - H_HelmetHeavy_VisorUp_White_RF);
+			Wallet = (Wallet - H_HelmetHeavy_VisorUp_White_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

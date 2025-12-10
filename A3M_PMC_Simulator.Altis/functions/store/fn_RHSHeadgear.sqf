@@ -5,7 +5,7 @@ case 111: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Bare for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare ];
-            Wallet= (wallet - rhsusf_ach_bare);
+            Wallet = (Wallet - rhsusf_ach_bare);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ case 112: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Bare W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ case 113: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Bare W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_headset ];
-            Wallet= (wallet - rhsusf_ach_bare_headset);
+            Wallet = (Wallet - rhsusf_ach_bare_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ case 114: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Bare W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_headset_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_headset_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_headset_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ case 115: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Tan for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_tan ];
-            Wallet= (wallet - rhsusf_ach_bare_tan);
+            Wallet = (Wallet - rhsusf_ach_bare_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ case 116: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Tan W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_tan_ess];
-            Wallet= (wallet - rhsusf_ach_bare_tan_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_tan_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ case 117: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Tan W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_tan_headset ];
-            Wallet= (wallet - rhsusf_ach_bare_tan_headset);
+            Wallet = (Wallet - rhsusf_ach_bare_tan_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ case 118: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Tan W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_tan_headset_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_tan_headset_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_tan_headset_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -117,7 +117,7 @@ case 119: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Wood for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_wood ];
-            Wallet= (wallet - rhsusf_ach_bare_wood);
+            Wallet = (Wallet - rhsusf_ach_bare_wood);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -131,7 +131,7 @@ case 120: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Wood W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_wood_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_wood_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_wood_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -145,7 +145,7 @@ case 121: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Wood W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_wood_headset ];
-            Wallet= (wallet - rhsusf_ach_bare_wood_headset);
+            Wallet = (Wallet - rhsusf_ach_bare_wood_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -159,7 +159,7 @@ case 122: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Wood W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_wood_headset_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_wood_headset_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_wood_headset_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -173,7 +173,7 @@ case 123: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Desert for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_des];
-            Wallet= (wallet - rhsusf_ach_bare_des);
+            Wallet = (Wallet - rhsusf_ach_bare_des);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -187,7 +187,7 @@ case 124: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Desert W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_des_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_des_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_des_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -201,7 +201,7 @@ case 125: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Desert W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_des_headset ];
-            Wallet= (wallet - rhsusf_ach_bare_des_headset);
+            Wallet = (Wallet - rhsusf_ach_bare_des_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -215,7 +215,7 @@ case 126: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Desert W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_des_headset_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_des_headset_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_des_headset_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -229,7 +229,7 @@ case 127: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Semi-Arid for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_semi ];
-            Wallet= (wallet - rhsusf_ach_bare_semi);
+            Wallet = (Wallet - rhsusf_ach_bare_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -243,7 +243,7 @@ case 128: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Semi-Arid W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_semi_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_semi_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_semi_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -257,7 +257,7 @@ case 129: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Semi-Arid W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_semi_headset ];
-            Wallet= (wallet - rhsusf_ach_bare_semi_headset);
+            Wallet = (Wallet - rhsusf_ach_bare_semi_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -271,7 +271,7 @@ case 130: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH Semi-Arid W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_bare_semi_headset_ess ];
-            Wallet= (wallet - rhsusf_ach_bare_semi_headset_ess);
+            Wallet = (Wallet - rhsusf_ach_bare_semi_headset_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -285,7 +285,7 @@ case 131: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH UCP for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_ucp ];
-            Wallet= (wallet - rhsusf_ach_helmet_ucp);
+            Wallet = (Wallet - rhsusf_ach_helmet_ucp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -299,7 +299,7 @@ case 132: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH UCP W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_ess_ucp ];
-            Wallet= (wallet - rhsusf_ach_helmet_ess_ucp);
+            Wallet = (Wallet - rhsusf_ach_helmet_ess_ucp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -313,7 +313,7 @@ case 133: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH UCP W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_headset_ucp];
-            Wallet= (wallet - rhsusf_ach_helmet_headset_ucp);
+            Wallet = (Wallet - rhsusf_ach_helmet_headset_ucp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -327,7 +327,7 @@ case 134: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH UCP W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_headset_ess_ucp ];
-            Wallet= (wallet - rhsusf_ach_helmet_headset_ess_ucp);
+            Wallet = (Wallet - rhsusf_ach_helmet_headset_ess_ucp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -341,7 +341,7 @@ case 135: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH OCP for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_ocp ];
-            Wallet= (wallet - rhsusf_ach_helmet_ocp);
+            Wallet = (Wallet - rhsusf_ach_helmet_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -355,7 +355,7 @@ case 136: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH OCP Camofor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_camo_ocp ];
-            Wallet= (wallet - rhsusf_ach_helmet_camo_ocp);
+            Wallet = (Wallet - rhsusf_ach_helmet_camo_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -369,7 +369,7 @@ case 137: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH OCP W/ ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_ess_ocp ];
-            Wallet= (wallet - rhsusf_ach_helmet_ess_ocp);
+            Wallet = (Wallet - rhsusf_ach_helmet_ess_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -383,7 +383,7 @@ case 138: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH OCP W/ Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_headset_ocp ];
-            Wallet= (wallet - rhsusf_ach_helmet_headset_ocp);
+            Wallet = (Wallet - rhsusf_ach_helmet_headset_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -397,7 +397,7 @@ case 139: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ACH OCP W/ Headset+ESSfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_headset_ess_ocp ];
-            Wallet= (wallet - rhsusf_ach_helmet_headset_ess_ocp);
+            Wallet = (Wallet - rhsusf_ach_helmet_headset_ess_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -411,7 +411,7 @@ case 140: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered M81for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ach_helmet_m81 ];
-            Wallet= (wallet - rhsusf_ach_helmet_m81);
+            Wallet = (Wallet - rhsusf_ach_helmet_m81);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -425,7 +425,7 @@ case 141: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Clean for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare ];
-            Wallet= (wallet - rhsusf_mich_bare);
+            Wallet = (Wallet - rhsusf_mich_bare);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -439,7 +439,7 @@ case 142: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -453,7 +453,7 @@ case 143: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Alternative for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_alt ];
-            Wallet= (wallet - rhsusf_mich_bare_alt);
+            Wallet = (Wallet - rhsusf_mich_bare_alt);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -467,7 +467,7 @@ case 144: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -481,7 +481,7 @@ case 145: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -495,7 +495,7 @@ case 146: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_alt ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_alt);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_alt);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -509,7 +509,7 @@ case 147: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_alt_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_alt_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_alt_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -523,7 +523,7 @@ case 148: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Arc for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -537,7 +537,7 @@ case 149: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Arc / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -551,7 +551,7 @@ case 150: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Arc / Alt for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_alt ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_alt);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_alt);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -565,7 +565,7 @@ case 151: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Olive) Norotos / Arc / Alt / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_alt_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_alt_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_alt_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -579,7 +579,7 @@ case 152: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Clean for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_tan ];
-            Wallet= (wallet - rhsusf_mich_bare_tan);
+            Wallet = (Wallet - rhsusf_mich_bare_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -593,7 +593,7 @@ case 153: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_tan_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_tan_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_tan_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -607,7 +607,7 @@ case 154: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Alternative for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_alt_tan ];
-            Wallet= (wallet - rhsusf_mich_bare_alt_tan);
+            Wallet = (Wallet - rhsusf_mich_bare_alt_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -621,7 +621,7 @@ case 155: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_tan ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_tan);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -635,7 +635,7 @@ case 156: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_tan_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_tan_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_tan_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -649,7 +649,7 @@ case 157: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_alt_tan ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_alt_tan);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_alt_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -663,7 +663,7 @@ case 158: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_alt_tan_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_alt_tan_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_alt_tan_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -677,7 +677,7 @@ case 159: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Arc for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_tan ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_tan);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -691,7 +691,7 @@ case 160: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Arc / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_tan_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_tan_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_tan_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -705,7 +705,7 @@ case 161: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Arc / Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_alt_tan ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_alt_tan);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_alt_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -719,7 +719,7 @@ case 162: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Tan) Norotos / Arc / Alt / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_alt_tan_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_alt_tan_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_alt_tan_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -733,7 +733,7 @@ case 163: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Clean for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_semi ];
-            Wallet= (wallet - rhsusf_mich_bare_semi);
+            Wallet = (Wallet - rhsusf_mich_bare_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -747,7 +747,7 @@ case 164: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_semi_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_semi_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_semi_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -761,7 +761,7 @@ case 165: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Alternative for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_alt_semi ];
-            Wallet= (wallet - rhsusf_mich_bare_alt_semi);
+            Wallet = (Wallet - rhsusf_mich_bare_alt_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -775,7 +775,7 @@ case 166: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_semi ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_semi);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -789,7 +789,7 @@ case 167: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_semi_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_semi_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_semi_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -803,7 +803,7 @@ case 168: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Alternative for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_alt_semi ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_alt_semi);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_alt_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -817,7 +817,7 @@ case 169: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Alternative for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_alt_semi_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_alt_semi_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_alt_semi_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -831,7 +831,7 @@ case 170: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Arc for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_semi ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_semi);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -845,7 +845,7 @@ case 171: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Arc / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_semi_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_semi_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_semi_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -859,7 +859,7 @@ case 172: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Arc / Alt for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_alt_semi ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_alt_semi);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_alt_semi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -873,7 +873,7 @@ case 173: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (Semi-Arid) Norotos / Arc / Alt / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_bare_norotos_arc_alt_semi_headset ];
-            Wallet= (wallet - rhsusf_mich_bare_norotos_arc_alt_semi_headset);
+            Wallet = (Wallet - rhsusf_mich_bare_norotos_arc_alt_semi_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -887,7 +887,7 @@ case 174: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Clean for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -901,7 +901,7 @@ case 175: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -915,7 +915,7 @@ case 176: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_alt ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_alt);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_alt);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -929,7 +929,7 @@ case 177: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Alt / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_alt_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_alt_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_alt_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -943,7 +943,7 @@ case 178: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Norotosfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_norotos ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_norotos);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_norotos);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -957,7 +957,7 @@ case 179: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Norotos / Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_norotos_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_norotos_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_norotos_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -971,7 +971,7 @@ case 180: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Norotos / Arc for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_norotos_arc ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_norotos_arc);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_norotos_arc);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -985,7 +985,7 @@ case 181: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Woodland) Norotos / Arc / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatwd_norotos_arc_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatwd_norotos_arc_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatwd_norotos_arc_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -999,7 +999,7 @@ case 182: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Clean for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1013,7 +1013,7 @@ case 183: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1027,7 +1027,7 @@ case 184: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Altfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_alt ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_alt);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_alt);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1041,7 +1041,7 @@ case 185: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Alt / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_alt_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_alt_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_alt_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1055,7 +1055,7 @@ case 186: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Norotosfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_norotos ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_norotos);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_norotos);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1069,7 +1069,7 @@ case 187: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Norotos / Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_norotos_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_norotos_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_norotos_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1083,7 +1083,7 @@ case 188: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Norotos / Arc for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_norotos_arc ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_norotos_arc);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_norotos_arc);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1097,7 +1097,7 @@ case 189: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MICH 2000 Bare (MARPAT Desert) Norotos / Arc / Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_mich_helmet_marpatd_norotos_arc_headset ];
-            Wallet= (wallet - rhsusf_mich_helmet_marpatd_norotos_arc_headset);
+            Wallet = (Wallet - rhsusf_mich_helmet_marpatd_norotos_arc_headset);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1111,7 +1111,7 @@ case 190: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered OPS CORE Bare for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_opscore_02 ];
-            Wallet= (wallet - rhsusf_opscore_02);
+            Wallet = (Wallet - rhsusf_opscore_02);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1125,7 +1125,7 @@ case 191: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered OPS CORE Bare (Headset)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_opscore_01 ];
-            Wallet= (wallet - rhsusf_opscore_01);
+            Wallet = (Wallet - rhsusf_opscore_01);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1139,7 +1139,7 @@ case 192: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered OPS CORE Tanfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_opscore_02_tan ];
-            Wallet= (wallet - rhsusf_opscore_02_tan);
+            Wallet = (Wallet - rhsusf_opscore_02_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1153,7 +1153,7 @@ case 193: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered OPS CORE Tan (Headset)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_opscore_01_tan ];
-            Wallet= (wallet - rhsusf_opscore_01_tan);
+            Wallet = (Wallet - rhsusf_opscore_01_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1167,7 +1167,7 @@ case 194: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered OPS CORE OCPfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_opscore_04_ocp ];
-            Wallet= (wallet - rhsusf_opscore_04_ocp);
+            Wallet = (Wallet - rhsusf_opscore_04_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1181,7 +1181,7 @@ case 195: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered OPS CORE OCP (Headset)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_opscore_03_ocp ];
-            Wallet= (wallet - rhsusf_opscore_03_ocp);
+            Wallet = (Wallet - rhsusf_opscore_03_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1195,7 +1195,7 @@ case 196: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Boonie Hat UCPfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_ucp ];
-            Wallet= (wallet - rhs_Booniehat_ucp);
+            Wallet = (Wallet - rhs_Booniehat_ucp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1209,7 +1209,7 @@ case 197: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Boonie Hat OCPfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_ocp ];
-            Wallet= (wallet - rhs_Booniehat_ocp);
+            Wallet = (Wallet - rhs_Booniehat_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1223,7 +1223,7 @@ case 198: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Boonie Hat MARPAT (Woodland)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_marpatwd ];
-            Wallet= (wallet - rhs_Booniehat_marpatwd);
+            Wallet = (Wallet - rhs_Booniehat_marpatwd);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1237,7 +1237,7 @@ case 199: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Boonie Hat MARPAT (Desert)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_marpatd ];
-            Wallet= (wallet - rhs_Booniehat_marpatd);
+            Wallet = (Wallet - rhs_Booniehat_marpatd);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1251,7 +1251,7 @@ case 200: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered M81for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_m81 ];
-            Wallet= (wallet - rhs_Booniehat_m81);
+            Wallet = (Wallet - rhs_Booniehat_m81);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1265,7 +1265,7 @@ case 201: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Bowman Headsetfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_Bowman ];
-            Wallet= (wallet - rhsusf_Bowman);
+            Wallet = (Wallet - rhsusf_Bowman);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1279,7 +1279,7 @@ case 202: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Bowman Headset w/ Capfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_bowman_cap ];
-            Wallet= (wallet - rhsusf_bowman_cap);
+            Wallet = (Wallet - rhsusf_bowman_cap);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1293,7 +1293,7 @@ case 203: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Patrol Cap (UCP)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_patrolcap_ucp ];
-            Wallet= (wallet - rhsusf_patrolcap_ucp);
+            Wallet = (Wallet - rhsusf_patrolcap_ucp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1307,7 +1307,7 @@ case 204: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Patrol Cap (OCP)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_patrolcap_ocp ];
-            Wallet= (wallet - rhsusf_patrolcap_ocp);
+            Wallet = (Wallet - rhsusf_patrolcap_ocp);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1321,7 +1321,7 @@ case 205: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet CVC Tan for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_cvc_helmet ];
-            Wallet= (wallet - rhsusf_cvc_helmet);
+            Wallet = (Wallet - rhsusf_cvc_helmet);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1335,7 +1335,7 @@ case 206: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet CVC Tan (ESS) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_cvc_ess ];
-            Wallet= (wallet - rhsusf_cvc_ess);
+            Wallet = (Wallet - rhsusf_cvc_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1349,7 +1349,7 @@ case 207: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet CVC Green for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_cvc_green_helmet ];
-            Wallet= (wallet - rhsusf_cvc_green_helmet);
+            Wallet = (Wallet - rhsusf_cvc_green_helmet);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1363,7 +1363,7 @@ case 208: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet CVC Green (ESS) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_cvc_green_ess ];
-            Wallet= (wallet - rhsusf_cvc_green_ess);
+            Wallet = (Wallet - rhsusf_cvc_green_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1377,7 +1377,7 @@ case 209: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Pilot/Crew Helmet HGU-56/Pfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", PilotHelmetHeli];
-            Wallet= (wallet - PilotHelmetHeli);
+            Wallet = (Wallet - PilotHelmetHeli);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1391,7 +1391,7 @@ case 210: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Pilot/Crew Helmet HGU-56/P (Mask)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", H_CrewHelmetHeli_B ];
-            Wallet= (wallet - H_CrewHelmetHeli_B);
+            Wallet = (Wallet - H_CrewHelmetHeli_B);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1405,7 +1405,7 @@ case 211: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Balaclavafor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_balaclava ];
-            Wallet= (wallet - rhs_balaclava);
+            Wallet = (Wallet - rhs_balaclava);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1419,7 +1419,7 @@ case 212: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Scarffor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_scarf ];
-            Wallet= (wallet - rhs_scarf);
+            Wallet = (Wallet - rhs_scarf);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1433,7 +1433,7 @@ case 213: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Plain for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_green ];
-            Wallet= (wallet - rhs_6b27m_green);
+            Wallet = (Wallet - rhs_6b27m_green);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1447,7 +1447,7 @@ case 214: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Plain (Goggles) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_green_ess ];
-            Wallet= (wallet - rhs_6b27m_green_ess);
+            Wallet = (Wallet - rhs_6b27m_green_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1461,7 +1461,7 @@ case 215: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Plain (Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_green_bala ];
-            Wallet= (wallet - rhs_6b27m_green_bala);
+            Wallet = (Wallet - rhs_6b27m_green_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1475,7 +1475,7 @@ case 216: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Plain (Goggles and Balaclava)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_green_ess_bala ];
-            Wallet= (wallet - rhs_6b27m_green_ess_bala);
+            Wallet = (Wallet - rhs_6b27m_green_ess_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1489,7 +1489,7 @@ case 217: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Flora for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m ];
-            Wallet= (wallet - rhs_6b27m);
+            Wallet = (Wallet - rhs_6b27m);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1503,7 +1503,7 @@ case 218: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Flora (Googles) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_ess ];
-            Wallet= (wallet - rhs_6b27m_ess);
+            Wallet = (Wallet - rhs_6b27m_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1517,7 +1517,7 @@ case 219: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Flora (Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_bala ];
-            Wallet= (wallet - rhs_6b27m_bala);
+            Wallet = (Wallet - rhs_6b27m_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1531,7 +1531,7 @@ case 220: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Flora (Goggles and Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_ess_bala ];
-            Wallet= (wallet - rhs_6b27m_ess_bala);
+            Wallet = (Wallet - rhs_6b27m_ess_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1545,7 +1545,7 @@ case 121: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M EMR-Summer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_digi ];
-            Wallet= (wallet - rhs_6b27m_digi);
+            Wallet = (Wallet - rhs_6b27m_digi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1559,7 +1559,7 @@ case 122: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M EMR-Summer (Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_digi_bala ];
-            Wallet= (wallet - rhs_6b27m_digi_bala);
+            Wallet = (Wallet - rhs_6b27m_digi_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1573,7 +1573,7 @@ case 123: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B27M Mountain Les for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b27m_ml ];
-            Wallet= (wallet - rhs_6b27m_ml);
+            Wallet = (Wallet - rhs_6b27m_ml);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1587,7 +1587,7 @@ case 124: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Plain for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_green ];
-            Wallet= (wallet - rhs_6b28_green);
+            Wallet = (Wallet - rhs_6b28_green);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1601,7 +1601,7 @@ case 125: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Plain (Goggles) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_green_ess ];
-            Wallet= (wallet - rhs_6b28_green_ess);
+            Wallet = (Wallet - rhs_6b28_green_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1615,7 +1615,7 @@ case 126: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Plain (Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_green_bala ];
-            Wallet= (wallet - rhs_6b28_green_bala);
+            Wallet = (Wallet - rhs_6b28_green_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1629,7 +1629,7 @@ case 127: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Plain (Goggles and Balaclava)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_green_ess_bala ];
-            Wallet= (wallet - rhs_6b28_green_ess_bala);
+            Wallet = (Wallet - rhs_6b28_green_ess_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1643,7 +1643,7 @@ case 128: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 EMR-Summer for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28 ];
-            Wallet= (wallet - rhs_6b28);
+            Wallet = (Wallet - rhs_6b28);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1657,7 +1657,7 @@ case 129: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 EMR-Summer (Googles) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_ess ];
-            Wallet= (wallet - rhs_6b28_ess);
+            Wallet = (Wallet - rhs_6b28_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1671,7 +1671,7 @@ case 130: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 EMR-Summer (Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_bala];
-            Wallet= (wallet - rhs_6b28_bala);
+            Wallet = (Wallet - rhs_6b28_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1685,7 +1685,7 @@ case 131: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 EMR-Summer (Goggles and Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_ess_bala ];
-            Wallet= (wallet - rhs_6b28_ess_bala);
+            Wallet = (Wallet - rhs_6b28_ess_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1699,7 +1699,7 @@ case 132: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Florafor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_flora ];
-            Wallet= (wallet - rhs_6b28_flora);
+            Wallet = (Wallet - rhs_6b28_flora);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1713,7 +1713,7 @@ case 133: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Flora (Goggles) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_flora_ess ];
-            Wallet= (wallet - rhs_6b28_flora_ess);
+            Wallet = (Wallet - rhs_6b28_flora_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1727,7 +1727,7 @@ case 134: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Helmet 6B28 Flora (Balaclava)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_flora_bala ];
-            Wallet= (wallet - rhs_6b28_flora_bala);
+            Wallet = (Wallet - rhs_6b28_flora_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1741,7 +1741,7 @@ case 135: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Flora (Googles and Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_6b28_ess_bala ];
-            Wallet= (wallet - rhs_6b28_ess_bala);
+            Wallet = (Wallet - rhs_6b28_ess_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1755,7 +1755,7 @@ case 136: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Boonie Hat (Flora) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_flora ];
-            Wallet= (wallet - rhs_Booniehat_flora);
+            Wallet = (Wallet - rhs_Booniehat_flora);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1769,7 +1769,7 @@ case 137: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Boonie Hat (EMR-Summer) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_Booniehat_digi ];
-            Wallet= (wallet - rhs_Booniehat_digi);
+            Wallet = (Wallet - rhs_Booniehat_digi);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1783,7 +1783,7 @@ case 138: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Beanie Florafor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_beanie ];
-            Wallet= (wallet - rhs_beanie);
+            Wallet = (Wallet - rhs_beanie);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1797,7 +1797,7 @@ case 139: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Beaniefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_beanie_green];
-            Wallet= (wallet - rhs_beanie_green);
+            Wallet = (Wallet - rhs_beanie_green);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1811,7 +1811,7 @@ case 140: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet TSh-4for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_tsh4 ];
-            Wallet= (wallet - rhs_tsh4);
+            Wallet = (Wallet - rhs_tsh4);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1825,7 +1825,7 @@ case 141: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet TSh-4 (Googles) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_tsh4_ess ];
-            Wallet= (wallet - rhs_tsh4_ess);
+            Wallet = (Wallet - rhs_tsh4_ess);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1839,7 +1839,7 @@ case 141: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet TSh-4 (Balaclava) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_tsh4_bala ];
-            Wallet= (wallet - rhs_tsh4_bala);
+            Wallet = (Wallet - rhs_tsh4_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1853,7 +1853,7 @@ case 143: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tank Helmet TSh-4 (Googles and Balaclava)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_tsh4_ess_bala ];
-            Wallet= (wallet - rhs_tsh4_ess_bala);
+            Wallet = (Wallet - rhs_tsh4_ess_bala);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1867,7 +1867,7 @@ case 144: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Pilot Helmet ZSh-7Afor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_zsh7a_mike ];
-            Wallet= (wallet - rhs_zsh7a_mike);
+            Wallet = (Wallet - rhs_zsh7a_mike);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -1881,7 +1881,7 @@ case 145: {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Pilot Helmet ZSh-7A (KM-35)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_zsh7a ];
-            Wallet= (wallet - rhs_zsh7a);
+            Wallet = (Wallet - rhs_zsh7a);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

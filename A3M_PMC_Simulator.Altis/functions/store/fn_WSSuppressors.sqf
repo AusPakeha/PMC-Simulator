@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (7.62mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_h_lxWS ];
-            Wallet= (wallet - supressor_h_lxWS);
+            Wallet = (Wallet - supressor_h_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (7.62mm, Sand) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_h_sand_lxWS ];
-            Wallet= (wallet - supressor_h_sand_lxWS);
+            Wallet = (Wallet - supressor_h_sand_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (7.62 mm, Khaki) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_h_khaki_lxWS ];
-            Wallet= (wallet - supressor_h_khaki_lxWS);
+            Wallet = (Wallet - supressor_h_khaki_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (5.56 mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_l_lxWS ];
-            Wallet= (wallet - supressor_l_lxWS);
+            Wallet = (Wallet - supressor_l_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (5.56 mm, Sand) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_l_sand_lxWS ];
-            Wallet= (wallet - supressor_l_sand_lxWS);
+            Wallet = (Wallet - supressor_l_sand_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (5.56 mm, Khaki) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_l_khaki_lxWS ];
-            Wallet= (wallet - supressor_l_khaki_lxWS);
+            Wallet = (Wallet - supressor_l_khaki_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (6.5 mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_m_lxWS ];
-            Wallet= (wallet - supressor_m_lxWS);
+            Wallet = (Wallet - supressor_m_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (6.5 mm, Sand) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_m_sand_lxWS ];
-            Wallet= (wallet - supressor_m_sand_lxWS);
+            Wallet = (Wallet - supressor_m_sand_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Stubby Sound Suppressor (6.5 mm, Khaki) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", supressor_m_khaki_lxWS ];
-            Wallet= (wallet - supressor_m_khaki_lxWS);
+            Wallet = (Wallet - supressor_m_khaki_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Sound Suppressor (12 Gauge) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", muzzel_snds_12Gauge_lxWS ];
-            Wallet= (wallet - muzzel_snds_12Gauge_lxWS);
+            Wallet = (Wallet - muzzel_snds_12Gauge_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep 2;

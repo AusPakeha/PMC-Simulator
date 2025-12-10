@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Makarov PMMfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_weap_makarov_pmm];
-            Wallet= (wallet - rhs_weap_makarov_pmm);
+            Wallet = (Wallet - rhs_weap_makarov_pmm);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered MP-443 Grachfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_weap_pya];
-            Wallet= (wallet - rhs_weap_pya);
+            Wallet = (Wallet - rhs_weap_pya);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Suppressor M2010Sfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_M2010S ];
-			Wallet= (wallet - rhsusf_acc_M2010S);
+			Wallet = (Wallet - rhsusf_acc_M2010S);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Suppressor rotex 5 (grey) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_rotex5_grey ];
-			Wallet= (wallet - rhsusf_acc_rotex5_grey);
+			Wallet = (Wallet - rhsusf_acc_rotex5_grey);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Suppressor rotex 5 (tan)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_rotex5_tan ];
-			Wallet= (wallet - rhsusf_acc_rotex5_tan);
+			Wallet = (Wallet - rhsusf_acc_rotex5_tan);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Surfire SFMBfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_SFMB556 ];
-			Wallet= (wallet - rhsusf_acc_SFMB556);
+			Wallet = (Wallet - rhsusf_acc_SFMB556);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Surfire SF3P rotex 5for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_SF3P556 ];
-			Wallet= (wallet - rhsusf_acc_SF3P556);
+			Wallet = (Wallet - rhsusf_acc_SF3P556);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

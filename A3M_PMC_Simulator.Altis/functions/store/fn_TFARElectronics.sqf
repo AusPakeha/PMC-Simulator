@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered a Harris Falcon III® AN/PRC-152 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_anprc152 ];
-            Wallet= (wallet - tf_anprc152);
+            Wallet = (Wallet - tf_anprc152);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -20,7 +20,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered a Harris RF-7800S for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rf7800str ];
-            Wallet= (wallet - tf_rf7800str);
+            Wallet = (Wallet - tf_rf7800str);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -35,7 +35,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1523G for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g ];
-            Wallet= (wallet - tf_rt1523g);
+            Wallet = (Wallet - tf_rt1523g);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -50,7 +50,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1702G for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g_big ];
-            Wallet= (wallet - tf_rt1523g_big);
+            Wallet = (Wallet - tf_rt1523g_big);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -65,7 +65,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1523G (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g_black ];
-            Wallet= (wallet - tf_rt1523g_black);
+            Wallet = (Wallet - tf_rt1523g_black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -80,7 +80,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1523G (Fabric) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g_fabric];
-            Wallet= (wallet - tf_rt1523g_fabric);
+            Wallet = (Wallet - tf_rt1523g_fabric);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -95,7 +95,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1523G (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g_green ];
-            Wallet= (wallet - tf_rt1523g_green);
+            Wallet = (Wallet - tf_rt1523g_green);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -110,7 +110,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1523G (RHS) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g_rhs ];
-            Wallet= (wallet - tf_rt1523g_rhs);
+            Wallet = (Wallet - tf_rt1523g_rhs);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -125,7 +125,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered an Exelis SINCGARS RT-1523G (Sage) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", tf_rt1523g_sage ];
-            Wallet= (wallet - tf_rt1523g_sage);
+            Wallet = (Wallet - tf_rt1523g_sage);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

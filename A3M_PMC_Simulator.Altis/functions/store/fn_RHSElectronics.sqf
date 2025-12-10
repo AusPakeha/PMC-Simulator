@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Eagle A-III (Raven UAV) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_rhsusf_B_BACKPACK ];
-            Wallet= (wallet - B_rhsusf_B_BACKPACK);
+            Wallet = (Wallet - B_rhsusf_B_BACKPACK);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered AN/PVS-14 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ANPVS_14 ];
-            Wallet= (wallet - rhsusf_ANPVS_14);
+            Wallet = (Wallet - rhsusf_ANPVS_14);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered AN/PVS-15 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_ANPVS_15 ];
-            Wallet= (wallet - rhsusf_ANPVS_15);
+            Wallet = (Wallet - rhsusf_ANPVS_15);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Lerca 1200 (black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", lerca_1200_black ];
-            Wallet= (wallet - lerca_1200_black);
+            Wallet = (Wallet - lerca_1200_black);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Lerca 1200 (tan) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", lerca_1200_tan ];
-            Wallet= (wallet - lerca_1200_tan);
+            Wallet = (Wallet - lerca_1200_tan);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered AN/PEQ-15 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_anpeq15 ];
-            Wallet= (wallet - rhsusf_acc_anpeq15);
+            Wallet = (Wallet - rhsusf_acc_anpeq15);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered AN/PEQ-15A for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_anpeq15A ];
-            Wallet= (wallet - rhsusf_acc_anpeq15A);
+            Wallet = (Wallet - rhsusf_acc_anpeq15A);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered AN/PEQ-15/M952V (Light) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_anpeq15_light ];
-            Wallet= (wallet - rhsusf_acc_anpeq15_light);
+            Wallet = (Wallet - rhsusf_acc_anpeq15_light);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

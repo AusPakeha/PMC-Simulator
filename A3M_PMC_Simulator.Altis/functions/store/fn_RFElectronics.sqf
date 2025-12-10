@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered TNVG-B (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", TiGoggles_RF ];
-			Wallet= (wallet - TiGoggles_RF);
+			Wallet = (Wallet - TiGoggles_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered TNVG-B (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", TiGoggles_grn_RF ];
-			Wallet= (wallet - TiGoggles_grn_RF);
+			Wallet = (Wallet - TiGoggles_grn_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered TNVG-B (Tan) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", TiGoggles_tan_RF ];
-			Wallet= (wallet - TiGoggles_tan_RF);
+			Wallet = (Wallet - TiGoggles_tan_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

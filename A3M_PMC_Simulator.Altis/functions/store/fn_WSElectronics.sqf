@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Digital Camera for $%1.00. Your order will be delivered soon! Check the deliveries box often!", Camera_lxWS ];
-            Wallet= (wallet - Camera_lxWS);
+            Wallet = (Wallet - Camera_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Motion Sensor for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ItemMotionSensor_lxWS ];
-            Wallet= (wallet - ItemMotionSensor_lxWS);
+            Wallet = (Wallet - ItemMotionSensor_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

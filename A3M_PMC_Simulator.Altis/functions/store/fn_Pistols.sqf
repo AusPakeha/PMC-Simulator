@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Colt 1911 .45 cal. for $%1.00. Your order will be delivered soon! Check the deliveries box often!", hgun_ACPC2_F];
-            Wallet= (wallet - hgun_ACPC2_F);
+            Wallet = (Wallet - hgun_ACPC2_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Walther P 07 9mmfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", hgun_P07_F ];
-            Wallet= (wallet - hgun_P07_F);
+            Wallet = (Wallet - hgun_P07_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered HK PDW2000 9mm SMG for $%1.00. Your order will be delivered soon! Check the deliveries box often!", hgun_PDW2000_F ];
-            Wallet= (wallet - hgun_PDW2000_F);
+            Wallet = (Wallet - hgun_PDW2000_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered HK USP .45 cal. for $%1.00. Your order will be delivered soon! Check the deliveries box often!", hgun_Pistol_heavy_01_F ];
-            Wallet= (wallet - hgun_Pistol_heavy_01_F);
+            Wallet = (Wallet - hgun_Pistol_heavy_01_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered S&W 500 .45 cal.for $%1.00. Your order will be delivered soon! Check the deliveries box often!", hgun_Pistol_heavy_02_F ];
-            Wallet= (wallet - hgun_Pistol_heavy_02_F);
+            Wallet = (Wallet - hgun_Pistol_heavy_02_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered CZ-75 9mm for $%1.00. Your order will be delivered soon! Check the deliveries box often!", hgun_Rook40_F ];
-            Wallet= (wallet - hgun_Rook40_F);
+            Wallet = (Wallet - hgun_Rook40_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have orderedVermin SMG .45 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", SMG_01_F];
-            Wallet= (wallet - SMG_01_F);
+            Wallet = (Wallet - SMG_01_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered HK MP5 Hybrid 9mm for $%1.00. Your order will be delivered soon! Check the deliveries box often!", SMG_02_F];
-            Wallet= (wallet - SMG_02_F);
+            Wallet = (Wallet - SMG_02_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

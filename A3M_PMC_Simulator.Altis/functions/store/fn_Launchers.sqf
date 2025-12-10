@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Titan Launcher (Full Size) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", launch_I_Titan_F];
-			Wallet= (wallet - launch_I_Titan_F);
+			Wallet = (Wallet - launch_I_Titan_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Titan Launcher Compact for $%1.00. Your order will be delivered soon! Check the deliveries box often!", launch_I_Titan_short_F ];
-			Wallet= (wallet - launch_I_Titan_short_F);
+			Wallet = (Wallet - launch_I_Titan_short_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered NLAWfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", launch_NLAW_F ];
-			Wallet= (wallet - launch_NLAW_F);
+			Wallet = (Wallet - launch_NLAW_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered RPG-32 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", launch_RPG32_F ];
-			Wallet= (wallet - launch_RPG32_F);
+			Wallet = (Wallet - launch_RPG32_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered PCMLfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", NLAW_F ];
-			Wallet= (wallet - NLAW_F);
+			Wallet = (Wallet - NLAW_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Titan AP Rocket for $%1.00. Your order will be delivered soon! Check the deliveries box often!", Titan_AP];
-			Wallet= (wallet - Titan_AP);
+			Wallet = (Wallet - Titan_AP);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have orderedTitan AT Rocket for $%1.00. Your order will be delivered soon! Check the deliveries box often!", Titan_AT];
-			Wallet= (wallet - Titan_AT);
+			Wallet = (Wallet - Titan_AT);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have orderedTitan AA Rocket for $%1.00. Your order will be delivered soon! Check the deliveries box often!", Titan_AA];
-			Wallet= (wallet - Titan_AA);
+			Wallet = (Wallet - Titan_AA);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have orderedRPG 32 Rocket for $%1.00. Your order will be delivered soon! Check the deliveries box often!", RPG32_F ];
-			Wallet= (wallet - RPG32_F);
+			Wallet = (Wallet - RPG32_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have orderedRPG 32 High Explosive Rocketfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", RPG32_HE_F ];
-			Wallet= (wallet - RPG32_HE_F);
+			Wallet = (Wallet - RPG32_HE_F);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

@@ -134,7 +134,7 @@ DoBudget = {
 	if (str (_Bdisplay) != "no display") then {
 		_ChildControl = _Bdisplay displayCtrl 1170;
 		// Change It
-		form_B_DefenseBudget= [B_DefenseBudget] call A3M_handle_number;
+		form_B_DefenseBudget = [B_DefenseBudget] call A3M_handle_number;
 		_ChildControl ctrlSetStructuredText parseText format ["$%1", form_B_DefenseBudget];
 	};
 };
@@ -149,7 +149,7 @@ DoTotal = {
 	if (str (_BTdisplay) != "no display") then {
 		_ChildControl2 = _BTdisplay displayCtrl 1171;
 		// Change It
-		form_B_TotalCost= [B_TotalCost] call A3M_handle_number;
+		form_B_TotalCost = [B_TotalCost] call A3M_handle_number;
 		_ChildControl2 ctrlSetStructuredText parseText format ["$%1", form_B_TotalCost];
 	};
 };

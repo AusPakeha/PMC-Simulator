@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Des_1 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Des_1);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Des_1);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Desert, Gloves) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Des_2 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Des_2);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Des_2);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Desert, Gloves, Kneepads) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Des_5 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Des_5);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Des_5);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Desert, Gloves, Rolled Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Des_3 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Des_3);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Des_3);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Desert, Gloves, Rolled Up, Kneepads) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Des_4 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Des_3);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Des_3);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Desert, Rolled Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Des_6 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Des_6);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Des_6);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Wdl_1 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Wdl_1);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Wdl_1);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Woodland, Gloves) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Wdl_2 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Wdl_2);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Wdl_2);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Woodland, Gloves, Kneepads) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Wdl_5 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Wdl_5);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Wdl_5);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Woodland, Gloves, Rolled Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Wdl_3 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Wdl_3);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Wdl_3);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Woodland, Gloves, Rolled Up, Kneepads) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniformWdl_4 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Wdl_3);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Wdl_3);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Combat Uniform (Woodland, Rolled Up) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Wdl_6 ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Wdl_6);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Wdl_6);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Diver Uniform (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Diver_Des ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Diver_Des);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Diver_Des);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Marine Diver Uniform (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_U_B_MarineCombatUniform_Diver_Wdl ];
-            Wallet= (wallet - EF_U_B_MarineCombatUniform_Diver_Wdl);
+            Wallet = (Wallet - EF_U_B_MarineCombatUniform_Diver_Wdl);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

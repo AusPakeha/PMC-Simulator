@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Duffle Bag (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Black_NoLogo_RF ];
-			Wallet= (wallet - B_DuffleBag_Black_NoLogo_RF);
+			Wallet = (Wallet - B_DuffleBag_Black_NoLogo_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Duffle Bag (Coyote) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Sand_NoLogo_RF ];
-			Wallet= (wallet - B_DuffleBag_Sand_NoLogo_RF);
+			Wallet = (Wallet - B_DuffleBag_Sand_NoLogo_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Duffle Bag (MTP) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_MTP_NoLogo_RF ];
-			Wallet= (wallet - B_DuffleBag_MTP_NoLogo_RF);
+			Wallet = (Wallet - B_DuffleBag_MTP_NoLogo_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Duffle Bag (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Olive_NoLogo_RF ];
-			Wallet= (wallet - B_DuffleBag_Olive_NoLogo_RF);
+			Wallet = (Wallet - B_DuffleBag_Olive_NoLogo_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Sports Duffle Bag (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Black_RF ];
-			Wallet= (wallet - B_DuffleBag_Black_RF);
+			Wallet = (Wallet - B_DuffleBag_Black_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Sports Duffle Bag (Blue) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Blue_RF ];
-			Wallet= (wallet - B_DuffleBag_Blue_RF);
+			Wallet = (Wallet - B_DuffleBag_Blue_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Sports Duffle Bag (Coyote) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Sand_RF ];
-			Wallet= (wallet - B_DuffleBag_Sand_RF);
+			Wallet = (Wallet - B_DuffleBag_Sand_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Sports Duffle Bag (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Olive_RF ];
-			Wallet= (wallet - B_DuffleBag_Olive_RF);
+			Wallet = (Wallet - B_DuffleBag_Olive_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Sports Duffle Bag (Red) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_Red_RF ];
-			Wallet= (wallet - B_DuffleBag_Red_RF);
+			Wallet = (Wallet - B_DuffleBag_Red_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Sports Duffle Bag (Vrana) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", B_DuffleBag_VRANA_RF ];
-			Wallet= (wallet - B_DuffleBag_VRANA_RF);
+			Wallet = (Wallet - B_DuffleBag_VRANA_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

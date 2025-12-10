@@ -5,7 +5,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Booniehat (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_Booniehat_Des ];
-			Wallet= (wallet - EF_H_Booniehat_Des);
+			Wallet = (Wallet - EF_H_Booniehat_Des);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Booniehat (Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_Booniehat_Wdl ];
-			Wallet= (wallet - EF_H_Booniehat_Wdl);
+			Wallet = (Wallet - EF_H_Booniehat_Wdl);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Cap (Navy) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_Cap_Navy ];
-			Wallet= (wallet - EF_H_Cap_Navy);
+			Wallet = (Wallet - EF_H_Cap_Navy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Cap (USS Takmyr) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_Cap_Takmyr ];
-			Wallet= (wallet - EF_H_Cap_Takmyr);
+			Wallet = (Wallet - EF_H_Cap_Takmyr);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Black, Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_black_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_black_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_black_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Desert, Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_desert_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_desert_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_desert_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Grass, Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_grass_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_grass_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_grass_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Sand, Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_sand_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_sand_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_sand_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Tropic, Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_tna_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_tna_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_tna_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -145,7 +145,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Light Combat Helmet (Woodland, Slick) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_HelmetB_light_wdl_slick ];
-			Wallet= (wallet - EF_H_HelmetB_light_wdl_slick);
+			Wallet = (Wallet - EF_H_HelmetB_light_wdl_slick);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -159,7 +159,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH ];
-			Wallet= (wallet - EF_H_MCH);
+			Wallet = (Wallet - EF_H_MCH);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -173,7 +173,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Basic) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_Basic ];
-			Wallet= (wallet - EF_H_MCH_Basic);
+			Wallet = (Wallet - EF_H_MCH_Basic);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -187,7 +187,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Basic, Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_BasicNet_Black ];
-			Wallet= (wallet - EF_H_MCH_BasicNet_Black);
+			Wallet = (Wallet - EF_H_MCH_BasicNet_Black);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -201,7 +201,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Basic, Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_BasicNet_Coy ];
-			Wallet= (wallet - EF_H_MCH_BasicNet_Coy);
+			Wallet = (Wallet - EF_H_MCH_BasicNet_Coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -215,7 +215,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Basic, Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_BasicNet_Des ];
-			Wallet= (wallet - EF_H_MCH_BasicNet_Des);
+			Wallet = (Wallet - EF_H_MCH_BasicNet_Des);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -229,7 +229,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Basic, Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_BasicNet_Olive ];
-			Wallet= (wallet - EF_H_MCH_BasicNet_Olive);
+			Wallet = (Wallet - EF_H_MCH_BasicNet_Olive);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -243,7 +243,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Basic, Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_BasicNet_Wdl ];
-			Wallet= (wallet - EF_H_MCH_BasicNet_Wdl);
+			Wallet = (Wallet - EF_H_MCH_BasicNet_Wdl);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -257,7 +257,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Full) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_Full ];
-			Wallet= (wallet - EF_H_MCH_Full);
+			Wallet = (Wallet - EF_H_MCH_Full);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -271,7 +271,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Full, Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_FullCamo_Black ];
-			Wallet= (wallet - EF_H_MCH_FullCamo_Black);
+			Wallet = (Wallet - EF_H_MCH_FullCamo_Black);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -285,7 +285,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Full, Coyote Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_FullCamo_Coy ];
-			Wallet= (wallet - EF_H_MCH_FullCamo_Coy);
+			Wallet = (Wallet - EF_H_MCH_FullCamo_Coy);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -299,7 +299,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Full, Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_FullCamo_Des ];
-			Wallet= (wallet - EF_H_MCH_FullCamo_Des);
+			Wallet = (Wallet - EF_H_MCH_FullCamo_Des);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -313,7 +313,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Full, Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_FullCamo_Olive ];
-			Wallet= (wallet - EF_H_MCH_FullCamo_Olive);
+			Wallet = (Wallet - EF_H_MCH_FullCamo_Olive);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -327,7 +327,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Combat Helmet (Full, Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_MCH_FullCamo_Wdl ];
-			Wallet= (wallet - EF_H_MCH_FullCamo_Wdl);
+			Wallet = (Wallet - EF_H_MCH_FullCamo_Wdl);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -341,7 +341,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Protecta Headset for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_Protecta ];
-			Wallet= (wallet - EF_H_Protecta);
+			Wallet = (Wallet - EF_H_Protecta);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -355,7 +355,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Utility Cap (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_UtilityCap_Des ];
-			Wallet= (wallet - EF_H_UtilityCap_Des);
+			Wallet = (Wallet - EF_H_UtilityCap_Des);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -369,7 +369,7 @@ case 111: {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Marine Utility Cap (Woodland) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_H_UtilityCap_Wdl ];
-			Wallet= (wallet - EF_H_UtilityCap_Wdl);
+			Wallet = (Wallet - EF_H_UtilityCap_Wdl);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

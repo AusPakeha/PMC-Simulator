@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Map Toolsfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ACE_MapTools];
-            Wallet= (wallet - ACE_MapTools);
+            Wallet = (Wallet - ACE_MapTools);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -20,7 +20,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ZipCuff Cable Restraintfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ACE_CableTie];
-            Wallet= (wallet - ACE_CableTie);
+            Wallet = (Wallet - ACE_CableTie);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -35,7 +35,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Ear Plugsfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ACE_EarPlugs];
-            Wallet= (wallet - ACE_EarPlugs);
+            Wallet = (Wallet - ACE_EarPlugs);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -50,7 +50,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Wire Cuttersfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ACE_wirecutter];
-            Wallet= (wallet - ACE_wirecutter);
+            Wallet = (Wallet - ACE_wirecutter);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -64,7 +64,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Spare Barrelfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ACE_SpareBarrel];
-            Wallet= (wallet - ACE_SpareBarrel);
+            Wallet = (Wallet - ACE_SpareBarrel);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Carrier GL Rig (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_lxWS_PlateCarrierGL_desert ];
-            Wallet= (wallet - V_lxWS_PlateCarrierGL_desert);
+            Wallet = (Wallet - V_lxWS_PlateCarrierGL_desert);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Carrier Lite (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_lxWS_PlateCarrier1_desert ];
-            Wallet= (wallet - V_lxWS_PlateCarrier1_desert);
+            Wallet = (Wallet - V_lxWS_PlateCarrier1_desert);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Carrier Rig (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_lxWS_PlateCarrier2_desert ];
-            Wallet= (wallet - V_lxWS_PlateCarrier2_desert);
+            Wallet = (Wallet - V_lxWS_PlateCarrier2_desert);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Carrier Special Rig (Desert) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_lxWS_PlateCarrierSpec_desert ];
-            Wallet= (wallet - V_lxWS_PlateCarrierSpec_desert);
+            Wallet = (Wallet - V_lxWS_PlateCarrierSpec_desert);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered CTRG Plate Carrier Rig for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_PlateCarrier_CTRG_lxWS ];
-            Wallet= (wallet - V_PlateCarrier_CTRG_lxWS);
+            Wallet = (Wallet - V_PlateCarrier_CTRG_lxWS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered LBV Harness (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_lxWS_HarnessO_oli ];
-            Wallet= (wallet - V_lxWS_HarnessO_oli);
+            Wallet = (Wallet - V_lxWS_HarnessO_oli);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Raven Vest (Olive) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", V_lxWS_TacVestIR_oli ];
-            Wallet= (wallet - V_lxWS_TacVestIR_oli);
+            Wallet = (Wallet - V_lxWS_TacVestIR_oli);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

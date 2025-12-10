@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered an ACE Tactical Ladder(Backpack) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ACE_TacticalLadder_Pack];
-			Wallet= (wallet - ACE_TacticalLadder_Pack);
+			Wallet = (Wallet - ACE_TacticalLadder_Pack);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Leather Jacket (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", U_C_PilotJacket_black_RF ];
-			Wallet= (wallet - U_C_PilotJacket_black_RF);
+			Wallet = (Wallet - U_C_PilotJacket_black_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Leather Jacket (Black, Open) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", U_C_PilotJacket_open_black_RF ];
-			Wallet= (wallet - U_C_PilotJacket_open_black_RF);
+			Wallet = (Wallet - U_C_PilotJacket_open_black_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Leather Jacket (Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", U_C_PilotJacket_brown_RF ];
-			Wallet= (wallet - U_C_PilotJacket_brown_RF);
+			Wallet = (Wallet - U_C_PilotJacket_brown_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Leather Jacket (Brown, Open) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", U_C_PilotJacket_open_brown_RF ];
-			Wallet= (wallet - U_C_PilotJacket_open_brown_RF);
+			Wallet = (Wallet - U_C_PilotJacket_open_brown_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Leather Jacket (Light Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", U_C_PilotJacket_lbrown_RF ];
-			Wallet= (wallet - U_C_PilotJacket_lbrown_RF);
+			Wallet = (Wallet - U_C_PilotJacket_lbrown_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Leather Jacket (Light Brown, Open) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", U_C_PilotJacket_open_lbrown_RF ];
-			Wallet= (wallet - U_C_PilotJacket_open_lbrown_RF);
+			Wallet = (Wallet - U_C_PilotJacket_open_lbrown_RF);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

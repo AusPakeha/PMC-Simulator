@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered First Aid Kitfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", FirstAidKit ];
-			Wallet= (wallet - FirstAidKit);
+			Wallet = (Wallet - FirstAidKit);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Medikitfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", Medikit ];
-			Wallet= (wallet - Medikit);
+			Wallet = (Wallet - Medikit);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

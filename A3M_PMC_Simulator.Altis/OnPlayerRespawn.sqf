@@ -53,7 +53,7 @@ if (_FreeBed1 == 1) then { player moveInCargo HBed1 } else {
 
 medicalDeductible = paramsArray select 8;
 
-Wallet = (wallet - medicalDeductible );
+Wallet = (Wallet - medicalDeductible );
 profileNamespace setVariable ["SavedMoney", Wallet];
 saveProfileNamespace;
 

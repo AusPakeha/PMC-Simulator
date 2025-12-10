@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Blue Smoke Grenade for $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShellBlue ];
-			Wallet= (wallet - SmokeShellBlue);
+			Wallet = (Wallet - SmokeShellBlue);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Green Smoke Grenade for $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShellGreen ];
-			Wallet= (wallet - SmokeShellGreen);
+			Wallet = (Wallet - SmokeShellGreen);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Orange Smoke Grenadefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShellOrange];
-			Wallet= (wallet - SmokeShellOrange);
+			Wallet = (Wallet - SmokeShellOrange);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Purple Smoke Grenadefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShellPurple];
-			Wallet= (wallet - SmokeShellPurple);
+			Wallet = (Wallet - SmokeShellPurple);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Red Smoke Grenade for $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShellRed ];
-			Wallet= (wallet - SmokeShellRed);
+			Wallet = (Wallet - SmokeShellRed);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered White (Standard) Smoke Grenade for $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShell ];
-			Wallet= (wallet - SmokeShell);
+			Wallet = (Wallet - SmokeShell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered Yellow Smoke Grenadefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", SmokeShellYellow];
-			Wallet= (wallet - SmokeShellYellow);
+			Wallet = (Wallet - SmokeShellYellow);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (Blue) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_SmokeBlue_Grenade_shell ];
-			Wallet= (wallet - M_1Rnd_SmokeBlue_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_SmokeBlue_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_SmokeGreen_Grenade_shell ];
-			Wallet= (wallet - M_1Rnd_SmokeGreen_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_SmokeGreen_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (Orange) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_SmokeOrange_Grenade_shell];
-			Wallet= (wallet - M_1Rnd_SmokeOrange_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_SmokeOrange_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (Purple) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_SmokePurple_Grenade_shell];
-			Wallet= (wallet - M_1Rnd_SmokePurple_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_SmokePurple_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (Red)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_SmokeRed_Grenade_shell ];
-			Wallet= (wallet - M_1Rnd_SmokeRed_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_SmokeRed_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (White) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_Smoke_Grenade_shell ];
-			Wallet= (wallet - M_1Rnd_Smoke_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_Smoke_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered 40mm Smoke Grenade (Yellow) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", M_1Rnd_SmokeYellow_Grenade_shell];
-			Wallet= (wallet - M_1Rnd_SmokeYellow_Grenade_shell);
+			Wallet = (Wallet - M_1Rnd_SmokeYellow_Grenade_shell);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

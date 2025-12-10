@@ -5,7 +5,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Laser Designatorfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", Laserdesignator];
-            Wallet= (wallet - Laserdesignator);
+            Wallet = (Wallet - Laserdesignator);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered NV Goggles (Gen3, Brown) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGoggles];
-            Wallet= (wallet - NVGoggles);
+            Wallet = (Wallet - NVGoggles);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered NV Goggles (Gen3, Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGoggles_OPFOR];
-            Wallet= (wallet - NVGoggles_OPFOR);
+            Wallet = (Wallet - NVGoggles_OPFOR);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered NV Goggles (Gen3, Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGoggles_INDEP];
-            Wallet= (wallet - NVGoggles_INDEP);
+            Wallet = (Wallet - NVGoggles_INDEP);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered NV Goggles (Gen3, Tropic) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGoggles_tna_F];
-            Wallet= (wallet - NVGoggles_tna_F);
+            Wallet = (Wallet - NVGoggles_tna_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered U.S. Military Range Finderfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", Rangefinder];
-            Wallet= (wallet - Rangefinder);
+            Wallet = (Wallet - Rangefinder);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Tactical Flashlightfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", acc_flashlight ];
-            Wallet= (wallet - acc_flashlight);
+            Wallet = (Wallet - acc_flashlight);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Infrared Laser Pointerfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", acc_pointer_IR];
-            Wallet= (wallet - acc_pointer_IR);
+            Wallet = (Wallet - acc_pointer_IR);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered UAV Control Interfacefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", I_UAVTerminal];
-            Wallet= (wallet - I_UAVTerminal);
+            Wallet = (Wallet - I_UAVTerminal);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Outdoorsman GPS Devicefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ItemGPS];
-            Wallet= (wallet - ItemGPS);
+            Wallet = (Wallet - ItemGPS);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Cobra Radio for $%1.00. Your order will be delivered soon! Check the deliveries box often!", ItemRadio];
-            Wallet= (wallet - ItemRadio);
+            Wallet = (Wallet - ItemRadio);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Casio Survival Watchfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", ItemWatch];
-            Wallet= (wallet - ItemWatch);
+            Wallet = (Wallet - ItemWatch);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered U.S. Army Mine Detection Devicefor $%1.00. Your order will be delivered soon! Check the deliveries box often!", MineDetector];
-            Wallet= (wallet - MineDetector);
+            Wallet = (Wallet - MineDetector);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Duracell Batteriesfor $%1.00. Your order will be delivered soon! Check the deliveries box often!", Laserbatteries];
-            Wallet= (wallet - Laserbatteries);
+            Wallet = (Wallet - Laserbatteries);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -201,7 +201,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Compact NVG (Green Hex) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", O_NVGoggles_ghex_F];
-            Wallet= (wallet - O_NVGoggles_ghex_F);
+            Wallet = (Wallet - O_NVGoggles_ghex_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -215,7 +215,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Compact NVG (Hex) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", O_NVGoggles_hex_F];
-            Wallet= (wallet - O_NVGoggles_hex_F);
+            Wallet = (Wallet - O_NVGoggles_hex_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -229,7 +229,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Compact NVG (Urban) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", O_NVGoggles_urb_F];
-            Wallet= (wallet - O_NVGoggles_urb_F);
+            Wallet = (Wallet - O_NVGoggles_urb_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -243,7 +243,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered Compact NVG (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", O_NVGoggles_grn_F];
-            Wallet= (wallet - O_NVGoggles_grn_F);
+            Wallet = (Wallet - O_NVGoggles_grn_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -257,7 +257,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ENVG-II (Black) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGogglesB_blk_F];
-            Wallet= (wallet - NVGogglesB_blk_F);
+            Wallet = (Wallet - NVGogglesB_blk_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -271,7 +271,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ENVG-II (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGogglesB_grn_F];
-            Wallet= (wallet - NVGogglesB_grn_F);
+            Wallet = (Wallet - NVGogglesB_grn_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;
@@ -285,7 +285,7 @@ switch (TheSelection) do {
         } else {
             PlaySound "A3M_buy";
             Hint format ["You have ordered ENVG-II (Grey) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", NVGogglesB_gry_F];
-            Wallet= (wallet - NVGogglesB_gry_F);
+            Wallet = (Wallet - NVGogglesB_gry_F);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
             sleep DeliveryTime;

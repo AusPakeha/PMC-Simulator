@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered LPNVG for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_LPNVG ];
-			Wallet= (wallet - EF_LPNVG);
+			Wallet = (Wallet - EF_LPNVG);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered LPNVG-T for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_LPNVG_T ];
-			Wallet= (wallet - EF_LPNVG_T);
+			Wallet = (Wallet - EF_LPNVG_T);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered LPNVG-T (Tan) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_LPNVG_T_Tan ];
-			Wallet= (wallet - EF_LPNVG_T_Tan);
+			Wallet = (Wallet - EF_LPNVG_T_Tan);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered LPNVG (Tan) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", EF_LPNVG_Tan ];
-			Wallet= (wallet - EF_LPNVG_Tan);
+			Wallet = (Wallet - EF_LPNVG_Tan);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;

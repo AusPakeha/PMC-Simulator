@@ -5,7 +5,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered VOG-40 (White Flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_vg40op_white ];
-			Wallet= (wallet - rhs_vg40op_white);
+			Wallet = (Wallet - rhs_vg40op_white);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -19,7 +19,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered VOG-40 (Green Flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_vg40op_green ];
-			Wallet= (wallet - rhs_vg40op_green);
+			Wallet = (Wallet - rhs_vg40op_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -33,7 +33,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered VOG-40 (Red Flare)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_vg40op_red ];
-			Wallet= (wallet - rhs_vg40op_red);
+			Wallet = (Wallet - rhs_vg40op_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -47,7 +47,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered GRD-40 (White Smoke)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_GRD40_white ];
-			Wallet= (wallet - rhs_GRD40_white);
+			Wallet = (Wallet - rhs_GRD40_white);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -61,7 +61,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered GRD-40 (Green Smoke)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_GRD40_green];
-			Wallet= (wallet - rhs_GRD40_green);
+			Wallet = (Wallet - rhs_GRD40_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -75,7 +75,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered GRD-40 (Red Smoke)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_GRD40_red ];
-			Wallet= (wallet - rhs_GRD40_red);
+			Wallet = (Wallet - rhs_GRD40_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -89,7 +89,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered RSP (White) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_weap_rsp30_white];
-			Wallet= (wallet - rhs_weap_rsp30_white);
+			Wallet = (Wallet - rhs_weap_rsp30_white);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -103,7 +103,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered RSP (Green) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_weap_rsp30_green ];
-			Wallet= (wallet - rhs_weap_rsp30_green);
+			Wallet = (Wallet - rhs_weap_rsp30_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -117,7 +117,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered RSP (Red) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_weap_rsp30_red ];
-			Wallet= (wallet - rhs_weap_rsp30_red);
+			Wallet = (Wallet - rhs_weap_rsp30_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -131,7 +131,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M585 (White flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M585_white ];
-			Wallet= (wallet - rhs_mag_M585_white);
+			Wallet = (Wallet - rhs_mag_M585_white);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -145,7 +145,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M661 (Green flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M661_green ];
-			Wallet= (wallet - rhs_mag_M661_green);
+			Wallet = (Wallet - rhs_mag_M661_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -159,7 +159,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M662 (Red flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M662_red ];
-			Wallet= (wallet - rhs_mag_M662_red);
+			Wallet = (Wallet - rhs_mag_M662_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -173,7 +173,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M713 (Red Smoke)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M713_red ];
-			Wallet= (wallet - rhs_mag_M713_red);
+			Wallet = (Wallet - rhs_mag_M713_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -187,7 +187,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M714 (White Smoke) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M714_white ];
-			Wallet= (wallet - rhs_mag_M714_white);
+			Wallet = (Wallet - rhs_mag_M714_white);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -201,7 +201,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M715 (Green Smoke) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M715_green ];
-			Wallet= (wallet - rhs_mag_M715_green);
+			Wallet = (Wallet - rhs_mag_M715_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -215,7 +215,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M716 (Yellow Smoke) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_M716_yellow];
-			Wallet= (wallet - rhs_mag_M716_yellow);
+			Wallet = (Wallet - rhs_mag_M716_yellow);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -229,7 +229,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M8HC Smoke (white) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_an_m8hc];
-			Wallet= (wallet - rhs_mag_an_m8hc);
+			Wallet = (Wallet - rhs_mag_an_m8hc);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -243,7 +243,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M18 Smoke (Purple) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_m18_purple];
-			Wallet= (wallet - rhs_mag_m18_purple);
+			Wallet = (Wallet - rhs_mag_m18_purple);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -257,7 +257,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M18 Smoke (Green)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_m18_green ];
-			Wallet= (wallet - rhs_mag_m18_green);
+			Wallet = (Wallet - rhs_mag_m18_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -271,7 +271,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M18 Smoke (Red) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_m18_red ];
-			Wallet= (wallet - rhs_mag_m18_red);
+			Wallet = (Wallet - rhs_mag_m18_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -285,7 +285,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered M18 Smoke (Yellow)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_m18_yellow ];
-			Wallet= (wallet - rhs_mag_m18_yellow);
+			Wallet = (Wallet - rhs_mag_m18_yellow);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -299,7 +299,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered RGD-2 (white smoke) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_rdg2_white];
-			Wallet= (wallet - rhs_mag_rdg2_white);
+			Wallet = (Wallet - rhs_mag_rdg2_white);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -313,7 +313,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered RGD-2 (black smoke)for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_rdg2_black];
-			Wallet= (wallet - rhs_mag_rdg2_black);
+			Wallet = (Wallet - rhs_mag_rdg2_black);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -327,7 +327,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered NSP-N (yellow flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_nspn_yellow];
-			Wallet= (wallet - rhs_mag_nspn_yellow);
+			Wallet = (Wallet - rhs_mag_nspn_yellow);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -341,7 +341,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered NSP-N (red flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_nspn_red];
-			Wallet= (wallet - rhs_mag_nspn_red);
+			Wallet = (Wallet - rhs_mag_nspn_red);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -355,7 +355,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered NSP-N (green flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_nspn_green];
-			Wallet= (wallet - rhs_mag_nspn_green);
+			Wallet = (Wallet - rhs_mag_nspn_green);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
@@ -369,7 +369,7 @@ switch (TheSelection) do {
 		} else {
 			PlaySound "A3M_buy";
 			Hint format ["You have ordered NSP-D (red flare) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_mag_nspd];
-			Wallet= (wallet - rhs_mag_nspd);
+			Wallet = (Wallet - rhs_mag_nspd);
 			profileNamespace setVariable ["SavedMoney", Wallet];
 			saveProfileNamespace;
 			sleep DeliveryTime;
