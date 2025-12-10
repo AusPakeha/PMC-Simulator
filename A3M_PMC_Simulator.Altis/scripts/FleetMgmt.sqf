@@ -86,11 +86,7 @@ if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
 
 // ///////////////////////////////////////////////////////////////////////////////////
 // Initial Budget for side - Change in ParamsArray!
-<<<<<<< HEAD
 B_InitialBudget = paramsArray select 1;
-=======
-B_initialbudget = paramsArray select 1;
->>>>>>> 4ec6165b0144e6d3de028acd461f04b20627d996
 // rating to Purchase values
 B_vaslimit = 0;
 B_Mlimit = 3500;
@@ -127,7 +123,7 @@ if (isnil "B_TotalCost") then {
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 // Open dialog
-_handle= CreateDialog "A3M_store";
+_handle = CreateDialog "A3M_store";
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 // Update Budget Balance in GUI
@@ -208,7 +204,6 @@ lbAdd [2175, "Reaction Forces"];
 lbAdd [2175, "Western Sahara"];
 lbAdd [2175, "Expeditionary Forces"];
 
-// End Supported Mods.
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // Add Wheeled vehicles to Main list
 DoAddWheel = {
@@ -392,6 +387,7 @@ DoAddFixedWing = {
 		getText(configFile >> "CfgVehicles">> "RHS_C130J">> "picture"); lbSetPicture [1575, 5, _Pic4 ]; lbSetPictureColor [1575, 3, [0.738, 0.714, 0.417, 1 ]];
 	};
 };
+
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // Add Rotary Aircraft to Main list
 DoAddRotary = {
@@ -502,6 +498,7 @@ DoAddRotary = {
 		getText(configFile >> "CfgVehicles">> "EF_B_Heli_Transport_01_pylons_MJTF_Wdl">> "picture"); lbSetPicture [1575, 44, _Pic45 ]; lbSetPictureColor [1575, 44, [0.738, 0.714, 0.417, 1 ]];
 	};
 };
+
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // Add Armored vehicles to Main list
 DoAddArmored = {
@@ -524,6 +521,8 @@ DoAddArmored = {
 	};
 };
 
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Add Robotic vehicles to Main list
 DoAddRobotics = {
 	wheelson = 0;
 	wingson = 0;
@@ -548,6 +547,8 @@ DoAddRobotics = {
 	};
 };
 
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Add Support vehicles to Main list
 DoAddSupport = {
 	wheelson = 0;
 	wingson = 0;
@@ -586,6 +587,8 @@ DoAddSupport = {
 	};
 };
 
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Add Upgrade vehicles to Main list
 DoAddUpgrades = {
 	wheelson = 0;
 	wingson = 0;
@@ -599,4 +602,3 @@ DoAddUpgrades = {
 	lbAdd [1575, "Transport UH-60M Price: $22, 500, 000.00 "];
 	getText(configFile >> "CfgVehicles">> "rhs_uh60m" >> "picture"); lbSetPicture [1575, 0, _Pic1 ]; lbSetPictureColor [1575, 0, [0.738, 0.714, 0.417, 1 ]];
 };
-// EOF

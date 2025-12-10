@@ -84,10 +84,7 @@ class Header {
 #include "INC_undercover\cfgFunctions.hpp"
 
 #include "configs\CfgFleet.hpp"
-<<<<<<< HEAD
-=======
 #include "configs\CfgStore.hpp"
->>>>>>> 4ec6165b0144e6d3de028acd461f04b20627d996
 
 class Extended_InitPost_EventHandlers {
     class CAManBase {
