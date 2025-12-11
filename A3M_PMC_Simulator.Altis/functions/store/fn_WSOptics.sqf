@@ -1,0 +1,27 @@
+switch (TheSelection) do {
+    case 18 : {["optic_ACO_grn_camo_lxWS", "ACO (Green, Stripes)", "deliveries"] call A3M_fnc_buyItem; };
+    case 19 : {["optic_ACO_camo_lxWS", "ACO (Red, Stripes)", "deliveries"] call A3M_fnc_buyItem; };
+    case 20 : {["optic_r1_high_lxWS", "RDS (High, Black)", "deliveries"] call A3M_fnc_buyItem; };
+    case 21 : {["optic_r1_low_lxWS", "RDS (Low, Black)", "deliveries"] call A3M_fnc_buyItem; };
+    case 22 : {["optic_r1_high_khaki_lxWS", "RDS (High, Khaki)", "deliveries"] call A3M_fnc_buyItem; };
+    case 23 : {["optic_r1_low_khaki_lxWS", "RDS (Low, Khaki)", "deliveries"] call A3M_fnc_buyItem; };
+    case 24 : {["optic_r1_high_sand_lxWS", "RDS (High, Sand)", "deliveries"] call A3M_fnc_buyItem; };
+    case 25 : {["optic_r1_high_black_sand_lxWS", "RDS (High, Black, Sand)", "deliveries"] call A3M_fnc_buyItem; };
+    case 26 : {["optic_r1_low_sand_lxWS", "RDS (Low, Sand)", "deliveries"] call A3M_fnc_buyItem; };
+    case 27 : {["optic_r1_high_snake_lxWS", "RDS (High, Snake)", "deliveries"] call A3M_fnc_buyItem; };
+    case 28 : {["optic_r1_low_snake_lxWS", "RDS (Low, Snake)", "deliveries"] call A3M_fnc_buyItem; };
+    case 29 : {["optic_r1_high_arid_lxWS", "RDS (High, Arid)", "deliveries"] call A3M_fnc_buyItem; };
+    case 30 : {["optic_r1_low_arid_lxWS", "RDS (Low, Arid)", "deliveries"] call A3M_fnc_buyItem; };
+    case 31 : {["optic_r1_high_lush_lxWS", "RDS (High, Lush)", "deliveries"] call A3M_fnc_buyItem; };
+    case 32 : {["optic_r1_low_lush_lxWS", "RDS (Low, Lush)", "deliveries"] call A3M_fnc_buyItem; };
+    case 33 : {["optic_DMS_Snake_lxWS", "Burris XTR II (Snake)", "deliveries"] call A3M_fnc_buyItem; };
+    case 34 : {["optic_ACO_grn_camo_lxWS", "C-More Railway (Green, Stripes)", "deliveries"] call A3M_fnc_buyItem; };
+    case 35 : {["optic_ACO_camo_lxWS", "C-More Railway (Red, Stripes)", "deliveries"] call A3M_fnc_buyItem; };
+    case 36 : {["optic_Arco_hex_lxWS", "ELCAN SpecterOS (Hex)", "deliveries"] call A3M_fnc_buyItem; };
+    case 37 : {["optic_Holosight_snake_lxWS", "EOTech XPS3 (Snake)", "deliveries"] call A3M_fnc_buyItem; };
+    case 39 : {["optic_Holosight_smg_snake_lxWS", "EOTech XPS3 SMG (Snake)", "deliveries"] call A3M_fnc_buyItem; };
+    case 40 : {["optic_Hamr_arid_lxWS", "Leupold Mk4 HAMR (Arid)", "deliveries"] call A3M_fnc_buyItem; };
+    case 41 : {["optic_Hamr_lush_lxWS", "Leupold Mk4 HAMR (Lush)", "deliveries"] call A3M_fnc_buyItem; };
+    case 42 : {["optic_Hamr_sand_lxWS", "Leupold Mk4 HAMR (Sand)", "deliveries"] call A3M_fnc_buyItem; };
+    case 43 : {["optic_Hamr_snake_lxWS", "Leupold Mk4 HAMR (Snake)", "deliveries"] call A3M_fnc_buyItem; };
+};

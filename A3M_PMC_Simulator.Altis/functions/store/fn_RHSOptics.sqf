@@ -1,10 +1,10 @@
 switch (TheSelection) do {
-    case 18: {
-        if (Wallet < rhs_acc_1p29) then {
+    case 18: { ["rhs_acc_1p29", "1P29", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_1p29 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered 1P29 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1p29 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1p29 ];
             Wallet = (Wallet - rhs_acc_1p29);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -13,12 +13,12 @@ switch (TheSelection) do {
             hint "Mail Call: Your 1P29 has arrived in the deliveries box";
         };
     };
-    case 19: {
-        if (Wallet < rhs_acc_1p63) then {
+    case 19: { ["rhs_acc_1p63", "1P63", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_1p63 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered 1P63for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1p63 ];
+            Hint format ["You have ordered for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1p63 ];
             Wallet = (Wallet - rhs_acc_1p63);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -28,12 +28,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 20: {
-        if (Wallet < rhs_acc_1pn93_1) then {
+    case 20: { ["rhs_acc_1pn93_1", "1PN93-1 (Night vision)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_1pn93_1 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered 1PN93-1 (Night vision) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1pn93_1 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1pn93_1 ];
             Wallet = (Wallet - rhs_acc_1pn93_1);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -43,12 +43,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 21: {
-        if (Wallet < rhs_acc_1pn93_2) then {
+    case 21: { ["rhs_acc_1pn93_2", "1PN93-2 (Night vision - RPG)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_1pn93_2 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered 1PN93-2 (Night vision - RPG) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1pn93_2 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_1pn93_2 ];
             Wallet = (Wallet - rhs_acc_1pn93_2);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -58,12 +58,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 22: {
-        if (Wallet < rhs_acc_ekp1) then {
+    case 22: { ["rhs_acc_ekp1", "EKP-1 Kobra", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_ekp1 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered EKP-1 Kobra for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_ekp1 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_ekp1 ];
             Wallet = (Wallet - rhs_acc_ekp1);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -73,12 +73,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 23: {
-        if (Wallet < rhs_acc_pgo7v) then {
+    case 23: { ["rhs_acc_pgo7v", "PGO-7V (RPG optic)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_pgo7v ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered PGO-7V (RPG optic) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_pgo7v ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_pgo7v ];
             Wallet = (Wallet - rhs_acc_pgo7v);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -88,12 +88,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 24: {
-        if (Wallet < rhs_acc_pkas) then {
+    case 24: { ["rhs_acc_pkas", "PK-AS (Reflex)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_pkas ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered PK-AS (Reflex) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_pkas ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_pkas ];
             Wallet = (Wallet - rhs_acc_pkas);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -103,12 +103,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 25: {
-        if (Wallet < rhs_acc_pso1m2) then {
+    case 25: { ["rhs_acc_pso1m2", "PSO-1M2 (4x24 tele)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_acc_pso1m2 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered PSO-1M2 (4x24 tele) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_pso1m2 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhs_acc_pso1m2 ];
             Wallet = (Wallet - rhs_acc_pso1m2);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -118,12 +118,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 26: {
-        if (Wallet < rhsusf_acc_EOTECH) then {
+    case 26: { ["rhsusf_acc_EOTECH", "EOtech XPS3", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_EOTECH ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered EOtech XPS3 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_EOTECH ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_EOTECH ];
             Wallet = (Wallet - rhsusf_acc_EOTECH);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -133,12 +133,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 27: {
-        if (Wallet < rhsusf_acc_eotech_552) then {
+    case 27: { ["rhsusf_acc_eotech_552", "EOtech M552", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_eotech_552];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered EOtech M552 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_eotech_552];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_eotech_552];
             Wallet = (Wallet - rhsusf_acc_eotech_552);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -148,12 +148,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 28: {
-        if (Wallet < rhsusf_acc_LEUPOLDMK4) then {
+    case 28: { ["rhsusf_acc_LEUPOLDMK4", "Leupold Mk4 (3.5-10x40mm)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_LEUPOLDMK4 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered Leupold Mk4 (3.5-10x40mm)* for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_LEUPOLDMK4 ];
+            Hint format ["You have ordered * for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_LEUPOLDMK4 ];
             Wallet = (Wallet - rhsusf_acc_LEUPOLDMK4);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -163,12 +163,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 29: {
-        if (Wallet < rhsusf_acc_LEUPOLDMK4_2) then {
+    case 29: { ["rhsusf_acc_LEUPOLDMK4_2", "Leupold Mk4 (6.5-20x50mm)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_LEUPOLDMK4_2 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered Leupold Mk4 (6.5-20x50mm) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_LEUPOLDMK4_2 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_LEUPOLDMK4_2 ];
             Wallet = (Wallet - rhsusf_acc_LEUPOLDMK4_2);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -178,12 +178,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 30: {
-        if (Wallet < rhsusf_acc_ELCAN) then {
+    case 30: { ["rhsusf_acc_ELCAN", "M145 MGO Elcan", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ELCAN ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M145 MGO Elcan for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ELCAN ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ELCAN ];
             Wallet = (Wallet - rhsusf_acc_ELCAN);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -193,12 +193,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 31: {
-        if (Wallet < rhsusf_acc_ELCAN_PIP) then {
+    case 31: { ["rhsusf_acc_ELCAN_PIP", "M145 MGO Elcan (PiP)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ELCAN_PIP];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M145 MGO Elcan (PiP) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ELCAN_PIP];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ELCAN_PIP];
             Wallet = (Wallet - rhsusf_acc_ELCAN_PIP);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -208,12 +208,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 32: {
-        if (Wallet < rhsusf_acc_ACOG) then {
+    case 32: { ["rhsusf_acc_ACOG", "M150 RCO ACOG", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M150 RCO ACOG for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG ];
             Wallet = (Wallet - rhsusf_acc_ACOG);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -223,12 +223,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 33: {
-        if (Wallet < rhsusf_acc_ACOG_PIP) then {
+    case 33: { ["rhsusf_acc_ACOG_PIP", "M150 RCO ACOG (PiP)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG_PIP];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M150 RCO ACOG (PiP) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG_PIP];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG_PIP];
             Wallet = (Wallet - rhsusf_acc_ACOG_PIP);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -238,12 +238,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 34: {
-        if (Wallet < rhsusf_acc_ACOG2) then {
+    case 34: { ["rhsusf_acc_ACOG2", "M150 RCO ACOG (ARD)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG2 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M150 RCO ACOG (ARD) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG2 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG2 ];
             Wallet = (Wallet - rhsusf_acc_ACOG2);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -253,12 +253,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 35: {
-        if (Wallet < rhsusf_acc_ACOG3) then {
+    case 35: { ["rhsusf_acc_ACOG3", "M150 RCO ACOG (ARD/Lens Cover)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG3 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M150 RCO ACOG (ARD/Lens Cover) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG3 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG3 ];
             Wallet = (Wallet - rhsusf_acc_ACOG3);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -268,12 +268,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 36: {
-        if (Wallet < rhsusf_acc_ACOG_USMC) then {
+    case 36: { ["rhsusf_acc_ACOG_USMC", "AN/PVQ-31", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG_USMC];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered AN/PVQ-31 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG_USMC];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG_USMC];
             Wallet = (Wallet - rhsusf_acc_ACOG_USMC);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -283,12 +283,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 37: {
-        if (Wallet < rhsusf_acc_ACOG2_USMC) then {
+    case 37: { ["rhsusf_acc_ACOG2_USMC", "AN/PVQ-31 (ARD)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG2_USMC ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered AN/PVQ-31 (ARD) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG2_USMC ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG2_USMC ];
             Wallet = (Wallet - rhsusf_acc_ACOG2_USMC);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -298,12 +298,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 38: {
-        if (Wallet < rhsusf_acc_ACOG3_USMC) then {
+    case 38: { ["rhsusf_acc_ACOG3_USMC", "AN/PVQ-31 (ARD/Lens Cover)", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_ACOG3_USMC];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered AN/PVQ-31 (ARD/Lens Cover) for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG3_USMC];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_ACOG3_USMC];
             Wallet = (Wallet - rhsusf_acc_ACOG3_USMC);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;
@@ -313,12 +313,12 @@ switch (TheSelection) do {
         };
     };
 
-    case 39: {
-        if (Wallet < rhsusf_acc_compm4) then {
+    case 39: { ["rhsusf_acc_compm4", "M68 CCO Aimpoint M4", "deliveries"] call A3M_fnc_buyItem; };
+        if (Wallet < ) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhsusf_acc_compm4 ];
         } else {
             PlaySound "A3M_buy";
-            Hint format ["You have ordered M68 CCO Aimpoint M4 for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_compm4 ];
+            Hint format ["You have ordered  for $%1.00. Your order will be delivered soon! Check the deliveries box often!", rhsusf_acc_compm4 ];
             Wallet = (Wallet - rhsusf_acc_compm4);
             profileNamespace setVariable ["SavedMoney", Wallet];
             saveProfileNamespace;

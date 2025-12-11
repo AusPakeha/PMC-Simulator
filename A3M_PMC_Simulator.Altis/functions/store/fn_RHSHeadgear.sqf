@@ -1833,7 +1833,7 @@ case 141: {
             hint "Mail Call: Your Headgear has arrived in the deliveries box";
         };
     };
-142case 131: {
+case 142: {
         if (Wallet < rhs_tsh4_bala) then {
             Hint Format ["Attention: Your Card Was Declined in the amount of:\n $%1.00 \n Please contact your financial institution.", rhs_tsh4_bala ];
         } else {

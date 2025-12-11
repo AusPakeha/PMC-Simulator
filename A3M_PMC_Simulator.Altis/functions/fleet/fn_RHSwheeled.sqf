@@ -24,7 +24,7 @@ switch (TheSelection) do {
     case 26: { ["rhsusf_M1078A1P2_B_M2_wd_open_fmtv_usarmy", "USA (Army 2014) M1078A1P2-B (M2/Open)", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 27: { ["rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy", "USA (Army 2014) M1078A1P2-B (M2/Flatbed)", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 28: { ["rhsusf_M1083A1P2_wd_fmtv_usarmy_10", "USA (Army 2010)M1083A1P2", "vehspawn"] call A3M_fnc_buyVehicle; };
-    case 29: { [" rhsusf_M1083A1P2_wd_open_fmtv_usarmy_10", "USA (Army 2010) M1083A1P2 (Open)", "vehspawn"] call A3M_fnc_buyVehicle; };
+    case 29: { ["rhsusf_M1083A1P2_wd_open_fmtv_usarmy_10", "USA (Army 2010) M1083A1P2 (Open)", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 30: { ["rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy_10", "USA (Army 2010)M1083A1P2 (Flatbed)", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 31: { ["rhsusf_M1083A1P2_B_wd_fmtv_usarmy_10", "USA (Army 2010) M1083A1P2-B", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 32: { ["rhsusf_M1083A1P2_B_wd_open_fmtv_usarmy_10", "USA (Army 2010) M1083A1P2-B (Open)", "vehspawn"] call A3M_fnc_buyVehicle; };

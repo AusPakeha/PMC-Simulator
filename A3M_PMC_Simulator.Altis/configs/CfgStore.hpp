@@ -159,6 +159,41 @@ class CfgStore {
             {"optic_Yorris",975},
 
             // EF Optics
+            // Rf Optics
+            {"optic_ACO_grn_desert_RF",350},
+            {"optic_ACO_grn_wood_RF",350},
+            {"optic_ACO_desert_RF",350},
+            {"optic_ACO_wood_RF",350},
+            {"optic_VRCO_RF",510},
+            {"optic_VRCO_khk_RF",510},
+            {"optic_VRCO_tan_RF",510},
+
+            // WS Optics
+            {"optic_ACO_grn_camo_lxWS",250},
+            {"optic_ACO_camo_lxWS",250},
+            {"optic_r1_high_lxWS",250},
+            {"optic_r1_low_lxWS",250},
+            {"optic_r1_high_khaki_lxWS",250},
+            {"optic_r1_low_khaki_lxWS",250},
+            {"optic_r1_high_sand_lxWS",250},
+            {"optic_r1_high_black_sand_lxWS",250},
+            {"optic_r1_low_sand_lxWS",250},
+            {"optic_r1_high_snake_lxWS",250},
+            {"optic_r1_low_snake_lxWS",250},
+            {"optic_r1_high_arid_lxWS",250},
+            {"optic_r1_low_arid_lxWS",250},
+            {"optic_r1_high_lush_lxWS",250},
+            {"optic_r1_low_lush_lxWS",250},
+            {"optic_DMS_Snake_lxWS",250},
+            {"optic_ACO_grn_camo_lxWS",250},
+            {"optic_ACO_camo_lxWS",250},
+            {"optic_Arco_hex_lxWS",250},
+            {"optic_Holosight_snake_lxWS",250},
+            {"optic_Holosight_smg_snake_lxWS",250},
+            {"optic_Hamr_arid_lxWS",450},
+            {"optic_Hamr_lush_lxWS",450},
+            {"optic_Hamr_sand_lxWS",450},
+            {"optic_Hamr_snake_lxWS",450},
 
             // RHS: Escalation Optics
             {"rhs_acc_1p29",650},
@@ -577,6 +612,10 @@ class CfgStore {
             {"launch_PSRL1_PWS_black_RF",700},
             {"launch_PSRL1_PWS_olive_RF",700},
             {"launch_PSRL1_PWS_sand_RF",700},
+            {"PSRL1_AT_RF",200},
+            {"PSRL1_FRAG_RF",300},
+            {"PSRL1_HE_RF",600},
+            {"PSRL1_HEAT_RF",800},
 
             // Pistols & SMG
             {"hgun_ACPC2_F",750},

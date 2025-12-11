@@ -6,7 +6,7 @@
 // items
 [x] separate each function to its own file
 [x] create CGFStore.hpp in configs
-[/] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
+[x] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
 [x] modify files to use new coding style
 [] Fix weapons
 
@@ -20,3 +20,6 @@
 
 // Far down the track
 [] switch out missions to be dynamic
+
+
+ case # : {["", "", "deliveries"] call A3M_fnc_buyItem; };

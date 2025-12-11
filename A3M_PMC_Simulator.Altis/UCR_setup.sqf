@@ -270,7 +270,7 @@ _noOffRoad = true; //Civilian vehicles driving at speed more than 50 meters from
 
 
 //-------------------------Enemy Disguise settings-------------------------
-_incogFactions = [""]; //Array of enemy factions whose items and vehicles will allow the player to impersonate the enemy
+_incogFactions = ["A3M_Cartel"]; //Array of enemy factions whose items and vehicles will allow the player to impersonate the enemy
 
  //Names of additional markers for areas that would be considered trespassing (any with "INC_tre" - case sensitive - somewhere in the marker name will automatically be included)
 _trespassMarkers = [];
@@ -282,7 +282,7 @@ _incognitoVests = [
 
 //(Array of classnames) Safe headgear (will automatically include incog headgear classes - useful if faction has randomisation script or to add items that are not used by the faction)
 _incognitoHeadgear = [
-"" // [DSF] Black Helmet
+"H_PASGT_basic_olive_F"
 ];
 
 //(Array of classnames) Safe backpacks (will automatically include incog backpack classes - useful if faction has randomisation script or to add items that are not used by the faction)
@@ -297,7 +297,7 @@ _incognitoBackpacks = [
 
 //(Array of classnames) Safe uniforms (on top of the specific factions above - useful if faction has randomisation script or to add items that are not used by the faction)
 _incognitoUniforms = [
-"" // [DSF] Black Uniform
+"U_I_L_Uniform_01_deserter_F"
 ];
 
 _incogVehArray = [
@@ -341,12 +341,12 @@ _highSecVehicles = [
 ];                  // (Array of classnames) Vehicles that can enter high security areas without raising suspicion (uniforms will still be noticed according to how open the vehicle is)
 
 _highSecurityUniforms = [
-"" // [DSF] Black Uniform
+"U_I_L_Uniform_01_deserter_F"
 ];             // (Array of classnames) Uniforms that allow entry into high security areas (defined by high security markers)
 
 _highSecItemCheck = true;               // Check for disallowed items that aren't in the permitted list? Each non-permitted item will incur a suspicion penality. Set to false if high security checks just include uniform only.
 
-_highSecItems = [];                     // (Array of classnames) List of items such as vests, headgear, hats etc., that won't cause suspicion in high security areas (only works on foot for now)
+_highSecItems = ["H_PASGT_basic_olive_F"];                     // (Array of classnames) List of items such as vests, headgear, hats etc., that won't cause suspicion in high security areas (only works on foot for now)
 
 _hsItChkOutside = true;                 // The high security item check will occur if wearing a high security uniform even in non-high security zones. Useful if the high security uniform is, for example, a businessman or scientist, who would look weird carrying a gun and helmet.
 

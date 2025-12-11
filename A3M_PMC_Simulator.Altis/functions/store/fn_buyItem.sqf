@@ -23,26 +23,26 @@ if (Wallet < _price) then {
     switch (_type) do {
         // All Items, Uniforms, Vests, Headgear, etc.
         case "item": {
-            Deliveries addItemCargoGlobal [_item, 1];
+            deliveries addItemCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         // All Weapons
         case "weapon": {
-            Deliveries addWeaponCargoGlobal [_item, 1];
+            deliveries addWeaponCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         // All Magazines
         case "magazine": {
-            Deliveries addMagazineCargoGlobal [_item, 1];
+            deliveries addMagazineCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         // All Backpacks
         case "backpack": {
-            Deliveries addBackpackCargoGlobal [_item, 1];
+            deliveries addBackpackCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
-        default: {
-            Deliveries addItemCargoGlobal [_item, 1];
+        default {
+            deliveries addItemCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
     };
