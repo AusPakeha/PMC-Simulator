@@ -21,5 +21,10 @@
 // Far down the track
 [] switch out missions to be dynamic
 
+ case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
 
- case # : {["", "", "deliveries"] call A3M_fnc_buyItem; };
+ ### TypeOfItem Categories:
+ - item
+ - weapon
+ - magazine
+ - backpack
