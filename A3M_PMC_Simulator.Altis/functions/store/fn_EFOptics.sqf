@@ -1,3 +1,20 @@
 switch (TheSelection) do {
-
+    case 18 : {["ef_optic_mbs", "MBS", "item"] call A3M_fnc_buyItem; };
+    case 19 : {["ef_optic_mbs_coy", "MBS (Coyote)", "item"] call A3M_fnc_buyItem; };
+    case 20 : {["ef_optic_mbs_remote_coy", "MBS (Coyote, Remote)", "item"] call A3M_fnc_buyItem; };
+    case 21 : {["ef_optic_mbs_khk", "MBS (Khaki)", "item"] call A3M_fnc_buyItem; };
+    case 22 : {["ef_optic_mbs_remote_khk", "MBS (Khaki, Remote)", "item"] call A3M_fnc_buyItem; };
+    case 23 : {["ef_optic_mbs_remote", "MBS (Remote)", "item"] call A3M_fnc_buyItem; };
+    case 24 : {["ef_optic_mbs_sand", "MBS (Sand)", "item"] call A3M_fnc_buyItem; };
+    case 25 : {["ef_optic_mbs_remote_sand", "MBS (Sand, Remote)", "item"] call A3M_fnc_buyItem; };
+    case 26 : {["ef_optic_microsight", "Microsight", "item"] call A3M_fnc_buyItem; };
+    case 27 : {["ef_optic_microsight_coy", "Microsight (Coyote)", "item"] call A3M_fnc_buyItem; };
+    case 28 : {["ef_optic_microsight_khk", "Microsight (Khaki)", "item"] call A3M_fnc_buyItem; };
+    case 29 : {["ef_optic_microsight_sand", "Microsight (Sand)", "item"] call A3M_fnc_buyItem; };
+    case 30 : {["ef_optic_Holosight_coy", "Mk17 Holosight (Coyote)", "item"] call A3M_fnc_buyItem; };
+    case 31 : {["ef_optic_Holosight_smg_coy", "Mk17 Holosight SMG (Coyote)", "item"] call A3M_fnc_buyItem; };
+    case 32 : {["ef_optic_microsight_pistol_coy", "Microsight (Coyote, Pistol Mount)", "item"] call A3M_fnc_buyItem; };
+    case 33 : {["ef_optic_microsight_pistol_khk", "Microsight (Khaki, Pistol Mount)", "item"] call A3M_fnc_buyItem; };
+    case 34 : {["ef_optic_microsight_pistol", "Microsight (Pistol Mount)", "item"] call A3M_fnc_buyItem; };
+    case 35 : {["ef_optic_microsight_pistol_sand", "Microsight (Sand, Pistol Mount)", "item"] call A3M_fnc_buyItem; };
 };

@@ -93,10 +93,8 @@ class Extended_InitPost_EventHandlers {
 };
 
 
-class CfgRemoteExec
-{
-  class Functions
-  {
+class CfgRemoteExec {
+  class Functions {
     mode = 2;
     jip = 1;
     #include "INC_undercover\functionsWhitelist.hpp"

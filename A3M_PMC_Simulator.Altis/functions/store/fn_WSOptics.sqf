@@ -19,9 +19,9 @@ switch (TheSelection) do {
     case 35 : {["optic_ACO_camo_lxWS", "C-More Railway (Red, Stripes)", "item"] call A3M_fnc_buyItem; };
     case 36 : {["optic_Arco_hex_lxWS", "ELCAN SpecterOS (Hex)", "item"] call A3M_fnc_buyItem; };
     case 37 : {["optic_Holosight_snake_lxWS", "EOTech XPS3 (Snake)", "item"] call A3M_fnc_buyItem; };
-    case 39 : {["optic_Holosight_smg_snake_lxWS", "EOTech XPS3 SMG (Snake)", "item"] call A3M_fnc_buyItem; };
-    case 40 : {["optic_Hamr_arid_lxWS", "Leupold Mk4 HAMR (Arid)", "item"] call A3M_fnc_buyItem; };
-    case 41 : {["optic_Hamr_lush_lxWS", "Leupold Mk4 HAMR (Lush)", "item"] call A3M_fnc_buyItem; };
-    case 42 : {["optic_Hamr_sand_lxWS", "Leupold Mk4 HAMR (Sand)", "item"] call A3M_fnc_buyItem; };
-    case 43 : {["optic_Hamr_snake_lxWS", "Leupold Mk4 HAMR (Snake)", "item"] call A3M_fnc_buyItem; };
+    case 38 : {["optic_Holosight_smg_snake_lxWS", "EOTech XPS3 SMG (Snake)", "item"] call A3M_fnc_buyItem; };
+    case 39 : {["optic_Hamr_arid_lxWS", "Leupold Mk4 HAMR (Arid)", "item"] call A3M_fnc_buyItem; };
+    case 40 : {["optic_Hamr_lush_lxWS", "Leupold Mk4 HAMR (Lush)", "item"] call A3M_fnc_buyItem; };
+    case 41 : {["optic_Hamr_sand_lxWS", "Leupold Mk4 HAMR (Sand)", "item"] call A3M_fnc_buyItem; };
+    case 42 : {["optic_Hamr_snake_lxWS", "Leupold Mk4 HAMR (Snake)", "item"] call A3M_fnc_buyItem; };
 };

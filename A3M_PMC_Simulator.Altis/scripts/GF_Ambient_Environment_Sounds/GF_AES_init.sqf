@@ -31,8 +31,8 @@ https// forums.bohemia.net/forums/topic/215850-compilation-list-of-my-gf-scripts
 // ________________ Settings ________________
 // ________________ set true or false  ________________
 
-GF_AES_Systemchat_info= true;// Show systemChat information
-GF_AES_hintsilent_info= true;// Show hint information
+GF_AES_Systemchat_info= false;// Show systemChat information
+GF_AES_hintsilent_info= false;// Show hint information
 
 GF_AES_Sounds_Ambiance= true;// Ambiance Sounds
 

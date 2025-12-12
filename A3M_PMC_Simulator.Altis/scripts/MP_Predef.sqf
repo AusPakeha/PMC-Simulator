@@ -616,9 +616,17 @@ A3M_fnc_ToMolos = {
 A3M_fnc_ToC12 = {
     player moveInCargo C12_Taxi;
     playSound "A3M_Deuce";
-    titleText ["Travelling to C-12 Research Facility | Astral Corporation / OPSG Facility", "BLACK FADED", 10];
+    titleText ["Travelling to OPSG Compound C-12", "BLACK FADED", 10];
     titleFadeOut 5;
     player action ["Eject", C12_Taxi];
+};
+
+A3M_fnc_ToC12Boat = {
+    player moveInCargo C12Boat_Taxi;
+    playSound "A3M_Deuce";
+    titleText ["Travelling to OPSG Boat Dock", "BLACK FADED", 10];
+    titleFadeOut 5;
+    player action ["Eject", C12Boat_Taxi];
 };
 
 // OPHQ Pre-Defines

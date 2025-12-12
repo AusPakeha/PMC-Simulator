@@ -1,0 +1,22 @@
+switch (TheSelection) do {
+    case 25 : {["arifle_ash12_blk_RF", "ASh-12 (Black)", "weapon"] call A3M_fnc_buyItem; };
+    case 26 : {["arifle_ash12_desert_RF", "ASh-12 (Desert)", "weapon"] call A3M_fnc_buyItem; };
+    case 27 : {["arifle_ash12_urban_RF", "ASh-12 (Urban)", "weapon"] call A3M_fnc_buyItem; };
+    case 28 : {["arifle_ash12_wood_RF", "ASh-12 (Woodland)", "weapon"] call A3M_fnc_buyItem; };
+    case 29 : {["arifle_ash12_GL_blk_RF", "ASh-12 GL (Black)", "weapon"] call A3M_fnc_buyItem; };
+    case 30 : {["arifle_ash12_GL_desert_RF", "ASh-12 GL (Desert)", "weapon"] call A3M_fnc_buyItem; };
+    case 31 : {["arifle_ash12_GL_urban_RF", "ASh-12 GL (Urban)", "weapon"] call A3M_fnc_buyItem; };
+    case 32 : {["arifle_ash12_GL_wood_RF", "ASh-12 GL (Woodland)", "weapon"] call A3M_fnc_buyItem; };
+    case 33 : {["arifle_ash12_LR_blk_RF", "ASh-12 LR (Black)", "weapon"] call A3M_fnc_buyItem; };
+    case 34 : {["arifle_ash12_LR_desert_RF", "ASh-12 LR (Desert)", "weapon"] call A3M_fnc_buyItem; };
+    case 35 : {["arifle_ash12_LR_urban_RF", "ASh-12 LR (Urban)", "weapon"] call A3M_fnc_buyItem; };
+    case 36 : {["arifle_ash12_LR_wood_RF", "ASh-12 LR (Woodland)", "weapon"] call A3M_fnc_buyItem; };
+    case 37 : {["srifle_h6_blk_rf", "HERA H6 (Black)", "weapon"] call A3M_fnc_buyItem; };
+    case 38 : {["srifle_h6_digi_rf", "HERA H6 (Digital)", "weapon"] call A3M_fnc_buyItem; };
+    case 39 : {["srifle_h6_gold_rf", "HERA H6 (Gold)", "weapon"] call A3M_fnc_buyItem; };
+    case 40 : {["srifle_h6_oli_rf", "HERA H6 (Olive)", "weapon"] call A3M_fnc_buyItem; };
+    case 41 : {["srifle_h6_tan_rf", "HERA H6 (Tan)", "weapon"] call A3M_fnc_buyItem; };
+    case 42 : {["SMG_01_black_RF", "Vector SMG (Black)", "weapon"] call A3M_fnc_buyItem; };
+    case 43 : {["srifle_DMR_01_black_RF", "VS-121 (Black)", "weapon"] call A3M_fnc_buyItem; };
+    case 44 : {["srifle_DMR_01_tan_RF", "VS-121 (tan)", "weapon"] call A3M_fnc_buyItem; };
+};

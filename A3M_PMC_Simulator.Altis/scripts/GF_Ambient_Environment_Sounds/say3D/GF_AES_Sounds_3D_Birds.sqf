@@ -28,14 +28,14 @@ or use any other program for editing .
 For the Compilation List of my GF Scripts , you can search in:
 https://forums.bohemia.net/forums/topic/215850-compilation-list-of-my-gf-scripts/
 */
-	
 
-diag_log "//________________ GF_AES_Sounds_3D_Birds initialized ________________";
+
+//diag_log "//________________ GF_AES_Sounds_3D_Birds initialized ________________";
 
 
 if (GF_AES_Systemchat_info) then {
-systemchat "GF_AES_3D_Sounds_Birds initialized";			
-};	
+//systemchat "GF_AES_3D_Sounds_Birds initialized";
+};
 
 
 //________________ GF_AES_Sounds_3D_Birds ________________
@@ -44,31 +44,31 @@ GF_AES_Sounds_3D_Birds_Spawn = {
 
 
 if (GF_AES_Systemchat_info) then {
-systemchat "GF_AES_Sounds_3D_Birds";			
-};	
+systemchat "GF_AES_Sounds_3D_Birds";
+};
 
 [] spawn {
 	while {true} do {
-	
+
 	//________________	daytime and nighttime	________________
-	
+
 	if ((date select 3) < 6 or (date select 3) > 19) then {
-	
+
 if (GF_AES_hintsilent_info) then {
-hintsilent "nightime";		
-};	
+//hintsilent "nightime";
+};
 
 	sleep GF_AES_Sounds_Birds_Loop;
-		
+
 	//________________	nighttime	________________
-	
+
 	if ((!(surfaceIsWater getPos player)) && (!(vehicle player != player))) then {
-	
-	_Player_Pos = getpos player;	
-	_Pos = [[[_Player_Pos, (20)],[]],[]] call BIS_fnc_randomPos;	
-	_Sound = "#particlesource" createVehicleLocal _Pos;	
-			
-	_array = selectRandom[	
+
+	_Player_Pos = getpos player;
+	_Pos = [[[_Player_Pos, (20)],[]],[]] call BIS_fnc_randomPos;
+	_Sound = "#particlesource" createVehicleLocal _Pos;
+
+	_array = selectRandom[
 	"Birds_night_1",
 	"Birds_night_2",
 	"Birds_night_3",
@@ -100,44 +100,44 @@ hintsilent "nightime";
 	"Birds_night_29",
 	"Birds_night_30"
 	];
-	
-	_Sound say3D [_array, 100, 1];	
-			
+
+	_Sound say3D [_array, 100, 1];
+
 if (GF_AES_hintsilent_info) then {
-hintsilent "loop";	
-};	
+//hintsilent "loop";
+};
 
 	sleep GF_AES_Sounds_Birds_Loop;
-	
+
 	}else{
 
 	//________________	surfaceIsWater	________________
-	
+
 if (GF_AES_hintsilent_info) then {
-hintsilent "surfaceIsWater or inside vehicle";		
-};	
+//hintsilent "surfaceIsWater or inside vehicle";
+};
 
 	sleep 3;
-	};	
+	};
 
 	} else {
 
 if (GF_AES_hintsilent_info) then {
-hintsilent "daytime";	
-};	
+//hintsilent "daytime";
+};
 
 	sleep GF_AES_Sounds_Birds_Loop;
-		
+
 	//________________	daytime	________________
-	
+
 	if ((!(surfaceIsWater getPos player)) && (!(vehicle player != player))) then {
-	
-	_Player_Pos = getpos player;	
-	_Pos = [[[_Player_Pos, (20)],[]],[]] call BIS_fnc_randomPos;	
-	_Sound = "#particlesource" createVehicleLocal _Pos;	
-	
-	
-	_array = selectRandom[	
+
+	_Player_Pos = getpos player;
+	_Pos = [[[_Player_Pos, (20)],[]],[]] call BIS_fnc_randomPos;
+	_Sound = "#particlesource" createVehicleLocal _Pos;
+
+
+	_array = selectRandom[
 	"Birds_day_1",
 	"Birds_day_2",
 	"Birds_day_3",
@@ -163,23 +163,23 @@ hintsilent "daytime";
 	"Birds_day_23",
 	"Birds_day_24"
 	];
-	
-	_Sound say3D [_array, 100, 1];	
-			
+
+	_Sound say3D [_array, 100, 1];
+
 if (GF_AES_hintsilent_info) then {
-hintsilent "loop";	
-};	
+//hintsilent "loop";
+};
 
 	sleep GF_AES_Sounds_Birds_Loop;
 
 	}else{
 
 if (GF_AES_hintsilent_info) then {
-hintsilent "surfaceIsWater or inside vehicle";	
-};	
+//hintsilent "surfaceIsWater or inside vehicle";
+};
 	sleep 3;
-	};		
-};	
+	};
+};
 };
 };
 };
