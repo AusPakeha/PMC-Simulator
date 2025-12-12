@@ -274,6 +274,10 @@ if (isDedicated) then {
 
 [] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
 
+if (isServer) then {
+    PFrun = false;
+    []spawn compileFinal(preprocessFile "scripts\PF\init.sqf")
+};
 
 //	GF Cleanup script , Call with radio alpha , hit in game 0,0,1
 _radio_1 = createTrigger["EmptyDetector",[0,0]];

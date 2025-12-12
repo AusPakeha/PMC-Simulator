@@ -12,7 +12,9 @@ A3M_fnc_Teleport = {
 _teleportLocations = [
     ["Fast Travel to OPSG Compound C-12", C12_Taxi, "Travelling to OPSG Compound C-12"],
     ["Fast Travel to Molos Air Facility", Molos_Taxi, "Travelling to Molos Air Facility | Orion Private Security Group Facility"],
-    ["Fast Travel to OPSG Boat Docks", C12Boat_Taxi, "Travelling to OPSG Boat Dock"]
+    ["Fast Travel to OPSG Boat Docks", C12Boat_Taxi, "Travelling to OPSG Boat Dock"],
+    ["Fast Travel to Altis International Airport", AIA_Taxi, "Travelling to Altis International Airport"],
+    ["Fast Travel to Pyrgos", C12Boat_Taxi, "Travelling to Pyrgos"]
 ];
 
 // Add actions dynamically

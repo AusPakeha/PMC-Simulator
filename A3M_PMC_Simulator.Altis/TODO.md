@@ -22,6 +22,10 @@
 // Far down the track
 [] switch out missions to be dynamic
 
+
+Ignore missing textures. Not finished with new hq.
+
+////////////////////////////////////////////////////////////////////////////
  case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
 
  case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
@@ -33,11 +37,3 @@
  - backpack
 
 // Errors MrPakeha cant figure out
-
-18:18:12 Error in expression <] call A3M_fnc_buyItem; };
-if (Wallet < ) then {
-Hint Format ["Attention: Your C>
-18:18:12   Error position: <) then {
-Hint Format ["Attention: Your C>
-18:18:12   Error unexpected )
-18:18:12 File C:\Users\cypha\OneDrive\Documents\Arma 3 - Other Profiles\MrPakeha\mpmissions\A3M PMC Simulator\PMC-Simulator\A3M_PMC_Simulator.Altis\functions\store\fn_RHSOptics.sqf..., line 3
