@@ -1,13 +1,13 @@
 switch (TheSelection) do {
-	case 111: { ["lxWS_H_bmask_base", "Ballistic Mask", "item"] call A3M_fnc_buyItem; };
-	case 112: { ["lxWS_H_bmask_ghex", "Ballistic Mask (Green Hex)", "item"] call A3M_fnc_buyItem; };
-	case 113: { ["lxWS_H_bmask_hex", "Ballistic Mask (Hex)", "item"] call A3M_fnc_buyItem; };
-	case 114: { ["lxWS_H_bmask_camo01", "Ballistic Mask (Rocky)", "item"] call A3M_fnc_buyItem; };
-	case 115: { ["H_bmask_snake_lxws", "Ballistic Mask (Snake)", "item"] call A3M_fnc_buyItem; };
-	case 116: { ["lxWS_H_bmask_white", "Ballistic Mask (White)", "item"] call A3M_fnc_buyItem; };
-	case 117: { ["lxWS_H_bmask_camo02", "Ballistic Mask (Woodland)", "item"] call A3M_fnc_buyItem; };
-	case 118: { ["lxWS_H_bmask_yellow", "Ballistic Mask (Yellow)", "item"] call A3M_fnc_buyItem; };
-	case 119: { ["lxWS_H_Bandanna_blk_hs", "Bandanna (Black, Headset)", "item"] call A3M_fnc_buyItem; };
+	case 191: { ["lxWS_H_bmask_base", "Ballistic Mask", "item"] call A3M_fnc_buyItem; };
+	case 192: { ["lxWS_H_bmask_ghex", "Ballistic Mask (Green Hex)", "item"] call A3M_fnc_buyItem; };
+	case 193: { ["lxWS_H_bmask_hex", "Ballistic Mask (Hex)", "item"] call A3M_fnc_buyItem; };
+	case 194: { ["lxWS_H_bmask_camo01", "Ballistic Mask (Rocky)", "item"] call A3M_fnc_buyItem; };
+	case 195: { ["H_bmask_snake_lxws", "Ballistic Mask (Snake)", "item"] call A3M_fnc_buyItem; };
+	case 196: { ["lxWS_H_bmask_white", "Ballistic Mask (White)", "item"] call A3M_fnc_buyItem; };
+	case 197: { ["lxWS_H_bmask_camo02", "Ballistic Mask (Woodland)", "item"] call A3M_fnc_buyItem; };
+	case 198: { ["lxWS_H_bmask_yellow", "Ballistic Mask (Yellow)", "item"] call A3M_fnc_buyItem; };
+	case 199: { ["lxWS_H_Bandanna_blk_hs", "Bandanna (Black, Headset)", "item"] call A3M_fnc_buyItem; };
 	case 200: { ["lxWS_H_PASGT_goggles_black_F", "Basic Helmet (Goggles, Black)", "item"] call A3M_fnc_buyItem; };
 	case 201: { ["lxWS_H_PASGT_goggles_olive_F", "Basic Helmet (Goggles, Olive)", "item"] call A3M_fnc_buyItem; };
 	case 202: { ["lxWS_H_PASGT_goggles_white_F", "Basic Helmet (Goggles, White)", "item"] call A3M_fnc_buyItem; };

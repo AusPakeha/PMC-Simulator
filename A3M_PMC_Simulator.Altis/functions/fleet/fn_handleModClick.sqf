@@ -38,12 +38,12 @@ switch (ModSelection) do {
         hint "Use of this content may require a mod to be installed. Please be sure the selected mod is installed prior to purchase";
         RHS_Support_Enabled = 0;
         Ace3_Enabled = 0;
-        Apex_Enabled = 1;
+        Apex_Enabled = 0;
         RF_Enabled = 0;
         WS_Enabled = 0;
-        EF_Enabled = 0;
+        EF_Enabled = 1;
         lbClear 1575;
-        lbAdd [1575, "Apex Drakon - Select Robotics Category."];
+        lbAdd [1575, "Expeditionary Forces CDLC - Select a Category."];
     };
     case 4: {
         hint "Use of this content may require a mod to be installed. Please be sure the selected mod is installed prior to purchase";
@@ -66,17 +66,6 @@ switch (ModSelection) do {
         EF_Enabled = 0;
         lbClear 1575;
         lbAdd [1575, "Western Sahara CDLC - Select a Category."];
-    };
-    case 6: {
-        hint "Use of this content may require a mod to be installed. Please be sure the selected mod is installed prior to purchase";
-        RHS_Support_Enabled = 0;
-        Ace3_Enabled = 0;
-        Apex_Enabled = 0;
-        RF_Enabled = 0;
-        WS_Enabled = 0;
-        EF_Enabled = 1;
-        lbClear 1575;
-        lbAdd [1575, "Expeditionary Forces CDLC - Select a Category."];
     };
     default {
         hint "Invalid selection made. No mods will be enabled.";

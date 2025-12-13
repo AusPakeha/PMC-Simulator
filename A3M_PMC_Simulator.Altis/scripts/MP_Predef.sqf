@@ -604,7 +604,6 @@ coroner = {
     { if (!alive _x) then { deleteVehicle _x } } foreach (nearestObjects [center, ["Man", "Car", "Tank", "Helicopter"], 2600]);
 };
 
-/*
 // Fast Travel Pre-Defines
 A3M_fnc_ToMolos = {
     player moveInCargo Molos_Taxi;
@@ -629,7 +628,6 @@ A3M_fnc_ToC12Boat = {
     titleFadeOut 5;
     player action ["Eject", C12Boat_Taxi];
 };
-*/
 
 // OPHQ Pre-Defines
 //GUI  Location ID Function
@@ -727,7 +725,7 @@ DRI_ABCT2_DHQTV = {
 
 DRI_ABCT2_DHQTVOFF = {
     CMDTVON = 0;
-    closeDisplay 1100;
+    1100 closeDisplay 1;
     CMD_TV setObjectTexture [0, "images\TVNoise.paa"];
 };
 
@@ -758,7 +756,7 @@ DRI_ABCT2_MPTV = {
 
 DRI_ABCT2_MPTVOFF = {
     MPTVON = 0;
-    closeDisplay 1100;
+    1100 closeDisplay 1;
     MP_TV setObjectTexture [0, "images\TVNoise.paa"];
 };
 

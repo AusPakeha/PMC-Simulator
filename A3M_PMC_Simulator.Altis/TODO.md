@@ -9,6 +9,9 @@
 [x] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
 [x] modify files to use new coding style
 [x] Fix weapons
+[] Add new items to functions\store
+- backpacks
+- uriki.sqf
 [] Item store - hide categories if CDLC/mod not present
 
 // Vehicles

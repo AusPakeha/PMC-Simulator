@@ -13,6 +13,7 @@ class CfgFunctions {
             class ACE3support {};
             class buyVehicle {};
             class EFheli {};
+            class EFsupport {};
             class EFwheeled {};
             class handleModClick {};
             class heli {};
@@ -41,6 +42,7 @@ class CfgFunctions {
             class ACE3Medical {};
             class Ammo {};
             class Backpacks {};
+            class beard {};
             class buyButton {};
             class buyItem {};
             class EFAmmo {};

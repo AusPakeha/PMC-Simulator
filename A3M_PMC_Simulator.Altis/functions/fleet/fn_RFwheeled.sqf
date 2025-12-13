@@ -1,5 +1,3 @@
-private _rank = rank player;
-
 switch (TheSelection) do {
     case 6: { ["B_ION_Pickup_rf", "ION PMC Ram 1500", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 7: { ["B_ION_Pickup_mmg_rf", "ION PMC Ram 1500 (MMG)", "vehspawn"] call A3M_fnc_buyVehicle; };

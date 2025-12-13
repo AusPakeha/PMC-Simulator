@@ -1,5 +1,3 @@
-private _rank = rank player;
-
 switch (TheSelection) do {
     case 6: { ["rhs_gaz66_msv", "GAZ-66", "vehspawn"] call A3M_fnc_buyVehicle; };
     case 7: { ["rhs_gaz66o_msv", "GAZ-66 (Open)", "vehspawn"] call A3M_fnc_buyVehicle; };
