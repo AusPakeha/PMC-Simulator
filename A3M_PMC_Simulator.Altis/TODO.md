@@ -26,6 +26,9 @@
 Ignore missing textures. Not finished with new hq.
 
 ////////////////////////////////////////////////////////////////////////////
+
+ {"",},
+
  case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
 
  case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };

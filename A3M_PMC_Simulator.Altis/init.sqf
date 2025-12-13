@@ -273,6 +273,7 @@ if (isDedicated) then {
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_SFX\GF_SFX_Screaming\GF_Set_SFX_Screaming.sqf";
 
 [] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
+[] execVM "scripts\FT.sqf";
 
 if (isServer) then {
     PFrun = false;
