@@ -6,6 +6,9 @@ class CfgFunctions {
             class putData {};
             class delData {};
         };
+        class main {
+            class createList {};
+        };
         class fleet {
             class ACE3support {};
             class buyVehicle {};

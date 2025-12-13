@@ -20,9 +20,9 @@ _teleportLocations = [
 // Add actions dynamically
 {
     _x params ["_actionText", "_taxi", "_title"];
-    This addAction [_actionText, {
+    this addAction [_actionText, {
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_taxi", "_title"];
         [_taxi, _title] call A3M_fnc_Teleport;
-    }, [_taxi, _title]];
+    }, [_taxi, _title], 0, true, false];
 } forEach _teleportLocations;

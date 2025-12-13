@@ -493,7 +493,7 @@ DoAddWheel = {
 
 // //// //// //////////////////////////////////////////////////////////////////////////////////////////////
 // Add Fixed Wing to Main list
-DoAddFixedWing = {
+/* DoAddFixedWing = {
 	wheelson = 0;
 	wingson = 1;
 	helion = 0;
@@ -529,6 +529,29 @@ DoAddFixedWing = {
 		_Pic6 = gettext(configFile >> "CfgVehicles">> "RHS_C130J">> "picture");
 		lbSetPicture [1575, 5, _Pic6 ];
 		lbSetPictureColor [1575, 5, [0.738, 0.714, 0.417, 1 ]];
+	};
+};
+*/
+DoAddFixedWing = {
+	wheelson = 0;
+	wingson = 1;
+	helion = 0;
+	armoredon = 0;
+	RoboticsOn = 0;
+	SupportOn = 0;
+	UpgradesOn = 0;
+	lbClear 1575;
+
+	private _fixedWingConfig = configFile >> "CfgFleet" >> "Store" >> "A3M_FixedWing";
+    private _a3 = getArray (_fixedWingConfig >> "a3");
+    private _rhs = getArray (_fixedWingConfig >> "rhs");
+	private _color = [0.738, 0.714, 0.417, 1];
+
+	// Add vanilla A3 aircraft
+	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	// Add RHS aircraft if enabled
+	if (RHS_Support_Enabled == 1) then {
+		[1575, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
 	};
 };
 

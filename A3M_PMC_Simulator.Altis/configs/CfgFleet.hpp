@@ -1,5 +1,17 @@
 class CfgFleet {
     class Store {
+        class A3M_FixedWing {
+            a3[] = {
+                {"B_Plane_CAS_01_dynamicLoadout_F",11800000},
+                {"O_Plane_CAS_02_dynamicLoadout_F",11000000}
+            };
+            rhs[] = {
+                {"rhs_su25SM_vvs",11000000},
+                {"rhs_su25SM_vvsc",11000000},
+                {"rhs_a10",11800000},
+                {"rhs_C130J",70370000}
+            };
+        };
         inventory[] = {
             // Wheeled
             {"B_MRAP_01_F",470000},
