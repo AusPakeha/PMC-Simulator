@@ -8,7 +8,7 @@
  *     0: NUMBER - Listbox control ID
  *     1: STRING - Config type (e.g., "CfgVehicles", "CfgWeapons", & "CfgMagazines")
  *     2: ARRAY - Array of item data [[className, displayName, price], ...]
- *     3: ARRAY - Picture color [r, g, b, a]
+ *     3: STRING - Type of item (e.g., "item", "weapon", "magazine", "backpack")
  *
  * Returns:
  *     Nothing
@@ -17,18 +17,17 @@
  *     [1575, getArray (_config >> "a3"), [0.738, 0.714, 0.417, 1]] call A3M_fnc_createList;
  */
 
-params [["_id", 0, [0]], ["_type", "", [""]], ["_array", [], [[]]], ["_color", [1,1,1,1], [[]]]];
+params [["_id", 0, [0]], ["_typeOfConfig", "", [""]], ["_array", [], [[]]], ["_typeOfItem", "", [""]]];
 
 {
     _x params ["_className", "_price"];
 
-    private _displayName = getText (configFile >> _type >> _className >> "displayName");
-    private _picture = getText (configFile >> _type >> _className >> "picture");
+    private _color = [0.738, 0.714, 0.417, 1];
+    private _displayName = getText (configFile >> _typeOfConfig >> _className >> "displayName");
+    private _picture = getText (configFile >> _typeOfConfig >> _className >> "picture");
     private _priceFormatted = [_price] call A3M_handle_number;
     private _index = lbAdd [_id, format ["%1 Price: $%2", _displayName, _priceFormatted]];
-    private _data = [_className, _displayName, _price];
-
-    // diag_log format ["[A3M] Added item %1 to listbox %2 with price $%3", _className, _id, _priceFormatted];
+    private _data = [_className, _displayName, _price, _typeOfItem];
 
     lbSetPicture [_id, _index, _picture];
     lbSetPictureColor [_id, _index, _color];
