@@ -7,7 +7,7 @@
  * Parameters:
  *     0: NUMBER - Listbox control ID
  *     1: STRING - Config type (e.g., "CfgVehicles", "CfgWeapons", & "CfgMagazines")
- *     2: ARRAY - Array of item data [[className, price], ...]
+ *     2: ARRAY - Array of item data [[className, displayName, price], ...]
  *     3: ARRAY - Picture color [r, g, b, a]
  *
  * Returns:
@@ -26,8 +26,11 @@ params [["_id", 0, [0]], ["_type", "", [""]], ["_array", [], [[]]], ["_color", [
     private _picture = getText (configFile >> _type >> _className >> "picture");
     private _priceFormatted = [_price] call A3M_handle_number;
     private _index = lbAdd [_id, format ["%1 Price: $%2", _displayName, _priceFormatted]];
+    private _data = [_className, _displayName, _price];
+
+    // diag_log format ["[A3M] Added item %1 to listbox %2 with price $%3", _className, _id, _priceFormatted];
 
     lbSetPicture [_id, _index, _picture];
     lbSetPictureColor [_id, _index, _color];
-    lbSetData [_id, _index, _className];
+    lbSetData [_id, _index, str _data];
 } forEach _array;
