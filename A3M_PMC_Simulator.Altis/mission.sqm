@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=12678;
+		nextID=12679;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=383;
+		nextID=457;
 	};
 	class Camera
 	{
-		pos[]={22999.967,18.197285,18818.566};
-		dir[]={0.69566947,-0.69808078,0.16949099};
-		up[]={0.67824107,0.71601897,0.16524477};
-		aside[]={0.23671296,-7.4505806e-09,-0.97157955};
+		pos[]={19356.619,55.347473,13232.22};
+		dir[]={-0.12886944,-0.5837217,0.80168802};
+		up[]={-0.092644438,0.81195247,0.57633108};
+		aside[]={0.98735315,-6.0000457e-07,0.15871616};
 	};
 };
 binarizationWanted=0;
@@ -7565,7 +7565,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23023.482,12.54698,18774.553};
+				position[]={23023.482,11.655722,18774.553};
 				angles[]={0,5.7505593,0};
 			};
 			side="Empty";
@@ -7575,7 +7575,7 @@ class Mission
 			};
 			id=452;
 			type="Sign_Arrow_Large_Green_F";
-			atlOffset=1.2957497;
+			atlOffset=0.40449142;
 		};
 		class Item421
 		{
@@ -7939,7 +7939,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23015.596,14.217725,18824.545};
+				position[]={23015.596,9.3642883,18824.545};
 				angles[]={0,5.3014641,0};
 			};
 			side="Empty";
@@ -7949,7 +7949,7 @@ class Mission
 			};
 			id=480;
 			type="Sign_Arrow_Large_Green_F";
-			atlOffset=5.3360815;
+			atlOffset=0.48264503;
 		};
 		class Item442
 		{
@@ -9490,10 +9490,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23020.748,9.305831,18772.498};
-				angles[]={0,5.7947469,0};
+				position[]={23021.025,9.3318157,18772.299};
+				angles[]={6.2823396,3.6566663,6.2818046};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -9501,17 +9502,17 @@ class Mission
 			};
 			id=601;
 			type="Flag_US_F";
-			atlOffset=2.1390262;
 		};
 		class Item524
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23024.959,9.305831,18779.014};
-				angles[]={0,4.5512476,0};
+				position[]={23024.787,9.3317871,18778.162};
+				angles[]={6.2823396,3.7261593,6.2818046};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -9519,7 +9520,6 @@ class Mission
 			};
 			id=602;
 			type="Flag_UNO_F";
-			atlOffset=2.1390262;
 		};
 		class Item525
 		{
@@ -13224,7 +13224,7 @@ class Mission
 			{
 				skill=0.60000002;
 				fuel=0;
-				init="this addAction [""Hospital Bed"", {Hint "" This is an ACE 3 Enabled Hospital bed. Put the patient is as Passenger. Doctor enter as DRIVER. If you see gunner, it is a GLITCH, DO NOT ENTER GUNNER SEAT! ""}]; this allowDamage false; this attachTo [medical, [0,0,0]];";
+				init="this addAction [""Hospital Bed"", {Hint "" This is an ACE 3 Enabled Hospital bed. Put the patient is as Passenger. Doctor enter as DRIVER. If you see gunner, it is a GLITCH, DO NOT ENTER GUNNER SEAT! ""}]; this allowDamage false;";
 				name="HBed1";
 			};
 			id=875;
@@ -23508,7 +23508,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23038.424,5.832026,18769.26};
-				angles[]={-0,2.5791628,0};
+				angles[]={0,2.5791628,0};
 			};
 			id=3284;
 			type="ModuleTaskSetState_F";
@@ -91020,7 +91020,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={23037.074,6.2390857,18769.205};
-												angles[]={-0,0.56904101,0};
+												angles[]={0,0.56904101,0};
 											};
 											side="Empty";
 											flags=4;

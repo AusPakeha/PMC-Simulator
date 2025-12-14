@@ -349,14 +349,13 @@ DoAddItems = {
 	private _a3m = getArray (_itemConfig >> "a3m");
 	private _ace3 = getArray (_itemConfig >> "ace3");
 	private _beard = getArray (_itemConfig >> "beard");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
-	[1850, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3m, "item"] call A3M_fnc_createList;
 	if (Ace3_Enabled == 1) then {
-		[1850, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ace3, "item"] call A3M_fnc_createList;
 	};
-	[1850, "CfgGlasses", _beard, _color] call A3M_fnc_createList;
+	[1850, "CfgGlasses", _beard, "item"] call A3M_fnc_createList;
 };
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -382,11 +381,10 @@ DoAddMedical = {
 	private _medicalConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Medical";
 	private _a3 = getArray (_medicalConfig >> "a3");
 	private _ace3 = getArray (_medicalConfig >> "ace3");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
 	if (Ace3_Enabled == 1) then {
-		[1850, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ace3, "item"] call A3M_fnc_createList;
 	};
 };
 
@@ -419,27 +417,26 @@ DoAddElect = {
 	private _ef = getArray (_electronicConfig >> "ef");
 	private _rf = getArray (_electronicConfig >> "rf");
 	private _ws = getArray (_electronicConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
-	[1850, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3m, "item"] call A3M_fnc_createList;
 	if (Ace3_Enabled == 1) then {
-		[1850, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ace3, "item"] call A3M_fnc_createList;
 	};
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "item"] call A3M_fnc_createList;
 	};
 	if (TFAR_Enabled == 1) then {
-		[1850, "CfgWeapons", _tfar, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _tfar, "item"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "item"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "item"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "item"] call A3M_fnc_createList;
 	};
 };
 
@@ -469,20 +466,19 @@ DoAddVests = {
 	private _ef = getArray (_vestConfig >> "ef");
 	private _rf = getArray (_vestConfig >> "rf");
 	private _ws = getArray (_vestConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "item"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "item"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "item"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "item"] call A3M_fnc_createList;
 	};
 };
 
@@ -512,20 +508,19 @@ DoAddClothes = {
 	private _ef = getArray (_uniformConfig >> "ef");
 	private _rf = getArray (_uniformConfig >> "rf");
 	private _ws = getArray (_uniformConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "item"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "item"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "item"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "item"] call A3M_fnc_createList;
 	};
 };
 
@@ -557,23 +552,22 @@ DoAddHeadgear = {
 	private _rf = getArray (_headgearConfig >> "rf");
 	private _ws = getArray (_headgearConfig >> "ws");
 	private _ukiri = getArray (_headgearConfig >> "ukiri");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
-	[1850, "CfgGlasses", _a3g, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
+	[1850, "CfgGlasses", _a3g, "item"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "item"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "item"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "item"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "item"] call A3M_fnc_createList;
 	};
-	[1850, "CfgGlasses", _ukiri, _color] call A3M_fnc_createList;
+	[1850, "CfgGlasses", _ukiri, "item"] call A3M_fnc_createList;
 };
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -603,23 +597,22 @@ DoAddBackpacks = {
 	private _ef = getArray (_backpackConfig >> "ef");
 	private _rf = getArray (_backpackConfig >> "rf");
 	private _ws = getArray (_backpackConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgVehicles", _a3, "backpack"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _rhs, "backpack"] call A3M_fnc_createList;
 	};
 	if (Ace3_Enabled == 1) then {
-		[1850, "CfgVehicles", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _ace3, "backpack"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgVehicles", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _ef, "backpack"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgVehicles", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _rf, "backpack"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _ws, "backpack"] call A3M_fnc_createList;
 	};
 };
 
@@ -649,20 +642,19 @@ DoAddSuppressors = {
 	private _ef = getArray (_suppressorConfig >> "ef");
 	private _rf = getArray (_suppressorConfig >> "rf");
 	private _ws = getArray (_suppressorConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "item"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "item"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "item"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "item"] call A3M_fnc_createList;
 	};
 };
 
@@ -692,20 +684,19 @@ DoAddOptics = {
 	private _ef = getArray (_opticsConfig >> "ef");
 	private _rf = getArray (_opticsConfig >> "rf");
 	private _ws = getArray (_opticsConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "item"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "item"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "item"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "item"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "item"] call A3M_fnc_createList;
 	};
 };
 
@@ -735,20 +726,19 @@ DoAddRifles = {
 	private _ef = getArray (_rifleConfig >> "ef");
 	private _rf = getArray (_rifleConfig >> "rf");
 	private _ws = getArray (_rifleConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "weapon"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "weapon"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "weapon"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "weapon"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "weapon"] call A3M_fnc_createList;
 	};
 };
 
@@ -778,20 +768,19 @@ DoAddPistols = {
 	private _ef = getArray (_pistolConfig >> "ef");
 	private _rf = getArray (_pistolConfig >> "rf");
 	private _ws = getArray (_pistolConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "weapon"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "weapon"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "weapon"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "weapon"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "weapon"] call A3M_fnc_createList;
 	};
 };
 
@@ -824,23 +813,22 @@ DoAddLaunchers = {
 	private _rf = getArray (_launcherConfig >> "rf");
 	private _rfm = getArray (_launcherConfig >> "rfm");
 	private _ws = getArray (_launcherConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
-	[1850, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, "weapon"] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3m, "weapon"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
-		[1850, "CfgMagazines", _rhms, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, "weapon"] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhms, "weapon"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, "weapon"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
-		[1850, "CfgMagazines", _rfm, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, "weapon"] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rfm, "weapon"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, "weapon"] call A3M_fnc_createList;
 	};
 };
 
@@ -870,20 +858,19 @@ DoAddAmmo = {
 	private _ef = getArray (_magazineConfig >> "ef");
 	private _rf = getArray (_magazineConfig >> "rf");
 	private _ws = getArray (_magazineConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3, "magazine"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhs, "magazine"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1850, "CfgMagazines", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _ef, "magazine"] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1850, "CfgMagazines", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rf, "magazine"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgMagazines", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _ws, "magazine"] call A3M_fnc_createList;
 	};
 };
 
@@ -911,14 +898,13 @@ DoAddExplosives = {
 	private _a3 = getArray (_expConfig >> "a3");
 	private _rhs = getArray (_expConfig >> "rhs");
 	private _ws = getArray (_expConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3, "magazine"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhs, "magazine"] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1850, "CfgMagazines", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _ws, "magazine"] call A3M_fnc_createList;
 	};
 };
 
@@ -945,10 +931,9 @@ DoAddSmoke = {
 	private _smokeGrenadeConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_SmokeGrenades";
 	private _a3 = getArray (_smokeGrenadeConfig >> "a3");
 	private _rhs = getArray (_smokeGrenadeConfig >> "rhs");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1850, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3, "magazine"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1850, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhs, "magazine"] call A3M_fnc_createList;
 	};
 };

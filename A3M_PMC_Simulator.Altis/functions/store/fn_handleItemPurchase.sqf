@@ -35,4 +35,4 @@ private _parsedData = parseSimpleArray _strData;
 _parsedData params ["_vehicleClass", "_displayName", "_price", "_typeOfItem"];
 
 // Call the buy function with the extracted data
-[_vehicleClass, _displayName, _price, _box] call A3M_fnc_buyVehicle;
+[_vehicleClass, _displayName, _price, _box] call A3M_fnc_buyItem;

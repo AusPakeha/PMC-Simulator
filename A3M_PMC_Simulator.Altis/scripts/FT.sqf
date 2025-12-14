@@ -40,7 +40,7 @@ _teleportLocations = [
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_teleportLocations", "_taxi", "_title"];
         private _buttons = _teleportLocations apply {_x select 0};
-        private _result = ["Select a destination:", "Fast Travel", _buttons] call BIS_fnc_guiMessage;
+        private _result = ["Select a destination:", "Fast Travel", true] call BIS_fnc_guiMessage;
         if (_result isEqualType 0 && {_result >= 0}) then {
             private _selected = _teleportLocations select _result;
             _selected params ["", "_selectedTaxi", "_selectedTitle"];
