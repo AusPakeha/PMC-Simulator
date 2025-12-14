@@ -364,17 +364,15 @@ A3M_MP_HackerRaid1_3 = {
 A3M_fnc_Hack = {
     MissionStatus = "M10";
     publicVariable "MissionStatus";
-    // ["","A3M_MP_HackerRaid1_2",true,false] call BIS_fnc_MP;
     remoteExecCall ["A3M_MP_HackerRaid1_2"];
-    // ["", "A3M_svr_Hack_1", false, false, false] call BIS_fnc_MP;
+
     remoteExecCall ["A3M_svr_Hack_1", 2];
     _HackProgress = ["Hacking into system...Please Wait", 300] spawn A3M_fnc_prgBar;
+
     waitUntil { scriptDone _HackProgress };
     MissionStatus = "M0";
     publicVariable "MissionStatus";
-    // ["", "A3M_svr_Hack_2", false, false, false] call BIS_fnc_MP;
     remoteExecCall ["A3M_svr_Hack_2", 2];
-    // ["","A3M_MP_HackerRaid1_3",true,false] call BIS_fnc_MP;
     remoteExecCall ["A3M_MP_HackerRaid1_3"];
 };
 
