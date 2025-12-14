@@ -97,5 +97,10 @@ class CfgFunctions {
             class WSUnits {};
             class WSVests {};
         };
+        class travel {
+            class initTravelClass { preInit = 1; };
+            class openUI {};
+            class handleUIEvents {};
+        };
     };
 };

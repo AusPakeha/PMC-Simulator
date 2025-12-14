@@ -75,6 +75,7 @@ class Header {
 #include "dialogs\WpnLkr.hpp"
 #include "dialogs\A3M_AIR.hpp"
 #include "dialogs\PrgBar.hpp"
+#include "dialogs\RscTravelMenu.hpp"
 
 #include "params.hpp"
 #include "CfgFunctions.hpp"
