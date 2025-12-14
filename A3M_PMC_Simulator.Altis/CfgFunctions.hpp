@@ -10,30 +10,10 @@ class CfgFunctions {
             class createList {};
         };
         class fleet {
-            class ACE3support {};
             class buyVehicle {};
-            class EFheli {};
-            class EFsupport {};
-            class EFwheeled {};
+            class handleFleetPurchase {};
             class handleModClick {};
-            class heli {};
-            class RFheli {};
-            class RFwheeled {};
-            class RHSheli {};
-            class RHSsupport {};
-            class RHSwheeled {};
-            class RHSwinged {};
-            class robotics {};
-            class Support {};
-            class Upgrades {};
             class vBuyButton {};
-            class wheeled {};
-            class winged {};
-            class WSarmor {};
-            class WSheli {};
-            class WSrobotics {};
-            class WSsupport {};
-            class WSwheeled {};
         };
         class store {
             class ACE3Backpacks {};

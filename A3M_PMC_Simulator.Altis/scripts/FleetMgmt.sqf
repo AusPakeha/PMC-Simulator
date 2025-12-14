@@ -95,16 +95,6 @@ B_Llimit = 5500;
 // Big Ticket Item rank (Expensive Shit locked to a rank)
 B_MaxRank = "MAJOR";
 
-// //// //// ////////////////////////////////////////////////////////////////////////////
-// load vehicle Prices from Config
-// //// //// ////////////////////////////////////////////////////////////////////////////
-
-{
-	private _vehicleClass = _x select 0;
-	private _price = _x select 1;
-	missionNamespace setVariable [_vehicleClass, _price];
-} forEach getArray (missionConfigFile >> "CfgFleet" >> "Store" >> "inventory");
-
 if (isNil "_MATV") then {
 	_MATV ="";
 };
@@ -134,11 +124,11 @@ A3M_handle_number = {
 	_digits = _number call BIS_fnc_numberDigits;
 	_digitsCount = count _digits - 1;
 	_modBase = _digitsCount % _mod;
-	_numberText ="";
+	_numberText = "";
 	{
 		_numberText = _numberText + str _x;
 		if ((_foreachindex - _modBase) % (_mod) == 0 && _foreachindex != _digitsCount) then {
-			_numberText = _numberText +", ";
+			_numberText = _numberText +",";
 		};
 	} forEach _digits;
 	_numberText
@@ -147,11 +137,10 @@ A3M_handle_number = {
 // Update Budget Balance in GUI
 DoBudget = {
 	disableSerialization;
-	   // get the dialog display (a viewport)
 	_Bdisplay = findDisplay 420;
+
 	if (str (_Bdisplay) != "no display") then {
 		_ChildControl = _Bdisplay displayCtrl 1170;
-		// Change It
 		form_B_DefenseBudget = [B_DefenseBudget] call A3M_handle_number;
 		_ChildControl ctrlSetStructuredText parseText format ["$%1", form_B_DefenseBudget];
 	};
@@ -162,11 +151,10 @@ DoBudget = {
 // Update Total Balance in GUI
 DoTotal = {
 	disableSerialization;
-	   // get the dialog display (a viewport)
 	_BTdisplay = findDisplay 420;
+
 	if (str (_BTdisplay) != "no display") then {
 		_ChildControl2 = _BTdisplay displayCtrl 1171;
-		// Change It
 		form_B_TotalCost = [B_TotalCost] call A3M_handle_number;
 		_ChildControl2 ctrlSetStructuredText parseText format ["$%1", form_B_TotalCost];
 	};
@@ -177,14 +165,12 @@ DoTotal = {
 // Show Current rank in GUI
 DoRankChk = {
 	disableSerialization;
-	   // get the dialog display (a viewport)
 	_BRdisplay = findDisplay 420;
 	if (str (_BRdisplay) != "no display") then {
 		_ChildControl3 = _BRdisplay displayCtrl 1172;
-		// Change It
 		_prank = rank player;
-		_Pnum = rating player;
-		_ChildControl3 ctrlSetStructuredText parseText format ["Rank is %1<br />Rating is %2", _prank, _Pnum];
+		_rating = rating player;
+		_ChildControl3 ctrlSetStructuredText parseText format ["Rank is %1<br />Rating is %2", _prank, _rating];
 	};
 };
 [] call DoRankChk;
