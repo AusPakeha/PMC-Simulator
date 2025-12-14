@@ -9,9 +9,6 @@
 [x] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
 [x] modify files to use new coding style
 [x] Fix weapons
-[] Add new items to functions\store
-- backpacks
-- uriki.sqf
 [] Item store - hide categories if CDLC/mod not present
 
 // Vehicles
@@ -25,8 +22,6 @@
 // Far down the track
 [] switch out missions to be dynamic
 
-
-Ignore missing textures. Not finished with new hq.
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -43,3 +38,7 @@ Ignore missing textures. Not finished with new hq.
  - backpack
 
 // Errors MrPakeha cant figure out
+
+// FT.sqf Teleport Modification
+- [ ] Modify the addAction in FT.sqf to replace direct teleport with a selection menu showing all possible teleport locations using BIS_fnc_guiMessage.
+- [ ] Test the changes in-game to ensure the menu appears and teleportation works correctly.

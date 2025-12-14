@@ -79,6 +79,7 @@ class CfgFunctions {
             class Suppressors {};
             class TFARElectronics {};
             class Units {};
+            class Uriki {};
             class Vests {};
             class WSAmmo {};
             class WSBackpacks {};

@@ -46,6 +46,22 @@
 	ACE3_Enabled= 0;
 	TFAR_Enabled= 0;
 */
+
+
+// Check for Ace3
+if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
+	Ace3_Enabled = 1;
+} else {
+	Ace3_Enabled = 0;
+};
+
+// Check for TFAR
+if (isClass (configfile >> "CfgPatches" >> "task_force_radio")) then {
+	TFAR_Enabled = 1;
+} else {
+	TFAR_Enabled = 0;
+};
+
 if ((isClass (configfile >> "CfgPatches" >> "rhsusf_main")) && (isClass (configfile >> "CfgPatches" >> "rhs_main"))) then {
 	RHS_Support_Enabled = 1;
 } else {
@@ -71,20 +87,6 @@ if (isClass (configfile >> "CfgPatches" >> "lxWS_Data")) then {
 	WS_Enabled = 1;
 } else {
 	WS_Enabled = 0;
-};
-
-// Check for Ace3
-if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
-	Ace3_Enabled = 1;
-} else {
-	Ace3_Enabled = 0;
-};
-
-// Check for TFAR
-if (isClass (configfile >> "CfgPatches" >> "task_force_radio")) then {
-	TFAR_Enabled = 1;
-} else {
-	TFAR_Enabled = 0;
 };
 
 // Delivery time (in Seconds)
@@ -115,16 +117,16 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 0;
-			RF_Enabled = 0;
-			EF_Enabled = 0;
-			WS_Enabled= 0;
 			ACE3_Enabled= 0;
 			TFAR_Enabled= 0;
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
 			lbAdd [1850, "Now In Stock Arma 3 Content Mode. Click a category to continue."];
 			hint "Stock A3 Mode - No Mods Required";
 		};
-		// Reaction Forces
+		// ACE 3
 		case 1: {
 			lbClear 1850;
 			ItemsOn = 0;
@@ -142,16 +144,16 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 0;
-			RF_Enabled = 1;
-			EF_Enabled = 0;
-			WS_Enabled= 0;
-			ACE3_Enabled= 0;
+			ACE3_Enabled= 1;
 			TFAR_Enabled= 0;
-			lbAdd [1850, "Now In Reaction Forces CDLC Mode. Click a category to continue."];
-			hint "Reaction Forces CDLC is required to use equipment in this category. Please verify that Reaction Forces CDLC is active before purchasing equipment in this category.";
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In ACE 3 Mod Mode. Click a category to continue."];
+			hint "ACE 3 Is required to use equipment in this category. Please verify the ACE 3 Mod is installed before purchasing equipment in this category.";
 		};
-		// Expeditionary Forces
+		// TFAR
 		case 2: {
 			lbClear 1850;
 			ItemsOn = 0;
@@ -169,16 +171,16 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 0;
-			RF_Enabled = 0;
-			EF_Enabled = 1;
-			WS_Enabled= 0;
 			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			lbAdd [1850, "Now In Expeditionary Forces CDLC Mode. Click a category to continue."];
-			hint "Expeditionary Forces CDLC are required to use equipment in this category. Please verify the correct Expeditionary Forces CDLC is installed before purchasing equipment in this category.";
+			TFAR_Enabled= 1;
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In Task Force Radio Mode. Click Electronics to continue."];
+			hint "Task Force Arrowhead Radio (TFAR) is required to use equipment in this category. Please verify the TFAR Mod is installed before purchasing and equipment in this category.";
 		};
-		// Western Sahara
+		// RHS: Escalation
 		case 3: {
 			lbClear 1850;
 			ItemsOn = 0;
@@ -196,16 +198,16 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 0;
-			RF_Enabled = 0;
-			EF_Enabled = 0;
-			WS_Enabled= 1;
 			ACE3_Enabled= 0;
 			TFAR_Enabled= 0;
-			lbAdd [1850, "Now In Western Sahara CDLC Mode. Click a category to continue."];
-			hint "Western Sahara CDLC are required to use equipment in this category. Please verify the correct Western Sahara CDLC is installed before purchasing equipment in this category.";
+			RHS_Support_Enabled = 1;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In RHS: Escalation Mode. Click a category to continue."];
+			hint "RHS: Escalation Is required to use equipment in this category. Please verify the RHS: Escalation Mod is installed before purchasing equipment in this category.";
 		};
-		// RHS: Escalation
+		// Expeditionary Forces
 		case 4: {
 			lbClear 1850;
 			ItemsOn = 0;
@@ -223,16 +225,16 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 1;
-			RF_Enabled = 0;
-			EF_Enabled = 0;
-			WS_Enabled= 0;
 			ACE3_Enabled= 0;
 			TFAR_Enabled= 0;
-			lbAdd [1850, "Now In RHS: Escalation Mode. Click a category to continue."];
-			hint "RHS: Escalation Is required to use equipment in this category. Please verify the RHS: Escalation Mod is installed before purchasing equipment in this category.";
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 1;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In Expeditionary Forces CDLC Mode. Click a category to continue."];
+			hint "Expeditionary Forces CDLC are required to use equipment in this category. Please verify the correct Expeditionary Forces CDLC is installed before purchasing equipment in this category.";
 		};
-		// ACE 3
+		// Reaction Forces
 		case 5: {
 			lbClear 1850;
 			ItemsOn = 0;
@@ -250,16 +252,16 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 0;
-			RF_Enabled = 0;
-			EF_Enabled = 0;
-			WS_Enabled= 0;
-			ACE3_Enabled= 1;
+			ACE3_Enabled= 0;
 			TFAR_Enabled= 0;
-			lbAdd [1850, "Now In ACE 3 Mod Mode. Click a category to continue."];
-			hint "ACE 3 Is required to use equipment in this category. Please verify the ACE 3 Mod is installed before purchasing equipment in this category.";
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 0;
+			RF_Enabled = 1;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In Reaction Forces CDLC Mode. Click a category to continue."];
+			hint "Reaction Forces CDLC is required to use equipment in this category. Please verify that Reaction Forces CDLC is active before purchasing equipment in this category.";
 		};
-		// TFAR
+		// Western Sahara
 		case 6: {
 			lbClear 1850;
 			ItemsOn = 0;
@@ -277,17 +279,35 @@ A3M_fnc_handleWModClick = {
 			AmmoOn= 0;
 			ExplOn= 0;
 			SmokeOn= 0;
-			RHS_Support_Enabled = 0;
-			RF_Enabled = 0;
-			EF_Enabled = 0;
-			WS_Enabled= 0;
 			ACE3_Enabled= 0;
-			TFAR_Enabled= 1;
-			lbAdd [1850, "Now In Task Force Radio Mode. Click Electronics to continue."];
-			hint "Task Force Arrowhead Radio (TFAR) is required to use equipment in this category. Please verify the TFAR Mod is installed before purchasing and equipment in this category.";
+			TFAR_Enabled= 0;
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 1;
+			lbAdd [1850, "Now In Western Sahara CDLC Mode. Click a category to continue."];
+			hint "Western Sahara CDLC are required to use equipment in this category. Please verify the correct Western Sahara CDLC is installed before purchasing equipment in this category.";
 		};
 	};
 };
+
+//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// //// /////////////////////////////////////////////////////  BEGIN ACTUAL OPENING OF dialo//// //// ////////////////////////////////////////////////////////
+//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Ta-dow
+// Open dialog
+_handle = CreateDialog "A3M_GunStore";
+
+//// //// //////////////////////////////////////////////////////////////////////////////////////
+// Supported mod list:
+_indexSM0 = lbAdd [2175, "Stock A3"];
+_indexSM5 = lbAdd [2175, "ACE3"];
+_indexSM6 = lbAdd [2175, "TFAR"];
+_indexSM4 = lbAdd [2175, "RHS: Escalation"];
+_indexSM2 = lbAdd [2175, "Expeditionary Forces"];
+_indexSM1 = lbAdd [2175, "Reaction Forces"];
+_indexSM3 = lbAdd [2175, "Western Sahara"];
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// //// /////////////////////////////////////////////////////  Handle Dbl Click of Ite//// //// //////////////////////////////////////////////////////////////
@@ -327,16 +347,16 @@ DoAddItems = {
 	private _itemConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Items";
 	private _a3 = getArray (_itemConfig >> "a3");
 	private _a3m = getArray (_itemConfig >> "a3m");
-	private _beard = getArray (_itemConfig >> "beard");
 	private _ace3 = getArray (_itemConfig >> "ace3");
+	private _beard = getArray (_itemConfig >> "beard");
 	private _color = [0.738, 0.714, 0.417, 1];
 
 	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	[1850, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
-	[1850, "CfgWeapons", _beard, _color] call A3M_fnc_createList;
 	if (Ace3_Enabled == 1) then {
 		[1850, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
 	};
+	[1850, "CfgGlasses", _beard, _color] call A3M_fnc_createList;
 };
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -359,14 +379,14 @@ DoAddMedical = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _medicalConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Medical";
+	private _medicalConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Medical";
 	private _a3 = getArray (_medicalConfig >> "a3");
 	private _ace3 = getArray (_medicalConfig >> "ace3");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (Ace3_Enabled == 1) then {
-		[1575, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -390,8 +410,9 @@ DoAddElect = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _electronicConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Elec";
+	private _electronicConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Electronic";
 	private _a3 = getArray (_electronicConfig >> "a3");
+	private _a3m = getArray (_electronicConfig >> "a3m");
 	private _ace3 = getArray (_electronicConfig >> "ace3");
 	private _rhs = getArray (_electronicConfig >> "rhs");
 	private _tfar = getArray (_electronicConfig >> "tfar");
@@ -400,24 +421,25 @@ DoAddElect = {
 	private _ws = getArray (_electronicConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
 	if (Ace3_Enabled == 1) then {
-		[1575, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
 	};
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (TFAR_Enabled == 1) then {
-		[1575, "CfgWeapons", _tfar, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _tfar, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -441,7 +463,7 @@ DoAddVests = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _vestConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Vests";
+	private _vestConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Vests";
 	private _a3 = getArray (_vestConfig >> "a3");
 	private _rhs = getArray (_vestConfig >> "rhs");
 	private _ef = getArray (_vestConfig >> "ef");
@@ -449,18 +471,18 @@ DoAddVests = {
 	private _ws = getArray (_vestConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -484,7 +506,7 @@ DoAddClothes = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _uniformConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Uniforms";
+	private _uniformConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Uniforms";
 	private _a3 = getArray (_uniformConfig >> "a3");
 	private _rhs = getArray (_uniformConfig >> "rhs");
 	private _ef = getArray (_uniformConfig >> "ef");
@@ -492,18 +514,18 @@ DoAddClothes = {
 	private _ws = getArray (_uniformConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -527,8 +549,9 @@ DoAddHeadgear = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _headgearConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Headgear";
+	private _headgearConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Headgear";
 	private _a3 = getArray (_headgearConfig >> "a3");
+	private _a3g = getArray (_headgearConfig >> "a3g");
 	private _rhs = getArray (_headgearConfig >> "rhs");
 	private _ef = getArray (_headgearConfig >> "ef");
 	private _rf = getArray (_headgearConfig >> "rf");
@@ -536,20 +559,21 @@ DoAddHeadgear = {
 	private _ukiri = getArray (_headgearConfig >> "ukiri");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgGlasses", _a3g, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
-	[1575, "CfgWeapons", _ukiri, _color] call A3M_fnc_createList;
+	[1850, "CfgGlasses", _ukiri, _color] call A3M_fnc_createList;
 };
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -572,7 +596,7 @@ DoAddBackpacks = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _backpackConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Backpacks";
+	private _backpackConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Backpacks";
 	private _a3 = getArray (_backpackConfig >> "a3");
 	private _rhs = getArray (_backpackConfig >> "rhs");
 	private _ace3 = getArray (_electronicConfig >> "ace3");
@@ -581,21 +605,21 @@ DoAddBackpacks = {
 	private _ws = getArray (_backpackConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (Ace3_Enabled == 1) then {
-		[1575, "CfgWeapons", _ace3, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _ace3, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgVehicles", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgVehicles", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -619,7 +643,7 @@ DoAddSuppressors = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _suppressorConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Suppressors";
+	private _suppressorConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Suppressors";
 	private _a3 = getArray (_suppressorConfig >> "a3");
 	private _rhs = getArray (_suppressorConfig >> "rhs");
 	private _ef = getArray (_suppressorConfig >> "ef");
@@ -627,18 +651,18 @@ DoAddSuppressors = {
 	private _ws = getArray (_suppressorConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -662,7 +686,7 @@ DoAddOptics = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _opticsConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Optics";
+	private _opticsConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Optics";
 	private _a3 = getArray (_opticsConfig >> "a3");
 	private _rhs = getArray (_opticsConfig >> "rhs");
 	private _ef = getArray (_opticsConfig >> "ef");
@@ -670,18 +694,18 @@ DoAddOptics = {
 	private _ws = getArray (_opticsConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -705,7 +729,7 @@ DoAddRifles = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _rifleConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Rifles";
+	private _rifleConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Rifles";
 	private _a3 = getArray (_rifleConfig >> "a3");
 	private _rhs = getArray (_rifleConfig >> "rhs");
 	private _ef = getArray (_rifleConfig >> "ef");
@@ -713,18 +737,18 @@ DoAddRifles = {
 	private _ws = getArray (_rifleConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -748,7 +772,7 @@ DoAddPistols = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _pistolConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Pistols";
+	private _pistolConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Pistols";
 	private _a3 = getArray (_pistolConfig >> "a3");
 	private _rhs = getArray (_pistolConfig >> "rhs");
 	private _ef = getArray (_pistolConfig >> "ef");
@@ -756,18 +780,18 @@ DoAddPistols = {
 	private _ws = getArray (_pistolConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -791,7 +815,7 @@ DoAddLaunchers = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _launcherConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Launchers";
+	private _launcherConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Launchers";
 	private _a3 = getArray (_launcherConfig >> "a3");
 	private _a3m = getArray (_launcherConfig >> "a3m");
 	private _rhs = getArray (_launcherConfig >> "rhs");
@@ -802,21 +826,21 @@ DoAddLaunchers = {
 	private _ws = getArray (_launcherConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
-	[1575, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
+	[1850, "CfgWeapons", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3m, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
-		[1575, "CfgMagazines", _rhms, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhms, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
-		[1575, "CfgMagazines", _rfm, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rfm, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgWeapons", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -840,7 +864,7 @@ DoAddAmmo = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _magazineConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Magazine";
+	private _magazineConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Magazine";
 	private _a3 = getArray (_magazineConfig >> "a3");
 	private _rhs = getArray (_magazineConfig >> "rhs");
 	private _ef = getArray (_magazineConfig >> "ef");
@@ -848,18 +872,18 @@ DoAddAmmo = {
 	private _ws = getArray (_magazineConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgMagazines", _ef, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _ef, _color] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgMagazines", _rf, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rf, _color] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgMagazines", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -883,17 +907,18 @@ DoAddExplosives = {
 	SmokeOn= 0;
 	lbClear 1850;
 
-	private _expConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Grenade";
+	private _expConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Grenade";
 	private _a3 = getArray (_expConfig >> "a3");
 	private _rhs = getArray (_expConfig >> "rhs");
-	private _ef = getArray (_expConfig >> "ef");
-	private _rf = getArray (_expConfig >> "rf");
 	private _ws = getArray (_expConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
+	};
+	if (WS_Enabled == 1) then {
+		[1850, "CfgMagazines", _ws, _color] call A3M_fnc_createList;
 	};
 };
 
@@ -917,43 +942,13 @@ DoAddSmoke = {
 	SmokeOn= 1;
 	lbClear 1850;
 
-	private _smokeGrenadeConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_SmokeGrenades";
+	private _smokeGrenadeConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_SmokeGrenades";
 	private _a3 = getArray (_smokeGrenadeConfig >> "a3");
 	private _rhs = getArray (_smokeGrenadeConfig >> "rhs");
-	private _ef = getArray (_smokeGrenadeConfig >> "ef");
-	private _rf = getArray (_smokeGrenadeConfig >> "rf");
-	private _ws = getArray (_smokeGrenadeConfig >> "ws");
 	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
+	[1850, "CfgMagazines", _a3, _color] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
-	};
-	if (EF_Enabled == 1) then {
-		[1575, "CfgMagazines", _ef, _color] call A3M_fnc_createList;
-	};
-	if (RF_Enabled == 1) then {
-		[1575, "CfgMagazines", _rf, _color] call A3M_fnc_createList;
-	};
-	if (WS_Enabled == 1) then {
-		[1575, "CfgMagazines", _ws, _color] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhs, _color] call A3M_fnc_createList;
 	};
 };
-
-//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//// //// /////////////////////////////////////////////////////  BEGIN ACTUAL OPENING OF dialo//// //// ////////////////////////////////////////////////////////
-//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Ta-dow
-// Open dialog
-_handle = CreateDialog "A3M_GunStore";
-
-//// //// //////////////////////////////////////////////////////////////////////////////////////
-// Supported mod list:
-_indexSM0 = lbAdd [2175, "Stock A3"];
-_indexSM5 = lbAdd [2175, "ACE3"];
-_indexSM6 = lbAdd [2175, "TFAR"];
-_indexSM4 = lbAdd [2175, "RHS: Escalation"];
-_indexSM2 = lbAdd [2175, "Expeditionary Forces"];
-_indexSM1 = lbAdd [2175, "Reaction Forces"];
-_indexSM3 = lbAdd [2175, "Western Sahara"];
