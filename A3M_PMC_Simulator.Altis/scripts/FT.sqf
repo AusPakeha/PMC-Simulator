@@ -13,6 +13,7 @@ _actionText = [
     "Altis International Airport",
     "Pyrgos"
 ];
+
 // Generic teleport function
 A3M_fnc_Teleport = {
     params ["_taxi", "_title"];
@@ -31,6 +32,7 @@ _teleportLocations = [
     ["Altis International Airport", AIA_Taxi, "Travelling to Altis International Airport"],
     ["Pyrgos", Pyrgos_Taxi, "Travelling to Pyrgos"]
 ];
+private _tpL = [_teleportLocations] call join;
 
 // Add actions dynamically
 {
@@ -38,8 +40,8 @@ _teleportLocations = [
     _taxi addAction [_actionText, {
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_teleportLocations", "_taxi", "_title"];
-        private _buttons = _teleportLocations apply {_x select 0};
-        private _result = ["Select a destination:", "Fast Travel to", _buttons] call BIS_fnc_guiMessage;
+        private _buttons = _tpL apply {_x select 0};
+        private _result = ["Select a destination:", "Fast Travel", _buttons] call BIS_fnc_guiMessage;
         if (_result isEqualType 0 && {_result >= 0}) then {
             private _selected = _teleportLocations select _result;
             _selected params ["", "_selectedTaxi", "_selectedTitle"];

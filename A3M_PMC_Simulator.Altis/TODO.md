@@ -38,7 +38,3 @@
  - backpack
 
 // Errors MrPakeha cant figure out
-
-// FT.sqf Teleport Modification
-- [ ] Modify the addAction in FT.sqf to replace direct teleport with a selection menu showing all possible teleport locations using BIS_fnc_guiMessage.
-- [ ] Test the changes in-game to ensure the menu appears and teleportation works correctly.
