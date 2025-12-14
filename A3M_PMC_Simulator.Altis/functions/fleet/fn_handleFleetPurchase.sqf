@@ -26,7 +26,7 @@ if (isNil "_selectedIndex") exitWith {
 // Get the data stored in the listbox
 private _strData = lbData [_listboxId, _selectedIndex];
 
-if (_data == "") exitWith {
+if (_strData == "") exitWith {
     hint "Invalid selection - no data found!";
 };
 
