@@ -3,6 +3,20 @@
 [/] half way complete
 [¯\\_(ツ)_/¯] MrPakeha has no idea
 
+ {"",},
+
+ case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
+
+ case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
+
+ ### TypeOfItem Categories:
+ - item
+ - weapon
+ - magazine
+ - backpack
+
+// Errors MrPakeha cant figure out
+
 // items
 [x] separate each function to its own file
 [x] create CGFStore.hpp in configs
@@ -22,19 +36,6 @@
 // Far down the track
 [] switch out missions to be dynamic
 
-
-////////////////////////////////////////////////////////////////////////////
-
- {"",},
-
- case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
-
- case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
-
- ### TypeOfItem Categories:
- - item
- - weapon
- - magazine
- - backpack
-
-// Errors MrPakeha cant figure out
+// Mission HackDen Update
+[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
+[] Finish it

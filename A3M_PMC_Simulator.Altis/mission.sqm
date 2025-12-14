@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=383;
+		nextID=494;
 	};
 	class Camera
 	{
-		pos[]={22999.967,18.197285,18818.566};
-		dir[]={0.69566947,-0.69808078,0.16949099};
-		up[]={0.67824107,0.71601897,0.16524477};
-		aside[]={0.23671296,-7.4505806e-09,-0.97157955};
+		pos[]={19337.604,56.055935,13212.22};
+		dir[]={0.55001962,-0.52249593,0.65151864};
+		up[]={0.33705011,0.8526417,0.39924836};
+		aside[]={0.7641176,0,-0.64507699};
 	};
 };
 binarizationWanted=0;
@@ -897,19 +897,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -929,6 +916,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
 				};
 			};
 		};
@@ -7939,7 +7939,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23015.596,14.217725,18824.545};
+				position[]={23008.221,10.608871,18815.416};
 				angles[]={0,5.3014641,0};
 			};
 			side="Empty";
@@ -7949,7 +7949,7 @@ class Mission
 			};
 			id=480;
 			type="Sign_Arrow_Large_Green_F";
-			atlOffset=5.3360815;
+			atlOffset=1.6946182;
 		};
 		class Item442
 		{
@@ -23178,8 +23178,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23015.449,7.060966,18824.318};
-				angles[]={0,5.3181052,0};
+				position[]={23008.074,7.0935898,18815.189};
+				angles[]={6.2823396,5.3181052,6.2818046};
 			};
 			side="Empty";
 			class Attributes
@@ -23192,7 +23192,7 @@ class Mission
 			};
 			id=2065;
 			type="C_Van_02_transport_F";
-			atlOffset=2.098;
+			atlOffset=2.1811137;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23508,7 +23508,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23038.424,5.832026,18769.26};
-				angles[]={-0,2.5791628,0};
+				angles[]={0,2.5791628,0};
 			};
 			id=3284;
 			type="ModuleTaskSetState_F";
@@ -90698,14 +90698,14 @@ class Mission
 														};
 														class Attribute1
 														{
-															property="face";
-															expression="_this setface _value;";
+															property="enableStamina";
+															expression="_this enablestamina _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="STRING";
-																	value="WhiteHead_13";
+																	singleType="BOOL";
+																	value=0;
 																};
 															};
 														};
@@ -90750,14 +90750,14 @@ class Mission
 														};
 														class Attribute5
 														{
-															property="enableStamina";
-															expression="_this enablestamina _value;";
+															property="face";
+															expression="_this setface _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="BOOL";
-																	value=0;
+																	singleType="STRING";
+																	value="WhiteHead_13";
 																};
 															};
 														};
@@ -91020,7 +91020,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={23037.074,6.2390857,18769.205};
-												angles[]={-0,0.56904101,0};
+												angles[]={0,0.56904101,0};
 											};
 											side="Empty";
 											flags=4;
