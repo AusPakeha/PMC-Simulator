@@ -1,7 +1,4 @@
-params ["_item", "_displayName", "_type"];
-
-private _rank = rank player;
-private _price = missionNamespace getVariable [_item, 0];
+params [["_item", "", [""]], ["_displayName", "", [""]], ["_price", 0, [0]], ["_type", "", [""]]];
 
 if (Wallet < _price) then {
     hint format [

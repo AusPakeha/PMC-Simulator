@@ -41,6 +41,7 @@ class CfgFunctions {
             class EFVests {};
             class Electronics {};
             class Explosives {};
+            class handleItemPurchase {};
             class Headgear {};
             class Items {};
             class Launchers {};

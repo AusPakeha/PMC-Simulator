@@ -209,20 +209,19 @@ DoAddWheel = {
     private _ef = getArray (_wheeledConfig >> "ef");
     private _rf = getArray (_wheeledConfig >> "rf");
     private _ws = getArray (_wheeledConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgVehicles", _ef, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ef] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgVehicles", _rf, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _rf] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ws] call A3M_fnc_createList;
 	};
 };
 // //// //// //////////////////////////////////////////////////////////////////////////////////////////////
@@ -240,11 +239,10 @@ DoAddFixedWing = {
 	private _fixedWingConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_FixedWing";
     private _a3 = getArray (_fixedWingConfig >> "a3f");
     private _rhs = getArray (_fixedWingConfig >> "rhsf");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 };
 
@@ -266,20 +264,19 @@ DoAddRotary = {
     private _ef = getArray (_heliConfig >> "ef");
     private _rf = getArray (_heliConfig >> "rf");
     private _ws = getArray (_heliConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgVehicles", _ef, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ef] call A3M_fnc_createList;
 	};
 	if (RF_Enabled == 1) then {
-		[1575, "CfgVehicles", _rf, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _rf] call A3M_fnc_createList;
 	};
 	if (WS_Enabled == 1) then {
-		[1575, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ws] call A3M_fnc_createList;
 	};
 };
 
@@ -297,10 +294,9 @@ DoAddArmored = {
 
 	private _armorConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Armored";
     private _ws = getArray (_armorConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
 	if (WS_Enabled == 1) then {
-		[1575, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ws] call A3M_fnc_createList;
 	};
 };
 
@@ -319,11 +315,10 @@ DoAddRobotics = {
 	private _droneConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Drone";
     private _a3 = getArray (_droneConfig >> "a3");
     private _ws = getArray (_droneConfig >> "ws");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 	if (WS_Enabled == 1) then {
-		[1575, "CfgVehicles", _ws, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ws] call A3M_fnc_createList;
 	};
 };
 
@@ -343,14 +338,13 @@ DoAddSupport = {
     private _a3 = getArray (_supportConfig >> "a3");
     private _rhs = getArray (_supportConfig >> "rhs");
     private _ef = getArray (_supportConfig >> "ef");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
-		[1575, "CfgVehicles", _ef, _color] call A3M_fnc_createList;
+		[1575, "CfgVehicles", _ef] call A3M_fnc_createList;
 	};
 };
 
@@ -368,7 +362,6 @@ DoAddUpgrades = {
 
 	private _upgradeConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Upgrade";
     private _a3 = getArray (_upgradeConfig >> "a3");
-	private _color = [0.738, 0.714, 0.417, 1];
 
-	[1575, "CfgVehicles", _a3, _color] call A3M_fnc_createList;
+	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 };
