@@ -274,6 +274,7 @@ if (isDedicated) then {
 
 [] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
 [] execVM "scripts\FT.sqf";
+[] execvM "scripts\doorways.sqf";
 
 if (isServer) then {
     PFrun = false;

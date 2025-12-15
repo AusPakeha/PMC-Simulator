@@ -107,8 +107,7 @@ class CfgFleet {
                 {"B_Heli_Light_01_dynamicLoadout_F",2300000},
                 {"B_Heli_Light_01_F",2000000},
                 {"O_Heli_Light_02_unarmed_F",14300000},
-                {"O_Heli_Light_02_dynamicLoadout_F",16800000},
-                {"ASL_AS350_1",1500000}
+                {"O_Heli_Light_02_dynamicLoadout_F",16800000}
             };
             rhs[] = {
                 {"rhs_ch_47f_10",38550000},

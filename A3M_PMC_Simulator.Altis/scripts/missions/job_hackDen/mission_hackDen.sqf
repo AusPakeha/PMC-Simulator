@@ -18,17 +18,17 @@ if (count _houses > 0) then {
 	private _houseDir = getDir _randomHouse;
 	_markerName setMarkerPos getPosATL _randomHouse;
 	private _housePosATL = getPosATL _randomHouse;
-	private _eqrfPos = [_housePosATL, 1000, random 360] call BIS_fnc_relPos;
+	// The Z coordinate (height) needs adjustment. Start with a small offset (e.g., 2.5m)
+	private _spawnPosASL = _randomHouse getPosASL [2.5, _houseDir];
+
+    private _eqrfPos = [_housePosATL, 1000, random 360] call BIS_fnc_relPos;
 	private _nearestRoad = [_eqrfPos, 500] call BIS_fnc_nearestRoad;
 	if (!isNull _nearestRoad) then {
 		"HACK_EQRF" setMarkerPos getPosATL _nearestRoad;
 	} else {
 		"HACK_EQRF" setMarkerPos _eqrfPos;
 	};
-	  // The Z coordinate (height) needs adjustment. Start with a small offset (e.g., 2.5m)
-	private _spawnPosASL = _randomHouse getPosASL [2.5, _houseDir];
-
-	  // format: [position, Azimuth, Composition_Code] call BIS_fnc_objectsMapper
+	// format: [position, Azimuth, Composition_Code] call BIS_fnc_objectsMapper
 	_spawnedObjects = [_spawnPosASL, _houseDir, call compile preprocessFileLineNumbers _compositionFile] call BIS_fnc_objectsMapper;
 
 	A3M_MP_HackOption= {
@@ -41,19 +41,19 @@ if (count _houses > 0) then {
 		_bluNums = west countSide allPlayers;
 
 		if (_bluNums < 10) then {
-			PC_QRFveh1 = "O_Truck_02_covered_F" createVehicle getMarkerPos "Hack_EQRF";
+			PC_QRFveh1 = "A3M_Truck" createVehicle getMarkerPos "Hack_EQRF";
 			PC_QRFinf1 = [getMarkerPos "Hack_EQRF", EAST, ["A3M_Lieutenant_Oppressor", "A3M_Falcon_Thug", "A3M_Falcon_Scout_Rifle", "A3M_Falcon_Dealer", "A3M_Falcon_Snatcher", "A3M_Falcon_Guard", "A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
 			PC_QRFcrew = [PC_QRFveh1, PC_QRFinf1] call BIS_fnc_spawnCrew;
 			[PC_QRFinf1, getMarkerPos "hack1"] call BIS_fnc_taskAttack;
 		};
 		if (_bluNums > 10) then {
-			PC_QRFveh2 = "O_Truck_02_covered_F" createVehicle getMarkerPos "Hack_EQRF";
+			PC_QRFveh2 = "A3M_Truck" createVehicle getMarkerPos "Hack_EQRF";
 			PC_QRFinf2 = [getMarkerPos "Hack_EQRF", EAST, ["A3M_Lieutenant_Oppressor", "A3M_Falcon_Thug", "A3M_Falcon_Scout_Rifle", "A3M_Falcon_Dealer", "A3M_Falcon_Snatcher", "A3M_Falcon_Guard", "A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
 			PC_QRFcrew = [PC_QRFveh2, PC_QRFinf2] call BIS_fnc_spawnCrew;
 			[PC_QRFinf2, getMarkerPos "hack1"] call BIS_fnc_taskAttack;
 		};
 		if (_bluNums > 20) then {
-			PC_QRFveh3 = "O_Truck_02_covered_F" createVehicle getMarkerPos "Hack_EQRF";
+			PC_QRFveh3 = "A3M_Truck" createVehicle getMarkerPos "Hack_EQRF";
 			PC_QRFinf3 = [getMarkerPos "Hack_EQRF", EAST, ["A3M_Lieutenant_Oppressor", "A3M_Falcon_Thug", "A3M_Falcon_Scout_Rifle", "A3M_Falcon_Dealer", "A3M_Falcon_Snatcher", "A3M_Falcon_Guard", "A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
 			PC_QRFcrew = [PC_QRFveh3, PC_QRFinf3] call BIS_fnc_spawnCrew;
 			[PC_QRFinf3, getMarkerPos "hack1"] call BIS_fnc_taskAttack;
@@ -98,7 +98,7 @@ if (count _houses > 0) then {
 
 		newGroupA = createGroup east;
 		private _safePosA = [_hackPos, 0, 500, 5, 0, 0.1, 0, [], [_hackPos, _hackPos]] call BIS_fnc_findSafePos;
-		newUnitA = newGroupA createUnit ['A3M_DrugLord_Solomon_Maru', _safePosA, [], 0, 'CAN_COLLIDE'];
+		newUnitA = newGroupA createUnit ['A3M_DrugLord', _safePosA, [], 0, 'CAN_COLLIDE'];
 		newUnitA setSkill 0.5;
 		newUnitA setRank 'PRIVATE';
 		newUnitA setFormDir 0;
@@ -174,7 +174,6 @@ if (count _houses > 0) then {
 		newGroupF setBehaviour 'AWARE';
 		newGroupF setSpeedMode 'NORMAL';
 
-		        // ["", "A3M_MP_HackOption", true, false] call BIS_fnc_MP;
 		remoteExecCall ["A3M_MP_HackOption", 0];
 	};
 
@@ -184,7 +183,7 @@ if (count _houses > 0) then {
 };
 
 _spawnedObjects
-missionNamespace setVariable ["myMission_SpawnedCompObjects", [] execVM "move_marker_script.sqf"];
+missionNamespace setVariable ["myMission_SpawnedCompObjects", [] execVM "mission_hackDen.sqf"];
 
 private _objectsToDelete = missionNamespace getVariable "myMission_SpawnedCompObjects";
  if (HRaidActive == 0) then {

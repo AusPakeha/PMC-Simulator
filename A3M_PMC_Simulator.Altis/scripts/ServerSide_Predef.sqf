@@ -642,7 +642,7 @@ A3M_svr_HackerRaid1 = {
     Furn7 setVectorDirAndUp [[0.558737,0.827848,-0.049808], [0.0199745,0.0466069,0.998714]];
 
     newGroupA = createGroup EAST;
-    newUnitA = newGroupA createUnit ['A3M_DrugLord_Solomon_Maru', [19345.2,13237.3,0.00143433], [], 0, 'CAN_COLLIDE'];
+    newUnitA = newGroupA createUnit ['A3M_DrugLord', [19345.2,13237.3,0.00143433], [], 0, 'CAN_COLLIDE'];
     newUnitA setSkill 0.5;
     newUnitA setRank 'PRIVATE';
     newUnitA setFormDir 0;
