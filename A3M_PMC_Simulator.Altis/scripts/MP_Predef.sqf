@@ -2393,9 +2393,9 @@ A3M_fnc_AIR = {
                     removeHeadgear CurAIRUnit;
                     removeGoggles CurAIRUnit;
 
-                    CurAIRUnit forceAddUniform "U_BG_Guerrilla_6_1";
+                    CurAIRUnit forceAddUniform "U_B_GEN_Soldier_F";
                     for "_i" from 1 to 2 do {CurAIRUnit addItemToUniform "30Rnd_9x21_Mag";};
-                    CurAIRUnit addVest "V_TacVest_oli";
+                    CurAIRUnit addVest "V_PlateCarrier1_blk";
                     CurAIRUnit addItemToVest "NVGoggles_INDEP";
                     CurAIRUnit addItemToVest "30Rnd_9x21_Mag";
                     CurAIRUnit addHeadgear "H_MilCap_blue";
@@ -2439,10 +2439,10 @@ A3M_fnc_AIR = {
                     removeHeadgear CurAIRUnit;
                     removeGoggles CurAIRUnit;
 
-                    CurAIRUnit forceAddUniform "U_BG_Guerrilla_6_1";
+                    CurAIRUnit forceAddUniform "U_B_GEN_Soldier_F";
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToUniform "16Rnd_9x21_Mag"; };
 
-                    CurAIRUnit addVest "V_PlateCarrier1_rgr";
+                    CurAIRUnit addVest "V_PlateCarrier2_blk";
                     for "_i" from 1 to 6 do { CurAIRUnit addItemToVest "10Rnd_93x64_DMR_05_Mag"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "HandGrenade"; };
@@ -2481,10 +2481,10 @@ A3M_fnc_AIR = {
                     removeHeadgear CurAIRUnit;
                     removeGoggles CurAIRUnit;
 
-                    CurAIRUnit forceAddUniform "U_BG_Guerrilla_6_1";
+                    CurAIRUnit forceAddUniform "U_B_GEN_Soldier_F";
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToUniform "16Rnd_9x21_Mag"; };
 
-                    CurAIRUnit addVest "V_PlateCarrier1_rgr";
+                    CurAIRUnit addVest "V_PlateCarrier1_blk";
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "HandGrenade"; };
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "SmokeShell"; };
                     for "_i" from 1 to 6 do { CurAIRUnit addItemToVest "30Rnd_65x39_caseless_mag"; };
@@ -2529,11 +2529,11 @@ A3M_fnc_AIR = {
                     removeHeadgear CurAIRUnit;
                     removeGoggles CurAIRUnit;
 
-                    CurAIRUnit forceAddUniform "U_BG_Guerrilla_6_1";
+                    CurAIRUnit forceAddUniform "U_B_GEN_Soldier_F";
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToUniform "16Rnd_9x21_Mag"; };
 
                     CurAIRUnit addItemToUniform "HandGrenade";
-                    CurAIRUnit addVest "V_PlateCarrier1_rgr";
+                    CurAIRUnit addVest "V_PlateCarrier1_blk";
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "HandGrenade"; };
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "SmokeShell"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
@@ -2579,9 +2579,9 @@ A3M_fnc_AIR = {
                     removeHeadgear CurAIRUnit;
                     removeGoggles CurAIRUnit;
 
-                    CurAIRUnit forceAddUniform "U_BG_Guerrilla_6_1";
+                    CurAIRUnit forceAddUniform "U_B_GEN_Soldier_F";
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToUniform "16Rnd_9x21_Mag"; };
-                    CurAIRUnit addVest "V_PlateCarrier1_rgr";
+                    CurAIRUnit addVest "V_PlateCarrier1_blk";
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
                     for "_i" from 1 to 7 do { CurAIRUnit addItemToVest "20Rnd_762x51_Mag"; };
                     CurAIRUnit addHeadgear "rhsusf_ach_bare_wood_ess";

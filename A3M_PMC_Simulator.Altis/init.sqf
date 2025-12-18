@@ -149,6 +149,10 @@ if (isDedicated) then {
         _MPpreDef = execVM "scripts\MP_Predef.sqf";
         waitUntil { scriptDone _MPpreDef };
 
+        // mission script loads
+        _missionHackDen = execVM "scripts\missions\job_hackDen\mission_hackDen.sqf";
+        waitUntil { scriptDone _missionHackDen };
+
 
         // Load the Common Predefines OLD METHOD, OUTDATED, DO NOT USE!
         //_CmnPreDef = execVM "scripts\Common_Predef.sqf";
@@ -274,7 +278,6 @@ if (isDedicated) then {
 
 [] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
 [] execVM "scripts\FT.sqf";
-[] execvM "scripts\doorways.sqf";
 
 if (isServer) then {
     PFrun = false;

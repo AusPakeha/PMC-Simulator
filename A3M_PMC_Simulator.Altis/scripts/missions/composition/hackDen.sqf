@@ -9,21 +9,6 @@ private _layerRoot = (_allWhitelisted || {
 }) && {
 	!(true in _layerBlackList)
 };
-private _layer105 = (_allWhitelisted || {
-	"hackable server (decor)" in _layerWhiteList
-}) && {
-	!("hackable server (decor)" in _layerBlackList)
-};
-private _layer104 = (_allWhitelisted || {
-	"hackable server (rugged)" in _layerWhiteList
-}) && {
-	!("hackable server (rugged)" in _layerBlackList)
-};
-private _layer175 = (_allWhitelisted || {
-	"hackable servers (composition)" in _layerWhiteList
-}) && {
-	!("hackable servers (composition)" in _layerBlackList)
-};
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 // Markers
@@ -67,8 +52,8 @@ if (_layerRoot) then {
 };
 
 private _item106 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
-	_item106 = createSimpleObject ["Land_Laptop_unfolded_F", [6435.25, 6686.89, 9.71599]];
+if (_layerRoot) then {
+	_item106 = createSimpleObject ["Land_Laptop_unfolded_F", [6435.25, 6686.89, 9.56559]];
 	_this = _item106;
 	_objects pushBack _this;
 	_objectIDs pushBack 106;
@@ -97,7 +82,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item107 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item107 = createSimpleObject ["Land_USB_Dongle_01_F", [6435.05, 6686.87, 9.39459]];
 	_this = _item107;
 	_objects pushBack _this;
@@ -126,7 +111,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item108 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item108 = createSimpleObject ["Land_MRL_Magazine_01_F", [6435.85, 6688.03, 9.17519]];
 	_this = _item108;
 	_objects pushBack _this;
@@ -155,7 +140,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item109 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item109 = createSimpleObject ["Land_MRL_Magazine_01_F", [6435.85, 6688.03, 10.2012]];
 	_this = _item109;
 	_objects pushBack _this;
@@ -184,7 +169,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item111 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item111 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6686.91, 8.66659]];
 	_this = _item111;
 	_objects pushBack _this;
@@ -216,7 +201,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item112 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item112 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6686.91, 8.97259]];
 	_this = _item112;
 	_objects pushBack _this;
@@ -248,7 +233,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item113 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item113 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6686.91, 9.30659]];
 	_this = _item113;
 	_objects pushBack _this;
@@ -280,7 +265,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item114 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item114 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6686.91, 9.63259]];
 	_this = _item114;
 	_objects pushBack _this;
@@ -312,7 +297,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item115 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item115 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6686.91, 9.95859]];
 	_this = _item115;
 	_objects pushBack _this;
@@ -344,7 +329,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item116 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item116 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6686.91, 10.2856]];
 	_this = _item116;
 	_objects pushBack _this;
@@ -376,7 +361,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item117 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item117 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6688.47, 8.66659]];
 	_this = _item117;
 	_objects pushBack _this;
@@ -408,7 +393,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item118 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item118 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6688.47, 8.97259]];
 	_this = _item118;
 	_objects pushBack _this;
@@ -440,7 +425,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item119 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item119 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6688.47, 9.30659]];
 	_this = _item119;
 	_objects pushBack _this;
@@ -472,7 +457,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item120 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item120 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6688.47, 9.63259]];
 	_this = _item120;
 	_objects pushBack _this;
@@ -504,7 +489,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item121 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item121 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6688.47, 9.95859]];
 	_this = _item121;
 	_objects pushBack _this;
@@ -536,7 +521,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item122 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item122 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6688.47, 10.2856]];
 	_this = _item122;
 	_objects pushBack _this;
@@ -568,7 +553,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item123 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item123 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6689.12, 8.66659]];
 	_this = _item123;
 	_objects pushBack _this;
@@ -600,7 +585,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item124 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item124 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6689.12, 8.97259]];
 	_this = _item124;
 	_objects pushBack _this;
@@ -632,7 +617,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item125 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item125 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6689.12, 9.30659]];
 	_this = _item125;
 	_objects pushBack _this;
@@ -664,7 +649,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item126 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item126 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6689.12, 9.63259]];
 	_this = _item126;
 	_objects pushBack _this;
@@ -696,7 +681,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item127 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item127 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6689.12, 9.95859]];
 	_this = _item127;
 	_objects pushBack _this;
@@ -728,7 +713,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item128 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item128 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6689.12, 10.2856]];
 	_this = _item128;
 	_objects pushBack _this;
@@ -760,7 +745,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item129 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item129 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6687.83, 8.66659]];
 	_this = _item129;
 	_objects pushBack _this;
@@ -792,7 +777,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item130 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item130 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6687.83, 8.97259]];
 	_this = _item130;
 	_objects pushBack _this;
@@ -824,7 +809,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item131 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item131 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6687.83, 9.30659]];
 	_this = _item131;
 	_objects pushBack _this;
@@ -856,7 +841,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item132 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item132 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6687.83, 9.63259]];
 	_this = _item132;
 	_objects pushBack _this;
@@ -888,7 +873,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item133 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item133 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6687.83, 9.95859]];
 	_this = _item133;
 	_objects pushBack _this;
@@ -920,7 +905,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item134 = objNull;
-if (_layer105 && _layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item134 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.86, 6687.83, 10.2856]];
 	_this = _item134;
 	_objects pushBack _this;
@@ -952,7 +937,7 @@ if (_layer105 && _layer104 && _layer175) then {
 };
 
 private _item135 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item135 = createSimpleObject ["Land_USB_Dongle_01_F", [6432.63, 6685.34, 9.39459]];
 	_this = _item135;
 	_objects pushBack _this;
@@ -983,8 +968,8 @@ if (_layer104 && _layer175) then {
 };
 
 private _item136 = objNull;
-if (_layer104 && _layer175) then {
-	_item136 = createVehicle ["Land_Laptop_unfolded_F", [6432.67, 6685.13, 4.716], [], 0, "CAN_COLLIDE"];
+if (_layerRoot) then {
+	_item136 = createVehicle ["Land_Laptop_unfolded_F", [6432.67, 6685.12, 4.5656], [], 0, "CAN_COLLIDE"];
 	_this = _item136;
 	_objects pushBack _this;
 	_objectIDs pushBack 136;
@@ -998,7 +983,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item137 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item137 = createSimpleObject ["Land_MRL_Magazine_01_F", [6433.78, 6684.54, 9.17519]];
 	_this = _item137;
 	_objects pushBack _this;
@@ -1027,7 +1012,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item138 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item138 = createSimpleObject ["Land_MRL_Magazine_01_F", [6433.78, 6684.54, 10.2012]];
 	_this = _item138;
 	_objects pushBack _this;
@@ -1056,7 +1041,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item142 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item142 = createVehicle ["Item_FlashDisk", [6429.64, 6686.89, 1.14945], [], 0, "CAN_COLLIDE"];
 	_this = _item142;
 	_objects pushBack _this;
@@ -1069,7 +1054,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item143 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item143 = createSimpleObject ["Land_USB_Dongle_01_F", [6434.99, 6685.19, 9.39459]];
 	_this = _item143;
 	_objects pushBack _this;
@@ -1100,8 +1085,8 @@ if (_layer104 && _layer175) then {
 };
 
 private _item144 = objNull;
-if (_layer104 && _layer175) then {
-	_item144 = createSimpleObject ["Land_Laptop_F", [6435.22, 6685.2, 9.58239]];
+if (_layerRoot) then {
+	_item144 = createSimpleObject ["Land_Laptop_F", [6435.22, 6685.2, 9.56559]];
 	_this = _item144;
 	_objects pushBack _this;
 	_objectIDs pushBack 144;
@@ -1131,7 +1116,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item145 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item145 = createSimpleObject ["Land_PortableServer_01_olive_F", [6432.67, 6684.54, 8.97259]];
 	_this = _item145;
 	_objects pushBack _this;
@@ -1163,7 +1148,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item146 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item146 = createSimpleObject ["Land_PortableServer_01_olive_F", [6432.67, 6684.54, 9.30659]];
 	_this = _item146;
 	_objects pushBack _this;
@@ -1195,7 +1180,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item147 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item147 = createSimpleObject ["Land_PortableServer_01_olive_F", [6432.67, 6684.54, 9.63259]];
 	_this = _item147;
 	_objects pushBack _this;
@@ -1227,7 +1212,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item148 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item148 = createSimpleObject ["Land_PortableServer_01_olive_F", [6432.67, 6684.54, 9.95859]];
 	_this = _item148;
 	_objects pushBack _this;
@@ -1259,7 +1244,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item149 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item149 = createSimpleObject ["Land_PortableServer_01_olive_F", [6432.67, 6684.54, 10.2856]];
 	_this = _item149;
 	_objects pushBack _this;
@@ -1291,7 +1276,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item150 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item150 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.8, 6685.23, 8.97259]];
 	_this = _item150;
 	_objects pushBack _this;
@@ -1323,7 +1308,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item151 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item151 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.8, 6685.23, 9.30659]];
 	_this = _item151;
 	_objects pushBack _this;
@@ -1355,7 +1340,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item152 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item152 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.8, 6685.23, 9.63259]];
 	_this = _item152;
 	_objects pushBack _this;
@@ -1387,7 +1372,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item153 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item153 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.8, 6685.23, 9.95859]];
 	_this = _item153;
 	_objects pushBack _this;
@@ -1419,7 +1404,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item154 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item154 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.8, 6685.23, 10.2856]];
 	_this = _item154;
 	_objects pushBack _this;
@@ -1451,7 +1436,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item155 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item155 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.21, 6684.54, 8.66659]];
 	_this = _item155;
 	_objects pushBack _this;
@@ -1483,7 +1468,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item156 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item156 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.21, 6684.54, 8.97259]];
 	_this = _item156;
 	_objects pushBack _this;
@@ -1515,7 +1500,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item157 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item157 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.21, 6684.54, 9.30659]];
 	_this = _item157;
 	_objects pushBack _this;
@@ -1547,7 +1532,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item158 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item158 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.21, 6684.54, 9.63259]];
 	_this = _item158;
 	_objects pushBack _this;
@@ -1579,7 +1564,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item159 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item159 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.21, 6684.54, 9.95859]];
 	_this = _item159;
 	_objects pushBack _this;
@@ -1611,7 +1596,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item160 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item160 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.21, 6684.54, 10.2856]];
 	_this = _item160;
 	_objects pushBack _this;
@@ -1643,7 +1628,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item161 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item161 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.86, 6684.54, 8.66659]];
 	_this = _item161;
 	_objects pushBack _this;
@@ -1675,7 +1660,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item162 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item162 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.86, 6684.54, 8.97259]];
 	_this = _item162;
 	_objects pushBack _this;
@@ -1707,7 +1692,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item163 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item163 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.86, 6684.54, 9.30659]];
 	_this = _item163;
 	_objects pushBack _this;
@@ -1739,7 +1724,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item164 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item164 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.86, 6684.54, 9.63259]];
 	_this = _item164;
 	_objects pushBack _this;
@@ -1771,7 +1756,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item165 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item165 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.86, 6684.54, 9.95859]];
 	_this = _item165;
 	_objects pushBack _this;
@@ -1803,7 +1788,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item166 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item166 = createSimpleObject ["Land_PortableServer_01_olive_F", [6434.86, 6684.54, 10.2856]];
 	_this = _item166;
 	_objects pushBack _this;
@@ -1835,7 +1820,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item167 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item167 = createSimpleObject ["Land_PortableServer_01_olive_F", [6433.56, 6684.54, 8.66659]];
 	_this = _item167;
 	_objects pushBack _this;
@@ -1867,7 +1852,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item168 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item168 = createSimpleObject ["Land_PortableServer_01_olive_F", [6433.56, 6684.54, 8.97259]];
 	_this = _item168;
 	_objects pushBack _this;
@@ -1899,7 +1884,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item169 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item169 = createSimpleObject ["Land_PortableServer_01_olive_F", [6433.56, 6684.54, 9.30659]];
 	_this = _item169;
 	_objects pushBack _this;
@@ -1931,7 +1916,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item170 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item170 = createSimpleObject ["Land_PortableServer_01_olive_F", [6433.56, 6684.54, 9.63259]];
 	_this = _item170;
 	_objects pushBack _this;
@@ -1963,7 +1948,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item171 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item171 = createSimpleObject ["Land_PortableServer_01_olive_F", [6433.56, 6684.54, 9.95859]];
 	_this = _item171;
 	_objects pushBack _this;
@@ -1995,7 +1980,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item172 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item172 = createSimpleObject ["Land_PortableServer_01_olive_F", [6433.56, 6684.54, 10.2856]];
 	_this = _item172;
 	_objects pushBack _this;
@@ -2027,7 +2012,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item173 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item173 = createSimpleObject ["Land_PortableServer_01_olive_F", [6432.67, 6684.54, 8.66659]];
 	_this = _item173;
 	_objects pushBack _this;
@@ -2061,7 +2046,7 @@ if (_layer104 && _layer175) then {
 };
 
 private _item174 = objNull;
-if (_layer104 && _layer175) then {
+if (_layerRoot) then {
 	_item174 = createSimpleObject ["Land_PortableServer_01_olive_F", [6435.8, 6685.23, 8.66659]];
 	_this = _item174;
 	_objects pushBack _this;
@@ -2818,7 +2803,7 @@ if (_layerRoot) then {
 
 private _item277 = objNull;
 if (_layerRoot) then {
-	_item277 = createSimpleObject ["Land_MobilePhone_old_F", [6429.72, 6689.06, 9.49776]];
+	_item277 = createSimpleObject ["Land_MobilePhone_old_F", [6429.72, 6689.06, 9.49798]];
 	_this = _item277;
 	_objects pushBack _this;
 	_objectIDs pushBack 277;
@@ -3000,14 +2985,8 @@ private _logicIDs = [];
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 // Layers
-if (_layer105) then {
-	missionNamespace setVariable ["A3M%20Compositions_Hackable Server (Decor)", [[_item106, _item107, _item108, _item109, _item111, _item112, _item113, _item114, _item115, _item116, _item117, _item118, _item119, _item120, _item121, _item122, _item123, _item124, _item125, _item126, _item127, _item128, _item129, _item130, _item131, _item132, _item133, _item134], []]];
-};
-if (_layer104) then {
-	missionNamespace setVariable ["A3M%20Compositions_Hackable Server (Rugged)", [[_item106, _item107, _item108, _item109, _item111, _item112, _item113, _item114, _item115, _item116, _item117, _item118, _item119, _item120, _item121, _item122, _item123, _item124, _item125, _item126, _item127, _item128, _item129, _item130, _item131, _item132, _item133, _item134, _item135, _item136, _item137, _item138, _item142, _item143, _item144, _item145, _item146, _item147, _item148, _item149, _item150, _item151, _item152, _item153, _item154, _item155, _item156, _item157, _item158, _item159, _item160, _item161, _item162, _item163, _item164, _item165, _item166, _item167, _item168, _item169, _item170, _item171, _item172, _item173, _item174], []]];
-};
-if (_layer175) then {
-	missionNamespace setVariable ["A3M%20Compositions_Hackable Servers (Composition)", [[_item106, _item107, _item108, _item109, _item111, _item112, _item113, _item114, _item115, _item116, _item117, _item118, _item119, _item120, _item121, _item122, _item123, _item124, _item125, _item126, _item127, _item128, _item129, _item130, _item131, _item132, _item133, _item134, _item135, _item136, _item137, _item138, _item142, _item143, _item144, _item145, _item146, _item147, _item148, _item149, _item150, _item151, _item152, _item153, _item154, _item155, _item156, _item157, _item158, _item159, _item160, _item161, _item162, _item163, _item164, _item165, _item166, _item167, _item168, _item169, _item170, _item171, _item172, _item173, _item174], []]];
+if (_layerRoot) then {
+	missionNamespace setVariable ["A3M%20Compositions_hackDen", [[_item0, _item1, _item106, _item107, _item108, _item109, _item111, _item112, _item113, _item114, _item115, _item116, _item117, _item118, _item119, _item120, _item121, _item122, _item123, _item124, _item125, _item126, _item127, _item128, _item129, _item130, _item131, _item132, _item133, _item134, _item135, _item136, _item137, _item138, _item142, _item143, _item144, _item145, _item146, _item147, _item148, _item149, _item150, _item151, _item152, _item153, _item154, _item155, _item156, _item157, _item158, _item159, _item160, _item161, _item162, _item163, _item164, _item165, _item166, _item167, _item168, _item169, _item170, _item171, _item172, _item173, _item174, _item241, _item242, _item243, _item244, _item246, _item248, _item249, _item250, _item251, _item252, _item253, _item254, _item255, _item256, _item257, _item258, _item259, _item260, _item261, _item262, _item263, _item264, _item265, _item266, _item267, _item268, _item269, _item271, _item272, _item273, _item274, _item275, _item276, _item277, _item278, _item280, _item282, _item283, _item284, _item285, _item286, _item288], []]];
 };
 
 // /////////////////////////////////////////////////////////////////////////////////////////

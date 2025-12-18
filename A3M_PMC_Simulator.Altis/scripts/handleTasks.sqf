@@ -59,7 +59,7 @@ doAddMissions = {
     _index5 = lbAdd [1905,"Terrorist Cell Raid II (Assault City)"];
     _index6 = lbAdd [1905,"*Urgent* Stranded unit requires E&E support"];
     _index7 = lbAdd [1905,"Premise Security Shift (T-9 Facility)"];
-    _index8 = lbAdd [1905,"Dorida Hacker Den Raid"];
+    _index8 = lbAdd [1905,"Hacker Den Raid"];
     _index9 = lbAdd [1905,"Dignitary Speech Security"];
 };
 
@@ -180,6 +180,7 @@ A3M_msn_T9sec = {
 
 // Next Mission Set
 // *********************#################***********************
+/*
 A3M_msn_Hden1 = {
     if (isNil "HRaidActive") then { HRaidActive = 0; };
     if (HRaidActive == 0) then {
@@ -203,6 +204,26 @@ A3M_msn_Hden1 = {
         systemChat "A Mission of this type is already active, and cannot be duplicated.";
     };
 };
+*/
+A3M_msn_Hden1 = {
+    if (isNil "HRaidActive") then { HRaidActive = 0; };
+    if (HRaidActive == 0) then {
+        MissionStatus = "M9";
+        publicVariable "MissionStatus";
+
+        HRaidActive = 1;
+        publicVariable "HRaidActive";
+        // Bells and Whistles to signal mission accepted
+        hint "Mission Accepted";
+        playSound "A3M_MissionAccepted";
+
+        // Execute mission script
+        remoteExecCall ["A3M_JHD_HackerRaid1", 2];
+    } else {
+        systemChat "A Mission of this type is already active, and cannot be duplicated.";
+    };
+};
+
 
 A3M_msn_DgntrySec = {
     if (isNil "SpeechActive") then { SpeechActive = 0; };

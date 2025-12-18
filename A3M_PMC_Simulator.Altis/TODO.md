@@ -43,4 +43,5 @@
 -
 -// Mission HackDen Update
 -[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
+-[] Mission is spawning but will not spawn items from hackDen.sqe
 -[] Finish it

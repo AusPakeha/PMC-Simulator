@@ -20,8 +20,8 @@ class CfgFleet {
                 {"B_Truck_01_covered_F",125000},
                 {"B_Truck_01_transport_F",90000},
                 {"B_Quadbike_01_F",7500},
-                {"DEGA_ArmoredSUV_PMC",350000},
-                {"DEGA_GunArmoredSUV_PMC",450000}
+                {"A3M_OPSG_Armored_Surburban_B",350000},
+                {"A3M_OPSG_Armored_Surburban_Minigun",450000}
             };
             rhs[] = {
                 {"rhs_gaz66_msv",125500},
@@ -107,7 +107,9 @@ class CfgFleet {
                 {"B_Heli_Light_01_dynamicLoadout_F",2300000},
                 {"B_Heli_Light_01_F",2000000},
                 {"O_Heli_Light_02_unarmed_F",14300000},
-                {"O_Heli_Light_02_dynamicLoadout_F",16800000}
+                {"O_Heli_Light_02_dynamicLoadout_F",16800000},
+                {"A3M_OPSG_MH6_Little_Bird_B",1000000},
+                {"A3M_OPSG_Ka60_Kasatka_B",8800000}
             };
             rhs[] = {
                 {"rhs_ch_47f_10",38550000},

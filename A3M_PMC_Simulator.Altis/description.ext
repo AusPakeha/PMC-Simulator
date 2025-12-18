@@ -83,6 +83,7 @@ class Header {
 #include "RscTitles.hpp"
 #include "CfgSounds.hpp"
 #include "INC_undercover\cfgFunctions.hpp"
+#include "scripts\missions\composition\composition.cfg"
 
 #include "configs\CfgFleet.hpp"
 #include "configs\CfgStore.hpp"
