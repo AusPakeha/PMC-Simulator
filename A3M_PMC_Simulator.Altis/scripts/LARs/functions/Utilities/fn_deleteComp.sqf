@@ -29,7 +29,7 @@ private _deferedGroups = [];
 			if ( count units _obj isEqualTo 0 ) then {
 				deleteGroup _obj;
 			}else{
-				_nul = _deferedGroups pushBack _group;
+				_nul = _deferedGroups pushBack _obj;
 			};
 		};
 		//WAYPOINT

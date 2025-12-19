@@ -409,7 +409,7 @@ private _fnc_setPositionAndRotation = {
 //			_this spawn _fnc_setPositionAndRotation;
 //		};
 //	};
-
+// [""2617298b580# 1785271: a3m_server_rack_1.p3d A3M_SmallServerRack"",""[2.38086,4.95155,-0.52832]"",""[0,3.13831,0]"",""0"",""[]"",""false"",""0""]
 	//Change cfg offset from [ x, z, y ] into [ x, y, z ]
 	_cfgOffset = [ _cfgOffset select 0, _cfgOffset select 2 , _cfgOffset select 1 ];
 	//Rotate the objects offset in the composition relative to the compositions spawn direction
@@ -475,49 +475,54 @@ private _fnc_setPositionAndRotation = {
 
 		//Turn composition angles to degrees
 		_CfgRot params[ "_P", "_Y", "_R" ];
+        diag_log format ["[A3M] %1", str _CfgRot];
 
 		_Y = ( deg _Y ) + _compRot;
 		_P = deg _P;
 		_R = 360 - deg _R;
 
 		//If Aliging composition or its a vehicle that needs surface up
-		_pb = if ( ( _compAlign || _needsSurfaceUP ) && !( surfaceIsWater _pos && _compWater ) && !_asPlaced ) then {
-			//Face it in the right direction
-			_obj setDir _Y;
-			//Get positions surface up
-			_up = surfaceNormal _pos;
+    _pb = if (( _compAlign || _needsSurfaceUP ) && !( surfaceIsWater _pos && _compWater ) && !_asPlaced) then {
+	// face it in the right direction
+	_obj setDir _Y;
+	// get positions surface up
+	_up = surfaceNormal _pos;
+	diag_log format ["[A3M] %1 up", _up];
 
-			//Get bound corner surface ups
-			_bounds = boundingBoxReal _obj;
-			_bounds params[ "_mins", "_maxs" ];
-			_mins params[ "_minX", "_minY", "_minZ" ];
-			_maxs params[ "_maxX", "_maxY" ];
+	// get bound corner surface ups
+	_bounds = boundingBoxReal _obj;
+	_bounds params[ "_mins", "_maxs" ];
+	_mins params[ "_minX", "_minY", "_minZ" ];
+	_maxs params[ "_maxX", "_maxY" ];
 
-			//Calculate up based on corner surface normals
-			_newUp = _up;
-			{
-				_cornerPos = _obj modelToWorldVisual _x;
-				_cornerUp = surfaceNormal _cornerPos;
-				_weight = _pos distance _cornerPos;
-				_diff = ( _up vectorDiff _cornerUp ) vectorMultiply _weight;
-				_newUp = _newUp vectorAdd _diff;
-			}forEach [
-				[ _minX, _minY, _minZ ],
-				[ _minX, _maxY, _minZ ],
-				[ _maxX, _maxY, _minZ ],
-				[ _maxX, _minY, _minZ ]
-			];
+	// Calculate up based on corner surface normals
+	_newUp = _up;
+	{
+		_cornerPos = _obj modelToWorldVisual _x;
+		_cornerUp = surfaceNormal _cornerPos;
+		_weight = _pos distance _cornerPos;
+		_diff = (_up vectorDiff _cornerUp) vectorMultiply _weight;
+		_newUp = _newUp vectorAdd _diff;
+		diag_log format ["[A3M] %1, %2, %3, %4, %5", _cornerPos, _cornerUp, _weight, _diff, _newUp];
+		}forEach [
+			[ _minX, _minY, _minZ ],
+			[ _minX, _maxY, _minZ ],
+			[ _maxX, _maxY, _minZ ],
+			[ _maxX, _minY, _minZ ]
+		];
 
-			_obj setVectorUp vectorNormalized _up;
+		_obj setVectorUp vectorNormalized _up;
 
-			_obj call BIS_fnc_getPitchBank
-		}else{
-			[ 0, 0 ]
-		};
+		_obj call BIS_fnc_getPitchBank
+	} else {
+		diag_log "[A3M] oops";
+		[ 0, 0 ]
+	};
 
 		//Add any surface offset to composition rotations
+        _pb = [0, 0];
 		_pb params[ "_pbP", "_pbR" ];
-
+        diag_log format ["[A3M] %1 pb", str _pb];
 		_P = _P + _pbP;
 		_R = _R + _pbR;
 
@@ -955,6 +960,8 @@ private _fnc_spawnObject = {
 		_randomStartPos = getArray( _cfg >> "randomStartPositions" );
 		_placementRadius = getNumber( _cfg >> "Attributes" >> "placementRadius" );
 
+        _log = [ str _veh, str _position, str _rotation, str _ATLOffset, str _randomStartPos, str _needsSurfaceUP, str _placementRadius ];
+        diag_log format ["[A3M] %1", _log];
 		_position = [ _veh, _position, _rotation, _ATLOffset, _randomStartPos, _needsSurfaceUP, _placementRadius ] call _fnc_setPositionAndRotation;
 
 		_ignoreTrigDynSym = [ ( _cfg >> "Attributes" >> "ignoreByDynSimulGrid" ), "NUM", 0 ] call _fnc_getCfgValue;
@@ -1041,7 +1048,7 @@ private _fnc_spawnTrigger = {
 	_position = [ _trg, _position, [0,0,0], _ATLOffset ] call _fnc_setPositionandRotation;
 	_trg setTriggerArea [ _sizeA, _sizeB, _rotation, _isRectangle, _sizeC ];
 	if !( _varName isEqualTo "" ) then {
-		_trg setVehicleVarName _varname;
+		_trg setVehicleVarName _varName;
 		missionNamespace setVariable [ _varName, _trg, true ];
 	};
 	_trg setTriggerText _description;

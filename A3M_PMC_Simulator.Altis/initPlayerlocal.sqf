@@ -3,10 +3,6 @@ _Player = _this select 0;
 _Player execVM "scripts\GF_Ambient_Environment_Sounds\Credits.sqf";// Please keep the Credits or add them to your Diary
 _Player execVM "scripts\GF_Ambient_Environment_Sounds\GF_AES_init.sqf";
 
-if (player getVariable ["isSneaky", false]) then {
-	[player] execVM "INC_undercover\Scripts\initUCR.sqf";
-};
-
 // //////////////////////////////////////////////////////////////////////////////////////////////
 
 for "_i" from 1 to 8 do {

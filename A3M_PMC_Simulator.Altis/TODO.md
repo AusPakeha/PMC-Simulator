@@ -32,6 +32,7 @@
 -[x] config Incon Undercover
 -[x] remove GF Ambience hints
 -[] global deliveries hold add action
+-[x] add funds to player account for completed missions
 -
 -// Base Upgrade System
 -[] Code base system
@@ -43,5 +44,5 @@
 -
 -// Mission HackDen Update
 -[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
--[] Mission is spawning but will not spawn items from hackDen.sqe
+-[] mission_hackDen.sqf is working but will not spawn items on hack1 marker
 -[] Finish it

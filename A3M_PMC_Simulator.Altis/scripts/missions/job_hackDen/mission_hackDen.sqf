@@ -5,34 +5,41 @@ A3M_JHD_HackerRaid1 = {
     private _mapSize = worldSize * sqrt 2 / 2;
 	private _houseClassname = "Land_i_House_Big_02_V1_F"; // Target house className
 	private _markerName = "hack1"; // Marker name
-	//private _compositionFile = "scripts\missions\job_hackDen\composition\hackDen.sqe"; // The composition file path
+	private _compositionFile = "scripts\missions\composition\hackDen.sqe"; // The composition file path
 	private _houses = nearestObjects [_center, [_houseClassname], _mapSize];
-    diag_log "hackDen - configuration completed";
+    diag_log "[A3M] hackDen - configuration completed";
 
 	if (count _houses > 0) then {
 		private _randomHouse = selectRandom _houses;
-		private _housePosASL = getPosASL _randomHouse;
-		private _houseDir = getDir _randomHouse;
-        diag_log "hackDen - Houses chosen";
-		_markerName setMarkerPos getPosATL _randomHouse;
-        diag_log "hackDen - hack1 marker moved";
-		private _housePosATL = getPosATL _randomHouse;
-		// The Z coordinate (height) needs adjustment. Start with a small offset (e.g., 2.5m)
-		private _spawnPosASL = [_housePosASL, 2.5, _houseDir] call BIS_fnc_relPos;
+        private _finalHouse = _randomHouse;
 
-		private _eqrfPos = [_housePosATL, 700, random 360] call BIS_fnc_relPos;
+		_markerName setMarkerPos getPosATL _finalHouse;
+        diag_log "[A3M] hackDen - hack1 marker moved";
+
+		private _houseDir = getDir _finalHouse;
+        diag_log "[A3M] hackDen - Houses chosen";
+
+		private _housePosATL = getPosATL _finalHouse;
+		// Adjust spawn position to align the composition's house with the actual house
+		private _relativeHousePos = [-1.8359375, 2.8839679, -2.1601563];
+		private _spawnPosATL = _housePosATL vectorAdd _relativeHousePos;
+		private _spawnPosASL = ATLtoASL _spawnPosATL;
+        diag_log ["[A3M] hackDen - House position: ATL: %1, Dir: %2", str _housePosATL, str _houseDir];
+
+		// format: [position, Azimuth, Composition_Code] call BIS_fnc_objectsMapper
+        _spawnedObjects = ["hackDen", _spawnPosASL, 0, _houseDir, false, false, true] call LARs_fnc_spawnComp;
+		// _spawnedObjects = [_spawnPosASL, _houseDir, ((call compile preprocessFileLineNumbers _compositionFile) select 0)] call BIS_fnc_objectsMapper;
+        missionNamespace setVariable ["A3M_HackDen_Comp", _spawnedObjects];
+        diag_log "[A3M] hackDen - composition spawned";
+
+		private _eqrfPos = [_finalHouse, 700, random 360] call BIS_fnc_relPos;
 		private _nearestRoad = [_eqrfPos, 500] call BIS_fnc_nearestRoad;
 		if (!isNull _nearestRoad) then {
 			"hack_eqrf" setMarkerPos getPosATL _nearestRoad;
 		} else {
 			"hack_eqrf" setMarkerPos _eqrfPos;
 		};
-        diag_log "hackDen - EQRF marker moved";
-
-		// format: [position, Azimuth, Composition_Code] call BIS_fnc_objectsMapper
-        _hackDen = ["hackDen", _spawnPosASL, 0, _houseDir, false, false, false] call LARs_fnc_spawnComp;
-		//_spawnedObjects = [_spawnPosASL, _houseDir, ((call compile preprocessFileLineNumbers _compositionFile) select 0)] call BIS_fnc_objectsMapper;
-        diag_log "hackDen - composition spawned";
+        diag_log "[A3M] hackDen - EQRF marker moved";
 
 		MPSrack = server_unit_screen;
 		publicVariable "MPSrack";
@@ -74,25 +81,25 @@ A3M_JHD_HackerRaid1 = {
 		remoteExecCall ["A3M_MP_HackOption", 0];
 
 		diag_log format ["Composition spawned on a random house at position %1 with direction %2", _spawnPosASL, _houseDir];
-		missionNamespace setVariable ["myMission_SpawnedCompObjects", _spawnedObjects];
+		//missionNamespace setVariable ["myMission_SpawnedCompObjects", _spawnedObjects];
 	} else {
 		diag_log format ["No houses found with classname %1", _houseClassname];
 		missionNamespace setVariable ["myMission_SpawnedCompObjects", []];
 	};
 };
 
-A3M_MP_HackOption= {
+A3M_JHD_HackOption= {
 	MPSrack addAction ["Hack Console", {
-		[] spawn A3M_fnc_Hack;
+		[] spawn A3M_JHD_Hack;
 	}];
 };
 
-A3M_fnc_Hack = {
+A3M_JHD_Hack = {
 	MissionStatus = "M10";
 	publicVariable "MissionStatus";
-	remoteExecCall ["A3M_MP_HackerRaid1_2"];
+	remoteExecCall ["A3M_JHD_HackerRaid1_2"];
 
-	remoteExecCall ["A3M_svr_Hack_1", 2];
+	remoteExecCall ["A3M_JHD_Hack_1", 2];
 	_HackProgress = ["Hacking into system...Please Wait", 300] spawn A3M_fnc_prgBar;
 
 	waitUntil {
@@ -100,11 +107,11 @@ A3M_fnc_Hack = {
 	};
 	MissionStatus = "M0";
 	publicVariable "MissionStatus";
-	remoteExecCall ["A3M_svr_Hack_2", 2];
-	remoteExecCall ["A3M_MP_HackerRaid1_3"];
+	remoteExecCall ["A3M_JHD_Hack_2", 2];
+	remoteExecCall ["A3M_JHD_HackerRaid1_3"];
 };
 
-A3M_svr_Hack_1 = {
+A3M_JHD_Hack_1 = {
 	_bluNums = west countSide allPlayers;
 
 	if (_bluNums < 10) then {
@@ -127,7 +134,7 @@ A3M_svr_Hack_1 = {
 	};
 };
 
-A3M_svr_Hack_2 = {
+A3M_JHD_Hack_2 = {
 	HRaidActive = 0;
 	publicVariable "HRaidActive";
 
@@ -137,16 +144,11 @@ A3M_svr_Hack_2 = {
 	sleep 90;
 
 	// Cleanup time
-	private _objectsToDelete = missionNamespace getVariable "myMission_SpawnedCompObjects";
+	private _hackDenComp = missionNamespace getVariable ["A3M_HackDen_Comp", nil];
 	if (HRaidActive == 0) then {
-		if (count _objectsToDelete > 0) then {
-			// Iterate through all objects in the array and delete them
-			{
-				deleteVehicle _x
-			} forEach _objectsToDelete;
-
+		if (!isNil "_hackDenComp") then {
+			[_hackDenComp] call LARs_fnc_deleteComp;
 			diag_log "Hack Den Composition deleted.";
-			[_hackDen] call LARs_fnc_deleteComp; // Clear the variable
 		} else {
 			diag_log "Mission Hack Den could not be cleaned. Zues intervention required"
 		};

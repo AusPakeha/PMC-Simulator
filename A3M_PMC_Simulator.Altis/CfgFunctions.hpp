@@ -26,6 +26,7 @@ class CfgFunctions {
             class handleUIEvents {};
         };
     };
+    #include "scripts\LARs\LARs_spawnComp.cpp"
 };
 
 class SimTools_Compositions {

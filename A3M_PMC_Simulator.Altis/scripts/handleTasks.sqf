@@ -180,7 +180,6 @@ A3M_msn_T9sec = {
 
 // Next Mission Set
 // *********************#################***********************
-/*
 A3M_msn_Hden1 = {
     if (isNil "HRaidActive") then { HRaidActive = 0; };
     if (HRaidActive == 0) then {
@@ -204,7 +203,7 @@ A3M_msn_Hden1 = {
         systemChat "A Mission of this type is already active, and cannot be duplicated.";
     };
 };
-*/
+/*
 A3M_msn_Hden1 = {
     if (isNil "HRaidActive") then { HRaidActive = 0; };
     if (HRaidActive == 0) then {
@@ -223,6 +222,7 @@ A3M_msn_Hden1 = {
         systemChat "A Mission of this type is already active, and cannot be duplicated.";
     };
 };
+*/
 
 
 A3M_msn_DgntrySec = {

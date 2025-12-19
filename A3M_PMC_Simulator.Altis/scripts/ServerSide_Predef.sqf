@@ -518,19 +518,19 @@ A3M_svr_Hack_1 = {
     _bluNums = west countSide allPlayers;
 
     if (_bluNums < 10) then {
-        PC_QRFveh1 = "O_Truck_02_covered_F" createVehicle getMarkerPos "Hack_EQRF";
+        PC_QRFveh1 = "A3M_Truck" createVehicle getMarkerPos "Hack_EQRF";
         PC_QRFinf1 = [getMarkerPos "Hack_EQRF", EAST, ["A3M_Lieutenant_Oppressor","A3M_Falcon_Thug","A3M_Falcon_Scout_Rifle","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Guard","A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
         PC_QRFcrew = [PC_QRFveh1, PC_QRFinf1] call BIS_fnc_spawnCrew;
         [PC_QRFinf1, getMarkerPos "Hack1"] call BIS_fnc_taskAttack;
     };
     if (_bluNums > 10) then {
-        PC_QRFveh2 = "O_Truck_02_covered_F" createVehicle getMarkerPos "Hack_EQRF";
+        PC_QRFveh2 = "A3M_Truck" createVehicle getMarkerPos "Hack_EQRF";
         PC_QRFinf2 = [getMarkerPos "Hack_EQRF", EAST, ["A3M_Lieutenant_Oppressor","A3M_Falcon_Thug","A3M_Falcon_Scout_Rifle","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Guard","A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
         PC_QRFcrew = [PC_QRFveh2, PC_QRFinf2] call BIS_fnc_spawnCrew;
         [PC_QRFinf2, getMarkerPos "Hack1"] call BIS_fnc_taskAttack;
     };
     if (_bluNums > 20) then {
-        PC_QRFveh3 = "O_Truck_02_covered_F" createVehicle getMarkerPos "Hack_EQRF";
+        PC_QRFveh3 = "A3M_Truck" createVehicle getMarkerPos "Hack_EQRF";
         PC_QRFinf3 = [getMarkerPos "Hack_EQRF", EAST, ["A3M_Lieutenant_Oppressor","A3M_Falcon_Thug","A3M_Falcon_Scout_Rifle","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Guard","A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
         PC_QRFcrew = [PC_QRFveh3, PC_QRFinf3] call BIS_fnc_spawnCrew;
         [PC_QRFinf3, getMarkerPos "Hack1"] call BIS_fnc_taskAttack;
@@ -654,7 +654,7 @@ A3M_svr_HackerRaid1 = {
     newGroupA setSpeedMode 'NORMAL';
 
     newGroupB = createGroup EAST;
-    newUnitB = newGroupB createUnit ['A3M_Falcon_Guard', [19340.1,13236.9,0.00143814], [], 0, 'CAN_COLLIDE'];
+    newUnitB = newGroupB createUnit ['A3M_Falcon_Smuggler', [19340.1,13236.9,0.00143814], [], 0, 'CAN_COLLIDE'];
     newUnitB setSkill 0.5;
     newUnitB setRank 'PRIVATE';
     newUnitB setFormDir 139.441;
@@ -678,7 +678,7 @@ A3M_svr_HackerRaid1 = {
     newGroupC setSpeedMode 'NORMAL';
 
     newGroupD = createGroup EAST;
-    newUnitD = newGroupD createUnit ['A3M_Falcon_Guard', [19343.4,13233,0.0014267], [], 0, 'CAN_COLLIDE'];
+    newUnitD = newGroupD createUnit ['A3M_Falcon_Snatcher', [19343.4,13233,0.0014267], [], 0, 'CAN_COLLIDE'];
     newUnitD setSkill 0.5;
     newUnitD setRank 'PRIVATE';
     newUnitD setFormDir 269.201;
