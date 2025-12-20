@@ -62,4 +62,109 @@ class Params {
         texts[] = {"Off ($0.00)","$100.00", "$200.00", "$300.00", "$400.00", "$500.00"};
         default = 200;
     };
+    class EP_Core {
+        //paramsArray select 9
+        title = "EP - Core (Must be enabled to use EP params)";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_AircraftEnhancements {
+        //paramsArray select 10
+        title = "EP - Aircraft Enhancements";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_AmbientNoises {
+        //paramsArray select 11
+        title = "EP - Ambient Noises";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_BetterMortars {
+        //paramsArray select 12
+        title = "EP - Better Mortars";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_BoatAnchors {
+        //paramsArray select 13
+        title = "EP - Boat Anchors";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_CombatCallouts {
+        //paramsArray select 14
+        title = "EP - Combat Callouts";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_DragPlayers {
+        //paramsArray select 15
+        title = "EP - Drag Players";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_EnhancedNVG {
+        //paramsArray select 16
+        title = "EP - Enhanced NVG";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_EnhancedRadio {
+        //paramsArray select 17
+        title = "EP - Enhanced Radio";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_FlashNFrags {
+        //paramsArray select 18
+        title = "EP - Flash N Frags";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_ForceFirstPerson {
+        //paramsArray select 19
+        title = "EP - Force First Person";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_IncreasedFuelBurn {
+        //paramsArray select 20
+        title = "EP - Increased Fuel Burn";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_SitOnQuads {
+        //paramsArray select 21
+        title = "EP - Sit On Quads";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_SlowOffroadVehicles {
+        //paramsArray select 22
+        title = "EP - Slow Offroad Vehicles";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
+    class EP_Suppression {
+        //paramsArray select 23
+        title = "EP - Suppression";
+        values[] = {0,1};
+        texts[] = {"Disabled","Enabled"};
+        default = 0;
+    };
 };

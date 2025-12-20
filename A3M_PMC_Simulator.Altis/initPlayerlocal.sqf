@@ -1,7 +1,3 @@
-_Player = _this select 0;
-
-_Player execVM "scripts\GF_Ambient_Environment_Sounds\Credits.sqf";// Please keep the Credits or add them to your Diary
-_Player execVM "scripts\GF_Ambient_Environment_Sounds\GF_AES_init.sqf";
 
 // //////////////////////////////////////////////////////////////////////////////////////////////
 

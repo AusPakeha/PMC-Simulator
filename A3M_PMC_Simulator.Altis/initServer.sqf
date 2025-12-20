@@ -21,10 +21,10 @@ if isServer then
 
 ///////////////////// Random ///////////////////////////////////////////////////////////////////
 [] spawn {
-	if (isNil "allPlayers_on") then 
+	if (isNil "allPlayers_on") then
 	{
 		chk_players = true;
-		while {chk_players} do 
+		while {chk_players} do
 		{
 			//allPlayers_on = allPlayers_on - entities "HeadlessClient_F";
 			allPlayers_on = call BIS_fnc_listPlayers;
@@ -33,6 +33,3 @@ if isServer then
 		};
 	}
 };
-
-///////////////////// Adds Junk to the roads ///////////////////////////////////////////////////////////////////
-//[ 50, 30, 15, [ [[10,10,0],15 ],[102,150,0],12]]; execVM "scripts\AbandonedRoads\init.sqf";

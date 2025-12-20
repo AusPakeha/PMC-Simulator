@@ -20,8 +20,8 @@ class CfgFleet {
                 {"B_Truck_01_covered_F",125000},
                 {"B_Truck_01_transport_F",90000},
                 {"B_Quadbike_01_F",7500},
-                {"A3M_OPSG_Armored_Surburban_B",350000},
-                {"A3M_OPSG_Armored_Surburban_Minigun",450000}
+                {"DEGA_ArmoredSUV_PMC",350000},
+                {"DEGA_GunArmoredSUV_PMC",450000}
             };
             rhs[] = {
                 {"rhs_gaz66_msv",125500},
@@ -95,7 +95,7 @@ class CfgFleet {
             };
         };
         class A3M_Armored {
-            wsa[] = {
+            ws[] = {
                 {"B_ION_APC_Wheeled_01_command_lxWS",3500000},
                 {"B_ION_APC_Wheeled_02_hmg_lxWS",3200000},
                 {"B_APC_Wheeled_01_atgm_lxWS",4000000}

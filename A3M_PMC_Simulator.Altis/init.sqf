@@ -192,7 +192,7 @@ if (isDedicated) then {
         initphase = 0;
 
         systemChat "Loading Phase * PMC Simulator * 100% Complete...";
-        systemChat "PMC Simulator ~ By PMC Revival";
+        systemChat "PMC Simulator ~ By PMC SIM Revival";
         systemChat "Original PMC Simulator ~ By Cody Salazar AKA A3M Fr33d0m ";
         systemChat "WARNING: THIS MISSION IS MADE FOR A DEDICATED SERVER!";
         systemChat "WARNING: CLIENT HOST DETECTED, PERFORMANCE MAY BE DEGRADED!";
@@ -263,7 +263,7 @@ if (isDedicated) then {
 
         systemChat "Loading Phase * PMC Simulator * 100% Complete...";
         systemChat "                                                         ";
-        systemChat "PMC Simulator ~ By PMC Revival ";
+        systemChat "PMC Simulator ~ By PMC SIM Revival ";
         systemChat "                                                         ";
         systemChat "Original PMC Simulator ~ By Cody Salazar AKA A3M Fr33d0m ";
     };
@@ -276,8 +276,26 @@ if (isDedicated) then {
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_SFX\GF_SFX_Killed_LITE\GF_SFX_Killed.sqf";
 [] execVM "scripts\GF_Blood_Stains_LITE\GF_SFX\GF_SFX_Screaming\GF_Set_SFX_Screaming.sqf";
 
+// Enhancement Pack Preloading
+if (paramsArray select 9 == 1) then { execVM "scripts\Enhancment_Pack\EP_Core.sqf"; };
+if (paramsArray select 10 == 1) then { execVM "scripts\Enhancment_Pack\EP_AircraftEnhancements.sqf"; };
+if (paramsArray select 11 == 1) then { execVM "scripts\Enhancment_Pack\EP_AmbientNoises.sqf"; };
+if (paramsArray select 12 == 1) then { execVM "scripts\Enhancment_Pack\EP_BetterMortars.sqf"; };
+if (paramsArray select 13 == 1) then { execVM "scripts\Enhancment_Pack\EP_BoatAnchors.sqf"; };
+if (paramsArray select 14 == 1) then { execVM "scripts\Enhancment_Pack\EP_CombatCallouts.sqf"; };
+if (paramsArray select 15 == 1) then { execVM "scripts\Enhancment_Pack\EP_DragPlayers.sqf"; };
+if (paramsArray select 16 == 1) then { execVM "scripts\Enhancment_Pack\EP_EnhancedNVG.sqf"; };
+if (paramsArray select 17 == 1) then { execVM "scripts\Enhancment_Pack\EP_EnhancedRadio.sqf"; };
+if (paramsArray select 18 == 1) then { execVM "scripts\Enhancment_Pack\EP_FlashNFrags.sqf"; };
+if (paramsArray select 19 == 1) then { execVM "scripts\Enhancment_Pack\EP_ForceFirstPerson.sqf"; };
+if (paramsArray select 20 == 1) then { execVM "scripts\Enhancment_Pack\EP_IncreasedFuelBurn.sqf"; };
+if (paramsArray select 21 == 1) then { execVM "scripts\Enhancment_Pack\EP_SitOnQuads.sqf"; };
+if (paramsArray select 22 == 1) then { execVM "scripts\Enhancment_Pack\EP_SlowOffroadVehicles.sqf"; };
+if (paramsArray select 23 == 1) then { execVM "scripts\Enhancment_Pack\EP_Suppression.sqf"; };
+
 [] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
 [] execVM "scripts\FT.sqf";
+
 
 if (isServer) then {
     PFrun = false;

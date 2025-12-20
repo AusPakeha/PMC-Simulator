@@ -1,51 +1,18 @@
 /*
 
-	  /$$$$$$   /$$$$$$  /$$      /$$       /$$$$$$$  /$$      /$$  /$$$$$$         /$$$$$$  /$$   /$$  /$$
-	 /$$__  $$ /$$__  $$| $$$    /$$$      | $$__  $$| $$$    /$$$ /$$__  $$       /$$__  $$|__/  | $$ | $$
-	| $$  \ $$|__/  \ $$| $$$$  /$$$$      | $$  \ $$| $$$$  /$$$$| $$  \__/      | $$  \__/ /$$ /$$$$$$/$$$$  /$$   /$$| $$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$
-	| $$$$$$$$   /$$$$$/| $$ $$/$$ $$      | $$$$$$$/| $$ $$/$$ $$| $$ |  $$$$$$ | $$| $$_  $$_  $$| $$  | $$| $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
-	| $$__  $$  |___  $$| $$  $$$| $$      | $$____/ | $$  $$$| $$| $$  \____  $$| $$| $$ \ $$ \ $$| $$  | $$| $$  /$$$$$$$  | $$    | $$  \ $$| $$  \__/
-	| $$  | $$ /$$  \ $$| $$\  $ | $$      | $$      | $$\  $ | $$| $$    $$       /$$  \ $$| $$| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$  | $$| $$
-	| $$  | $$|  $$$$$$/| $$ \/  | $$      | $$      | $$ \/  | $$|  $$$$$$/      |  $$$$$$/| $$| $$ | $$ | $$|  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$
-	|__/  |__/ \______/ |__/     |__/      |__/      |__/     |__/ \______/        \______/ |__/|__/ |__/ |__/ \______/ |__/ \_______/   \___/   \______/ |__/
-
-
 	Item Store V 3.0 by Cody Salazar AKA Fr33d0m
-	www.A3MilSim.com
+	Modified by MrPakeha and J. Schmidt
 
 	License:
-	You can do whatever you were going to do anyway. Just give me the credit i'm due, and don't steal my shit. I'll be pissed.
-	if you want to repay me for all my hard work, come and play arma with me! I hang out at a MilSim unit known as A3M (A3 MilSim)
-	Come and visit us at ts3.a3milsim.com
-
-	WE LOVE JOINT OPS with OTHER units!!
-
-	www.A3MilSim.com (A3 MilSim)
-	All Rights Reserved
-
-	for Information and Inquiries, EMAIL: salazar@a3milsim.com
-
-	Credits & Thanks:
-
-	My wife, for not only supporting my modding ventures, but actually jumping in and helping with mods when she can. What a gal!
-
-	And last, but definitely not least, the A3 community, who through over 250+ encouraging messages highly motivated me to continue this project. I'm glad you like it,
-	and I hope you enjoy the things I have in the works!
+	You can do whatever you were going to do anyway. Just give credit.
 
 ################################## LET US BEGIN #################################### */
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// //// /////////////////////////////////////////////////////  General Options and Pre-load Variables//////// ////////////////////////////////////////////////
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
-// Turn Off Weapon Mods on Open:
-	RHS_Support_Enabled= 0;
-	RF_Enabled = 0;
-	EF_Enabled = 0;
-	WS_Enabled= 0;
-	ACE3_Enabled= 0;
-	TFAR_Enabled= 0;
-*/
+
+// configFile checks to see if mod is active.
 
 
 // Check for Ace3
@@ -93,8 +60,10 @@ if (isClass (configfile >> "CfgPatches" >> "lxWS_Data")) then {
 DeliveryTime = ParamsArray select 3;
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//// //// /////////////////////////////////////////////////////  Handle mod Support Filte//// //// /////////////////////////////////////////////////////////////
+//// //// /////////////////////////////////////////////////////  Handle mod Support Filters//// //// /////////////////////////////////////////////////////////////
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Swutch and cases for mod filtering in the store.
 
 A3M_fnc_handleWModClick = {
 	WModSelection= _this select 1;
@@ -153,62 +122,8 @@ A3M_fnc_handleWModClick = {
 			lbAdd [1850, "Now In ACE 3 Mod Mode. Click a category to continue."];
 			hint "ACE 3 Is required to use equipment in this category. Please verify the ACE 3 Mod is installed before purchasing equipment in this category.";
 		};
-		// TFAR
-		case 2: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 1;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In Task Force Radio Mode. Click Electronics to continue."];
-			hint "Task Force Arrowhead Radio (TFAR) is required to use equipment in this category. Please verify the TFAR Mod is installed before purchasing and equipment in this category.";
-		};
-		// RHS: Escalation
-		case 3: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 1;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In RHS: Escalation Mode. Click a category to continue."];
-			hint "RHS: Escalation Is required to use equipment in this category. Please verify the RHS: Escalation Mod is installed before purchasing equipment in this category.";
-		};
 		// Expeditionary Forces
-		case 4: {
+		case 2: {
 			lbClear 1850;
 			ItemsOn = 0;
 			MedOn = 0;
@@ -235,7 +150,7 @@ A3M_fnc_handleWModClick = {
 			hint "Expeditionary Forces CDLC are required to use equipment in this category. Please verify the correct Expeditionary Forces CDLC is installed before purchasing equipment in this category.";
 		};
 		// Reaction Forces
-		case 5: {
+		case 3: {
 			lbClear 1850;
 			ItemsOn = 0;
 			MedOn = 0;
@@ -262,7 +177,7 @@ A3M_fnc_handleWModClick = {
 			hint "Reaction Forces CDLC is required to use equipment in this category. Please verify that Reaction Forces CDLC is active before purchasing equipment in this category.";
 		};
 		// Western Sahara
-		case 6: {
+		case 4: {
 			lbClear 1850;
 			ItemsOn = 0;
 			MedOn = 0;
@@ -288,6 +203,60 @@ A3M_fnc_handleWModClick = {
 			lbAdd [1850, "Now In Western Sahara CDLC Mode. Click a category to continue."];
 			hint "Western Sahara CDLC are required to use equipment in this category. Please verify the correct Western Sahara CDLC is installed before purchasing equipment in this category.";
 		};
+		// RHS: Escalation
+		case 5: {
+			lbClear 1850;
+			ItemsOn = 0;
+			MedOn = 0;
+			ElecOn= 0;
+			VestsOn= 0;
+			ClothesOn= 0;
+			HeadGearOn= 0;
+			BackPacksOn = 0;
+			SuppOn= 0;
+			OptOn= 0;
+			RiflesOn= 0;
+			PistolsOn= 0;
+			LaunchersOn= 0;
+			AmmoOn= 0;
+			ExplOn= 0;
+			SmokeOn= 0;
+			ACE3_Enabled= 0;
+			TFAR_Enabled= 0;
+			RHS_Support_Enabled = 1;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In RHS: Escalation Mode. Click a category to continue."];
+			hint "RHS: Escalation Is required to use equipment in this category. Please verify the RHS: Escalation Mod is installed before purchasing equipment in this category.";
+		};
+		// TFAR
+		case 6: {
+			lbClear 1850;
+			ItemsOn = 0;
+			MedOn = 0;
+			ElecOn= 0;
+			VestsOn= 0;
+			ClothesOn= 0;
+			HeadGearOn= 0;
+			BackPacksOn = 0;
+			SuppOn= 0;
+			OptOn= 0;
+			RiflesOn= 0;
+			PistolsOn= 0;
+			LaunchersOn= 0;
+			AmmoOn= 0;
+			ExplOn= 0;
+			SmokeOn= 0;
+			ACE3_Enabled= 0;
+			TFAR_Enabled= 1;
+			RHS_Support_Enabled = 0;
+			EF_Enabled = 0;
+			RF_Enabled = 0;
+			WS_Enabled= 0;
+			lbAdd [1850, "Now In Task Force Radio Mode. Click Electronics to continue."];
+			hint "Task Force Arrowhead Radio (TFAR) is required to use equipment in this category. Please verify the TFAR Mod is installed before purchasing and equipment in this category.";
+		};
 	};
 };
 
@@ -302,12 +271,12 @@ _handle = CreateDialog "A3M_GunStore";
 //// //// //////////////////////////////////////////////////////////////////////////////////////
 // Supported mod list:
 _indexSM0 = lbAdd [2175, "Stock A3"];
-_indexSM5 = lbAdd [2175, "ACE3"];
-_indexSM6 = lbAdd [2175, "TFAR"];
-_indexSM4 = lbAdd [2175, "RHS: Escalation"];
+_indexSM1 = lbAdd [2175, "ACE3"];
 _indexSM2 = lbAdd [2175, "Expeditionary Forces"];
-_indexSM1 = lbAdd [2175, "Reaction Forces"];
-_indexSM3 = lbAdd [2175, "Western Sahara"];
+_indexSM3 = lbAdd [2175, "Reaction Forces"];
+_indexSM4 = lbAdd [2175, "Western Sahara"];
+_indexSM5 = lbAdd [2175, "RHS: Escalation"];
+_indexSM6 = lbAdd [2175, "TFAR"];
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// //// /////////////////////////////////////////////////////  Handle Dbl Click of Ite//// //// //////////////////////////////////////////////////////////////

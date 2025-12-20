@@ -27,12 +27,14 @@
 -
 -// Vehicles
 -[x] convert all fleet files to new coding style
+-[] Fix Supported Modification section of FleetMgmt.sqf
 -
 -// Various
 -[x] config Incon Undercover
 -[x] remove GF Ambience hints
 -[] global deliveries hold add action
 -[x] add funds to player account for completed missions
+
 -
 -// Base Upgrade System
 -[] Code base system

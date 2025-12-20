@@ -8,9 +8,9 @@ if(missionNamespace getVariable ["MAZ_EP_CoreEnabled",false]) exitWith {
 		private _result = [
 			parseText "
 			<t size='1.3' align='center' color='#00BFBF'>Enhancement Pack Core is already running</t><br/>
-			<t size='1.0' align='center'>If you'd like to edit the settings of the systems that are running press OK, otherwise press CANCEL to continue Zeusing.</t> ", 
-			"Enhancement Pack Already Running", 
-			true, 
+			<t size='1.0' align='center'>If you'd like to edit the settings of the systems that are running press OK, otherwise press CANCEL to continue Zeusing.</t> ",
+			"Enhancement Pack Already Running",
+			true,
 			true,
 			(findDisplay 312)
 		] call BIS_fnc_guiMessage;
@@ -299,7 +299,7 @@ private _value = (str {
 					KeybindListnBox ctrlSetPosition [["X",7.5] call _fn_convertGUIGRID, ["Y",6.5] call _fn_convertGUIGRID, ["W",25] call _fn_convertGUIGRID, ["H",13.2] call _fn_convertGUIGRID];
 					KeybindListnBox ctrlSetBackgroundColor [0,0,0,0.5];
 					lnbClear KeybindListnBox;
-					for "_i" from 0 to 10 do {	
+					for "_i" from 0 to 10 do {
 						KeybindListnBox lnbDeleteColumn _i;
 					};
 					KeybindListnBox lnbAddColumn 0;
@@ -394,7 +394,7 @@ private _value = (str {
 
 	MAZ_EP_fnc_coreInit = {
 		MAZ_EP_userActions = [];
-		
+
 		MAZ_smokeGrenades = [
 			'SmokeShell',
 			'SmokeShellOrange',
@@ -502,8 +502,8 @@ private _value = (str {
 			[player,selectRandom MAZ_EP_Sitting_AnimSet] remoteExec ["switchMove"];
 			if(_hideBag) then {
 				if(backpack player != "") then {
-					MAZ_EP_Sitting_BackpackHolder = "groundweaponholder" createVehicle (getpos player);  
-					MAZ_EP_Sitting_BackpackHolder addBackpackCargoGlobal [backpack player,1];  
+					MAZ_EP_Sitting_BackpackHolder = "groundweaponholder" createVehicle (getpos player);
+					MAZ_EP_Sitting_BackpackHolder addBackpackCargoGlobal [backpack player,1];
 					MAZ_EP_Sitting_BackpackHolder attachTo [player,[-0.1,0.9,0.65]];
 					MAZ_EP_Sitting_BackpackHolder setVectorDirAndUp [[0,1,0],[0,0,1]];
 					MAZ_EP_Sitting_BackpackTexture = getObjectTextures (backpackContainer player);
@@ -584,7 +584,7 @@ private _value = (str {
 				private _offset = _offsets select _index;
 				_spots set [_index,player];
 				_chair setVariable ["MAZ_EP_BenchSpots",_spots,true];
-				
+
 				private _pos = _chair modelToWorld _offset;
 				player setVelocity [0,0,0];
 				if(_attach) then {
@@ -593,7 +593,7 @@ private _value = (str {
 					player setPos _pos;
 				};
 				player allowDamage false;
-				
+
 				if(!_attach) then {
 					player setDir (getDir _chair + 180);
 				} else {
@@ -602,7 +602,7 @@ private _value = (str {
 					};
 				};
 				_sat = true;
-				
+
 			};
 			_index = _logs findIf {toLower _type in _x};
 			if(_index != -1) then {
@@ -650,7 +650,7 @@ private _value = (str {
 				_spots set [_index,objNull];
 				_chair setVariable ["MAZ_EP_BenchSpots",_spots,true];
 			};
-			
+
 			call MAZ_fnc_removeSitAnimation;
 			call MAZ_fnc_enableMovement;
 		};
@@ -682,8 +682,8 @@ private _value = (str {
 					_dir = direction _vehicle;
 					_speed = -7; comment "Added speed";
 					_vehicle setVelocity [
-						(_vel select 0) + (sin _dir * _speed), 
-						(_vel select 1) + (cos _dir * _speed), 
+						(_vel select 0) + (sin _dir * _speed),
+						(_vel select 1) + (cos _dir * _speed),
 						(_vel select 2)
 					];
 					systemChat "[Z.A.M.] - Vehicle pushed.";
@@ -698,8 +698,8 @@ private _value = (str {
 					_dir = direction _vehicle;
 					_speed = -5; comment "Added speed";
 					_vehicle setVelocity [
-						(_vel select 0) + (sin _dir * _speed), 
-						(_vel select 1) + (cos _dir * _speed), 
+						(_vel select 0) + (sin _dir * _speed),
+						(_vel select 1) + (cos _dir * _speed),
 						(_vel select 2)
 					];
 					systemChat "[Z.A.M.] - Vehicle pushed.";
@@ -745,7 +745,7 @@ private _value = (str {
 				MAZ_ViewDist_ControlGroup = MAZ_ViewDist_Display ctrlCreate ["RscControlsGroupNoScrollbars",3010];
 				MAZ_ViewDist_ControlGroup ctrlSetPosition [0.3,0.12,0.4,0];
 				MAZ_ViewDist_ControlGroup ctrlCommit 0;
-				
+
 				private _bg = MAZ_ViewDist_Display ctrlCreate ["RscPicture",-1,MAZ_ViewDist_ControlGroup];
 				_bg ctrlSetPosition [0,0.045,0.4,0];
 				_bg ctrlSetText "#(argb,8,8,3)color(0,0,0,0.7)";
@@ -923,12 +923,12 @@ private _value = (str {
 				};
 			}forEach _allMags;
 
-			_primaryMagazines = [_primaryMagazines,[],{_x select 1},"DESCEND"] call BIS_fnc_sortBy; 
-			_secondaryMagazines = [_secondaryMagazines,[],{_x select 1},"DESCEND"] call BIS_fnc_sortBy; 
+			_primaryMagazines = [_primaryMagazines,[],{_x select 1},"DESCEND"] call BIS_fnc_sortBy;
+			_secondaryMagazines = [_secondaryMagazines,[],{_x select 1},"DESCEND"] call BIS_fnc_sortBy;
 			{
 				player removeMagazine (_x select 0);
 			}forEach (_primaryMagazines + _secondaryMagazines);
-			
+
 			private _timeToLoad = (_ammoCountPrimary + _ammoCountSecondary - _fullMagTimeReduction) * 0.25;
 			private _magIndex = 0;
 			while {_ammoCountPrimary > 0 && _magIndex < (count _primaryMagazines)} do {
@@ -963,7 +963,7 @@ private _value = (str {
 			disableSerialization;
 			with uiNamespace do {
 				display = findDisplay 46;
-				
+
 				progressBarBackground = display ctrlCreate ['RscStructuredText' ,-1];
 				progressBarBackground ctrlSetBackgroundColor [0,0,0,0.5];
 				progressBarBackground ctrlSetPosition [0.29375 * safezoneW + safezoneX,0.753 * safezoneH + safezoneY,0.4125 * safezoneW,0.022 * safezoneH];
@@ -971,7 +971,7 @@ private _value = (str {
 				progressBarBackground ctrlCommit 0;
 				progressBarBackground ctrlSetFade 0;
 				progressBarBackground ctrlCommit 1;
-				
+
 				progressBarForeground = display ctrlCreate ['RscText' ,-1];
 				progressBarForeground ctrlSetBackgroundColor [0.3,1,0.2,0.7];
 				progressBarForeground ctrlSetPosition [0.29375 * safezoneW + safezoneX,0.753 * safezoneH + safezoneY,0 * safezoneW,0.022 * safezoneH];
@@ -989,9 +989,9 @@ private _value = (str {
 				progressBarText ctrlCommit 0;
 				progressBarText ctrlSetFade 0;
 				progressBarText ctrlCommit 1;
-				
+
 				uiSleep 1;
-				
+
 			};
 
 			MAZ_magRepackDone = false;
@@ -1000,7 +1000,7 @@ private _value = (str {
 			with uiNamespace do {
 				progressBarForeground ctrlSetPosition [0.29375 * safezoneW + safezoneX,0.753 * safezoneH + safezoneY,0.4125 * safezoneW,0.022 * safezoneH];
 				progressBarForeground ctrlCommit _amountOfMags;
-				
+
 				uiSleep _amountOfMags;
 
 				missionNamespace setVariable ["MAZ_magRepackDone",true];
@@ -1010,11 +1010,11 @@ private _value = (str {
 				progressBarText ctrlCommit 0;
 
 				uiSleep 5;
-				
-				
+
+
 				progressBarBackground ctrlSetFade 1;
 				progressBarBackground ctrlCommit 1;
-				
+
 				progressBarForeground ctrlSetFade 1;
 				progressBarForeground ctrlCommit 1;
 
@@ -1022,9 +1022,9 @@ private _value = (str {
 				progressBarText ctrlCommit 1;
 
 
-				
+
 				uiSleep 1;
-				
+
 				ctrlDelete progressBarBackground;
 				ctrlDelete progressBarForeground;
 				ctrlDelete progressBarText;
@@ -1114,7 +1114,7 @@ private _value = (str {
 				if(!isMultiplayer) then {systemChat "Intersect wrong object"; systemChat format ["Object: %1. InterObj: %2",_object, _interObj]};
 				false;
 			};
-			
+
 			"Get position further into object than intersect position";
 			private _dirToPlayer = _interPosASL getDir _posASL;
 			private _climbPos = _interPosASL getPos [0.3,_dirToPlayer + 180];
@@ -1210,8 +1210,8 @@ private _value = (str {
 			if ((_keyCode in actionKeys "GetOver" && _isShift) && (animationState player != "AovrPercMrunSrasWrflDf")) then {
 				private ["_height","_velocity","_direction","_speed"];
 				if (
-					(player == vehicle player) && 
-					(isTouchingGround player) && 
+					(player == vehicle player) &&
+					(isTouchingGround player) &&
 					((stance player == "STAND") || (stance player == "CROUCH")) &&
 					(getFatigue player + 0.10) < 1
 				) exitWith {
@@ -1235,13 +1235,13 @@ private _value = (str {
 					private _backPack = backpack player;
 					private _backPackItems = backpackItems player;
 					private _haloBackPack = "B_Parachute";
-							
+
 					systemChat "[Z.A.M.] - Since you jumped at a high altitude your backpack has been placed on your chest and you've been equipped with a parachute.";
 					removeBackPack player;
 					player addBackpack _haloBackPack;
-					private _backpackHolder = "groundweaponholder" createVehicle getpos player;   
-					_backpackHolder addBackpackCargoGlobal [_backPack,1];   
-					_backpackHolder attachTo [player,[-0.3,0.72,-0.47],'RightShoulder',true];   
+					private _backpackHolder = "groundweaponholder" createVehicle getpos player;
+					_backpackHolder addBackpackCargoGlobal [_backPack,1];
+					_backpackHolder attachTo [player,[-0.3,0.72,-0.47],'RightShoulder',true];
 					_backpackHolder setVectorDirAndUp [[0,0,-1],[0,1,0]];
 					waitUntil {(getPos player select 2) < 1};
 					removeBackpack player;
@@ -1284,7 +1284,7 @@ private _value = (str {
 				if(!isNil "lbPrpl") then {lbPrpl = nil;};
 				dropSmokeMenu = (findDisplay 46) createDisplay "RscDisplayEmpty";
 				showChat true;
-					
+
 				comment "Backgrounds";
 
 					frame1 = dropSmokeMenu ctrlCreate ["RscFrame", 1800];
@@ -1382,7 +1382,7 @@ private _value = (str {
 									lbBlu = _listBox lbAdd "Smoke Grenade (Blue)";
 									_listBox lbSetData [lbBlu, "Blue"];
 								};
-							};	
+							};
 							case "SmokeShellPurple": {
 								if(isNil "lbPrpl") then {
 									lbPrpl = _listBox lbAdd "Smoke Grenade (Purple)";
@@ -1518,13 +1518,13 @@ private _value = (str {
 					_missileTwo attachTo [_projectile,[0,-0.1,0]];
 				};
 			}];
-			
+
 			if((player getVariable ["LM_MEH_playerNames",-1]) != -1) then {
 				removeMissionEventHandler ['Draw3D', (player getVariable ['LM_MEH_playerNames',-1])];
 			};
 			if((player getVariable ["LM_MEH_killFeed",-1]) != -1) then {
 				removeMissionEventHandler ['EntityKilled', (player getVariable ['LM_MEH_killFeed',-1])];
-			};  
+			};
 
 			waitUntil {!isNull (findDisplay 12)};
 			if(!isNil "MAZ_DEH_PreventDeleteMarkers") then {
@@ -1718,7 +1718,7 @@ private _value = (str {
 			if(isNil "MAZ_EP_ExecQueue") then {
 				MAZ_EP_ExecQueue = [];
 			};
-			
+
 			MAZ_EP_ExecQueue pushBack [_parameters,_function];
 			if(!MAZ_EP_ExecQueueStarted) then {
 				MAZ_EP_ExecQueueStarted = true;
@@ -1889,7 +1889,7 @@ private _value = (str {
 							};
 							private _displayName = getText (configfile >> "CfgFaces" >> "Man_A3" >> _normalHead >> "DisplayName");
 							_displayName = _displayName + " (Camo)";
-							
+
 							private _lbAdd = _ctrlList lbAdd _displayName;
 							_ctrlList lbSetdata [_lbAdd, _camoFaceClass];
 							_ctrlList lbSetTooltip [_lbAdd, format ["%1\n%2",_displayName,_camoFaceClass]];
@@ -1963,14 +1963,14 @@ private _value = (str {
 					if(_userActionId isEqualType []) then {
 						private _tempParent = +MAZ_EP_userActions;
 						private _tempOld = [];
-						
+
 						{
 							if(_forEachIndex == 0) then {
 								_tempOld pushBack (_tempParent select _x);
 								continue;
 							};
 							private _temp = (_tempOld select (_forEachIndex - 1)) select 4 select _x;
-							
+
 							_tempOld pushBack _temp;
 						}forEach _userActionId;
 
@@ -1984,7 +1984,7 @@ private _value = (str {
 							_actions set [(_userActionId select _forEachIndex), (_tempOld select (_forEachIndex + 1))];
 							_action set [4, _actions];
 							_tempOld set [_forEachIndex, _action];
-						}forEachReversed _tempOld; 
+						}forEachReversed _tempOld;
 
 						MAZ_EP_userActions set [(_userActionId select 0), _tempOld select 0];
 					} else {
@@ -2020,7 +2020,7 @@ private _value = (str {
 						private _action = MAZ_EP_userActions select _x;
 
 						private _circumferencePos = _forEachIndex * _intervals;
-				
+
 						private _xPos2D = 0.5 + _radius * cos(_circumferencePos);
 						private _yPos2D = 0.5 + _radius * sin(_circumferencePos);
 						private _pos = screenToWorld [_xPos2D, _yPos2D];
@@ -2069,18 +2069,18 @@ private _value = (str {
 						private _pos = MAZ_EP_userActionsDrawn select 0 select 1;
 						private _noActions = drawIcon3D [
 							"a3\ui_f\data\map\markers\military\dot_ca.paa",
-							[1,1,1,1], 
-							_pos, 
-							1, 
-							1, 
-							0, 
-							"No Actions", 
-							2, 
-							0.035, 
-							"PuristaMedium", 
-							"right", 
-							false, 
-							0, 
+							[1,1,1,1],
+							_pos,
+							1,
+							1,
+							0,
+							"No Actions",
+							2,
+							0.035,
+							"PuristaMedium",
+							"right",
+							false,
+							0,
 							-0.025
 						];
 					};
@@ -2160,7 +2160,7 @@ private _value = (str {
 						_resultTemp = _this call _fnc;
 					};
 					if(typeName _x == typeName {}) then {
-						_resultTemp = _this call _x;	
+						_resultTemp = _this call _x;
 					};
 					if(_resultTemp) exitWith {_result = true};
 				}forEach MAZ_EP_StackedUIEHs;
@@ -2451,7 +2451,7 @@ private _value = (str {
 									_value = round (sliderPosition _x);
 								};
 							};
-							
+
 							[_forEachIndex,_x getVariable "MAZ_settingVarName",_value] call MAZ_EP_fnc_updateSetting;
 						}forEach _settings;
 
@@ -2460,7 +2460,7 @@ private _value = (str {
 					_confirmButton ctrlCommit 0;
 
 					_yPos = _yPos + 0.04;
-					
+
 
 					private _contentYPos = (0.5 - (_yPos / 2));
 					private _buttonYPos = (0.5 + (_yPos / 2)) + 0.01;
@@ -2576,14 +2576,14 @@ private _value = (str {
 				"Fixed GL smoke grenades from going to the stratosphere"
 			]
 		] spawn MAZ_EP_fnc_addDiaryRecord;
-		
+
 		[] spawn MAZ_EP_fnc_event_onNotificationCountChanged;
 		[
 			"Enhancement Pack Core has been loaded! Open your map and go to the Enhancement Pack section to learn more about the systems.",
 			"System Initialization Notification",
 			12
 		] spawn MAZ_EP_fnc_createNotification;
-		
+
 		["Z.A.M. Server Enhancement Pack running!","addItemOk"] call MAZ_EP_fnc_systemMessage;
 		[] spawn MAZ_fnc_globalLaserMarkers;
 		[] spawn MAZ_fnc_addKeybinds;

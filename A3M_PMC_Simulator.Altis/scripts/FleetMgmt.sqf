@@ -1,37 +1,10 @@
 /*
 
-	  /$$$$$$   /$$$$$$  /$$      /$$       /$$$$$$$  /$$      /$$  /$$$$$$         /$$$$$$  /$$                         /$$             /$$
-	 /$$__  $$ /$$__  $$| $$$    /$$$      | $$__  $$| $$$    /$$$ /$$__  $$       /$$__  $$|__/                        | $$            | $$
-	| $$  \ $$|__/  \ $$| $$$$  /$$$$      | $$  \ $$| $$$$  /$$$$| $$  \__/      | $$  \__/ /$$ /$$$$$$/$$$$  /$$   /$$| $$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$
-	| $$$$$$$$   /$$$$$/| $$ $$/$$ $$      | $$$$$$$/| $$ $$/$$ $$| $$            |  $$$$$$ | $$| $$_  $$_  $$| $$  | $$| $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
-	| $$__  $$  |___  $$| $$  $$$| $$      | $$____/ | $$  $$$| $$| $$             \____  $$| $$| $$ \ $$ \ $$| $$  | $$| $$  /$$$$$$$  | $$    | $$  \ $$| $$  \__/
-	| $$  | $$ /$$  \ $$| $$\  $ | $$      | $$      | $$\  $ | $$| $$    $$       /$$  \ $$| $$| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$  | $$| $$
-	| $$  | $$|  $$$$$$/| $$ \/  | $$      | $$      | $$ \/  | $$|  $$$$$$/      |  $$$$$$/| $$| $$ | $$ | $$|  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$
-	|__/  |__/ \______/ |__/     |__/      |__/      |__/     |__/ \______/        \______/ |__/|__/ |__/ |__/ \______/ |__/ \_______/   \___/   \______/ |__/
-
 	 Fleet Management Module V 3.0 by Cody Salazar AKA Fr33d0m
-	 www.A3MilSim.com
-
-	Last Modified: 4/15/2015
+	 Modified by MrPakeha and J. Schmidt
 
 	License:
-	You can do whatever you were going to do anyway. Just give me the credit i'm due, and don't outright steal my shit and call it your own. If I find it, I'll be pissed.
-	if you want to repay me for all my hard work, come and play arma with me! I hang out at a MilSim unit known as A3M (A3 MilSim)
-	Come and visit us at ts3.a3milsim.com:1911
-
-	WE LOVE JOINT OPS with OTHER units!!
-
-	www.A3MilSim.com (A3 MilSim)
-	All Rights Reserved
-
-	for Information and Inquiries, EMAIL: salazar@a3milsim.com
-
-	Credits & Thanks:
-
-	My wife, for not only supporting my modding ventures, but actually jumping in and helping with mods when she can. What a gal!
-
-	And last, but definitely not least, the A3 community, who through over 250+ encouraging messages highly encouraged me to continue this project. I'm glad you like it,
-	and I hope you enjoy the things I have in the works!
+	You can do whatever you were going to do anyway. Just give credit.
 
 	###################
 	 rank ###### rating
@@ -47,14 +20,7 @@
 
 ################################## LET US BEGIN #################################### */
 
-// Addon Options - Enabled By default? 1 = Yes, 0 = No.
-
-// Check for RHS
-if ((isClass (configfile >> "CfgPatches" >> "rhsusf_main")) && (isClass (configfile >> "CfgPatches" >> "rhs_main"))) then {
-	RHS_Support_Enabled = 1;
-} else {
-	RHS_Support_Enabled = 0;
-};
+// configFile checks to see if mod is active.
 
 // Check for Ace3
 if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
@@ -63,26 +29,63 @@ if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
 	Ace3_Enabled = 0;
 };
 
-// Check for EF CDLC
+// Check for EF CDLC or Workshop
 if (isClass (configfile >> "CfgPatches" >> "EF_Data")) then {
 	EF_Enabled = 1;
 } else {
 	EF_Enabled = 0;
 };
 
-// Check for RF CDLC
-if (isClass (configfile >> "CfgPatches" >> "lxRF_Data")) then {
+// Check for RF CDLC or Workshop
+if (isClass (configfile >> "CfgPatches" >> "lxRF_Data") or isClass (configfile >> "CfgMods" >> "lxRF") or isClass (configfile >> "CfgMods" >> "RF")) then {
 	RF_Enabled = 1;
 } else {
 	RF_Enabled = 0;
 };
 
-// Check for WS CDLC
-if (isClass (configfile >> "CfgPatches" >> "lxWS_Data")) then {
+// Check for WS CDLC or Workshop
+if (isClass (configfile >> "CfgPatches" >> "lxWS_Data") or isClass (configfile >> "CfgMods" >> "lxWS") or isClass (configfile >> "CfgMods" >> "WS")) then {
 	WS_Enabled = 1;
 } else {
 	WS_Enabled = 0;
 };
+
+// Check for RHS
+if ((isClass (configfile >> "CfgPatches" >> "rhsusf_main")) && (isClass (configfile >> "CfgPatches" >> "rhs_main"))) then {
+	RHS_Support_Enabled = 1;
+} else {
+	RHS_Support_Enabled = 0;
+};
+
+// //// //// ////////////////////////////////////////////////////////////////////////////////////////////////////
+// Handle the menu clicks (Parent class)
+A3M_fnc_VhandleClick = {
+	TheSelection = _this select 1;
+	hint "You have made a selection. Click *Purchase* button to buy.";
+};
+
+// //// //// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Supported Modifications:
+
+lbAdd [2175, "Stock A3"];
+if (Ace3_Enabled == 1) then {
+    lbAdd [2175, "ACE 3"];
+};
+if (EF_Enabled == 1) then {
+    lbAdd [2175, "Expeditionary Forces"];
+};
+if (RF_Enabled == 1) then {
+    lbAdd [2175, "Reaction Forces"];
+};
+if (WS_Enabled == 1) then {
+    lbAdd [2175, "Western Sahara"];
+};
+if (RHS_Support_Enabled == 1) then {
+    lbAdd [2175, "RHS: Escalation"];
+};
+
+// Debug: Show flag values
+diag_log format ["[A3M] Mod Flags - Ace3: %1 EF: %2, RF: %3, WS: %4, RHS: %5", Ace3_Enabled, EF_Enabled, RF_Enabled, WS_Enabled, RHS_Support_Enabled];
 
 // //// //// ///////////////////////////////////////////////////////////////////////////
 // Initial Budget for side - Change in ParamsArray!
@@ -175,22 +178,6 @@ DoRankChk = {
 };
 [] call DoRankChk;
 
-// //// //// ////////////////////////////////////////////////////////////////////////////////////////////////////
-// Handle the menu clicks (Parent class)
-A3M_fnc_VhandleClick = {
-	TheSelection = _this select 1;
-	hint "You have made a selection. Click *Purchase* button to buy.";
-};
-
-// //// //// ////////////////////////////////////////////////////////////////////////////////////////////////
-// Supported Modifications:
-lbAdd [2175, "Stock A3"];
-lbAdd [2175, "RHS: Escalation"];
-lbAdd [2175, "Ace 3"];
-lbAdd [2175, "Expeditionary Forces"];
-lbAdd [2175, "Reaction Forces"];
-lbAdd [2175, "Western Sahara"];
-
 // //// //// ///////////////////////////////////////////////////////////////////////////////////////////////
 // Add Wheeled vehicles to Main list
 DoAddWheel = {
@@ -205,15 +192,12 @@ DoAddWheel = {
 
 	private _wheeledConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Wheeled";
     private _a3 = getArray (_wheeledConfig >> "a3");
-    private _rhs = getArray (_wheeledConfig >> "rhs");
     private _ef = getArray (_wheeledConfig >> "ef");
     private _rf = getArray (_wheeledConfig >> "rf");
     private _ws = getArray (_wheeledConfig >> "ws");
+    private _rhs = getArray (_wheeledConfig >> "rhs");
 
 	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
-	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
-	};
 	if (EF_Enabled == 1) then {
 		[1575, "CfgVehicles", _ef] call A3M_fnc_createList;
 	};
@@ -222,6 +206,9 @@ DoAddWheel = {
 	};
 	if (WS_Enabled == 1) then {
 		[1575, "CfgVehicles", _ws] call A3M_fnc_createList;
+	};
+	if (RHS_Support_Enabled == 1) then {
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 };
 // //// //// //////////////////////////////////////////////////////////////////////////////////////////////
@@ -237,8 +224,8 @@ DoAddFixedWing = {
 	lbClear 1575;
 
 	private _fixedWingConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_FixedWing";
-    private _a3 = getArray (_fixedWingConfig >> "a3f");
-    private _rhs = getArray (_fixedWingConfig >> "rhsf");
+    private _a3 = getArray (_fixedWingConfig >> "a3");
+    private _rhs = getArray (_fixedWingConfig >> "rhs");
 
 	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
@@ -260,15 +247,12 @@ DoAddRotary = {
 
 	private _heliConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Heli";
     private _a3 = getArray (_heliConfig >> "a3");
-    private _rhs = getArray (_heliConfig >> "rhs");
     private _ef = getArray (_heliConfig >> "ef");
     private _rf = getArray (_heliConfig >> "rf");
     private _ws = getArray (_heliConfig >> "ws");
+    private _rhs = getArray (_heliConfig >> "rhs");
 
 	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
-	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
-	};
 	if (EF_Enabled == 1) then {
 		[1575, "CfgVehicles", _ef] call A3M_fnc_createList;
 	};
@@ -277,6 +261,9 @@ DoAddRotary = {
 	};
 	if (WS_Enabled == 1) then {
 		[1575, "CfgVehicles", _ws] call A3M_fnc_createList;
+	};
+	if (RHS_Support_Enabled == 1) then {
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 };
 
@@ -336,15 +323,19 @@ DoAddSupport = {
 
 	private _supportConfig = missionConfigFile >> "CfgFleet" >> "Store" >> "A3M_Support";
     private _a3 = getArray (_supportConfig >> "a3");
+    private _ace3 = getArray (_supportConfig >> "ace3");
     private _rhs = getArray (_supportConfig >> "rhs");
     private _ef = getArray (_supportConfig >> "ef");
 
 	[1575, "CfgVehicles", _a3] call A3M_fnc_createList;
-	if (RHS_Support_Enabled == 1) then {
-		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
-	};
+    if (ACE3_Enabled == 1) then {
+        [1575, "CfgVehicles", _ace3] call A3M_fnc_createList;
+    };
 	if (EF_Enabled == 1) then {
 		[1575, "CfgVehicles", _ef] call A3M_fnc_createList;
+	};
+	if (RHS_Support_Enabled == 1) then {
+		[1575, "CfgVehicles", _rhs] call A3M_fnc_createList;
 	};
 };
 

@@ -9,14 +9,16 @@ A3M_TravelClass = createHashMapObject [[
             Molos_Taxi,
             C12Boat_Taxi,
             AIA_Taxi,
-            Pyrgos_Taxi
+            Pyrgos_Taxi,
+            ShootingRange_Taxi
         ]];
         _destinations set ["actionTexts", [
             ["OPSG Compound C12 Taxi", "Travel to OPSG Compound C12"],
-            ["Molos Air Facility", "Travel to Molos Air Facility | OPSG Facility"],
+            ["Molos Airfield", "Travel to Molos Airfield | NATO Facility"],
             ["OPSG Boat Docks", "Travel to OPSG Boat Docks"],
             ["Altis International Airport", "Travel to Altis International Airport"],
-            ["Pyrgos", "Travel to Pyrgos"]
+            ["Pyrgos", "Travel to Pyrgos"],
+            ["Shooting Range", "Travel to the Shooting Range"]
         ]];
 
         _self set ["destinations", _destinations];
