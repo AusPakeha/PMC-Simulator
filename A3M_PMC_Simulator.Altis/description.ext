@@ -41,7 +41,7 @@ and I hope you enjoy the things I have in the works!
 
 overviewText = "PMC Simulator is a multiplayer mode designed to simulate working as a Private Military Contractor in a conflict zone. You will be required to carry out security and paramilitary operations pursuant to your contracts with OPSG, and you will be paid based on performance per operation.";
 overviewTextLocked = "If this mission is locked, something is wrong!";
-overviewPicture = "images\Loadimg.paa";
+overviewPicture = "images\Loadimg.jpg";
 
 author = "PMC SIM Revival";
 OnLoadName = "PMC Simulator Mod";
@@ -56,12 +56,18 @@ disabledAI = 1;
 enableDebugConsole = 1;
 scriptedPlayer = 1;
 
-loadscreen = "images\Loadimg.paa";
+loadscreen = "images\Loadimg.jpg";
 
 class Header {
 	gameType = Sandbox;
 	minPlayers = 1;
 	maxPlayers = 43;
+};
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayLoading {
+        Mission_customLoadingScreen = "_this call compile preprocessFileLineNumbers 'scripts\initLoadingScreen.sqf'";
+    };
 };
 
 #include "dialogs\A3M_Normals.hpp"

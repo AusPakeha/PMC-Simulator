@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPSG Homepage</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+        <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\homepage\\ui\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\homepage\\ui\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="background-image">
+            <img src="images\OPSG_Home.paa" alt="OPSG Home Background">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="btn-bank">Pursuit Bank</button>
+            <button class="btn" id="btn-fleet">Lazarus Fleet Management</button>
+            <button class="btn" id="btn-arms">Lazarus Security Supply</button>
+            <button class="btn" id="btn-admin">Administrator Login</button>
+            <button class="btn" id="btn-mail">Access Email</button>
+            <button class="btn" id="btn-exit">Exit Browser</button>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

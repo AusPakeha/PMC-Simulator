@@ -39,3 +39,14 @@ class RscTitles {
 		};
 	};
 };
+
+class RscLoadingText {
+    type = CT_STATIC;
+    idc = -1;
+    style = ST_LEFT;
+    colorBackground[] = {0,0,0,0};
+    colorText[] = {1,1,1,1};
+    font = "PuristaMedium";
+    sizeEx = 0.04;
+    text = "";
+};

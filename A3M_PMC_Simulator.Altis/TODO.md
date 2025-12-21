@@ -34,17 +34,27 @@
 -[x] remove GF Ambience hints
 -[] global deliveries hold add action
 -[x] add funds to player account for completed missions
-
 -
--// Base Upgrade System
--[] Code base system
--[] Create compositions for each upgrade
--[] Code purchase system
+-// UI Changes
+-[] set up files for each dialog
+--[/] Homepage - Started, need to verify working
+--[/] Fleet Store - files made
+--[] Item Store
+--[] Email
+--[] Admin
+--[] Bank
+--[] Recuitment
 -
 -// Far down the track
 -[] switch out missions to be dynamic
 -
+-// Base Upgrade System
+-[] Code base system
+--[] Create compositions for each upgrade
+--[] Code purchase system
+-
+-
 -// Mission HackDen Update
 -[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
--[] mission_hackDen.sqf is working but will not spawn items on hack1 marker
+--[] mission_hackDen.sqf is working but will not spawn items on hack1 marker
 -[] Finish it
