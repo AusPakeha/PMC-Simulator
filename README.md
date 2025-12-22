@@ -50,5 +50,5 @@ Changes made by PMC Revival:
 - Custom presistance
 - Code optimised Vehicle Manager and Item Store
 - Expanded vehicles and items from CDLC's
-- Incon Undercover script for those sneaky jobs
-- Various scripts for ambience, blood and sfx
+- Redesigned menus and loading screens
+- Various scripts including ambience, blood effects and components from Enhancment Pack
