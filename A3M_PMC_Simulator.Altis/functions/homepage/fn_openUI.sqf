@@ -1,12 +1,14 @@
-params [["_display", displayNull]];
+private _display = createDialog "A3M_HomePage";
 
-if (isNull _display) exitWith { diag_log "[A3M] Homepage: No display provided"; };
+if (isNull _display) exitWith { diag_log "[A3M] Homepage: Failed to create dialog"; };
+
+playMusic "gearup";
 
 private _control = _display ctrlCreate ["RscHTML", 1000];
 _control ctrlSetPosition [0, 0, 1, 1];
 _control ctrlCommit 0;
 
-private _url = "functions\homepage\ui\index.html";
+private _url = "functions\homepage\ui\_site\index.html";
 _control htmlLoad _url;
 
 _control ctrlAddEventHandler ["HTMLLink", {

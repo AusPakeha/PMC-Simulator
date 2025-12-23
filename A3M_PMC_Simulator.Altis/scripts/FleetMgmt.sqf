@@ -29,22 +29,22 @@ if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
 	Ace3_Enabled = 0;
 };
 
-// Check for EF CDLC or Workshop
+// Check for EF CDLC
 if (isClass (configfile >> "CfgPatches" >> "EF_Data")) then {
 	EF_Enabled = 1;
 } else {
 	EF_Enabled = 0;
 };
 
-// Check for RF CDLC or Workshop
-if (isClass (configfile >> "CfgPatches" >> "lxRF_Data") or isClass (configfile >> "CfgMods" >> "lxRF") or isClass (configfile >> "CfgMods" >> "RF")) then {
+// Check for RF CDLC
+if (isClass (configfile >> "CfgPatches" >> "lxRF_Data")) then {
 	RF_Enabled = 1;
 } else {
 	RF_Enabled = 0;
 };
 
-// Check for WS CDLC or Workshop
-if (isClass (configfile >> "CfgPatches" >> "lxWS_Data") or isClass (configfile >> "CfgMods" >> "lxWS") or isClass (configfile >> "CfgMods" >> "WS")) then {
+// Check for WS CDLC
+if (isClass (configfile >> "CfgPatches" >> "lxWS_Data")) then {
 	WS_Enabled = 1;
 } else {
 	WS_Enabled = 0;
@@ -57,6 +57,10 @@ if ((isClass (configfile >> "CfgPatches" >> "rhsusf_main")) && (isClass (configf
 	RHS_Support_Enabled = 0;
 };
 
+// //// //// /////////////////////////////////////////////////////////////////////////////////
+// Open dialog
+_handle = CreateDialog "A3M_store";
+
 // //// //// ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Handle the menu clicks (Parent class)
 A3M_fnc_VhandleClick = {
@@ -67,25 +71,23 @@ A3M_fnc_VhandleClick = {
 // //// //// ////////////////////////////////////////////////////////////////////////////////////////////////
 // Supported Modifications:
 
-lbAdd [2175, "Stock A3"];
-if (Ace3_Enabled == 1) then {
-    lbAdd [2175, "ACE 3"];
-};
-if (EF_Enabled == 1) then {
-    lbAdd [2175, "Expeditionary Forces"];
-};
-if (RF_Enabled == 1) then {
-    lbAdd [2175, "Reaction Forces"];
-};
-if (WS_Enabled == 1) then {
-    lbAdd [2175, "Western Sahara"];
-};
-if (RHS_Support_Enabled == 1) then {
-    lbAdd [2175, "RHS: Escalation"];
-};
+// Build array of available mods (stock always first, then enabled mods)
+private _availableMods = ["stock"];
+if (Ace3_Enabled == 1) then {_availableMods pushBack "ace3"; };
+if (EF_Enabled == 1) then { _availableMods pushBack "ef"; };
+if (RF_Enabled == 1) then { _availableMods pushBack "rf"; };
+if (WS_Enabled == 1) then { _availableMods pushBack "ws"; };
+if (RHS_Support_Enabled == 1) then { _availableMods pushBack "rhs"; };
+
+// Populate listbox 2175 using _availableMods
+private _displayNames = ["Stock A3", "ACE 3", "Expeditionary Forces", "Reaction Forces", "Western Sahara", "RHS: Escalation"];
+lbClear 2175;
+{
+    lbAdd [2175, _displayNames select _forEachIndex];
+} forEach _availableMods;
 
 // Debug: Show flag values
-diag_log format ["[A3M] Mod Flags - Ace3: %1 EF: %2, RF: %3, WS: %4, RHS: %5", Ace3_Enabled, EF_Enabled, RF_Enabled, WS_Enabled, RHS_Support_Enabled];
+diag_log format ["[A3M] Supported Mod- Ace3: %1 EF: %2, RF: %3, WS: %4, RHS: %5", Ace3_Enabled, EF_Enabled, RF_Enabled, WS_Enabled, RHS_Support_Enabled];
 
 // //// //// ///////////////////////////////////////////////////////////////////////////
 // Initial Budget for side - Change in ParamsArray!
@@ -113,10 +115,6 @@ if (isnil "B_TotalCost") then {
 	B_TotalCost= 0;
 	publicVariable "B_TotalCost";
 };
-
-// //// //// /////////////////////////////////////////////////////////////////////////////////
-// Open dialog
-_handle = CreateDialog "A3M_store";
 
 // //// //// /////////////////////////////////////////////////////////////////////////////////
 

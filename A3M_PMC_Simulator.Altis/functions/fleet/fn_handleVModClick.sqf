@@ -47,6 +47,7 @@ if (RHS_Support_Enabled == 1) then { _availableMods pushBack "rhs"; };
 if (ModSelection >= count _availableMods) then {
     // Invalid selection, default to stock
     hint "Invalid selection made. No mods will be enabled.";
+            Ace3_Enabled = 0;
             EF_Enabled = 0;
             RF_Enabled = 0;
             WS_Enabled = 0;
@@ -58,6 +59,16 @@ if (ModSelection >= count _availableMods) then {
     switch (_selectedMod) do {
         case "stock": {
             hint "No mods are required to access this content. Official DLCs may be required in some cases.";
+            Ace3_Enabled = 0;
+            EF_Enabled = 0;
+            RF_Enabled = 0;
+            WS_Enabled = 0;
+            RHS_Support_Enabled = 0;
+            lbClear 1575;
+            lbAdd [1575, "Stock A3 - Select a Category"];
+        };
+        case "ace3": {
+            hint "Use of this content may require a mod to be installed. Please be sure the selected mod is installed prior to purchase";
             Ace3_Enabled = 1;
             EF_Enabled = 0;
             RF_Enabled = 0;
@@ -65,16 +76,6 @@ if (ModSelection >= count _availableMods) then {
             RHS_Support_Enabled = 0;
             lbClear 1575;
             lbAdd [1575, "ACE 3 - Select a Category"];
-        };
-        case "ace3": {
-            hint "Use of this content may require a mod to be installed. Please be sure the selected mod is installed prior to purchase";
-            Ace3_Enabled = 0;
-            EF_Enabled = 1;
-            RF_Enabled = 0;
-            WS_Enabled = 0;
-            RHS_Support_Enabled = 0;
-            lbClear 1575;
-            lbAdd [1575, "Expeditionary Forces CDLC - Select a Category."];
         };
         case "ef": {
             hint "Use of this content may require a mod to be installed. Please be sure the selected mod is installed prior to purchase";

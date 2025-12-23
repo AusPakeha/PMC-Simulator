@@ -1651,8 +1651,8 @@ class CfgStore {
                 {"rhs_mag_m69",20}
             };
             ws[] = {
-                {"1Rnd_Pellet_Grenade_shell_lxWS",},
-                {"1Rnd_40mm_HE_lxWS"}
+                {"1Rnd_Pellet_Grenade_shell_lxWS",75},
+                {"1Rnd_40mm_HE_lxWS",120}
             };
         };
         class A3M_SmokeGrenades {

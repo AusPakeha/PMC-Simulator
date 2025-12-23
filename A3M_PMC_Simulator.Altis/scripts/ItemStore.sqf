@@ -8,12 +8,7 @@
 
 ################################## LET US BEGIN #################################### */
 
-//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//// //// /////////////////////////////////////////////////////  General Options and Pre-load Variables//////// ////////////////////////////////////////////////
-//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // configFile checks to see if mod is active.
-
 
 // Check for Ace3
 if (isClass (configfile >> "CfgPatches" >> "ace_main")) then {
@@ -29,19 +24,6 @@ if (isClass (configfile >> "CfgPatches" >> "task_force_radio")) then {
 	TFAR_Enabled = 0;
 };
 
-if ((isClass (configfile >> "CfgPatches" >> "rhsusf_main")) && (isClass (configfile >> "CfgPatches" >> "rhs_main"))) then {
-	RHS_Support_Enabled = 1;
-} else {
-	RHS_Support_Enabled = 0;
-};
-
-// Check for RF CDLC
-if (isClass (configfile >> "CfgPatches" >> "lxRF_Data")) then {
-	RF_Enabled = 1;
-} else {
-	RF_Enabled = 0;
-};
-
 // Check for EF CDLC
 if (isClass (configfile >> "CfgPatches" >> "EF_Data")) then {
 	EF_Enabled = 1;
@@ -49,216 +31,29 @@ if (isClass (configfile >> "CfgPatches" >> "EF_Data")) then {
 	EF_Enabled = 0;
 };
 
+// Check for RF CDLC
+if (isClass (configfile >> "CfgPatches" >> "lxRF_Data") or isClass (configfile >> "CfgMods" >> "lxRF") or isClass (configfile >> "CfgMods" >> "RF")) then {
+	RF_Enabled = 1;
+} else {
+	RF_Enabled = 0;
+};
+
 // Check for WS CDLC
-if (isClass (configfile >> "CfgPatches" >> "lxWS_Data")) then {
+if (isClass (configfile >> "CfgPatches" >> "lxWS_Data") or isClass (configfile >> "CfgMods" >> "lxWS") or isClass (configfile >> "CfgMods" >> "WS")) then {
 	WS_Enabled = 1;
 } else {
 	WS_Enabled = 0;
 };
 
+// Check for RHS
+if ((isClass (configfile >> "CfgPatches" >> "rhsusf_main")) && (isClass (configfile >> "CfgPatches" >> "rhs_main"))) then {
+	RHS_Support_Enabled = 1;
+} else {
+	RHS_Support_Enabled = 0;
+};
+
 // Delivery time (in Seconds)
 DeliveryTime = ParamsArray select 3;
-
-//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//// //// /////////////////////////////////////////////////////  Handle mod Support Filters//// //// /////////////////////////////////////////////////////////////
-//// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Swutch and cases for mod filtering in the store.
-
-A3M_fnc_handleWModClick = {
-	WModSelection= _this select 1;
-	switch (WModSelection) do {
-		// Stock A3
-		case 0: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In Stock Arma 3 Content Mode. Click a category to continue."];
-			hint "Stock A3 Mode - No Mods Required";
-		};
-		// ACE 3
-		case 1: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 1;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In ACE 3 Mod Mode. Click a category to continue."];
-			hint "ACE 3 Is required to use equipment in this category. Please verify the ACE 3 Mod is installed before purchasing equipment in this category.";
-		};
-		// Expeditionary Forces
-		case 2: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 1;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In Expeditionary Forces CDLC Mode. Click a category to continue."];
-			hint "Expeditionary Forces CDLC are required to use equipment in this category. Please verify the correct Expeditionary Forces CDLC is installed before purchasing equipment in this category.";
-		};
-		// Reaction Forces
-		case 3: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 0;
-			RF_Enabled = 1;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In Reaction Forces CDLC Mode. Click a category to continue."];
-			hint "Reaction Forces CDLC is required to use equipment in this category. Please verify that Reaction Forces CDLC is active before purchasing equipment in this category.";
-		};
-		// Western Sahara
-		case 4: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 1;
-			lbAdd [1850, "Now In Western Sahara CDLC Mode. Click a category to continue."];
-			hint "Western Sahara CDLC are required to use equipment in this category. Please verify the correct Western Sahara CDLC is installed before purchasing equipment in this category.";
-		};
-		// RHS: Escalation
-		case 5: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 0;
-			RHS_Support_Enabled = 1;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In RHS: Escalation Mode. Click a category to continue."];
-			hint "RHS: Escalation Is required to use equipment in this category. Please verify the RHS: Escalation Mod is installed before purchasing equipment in this category.";
-		};
-		// TFAR
-		case 6: {
-			lbClear 1850;
-			ItemsOn = 0;
-			MedOn = 0;
-			ElecOn= 0;
-			VestsOn= 0;
-			ClothesOn= 0;
-			HeadGearOn= 0;
-			BackPacksOn = 0;
-			SuppOn= 0;
-			OptOn= 0;
-			RiflesOn= 0;
-			PistolsOn= 0;
-			LaunchersOn= 0;
-			AmmoOn= 0;
-			ExplOn= 0;
-			SmokeOn= 0;
-			ACE3_Enabled= 0;
-			TFAR_Enabled= 1;
-			RHS_Support_Enabled = 0;
-			EF_Enabled = 0;
-			RF_Enabled = 0;
-			WS_Enabled= 0;
-			lbAdd [1850, "Now In Task Force Radio Mode. Click Electronics to continue."];
-			hint "Task Force Arrowhead Radio (TFAR) is required to use equipment in this category. Please verify the TFAR Mod is installed before purchasing and equipment in this category.";
-		};
-	};
-};
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// //// /////////////////////////////////////////////////////  BEGIN ACTUAL OPENING OF dialo//// //// ////////////////////////////////////////////////////////
@@ -270,13 +65,25 @@ _handle = CreateDialog "A3M_GunStore";
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////
 // Supported mod list:
-_indexSM0 = lbAdd [2175, "Stock A3"];
-_indexSM1 = lbAdd [2175, "ACE3"];
-_indexSM2 = lbAdd [2175, "Expeditionary Forces"];
-_indexSM3 = lbAdd [2175, "Reaction Forces"];
-_indexSM4 = lbAdd [2175, "Western Sahara"];
-_indexSM5 = lbAdd [2175, "RHS: Escalation"];
-_indexSM6 = lbAdd [2175, "TFAR"];
+
+// Build array of available mods (stock always first, then enabled mods)
+private _availableMods = ["stock"];
+if (Ace3_Enabled == 1) then {_availableMods pushBack "ace3"; };
+if (TFAR_Enabled == 1) then {_availableMods pushBack "tfar"; };
+if (EF_Enabled == 1) then { _availableMods pushBack "ef"; };
+if (RF_Enabled == 1) then { _availableMods pushBack "rf"; };
+if (WS_Enabled == 1) then { _availableMods pushBack "ws"; };
+if (RHS_Support_Enabled == 1) then { _availableMods pushBack "rhs"; };
+
+// Populate listbox 2175 using _availableMods
+private _displayNames = ["Stock A3", "ACE 3", "TFAR", "Expeditionary Forces", "Reaction Forces", "Western Sahara", "RHS: Escalation"];
+lbClear 2175;
+{
+    lbAdd [2175, _displayNames select _forEachIndex];
+} forEach _availableMods;
+
+// Debug: Show flag values
+diag_log format ["[A3M] Item Supported Mod- Ace3: %1 TFAR %2 EF: %3, RF: %4, WS: %5, RHS: %6", Ace3_Enabled, TFAR_Enabled, EF_Enabled, RF_Enabled, WS_Enabled, RHS_Support_Enabled];
 
 //// //// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// //// /////////////////////////////////////////////////////  Handle Dbl Click of Ite//// //// //////////////////////////////////////////////////////////////
@@ -562,7 +369,7 @@ DoAddBackpacks = {
 	private _backpackConfig = missionConfigFile >> "CfgStore" >> "Store" >> "A3M_Backpacks";
 	private _a3 = getArray (_backpackConfig >> "a3");
 	private _rhs = getArray (_backpackConfig >> "rhs");
-	private _ace3 = getArray (_electronicConfig >> "ace3");
+	private _ace3 = getArray (_backpackConfig >> "ace3");
 	private _ef = getArray (_backpackConfig >> "ef");
 	private _rf = getArray (_backpackConfig >> "rf");
 	private _ws = getArray (_backpackConfig >> "ws");
@@ -787,7 +594,7 @@ DoAddLaunchers = {
 	[1850, "CfgMagazines", _a3m, "weapon"] call A3M_fnc_createList;
 	if (RHS_Support_Enabled == 1) then {
 		[1850, "CfgWeapons", _rhs, "weapon"] call A3M_fnc_createList;
-		[1850, "CfgMagazines", _rhms, "weapon"] call A3M_fnc_createList;
+		[1850, "CfgMagazines", _rhsm, "weapon"] call A3M_fnc_createList;
 	};
 	if (EF_Enabled == 1) then {
 		[1850, "CfgWeapons", _ef, "weapon"] call A3M_fnc_createList;

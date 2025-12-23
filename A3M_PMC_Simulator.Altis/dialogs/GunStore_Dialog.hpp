@@ -177,7 +177,7 @@ class A3M_GunStore {
             tooltip = "Access Catalogue of Backpacks"; //--- ToDo: Localize;
         };
         class A3M_ModSelector: RscCombo {
-            onLBSelChanged = "_this spawn A3M_fnc_handleWModClick";
+            onLBSelChanged = "_this spawn A3M_fnc_handleIModClick";
             idc = 2175;
             text = "Select Modification "; //--- ToDo: Localize;
             x = 0.33174 * safezoneW + safezoneX;

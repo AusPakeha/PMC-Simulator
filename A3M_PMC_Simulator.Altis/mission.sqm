@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=949;
+		nextID=1023;
 	};
 	class Camera
 	{
-		pos[]={22872.256,55.069408,19238.363};
-		dir[]={-0.075990602,-0.58848143,0.8049317};
-		up[]={-0.055310413,0.80851078,0.58587641};
-		aside[]={0.99557328,3.7252903e-09,0.093988374};
+		pos[]={22796.551,17.14563,19354.572};
+		dir[]={-0.68876386,-0.69482011,-0.206958};
+		up[]={-0.66542977,0.7191835,-0.19994664};
+		aside[]={-0.28776795,-1.9813888e-07,0.9577015};
 	};
 };
 binarizationWanted=0;
@@ -5032,20 +5032,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22817.115,14.517299,19354.061};
-				angles[]={0.00099955383,4.1094322,0.0012712938};
+				position[]={22817.115,14.517986,19354.061};
+				angles[]={0.00099483761,4.1094303,0.0012740904};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Trash Can 2"", {hint ""Keep Our Property Clean!! Put Unwanted Stuff In Here!""}]; this addAction [""Empty Trash"", {clearWeaponCargoGlobal GS2; clearItemCargoGlobal GS2; clearMagazineCargoGlobal GS2; clearBackpackCargoGlobal GS2; }]; this allowDamage False; ";
+				init="this addAction [""Trash Can 2"", {hint ""Keep Our Property Clean!! Put Unwanted Stuff In Here!""},  " \n " [],  " \n " 1.5,  " \n " true,  " \n " true,  " \n " """",  " \n " ""(_this distance _target) < 3""]; this addAction [""Empty Trash"", {clearWeaponCargoGlobal GS2; clearItemCargoGlobal GS2; clearMagazineCargoGlobal GS2; clearBackpackCargoGlobal GS2; },  " \n " [],  " \n " 1.5,  " \n " true,  " \n " true,  " \n " """",  " \n " ""(_this distance _target) < 3""]; this allowDamage False; ";
 				name="GS2";
 			};
 			id=338;
 			type="Box_NATO_AmmoVeh_F";
-			atlOffset=-0.00068759918;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5069,20 +5068,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22824.598,14.57618,19360.709};
-				angles[]={0,3.8232851,0};
+				position[]={22824.598,14.576657,19360.709};
+				angles[]={0,3.8232832,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""General Storage 1"", {hint ""Designated Equipment Storage Box""} ]; this allowDamage False; ";
+				init="this addAction [ " \n " ""General Storage 1"",  " \n " {hint ""Designated Equipment Storage Box""},  " \n " [],  " \n " 1.5,  " \n " true,  " \n " true,  " \n " """",  " \n " ""(_this distance _target) < 3"" " \n "];  " \n "this allowDamage false;";
 				name="GS1";
 			};
 			id=339;
 			type="Box_NATO_AmmoVeh_F";
-			atlOffset=-0.00047683716;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51296,20 +51294,17 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={22808.244,15.180878,19365.283};
-												angles[]={0,5.3193808,0};
+												position[]={22808.105,15.180021,19365.379};
+												angles[]={0,5.3193798,0};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												name="AOdesk";
-												createAsSimpleObject=1;
-												disableSimulation=1;
 											};
 											id=9416;
 											type="Land_Laptop_device_F";
-											atlOffset=0.0004940033;
+											atlOffset=0.81445885;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -76499,6 +76494,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Road";
+					state=1;
 					class Entities
 					{
 						items=185;
@@ -79536,6 +79532,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Walls";
+					state=1;
 					class Entities
 					{
 						items=336;
@@ -94321,7 +94318,7 @@ class Mission
 							{
 								skill=0.60000002;
 								fuel=0;
-								init="this addAction [""Hospital Bed"", {Hint "" This is an ACE 3 Enabled Hospital bed. Put the patient is as Passenger. Doctor enter as DRIVER. If you see gunner, it is a GLITCH, DO NOT ENTER GUNNER SEAT! ""}]; this allowDamage false; [medicall, HBed2] call BIS_fnc_attachToRelative;";
+								init="this addAction [""Hospital Bed"", {Hint "" This is an ACE 3 Enabled Hospital bed. Put the patient is as Passenger. Doctor enter as DRIVER. If you see gunner, it is a GLITCH, DO NOT ENTER GUNNER SEAT! ""},  " \n " [],  " \n " 1.5,  " \n " true,  " \n " true,  " \n " """",  " \n " ""(_this distance _target) < 3""]; this allowDamage false; [HBed2, medicall] call BIS_fnc_attachToRelative;";
 								name="HBed2";
 							};
 							id=874;
@@ -94372,7 +94369,7 @@ class Mission
 							{
 								skill=0.60000002;
 								fuel=0;
-								init="this addAction [""Hospital Bed"", {Hint "" This is an ACE 3 Enabled Hospital bed. Put the patient is as Passenger. Doctor enter as DRIVER. If you see gunner, it is a GLITCH, DO NOT ENTER GUNNER SEAT! ""}]; this allowDamage false;[medicall, HBed1] call BIS_fnc_attachToRelative;";
+								init="this addAction [""Hospital Bed"", {Hint "" This is an ACE 3 Enabled Hospital bed. Put the patient is as Passenger. Doctor enter as DRIVER. If you see gunner, it is a GLITCH, DO NOT ENTER GUNNER SEAT! ""},  " \n " [],  " \n " 1.5,  " \n " true,  " \n " true,  " \n " """",  " \n " ""(_this distance _target) < 3""]; this allowDamage false;[HBed1, medicall] call BIS_fnc_attachToRelative;";
 								name="HBed1";
 							};
 							id=875;
@@ -98370,6 +98367,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="SF Camp Outlines";
+					state=1;
 					class Entities
 					{
 						items=84;
@@ -98426,7 +98424,7 @@ class Mission
 							fillName="SolidFull";
 							a=17.853277;
 							b=9.1770792;
-							angle=218.56461;
+							angle=218.56456;
 							id=19118;
 						};
 						class Item4
@@ -98582,7 +98580,7 @@ class Mission
 							fillName="SolidFull";
 							a=3.0694244;
 							b=2.6126394;
-							angle=221.6033;
+							angle=221.60326;
 							id=19129;
 						};
 						class Item15
@@ -98652,7 +98650,7 @@ class Mission
 							fillName="SolidFull";
 							a=3.3817902;
 							b=5.0566874;
-							angle=218.14328;
+							angle=218.14322;
 							id=19134;
 						};
 						class Item20
@@ -98666,7 +98664,7 @@ class Mission
 							fillName="SolidFull";
 							a=3.3817902;
 							b=5.0566874;
-							angle=218.14326;
+							angle=218.14322;
 							id=19135;
 						};
 						class Item21
@@ -98680,7 +98678,7 @@ class Mission
 							fillName="SolidFull";
 							a=3.3817902;
 							b=5.0566874;
-							angle=218.14326;
+							angle=218.14322;
 							id=19136;
 						};
 						class Item22
@@ -98694,7 +98692,7 @@ class Mission
 							fillName="SolidFull";
 							a=9.9435606;
 							b=10.115727;
-							angle=219.7813;
+							angle=219.78123;
 							id=19137;
 						};
 						class Item23
@@ -98708,7 +98706,7 @@ class Mission
 							fillName="SolidFull";
 							a=8.3615503;
 							b=10.652141;
-							angle=218.98241;
+							angle=218.98238;
 							id=19138;
 						};
 						class Item24
@@ -98737,7 +98735,7 @@ class Mission
 							fillName="SolidFull";
 							a=8.7771902;
 							b=10.652141;
-							angle=218.98239;
+							angle=218.98238;
 							id=19140;
 						};
 						class Item26
@@ -143431,14 +143429,14 @@ class Mission
 					};
 					id=19797;
 					type="A3M_OPSG_Op_B";
-					atlOffset=0.0041828156;
+					atlOffset=0.0041837692;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=19796;
-			atlOffset=0.0041828156;
+			atlOffset=0.0041837692;
 		};
 		class Item689
 		{
@@ -143865,12 +143863,14 @@ class Mission
 					};
 					id=19823;
 					type="A3M_OPSG_Op_B";
+					atlOffset=9.5367432e-07;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=19822;
+			atlOffset=9.5367432e-07;
 		};
 		class Item702
 		{
@@ -143969,12 +143969,14 @@ class Mission
 					};
 					id=19829;
 					type="A3M_OPSG_Engineer_B";
+					atlOffset=-9.5367432e-07;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=19828;
+			atlOffset=-9.5367432e-07;
 		};
 		class Item705
 		{
@@ -144053,14 +144055,14 @@ class Mission
 					};
 					id=19833;
 					type="A3M_OPSG_Medic_B";
-					atlOffset=9.5367432e-07;
+					atlOffset=1.9073486e-06;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=19832;
-			atlOffset=9.5367432e-07;
+			atlOffset=1.9073486e-06;
 		};
 		class Item707
 		{

@@ -12,9 +12,6 @@ if (Wallet < _price) then {
 
     hint format ["You have purchased %1 for $%2", _displayName, _price];
 
-    [] call DoBudget;
-    [] call DoTotal;
-
     sleep DeliveryTime;
 
     switch (_type) do {

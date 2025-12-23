@@ -1,60 +1,60 @@
--// legend
--[x] Complete (probally partially complete if MrPakeha is doing it... lol)
--[/] half way complete
--[¯\\_(ツ)_/¯] MrPakeha has no idea
--
-- {"",},
--
-- case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
--
-- case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
--
-- ### TypeOfItem Categories:
-- - item
-- - weapon
-- - magazine
-- - backpack
--
--// Errors MrPakeha cant figure out
--
--// items
--[x] separate each function to its own file
--[x] create CGFStore.hpp in configs
--[x] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
--[x] modify files to use new coding style
--[x] Fix weapons
--[] Item store - hide categories if CDLC/mod not present
--
--// Vehicles
--[x] convert all fleet files to new coding style
--[] Fix Supported Modification section of FleetMgmt.sqf
--
--// Various
--[x] config Incon Undercover
--[x] remove GF Ambience hints
--[] global deliveries hold add action
--[x] add funds to player account for completed missions
--
--// UI Changes
--[] set up files for each dialog
---[/] Homepage - Started, need to verify working
---[/] Fleet Store - files made
---[] Item Store
---[] Email
---[] Admin
---[] Bank
---[] Recuitment
--
--// Far down the track
--[] switch out missions to be dynamic
--
--// Base Upgrade System
--[] Code base system
---[] Create compositions for each upgrade
---[] Code purchase system
--
--
--// Mission HackDen Update
--[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
---[] mission_hackDen.sqf is working but will not spawn items on hack1 marker
--[] Finish it
+--// legend
+--[x] Complete (probally partially complete if MrPakeha is doing it... lol)
+--[/] half way complete
+--[¯\\_(ツ)_/¯] MrPakeha has no idea
+--
+-- {"",},
+--
+-- case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
+--
+-- case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
+--
+-- ### TypeOfItem Categories:
+-- - item
+-- - weapon
+-- - magazine
+-- - backpack
+--
+--// Errors MrPakeha cant figure out
+--
+--// items
+--[x] separate each function to its own file
+--[x] create CGFStore.hpp in configs
+--[x] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
+--[x] modify files to use new coding style
+--[x] Fix weapons
+--[] Item store - hide categories if CDLC/mod not present
+--
+--// Vehicles
+--[x] convert all fleet files to new coding style
+--[] Fix Supported Modification section of FleetMgmt.sqf
+--
+--// Various
+--[x] removed Incon Undercover
+--[x] removed GF Ambience
+--[] global deliveries hold add action
+--[x] add funds to player account for completed missions
+--
+--// UI Changes
+--[] set up files for each dialog
+---[/] Homepage - Started, need to verify working
+---[] Fleet Store - files made
+---[] Item Store
+---[] Email
+---[] Admin
+---[] Bank
+---[] Recuitment
+--
+--// Far down the track
+--[] switch out missions to be dynamic
+--
+--// Base Upgrade System
+--[] Code base system
+---[] Create compositions for each upgrade
+---[] Code purchase system
+--
+--
+--// Mission HackDen Update
+--[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
+---[] mission_hackDen.sqf is working but will not spawn items on hack1 marker
+--[] Finish it

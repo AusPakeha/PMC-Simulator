@@ -137,7 +137,7 @@ class A3M_store {
             h = 0.374092 * safezoneH;
         };
         class A3M_VehMod: RscCombo {
-            onLBSelChanged = "_this spawn A3M_fnc_handleModClick";
+            onLBSelChanged = "_this spawn A3M_fnc_handleVModClick";
             idc = 2175;
             text = "Supported Vehicle Mods"; //--- ToDo: Localize;
             x = 0.658396 * safezoneW + safezoneX;

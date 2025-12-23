@@ -12,16 +12,22 @@ class CfgFunctions {
         class fleet {
             class buyVehicle {};
             class handleFleetPurchase {};
-            class handleModClick {};
+            class handleVModClick {};
             class vBuyButton {};
         };
         class store {
             class buyButton {};
             class buyItem {};
             class handleItemPurchase {};
+            class handleIModClick {};
         };
         class travel {
             class initTravelClass { preInit = 1; };
+            class openUI {};
+            class handleUIEvents {};
+        };
+        class homepage {
+            class initLaptopClass { preInit = 1; };
             class openUI {};
             class handleUIEvents {};
         };

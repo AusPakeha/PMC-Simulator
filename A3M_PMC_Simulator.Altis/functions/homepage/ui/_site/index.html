@@ -8,10 +8,10 @@
         <script>
         Promise.all([
             A3API.RequestFile(
-                "functions\\homepage\\ui\\style.css",
+                "functions\\homepage\\ui\\_site\\style.css",
             ),
             A3API.RequestFile(
-                "functions\\homepage\\ui\\script.js",
+                "functions\\homepage\\ui\\_site\\script.js",
             ),
         ]).then(([css, js]) => {
             const style = document.createElement("style");
