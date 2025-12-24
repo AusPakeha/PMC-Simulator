@@ -38,9 +38,9 @@ and I hope you enjoy the things I have in the works!
 HR_Rep disableAI "ANIM";
 // [[ HR_Rep, "HubSittingChairA_idle1" ], "switchMoveEverywhere" ] call BIS_fnc_MP;
 [HR_Rep, "HubSittingChairA_idle1"] remoteExecCall ["switchMoveEverywhere"];
-HR_Rep attachTo [HRChair, [0,0.05,-0.55]];
-HR_Rep setDir (getDIr HRChair);
-HR_Rep setDir 180;
+// HR_Rep attachTo [HRChair, [0,0.05,-0.55]];
+// HR_Rep setDir (getDir HRChair);
+// HR_Rep setDir 180;
 sleep 0.1;
 
 removeAllWeapons HR_Rep;
@@ -52,13 +52,12 @@ removeBackpack HR_Rep;
 removeHeadgear HR_Rep;
 removeGoggles HR_Rep;
 
-HR_Rep forceAddUniform "U_Marshal";
+HR_Rep forceAddUniform "U_B_GEN_Soldier_F";
 HR_Rep addHeadgear "H_Cap_blk_CMMG";
 HR_Rep addGoggles "G_Spectacles";
 
 HR_Rep linkItem "ItemCompass";
 HR_Rep linkItem "ItemWatch";
-HR_Rep linkItem "tf_anprc152_1";
 
 HR_Rep setFace "WhiteHead_03";
 HR_Rep setSpeaker "Male01ENG";

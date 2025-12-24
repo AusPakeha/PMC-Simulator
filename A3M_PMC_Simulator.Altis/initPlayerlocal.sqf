@@ -88,7 +88,7 @@ for "_i" from 1 to 8 do {
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 
-for "_i" from 1 to 6 do {
+for "_i" from 1 to 7 do {
 	_deliveries = missionNamespace getVariable [format ["deliveries%1", _i], objNull];
 	if (!isNull _deliveries) then {
 		[

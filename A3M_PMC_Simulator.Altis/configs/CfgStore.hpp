@@ -13,13 +13,6 @@ class CfgStore {
                 {"Chemlight_red",2},
                 {"Chemlight_yellow",2}
             };
-            ace3[] = {
-                {"ACE_MapTools",525},
-                {"ACE_CableTie",2},
-                {"ACE_EarPlugs",1},
-                {"ACE_wirecutter",65},
-                {"ACE_SpareBarrel",300}
-            };
             beard[] = {
                 {"SFG_Tac_smallBeardB",1},
                 {"SFG_Tac_smallBeardD",1},
@@ -41,6 +34,13 @@ class CfgStore {
                 {"SFG_Tac_ChopsD",1},
                 {"SFG_Tac_ChopsG",1},
                 {"SFG_Tac_ChopsO",1}
+            };
+            ace3[] = {
+                {"ACE_MapTools",525},
+                {"ACE_CableTie",2},
+                {"ACE_EarPlugs",1},
+                {"ACE_wirecutter",65},
+                {"ACE_SpareBarrel",300}
             };
         };
         class A3M_Medical {
@@ -97,16 +97,6 @@ class CfgStore {
             a3m[] = {
                 {"Laserbatteries",12}
             };
-            rhs[] = {
-                {"B_rhsusf_B_BACKPACK",9500},
-                {"rhsusf_ANPVS_14",3299},
-                {"rhsusf_ANPVS_15",13339},
-                {"lerca_1200_black",12500},
-                {"lerca_1200_tan",12500},
-                {"rhsusf_acc_anpeq15",1329},
-                {"rhsusf_acc_anpeq15A",1678},
-                {"rhsusf_acc_anpeq15_light",1779}
-            };
             ace3[] = {
                 {"ACE_Kestrel",699},
                 {"ACE_microDAGR",2200},
@@ -120,6 +110,17 @@ class CfgStore {
                 {"ItemALiVEPhoneOld",0},
                 {"ItemAndroid",1200},
                 {"ACE_Altimeter",155}
+            };
+            tfar[] = {
+                {"tf_anprc152",1275},
+                {"tf_rf7800str",625},
+                {"tf_rt1523g",2379},
+                {"tf_rt1523g_big",3199},
+                {"tf_rt1523g_black",2379},
+                {"tf_rt1523g_fabric",2379},
+                {"tf_rt1523g_green",2379},
+                {"tf_rt1523g_rhs",2379},
+                {"tf_rt1523g_sage",2379}
             };
             ef[] = {
                 {"EF_LPNVG",3750},
@@ -153,17 +154,17 @@ class CfgStore {
                 {"saber_light_ir_sand_lxWS",275},
                 {"saber_light_ir_snake_lxWS",275}
             };
-            tfar[] = {
-                {"tf_anprc152",1275},
-                {"tf_rf7800str",625},
-                {"tf_rt1523g",2379},
-                {"tf_rt1523g_big",3199},
-                {"tf_rt1523g_black",2379},
-                {"tf_rt1523g_fabric",2379},
-                {"tf_rt1523g_green",2379},
-                {"tf_rt1523g_rhs",2379},
-                {"tf_rt1523g_sage",2379}
+            rhs[] = {
+                {"B_rhsusf_B_BACKPACK",9500},
+                {"rhsusf_ANPVS_14",3299},
+                {"rhsusf_ANPVS_15",13339},
+                {"lerca_1200_black",12500},
+                {"lerca_1200_tan",12500},
+                {"rhsusf_acc_anpeq15",1329},
+                {"rhsusf_acc_anpeq15A",1678},
+                {"rhsusf_acc_anpeq15_light",1779}
             };
+
         };
         class A3M_Vests {
             a3[] = {
@@ -200,35 +201,6 @@ class CfgStore {
                 {"V_TacVest_oli",1475},
                 {"V_TacVestCamo_khk",1475},
                 {"V_TacVestIR_blk",175}
-            };
-            rhs[] = {
-                {"rhsusf_iotv_ucp",820},
-                {"rhsusf_iotv_ucp_grenadier",850},
-                {"rhsusf_iotv_ucp_medic",850},
-                {"rhsusf_iotv_ucp_repair",850},
-                {"rhsusf_iotv_ucp_rifleman",875},
-                {"rhsusf_iotv_ucp_SAW",875},
-                {"rhsusf_iotv_ucp_squadleader",900},
-                {"rhsusf_iotv_ucp_teamleader",900},
-                {"rhsusf_iotv_ocp",820},
-                {"rhsusf_iotv_ocp_grenadier",850},
-                {"rhsusf_iotv_ocp_medic",850},
-                {"rhsusf_iotv_ocp_repair",850},
-                {"rhsusf_iotv_ocp_rifleman",875},
-                {"rhsusf_iotv_ocp_SAW",875},
-                {"rhsusf_iotv_ocp_squadleader",900},
-                {"rhsusf_iotv_ocp_teamleader",900},
-                {"rhsusf_spc",675},
-                {"rhs_6sh92",125},
-                {"rhs_6sh92_radio",225},
-                {"rhs_6sh92_vog",310},
-                {"rhs_6sh92_vog_headset",410},
-                {"rhs_6sh92_headset",225},
-                {"rhs_6sh92_digi",125},
-                {"rhs_6sh92_digi_radio",225},
-                {"rhs_6sh92_digi_vog",310},
-                {"rhs_6sh92_digi_vog_headset",410},
-                {"rhs_6sh92_digi_headset",225}
             };
             ef[] = {
                 {"EF_V_AAV_Black",800},
@@ -284,6 +256,35 @@ class CfgStore {
                 {"V_lxWS_Harnesso_oli",500},
                 {"V_lxWS_TacVestIR_oli",500}
             };
+            rhs[] = {
+                {"rhsusf_iotv_ucp",820},
+                {"rhsusf_iotv_ucp_grenadier",850},
+                {"rhsusf_iotv_ucp_medic",850},
+                {"rhsusf_iotv_ucp_repair",850},
+                {"rhsusf_iotv_ucp_rifleman",875},
+                {"rhsusf_iotv_ucp_SAW",875},
+                {"rhsusf_iotv_ucp_squadleader",900},
+                {"rhsusf_iotv_ucp_teamleader",900},
+                {"rhsusf_iotv_ocp",820},
+                {"rhsusf_iotv_ocp_grenadier",850},
+                {"rhsusf_iotv_ocp_medic",850},
+                {"rhsusf_iotv_ocp_repair",850},
+                {"rhsusf_iotv_ocp_rifleman",875},
+                {"rhsusf_iotv_ocp_SAW",875},
+                {"rhsusf_iotv_ocp_squadleader",900},
+                {"rhsusf_iotv_ocp_teamleader",900},
+                {"rhsusf_spc",675},
+                {"rhs_6sh92",125},
+                {"rhs_6sh92_radio",225},
+                {"rhs_6sh92_vog",310},
+                {"rhs_6sh92_vog_headset",410},
+                {"rhs_6sh92_headset",225},
+                {"rhs_6sh92_digi",125},
+                {"rhs_6sh92_digi_radio",225},
+                {"rhs_6sh92_digi_vog",310},
+                {"rhs_6sh92_digi_vog_headset",410},
+                {"rhs_6sh92_digi_headset",225}
+            };
         };
         class A3M_Uniforms {
             a3[] = {
@@ -332,13 +333,6 @@ class CfgStore {
                 {"U_OG_Guerilla3_2",120},
                 {"U_OG_leader",160}
             };
-            rhs[] = {
-                {"rhs_uniform_cu_ocp_patchless",175},
-                {"rhs_uniform_cu_ucp_patchless",175},
-                {"rhs_uniform_FROG01_wd",325},
-                {"rhs_uniform_FROG01_d",325},
-                {"rhs_uniform_FROG01_m81",325}
-            };
             ef[] = {
                 {"EF_U_B_MarineCombatUniform_Des_1",300},
                 {"EF_U_B_MarineCombatUniform_Des_2",310},
@@ -377,6 +371,13 @@ class CfgStore {
                 {"U_B_CTRG_3_lxWS",180},
                 {"U_B_CTRG_4_lxWS",180},
                 {"U_lxWS_B_CombatUniform_desert_vest",130}
+            };
+            rhs[] = {
+                {"rhs_uniform_cu_ocp_patchless",175},
+                {"rhs_uniform_cu_ucp_patchless",175},
+                {"rhs_uniform_FROG01_wd",325},
+                {"rhs_uniform_FROG01_d",325},
+                {"rhs_uniform_FROG01_m81",325}
             };
         };
         class A3M_Headgear {
@@ -575,6 +576,132 @@ class CfgStore {
                 {"G_AirPurifyingRespirator_01_F",50},
                 {"G_RegulatorMask_F",50}
             };
+            ukiri[] = {
+                {"UR_G_Bandanna_Beast_Avi",8},
+                {"UR_G_Bandanna_Beast_Grey_Avi",10},
+                {"UR_G_Bandanna_Beast_Grey",8},
+                {"UR_G_Bandanna_Beast_Red_Avi",10},
+                {"UR_G_Bandanna_Beast_Red",8},
+                {"UR_G_Bandanna_Kha_Avi",10},
+                {"UR_G_Bandanna_Oli_Avi",10},
+                {"UR_G_Bandanna_Tan_Avi",10},
+                {"UR_G_Balaclava_ACU",15},
+                {"UR_G_Balaclava_Artic",15},
+                {"UR_G_Balaclava_Deadpool",15},
+                {"UR_G_Balaclava_Deathstroke",15},
+                {"UR_G_Balaclava_Emile_Ard",15},
+                {"UR_G_Balaclava_Emile_Blk",15},
+                {"UR_G_Balaclava_Emile_Lush",15},
+                {"UR_G_Balaclava_Flecktarn",15},
+                {"UR_G_Balaclava_CodGhosts_01_Ard",20},
+                {"UR_G_Balaclava_CodGhosts_01_Blk",20},
+                {"UR_G_Balaclava_CodGhosts_01_Blk_LPG",20},
+                {"UR_G_Balaclava_CodGhosts_01_Lsh",20},
+                {"UR_G_Balaclava_CodGhosts_02_Ard",20},
+                {"UR_G_Balaclava_CodGhosts_02_Blk",20},
+                {"UR_G_Balaclava_CodGhosts_02_Blk_LPG",20},
+                {"UR_G_Balaclava_CodGhosts_02_Lsh",20},
+                {"UR_G_Balaclava_CodGhosts_03_Ard",20},
+                {"UR_G_Balaclava_CodGhosts_03_Blk",20},
+                {"UR_G_Balaclava_CodGhosts_03_Blk_LPG",20},
+                {"UR_G_Balaclava_CodGhosts_03_Lsh",20},
+                {"UR_G_Balaclava_Marpat_Des",15},
+                {"UR_G_Balaclava_Marpat_Wood",15},
+                {"UR_G_Balaclava_Woodland",15},
+                {"UR_H_Bandanna_clownCigar",15},
+                {"UR_H_Bandanna_clownColour",15},
+                {"UR_G_Bandanna_CodGhosts_04_Blk",20},
+                {"UR_H_Bandanna_mouthDirty",15},
+                {"UR_H_Bandanna_mouthSnarl",15},
+                {"UR_H_Bandanna_GhostRecon_Black",15},
+                {"UR_H_Bandanna_Ghostrecon_Green",15},
+                {"UR_H_Bandanna_GhostRecon_Khaki",15},
+                {"UR_G_Bandanna_Skull_01_Black_Avi",15},
+                {"UR_G_Bandanna_Skull_01_Black",15},
+                {"UR_G_Bandanna_Skull_01_Green",15},
+                {"UR_G_Bandanna_Skull_01_Khaki",15},
+                {"UR_G_Bandanna_Tribal_01_Blk",15},
+                {"UR_G_Bandanna_Tribal_01_Grn",15},
+                {"UR_G_Bandanna_Tribal_01_Khk",15},
+                {"UR_G_Bandanna_Tribal_02_Blk",15},
+                {"UR_G_Bandanna_Tribal_02_Grn",15},
+                {"UR_G_Bandanna_Tribal_02_Khk",15},
+            };
+            ef[] = {
+                {"EF_H_Booniehat_Des",75},
+                {"EF_H_Booniehat_Wdl",75},
+                {"EF_H_Cap_Navy",15},
+                {"EF_H_Cap_Takmyr",20},
+                {"EF_H_HelmetB_light_black_slick",1425},
+                {"EF_H_HelmetB_light_desert_slick",1425},
+                {"EF_H_HelmetB_light_grass_slick",1425},
+                {"EF_H_HelmetB_light_sand_slick",1425},
+                {"EF_H_HelmetB_light_slick",1400},
+                {"EF_H_HelmetB_light_tna_slick",1425},
+                {"EF_H_HelmetB_light_wdl_slick",1425},
+                {"EF_H_MCH",1350},
+                {"EF_H_MCH_Basic",1350},
+                {"EF_H_MCH_BasicNet_Black",1350},
+                {"EF_H_MCH_BasicNet_Coy",1350},
+                {"EF_H_MCH_BasicNet_Des",1350},
+                {"EF_H_MCH_BasicNet_Olive",1350},
+                {"EF_H_MCH_BasicNet_Wdl",1350},
+                {"EF_H_MCH_Full",1370},
+                {"EF_H_MCH_FullCamo_Black",1370},
+                {"EF_H_MCH_FullCamo_Coy",1370},
+                {"EF_H_MCH_FullCamo_Des",1370},
+                {"EF_H_MCH_FullCamo_Olive",1370},
+                {"EF_H_MCH_FullCamo_Wdl",1370},
+                {"EF_H_Protecta",75},
+                {"EF_H_UtilityCap_Des",50},
+                {"EF_H_UtilityCap_Wdl",50}
+            };
+            ws[] = {
+                {"lxWS_H_bmask_base",75},
+                {"lxWS_H_bmask_ghex",75},
+                {"lxWS_H_bmask_hex",75},
+                {"lxWS_H_bmask_camo01",75},
+                {"H_bmask_snake_lxws",75},
+                {"lxWS_H_bmask_white",75},
+                {"lxWS_H_bmask_camo02",75},
+                {"lxWS_H_bmask_yellow",75},
+                {"lxWS_H_Bandanna_blk_hs",10},
+                {"lxWS_H_PASGT_goggles_black_F",1275},
+                {"lxWS_H_PASGT_goggles_olive_F",1275},
+                {"lxWS_H_PASGT_goggles_white_F",1275},
+                {"H_Beret_Headset_lxWS",90},
+                {"lxWS_H_Booniehat_desert",75},
+                {"H_Cap_headphones_ion_lxws",95},
+                {"lxWS_H_CapB_rvs_blk_ION",95},
+                {"lxWS_H_Headset",85}
+            };
+            rf[] = {
+                {"H_HelmetAggressor_sb_taiga_RF",1595},
+                {"H_HelmetB_plain_sb_geo_RF",1595},
+                {"H_HelmetB_plain_sb_hex_RF",1595},
+                {"H_HelmetB_plain_sb_khaki_RF",1595},
+                {"H_HelmetB_plain_sb_mtp_RF",1595},
+                {"H_HelmetB_plain_sb_tna_RF",1595},
+                {"H_HelmetB_plain_sb_wdl_RF",1595},
+                {"H_HelmetHeavy_Black_RF",1350},
+                {"H_HelmetHeavy_Simple_Black_RF",1325},
+                {"H_HelmetHeavy_VisorUp_Black_RF",1350},
+                {"H_HelmetHeavy_GHex_RF",1350},
+                {"H_HelmetHeavy_Simple_GHex_RF",1325},
+                {"H_HelmetHeavy_VisorUp_GHex_RF",1350},
+                {"H_HelmetHeavy_Hex_RF",1350},
+                {"H_HelmetHeavy_Simple_Hex_RF",1325},
+                {"H_HelmetHeavy_VisorUp_Hex_RF",1350},
+                {"H_HelmetHeavy_Olive_RF",1350},
+                {"H_HelmetHeavy_Simple_Olive_RF",1325},
+                {"H_HelmetHeavy_VisorUp_Olive_RF",1350},
+                {"H_HelmetHeavy_Sand_RF",1350},
+                {"H_HelmetHeavy_Simple_Sand_RF",1325},
+                {"H_HelmetHeavy_VisorUp_Sand_RF",1350},
+                {"H_HelmetHeavy_White_RF",1350},
+                {"H_HelmetHeavy_Simple_White_RF",1325},
+                {"H_HelmetHeavy_VisorUp_White_RF",1350}
+            };
             rhs[] = {
                 {"rhsusf_ach_bare",349},
                 {"rhsusf_ach_bare_ess",485},
@@ -712,132 +839,6 @@ class CfgStore {
                 {"rhs_zsh7a_mike",2650},
                 {"rhs_zsh7a",3650}
             };
-            ef[] = {
-                {"EF_H_Booniehat_Des",75},
-                {"EF_H_Booniehat_Wdl",75},
-                {"EF_H_Cap_Navy",15},
-                {"EF_H_Cap_Takmyr",20},
-                {"EF_H_HelmetB_light_black_slick",1425},
-                {"EF_H_HelmetB_light_desert_slick",1425},
-                {"EF_H_HelmetB_light_grass_slick",1425},
-                {"EF_H_HelmetB_light_sand_slick",1425},
-                {"EF_H_HelmetB_light_slick",1400},
-                {"EF_H_HelmetB_light_tna_slick",1425},
-                {"EF_H_HelmetB_light_wdl_slick",1425},
-                {"EF_H_MCH",1350},
-                {"EF_H_MCH_Basic",1350},
-                {"EF_H_MCH_BasicNet_Black",1350},
-                {"EF_H_MCH_BasicNet_Coy",1350},
-                {"EF_H_MCH_BasicNet_Des",1350},
-                {"EF_H_MCH_BasicNet_Olive",1350},
-                {"EF_H_MCH_BasicNet_Wdl",1350},
-                {"EF_H_MCH_Full",1370},
-                {"EF_H_MCH_FullCamo_Black",1370},
-                {"EF_H_MCH_FullCamo_Coy",1370},
-                {"EF_H_MCH_FullCamo_Des",1370},
-                {"EF_H_MCH_FullCamo_Olive",1370},
-                {"EF_H_MCH_FullCamo_Wdl",1370},
-                {"EF_H_Protecta",75},
-                {"EF_H_UtilityCap_Des",50},
-                {"EF_H_UtilityCap_Wdl",50}
-            };
-            ws[] = {
-                {"lxWS_H_bmask_base",75},
-                {"lxWS_H_bmask_ghex",75},
-                {"lxWS_H_bmask_hex",75},
-                {"lxWS_H_bmask_camo01",75},
-                {"H_bmask_snake_lxws",75},
-                {"lxWS_H_bmask_white",75},
-                {"lxWS_H_bmask_camo02",75},
-                {"lxWS_H_bmask_yellow",75},
-                {"lxWS_H_Bandanna_blk_hs",10},
-                {"lxWS_H_PASGT_goggles_black_F",1275},
-                {"lxWS_H_PASGT_goggles_olive_F",1275},
-                {"lxWS_H_PASGT_goggles_white_F",1275},
-                {"H_Beret_Headset_lxWS",90},
-                {"lxWS_H_Booniehat_desert",75},
-                {"H_Cap_headphones_ion_lxws",95},
-                {"lxWS_H_CapB_rvs_blk_ION",95},
-                {"lxWS_H_Headset",85}
-            };
-            rf[] = {
-                {"H_HelmetAggressor_sb_taiga_RF",1595},
-                {"H_HelmetB_plain_sb_geo_RF",1595},
-                {"H_HelmetB_plain_sb_hex_RF",1595},
-                {"H_HelmetB_plain_sb_khaki_RF",1595},
-                {"H_HelmetB_plain_sb_mtp_RF",1595},
-                {"H_HelmetB_plain_sb_tna_RF",1595},
-                {"H_HelmetB_plain_sb_wdl_RF",1595},
-                {"H_HelmetHeavy_Black_RF",1350},
-                {"H_HelmetHeavy_Simple_Black_RF",1325},
-                {"H_HelmetHeavy_VisorUp_Black_RF",1350},
-                {"H_HelmetHeavy_GHex_RF",1350},
-                {"H_HelmetHeavy_Simple_GHex_RF",1325},
-                {"H_HelmetHeavy_VisorUp_GHex_RF",1350},
-                {"H_HelmetHeavy_Hex_RF",1350},
-                {"H_HelmetHeavy_Simple_Hex_RF",1325},
-                {"H_HelmetHeavy_VisorUp_Hex_RF",1350},
-                {"H_HelmetHeavy_Olive_RF",1350},
-                {"H_HelmetHeavy_Simple_Olive_RF",1325},
-                {"H_HelmetHeavy_VisorUp_Olive_RF",1350},
-                {"H_HelmetHeavy_Sand_RF",1350},
-                {"H_HelmetHeavy_Simple_Sand_RF",1325},
-                {"H_HelmetHeavy_VisorUp_Sand_RF",1350},
-                {"H_HelmetHeavy_White_RF",1350},
-                {"H_HelmetHeavy_Simple_White_RF",1325},
-                {"H_HelmetHeavy_VisorUp_White_RF",1350}
-            };
-            ukiri[] = {
-                {"UR_G_Bandanna_Beast_Avi",8},
-                {"UR_G_Bandanna_Beast_Grey_Avi",10},
-                {"UR_G_Bandanna_Beast_Grey",8},
-                {"UR_G_Bandanna_Beast_Red_Avi",10},
-                {"UR_G_Bandanna_Beast_Red",8},
-                {"UR_G_Bandanna_Kha_Avi",10},
-                {"UR_G_Bandanna_Oli_Avi",10},
-                {"UR_G_Bandanna_Tan_Avi",10},
-                {"UR_G_Balaclava_ACU",15},
-                {"UR_G_Balaclava_Artic",15},
-                {"UR_G_Balaclava_Deadpool",15},
-                {"UR_G_Balaclava_Deathstroke",15},
-                {"UR_G_Balaclava_Emile_Ard",15},
-                {"UR_G_Balaclava_Emile_Blk",15},
-                {"UR_G_Balaclava_Emile_Lush",15},
-                {"UR_G_Balaclava_Flecktarn",15},
-                {"UR_G_Balaclava_CodGhosts_01_Ard",20},
-                {"UR_G_Balaclava_CodGhosts_01_Blk",20},
-                {"UR_G_Balaclava_CodGhosts_01_Blk_LPG",20},
-                {"UR_G_Balaclava_CodGhosts_01_Lsh",20},
-                {"UR_G_Balaclava_CodGhosts_02_Ard",20},
-                {"UR_G_Balaclava_CodGhosts_02_Blk",20},
-                {"UR_G_Balaclava_CodGhosts_02_Blk_LPG",20},
-                {"UR_G_Balaclava_CodGhosts_02_Lsh",20},
-                {"UR_G_Balaclava_CodGhosts_03_Ard",20},
-                {"UR_G_Balaclava_CodGhosts_03_Blk",20},
-                {"UR_G_Balaclava_CodGhosts_03_Blk_LPG",20},
-                {"UR_G_Balaclava_CodGhosts_03_Lsh",20},
-                {"UR_G_Balaclava_Marpat_Des",15},
-                {"UR_G_Balaclava_Marpat_Wood",15},
-                {"UR_G_Balaclava_Woodland",15},
-                {"UR_H_Bandanna_clownCigar",15},
-                {"UR_H_Bandanna_clownColour",15},
-                {"UR_G_Bandanna_CodGhosts_04_Blk",20},
-                {"UR_H_Bandanna_mouthDirty",15},
-                {"UR_H_Bandanna_mouthSnarl",15},
-                {"UR_H_Bandanna_GhostRecon_Black",15},
-                {"UR_H_Bandanna_Ghostrecon_Green",15},
-                {"UR_H_Bandanna_GhostRecon_Khaki",15},
-                {"UR_G_Bandanna_Skull_01_Black_Avi",15},
-                {"UR_G_Bandanna_Skull_01_Black",15},
-                {"UR_G_Bandanna_Skull_01_Green",15},
-                {"UR_G_Bandanna_Skull_01_Khaki",15},
-                {"UR_G_Bandanna_Tribal_01_Blk",15},
-                {"UR_G_Bandanna_Tribal_01_Grn",15},
-                {"UR_G_Bandanna_Tribal_01_Khk",15},
-                {"UR_G_Bandanna_Tribal_02_Blk",15},
-                {"UR_G_Bandanna_Tribal_02_Grn",15},
-                {"UR_G_Bandanna_Tribal_02_Khk",15},
-            };
         };
         class A3M_Backpacks {
             a3[] = {
@@ -903,18 +904,6 @@ class CfgStore {
                 {"B_Messenger_Gray_F",155},
                 {"B_Messenger_Olive_F",155}
             };
-            rhs[] = {
-                {"rhsusf_falconii",120},
-                {"rhsusf_assault_eagleaiii_ucp",115},
-                {"rhsusf_assault_eagleaiii_ocp",115},
-                {"rhsusf_assault_eagleaiii_coy",115},
-                {"rhsusf_assault_eagleaiii_ocp_engineer",1115},
-                {"rhsusf_assault_eagleaiii_ocp_medic",1115},
-                {"rhsusf_assault_eagleaiii_ocp_demo",1115},
-                {"rhs_assault_umbts",130},
-                {"rhs_sidor",35},
-                {"rhs_rpg",25}
-            };
             ace3[] = {
                 {"ACE_TacticalLadder_Pack",344}
             };
@@ -945,6 +934,18 @@ class CfgStore {
                 {"B_Kitbag_desert_lxWS",450},
                 {"B_shield_backpack_lxWS",1255}
             };
+            rhs[] = {
+                {"rhsusf_falconii",120},
+                {"rhsusf_assault_eagleaiii_ucp",115},
+                {"rhsusf_assault_eagleaiii_ocp",115},
+                {"rhsusf_assault_eagleaiii_coy",115},
+                {"rhsusf_assault_eagleaiii_ocp_engineer",1115},
+                {"rhsusf_assault_eagleaiii_ocp_medic",1115},
+                {"rhsusf_assault_eagleaiii_ocp_demo",1115},
+                {"rhs_assault_umbts",130},
+                {"rhs_sidor",35},
+                {"rhs_rpg",25}
+            };
         };
         class A3M_Suppressors {
             a3[] = {
@@ -954,14 +955,6 @@ class CfgStore {
                 {"muzzle_snds_H_MG",1800},
                 {"muzzle_snds_L",1100},
                 {"muzzle_snds_M",900}
-            };
-            rhs[] = {
-                {"rhs_acc_tgpa",949},
-                {"rhsusf_acc_M2010S",350},
-                {"rhsusf_acc_rotex5_grey",629},
-                {"rhsusf_acc_rotex5_tan",659},
-                {"rhsusf_acc_SFMB556",149},
-                {"rhsusf_acc_SF3P556",129}
             };
             ef[] = {
                 {"ef_snds_mxar",770},
@@ -994,6 +987,14 @@ class CfgStore {
                 {"supressor_m_khaki_lxWS",770},
                 {"muzzel_snds_12Gauge_lxWS",820}
             };
+            rhs[] = {
+                {"rhs_acc_tgpa",949},
+                {"rhsusf_acc_M2010S",350},
+                {"rhsusf_acc_rotex5_grey",629},
+                {"rhsusf_acc_rotex5_tan",659},
+                {"rhsusf_acc_SFMB556",149},
+                {"rhsusf_acc_SF3P556",129}
+            };
         };
         class A3M_Optics {
             a3[] = {
@@ -1015,30 +1016,6 @@ class CfgStore {
                 {"optic_tws",4775},
                 {"optic_tws_mg",5995},
                 {"optic_Yorris",975}
-            };
-            rhs[] = {
-                {"rhs_acc_1p29",650},
-                {"rhs_acc_1p63",500},
-                {"rhs_acc_1pn93_1",3000},
-                {"rhs_acc_1pn93_2",3600},
-                {"rhs_acc_ekp1",300},
-                {"rhs_acc_pgo7v",300},
-                {"rhs_acc_pkas",300},
-                {"rhs_acc_pso1m2",320},
-                {"rhsusf_acc_EOTECH",629},
-                {"rhsusf_acc_eotech_552",579},
-                {"rhsusf_acc_LEUPOLDMK4",940},
-                {"rhsusf_acc_LEUPOLDMK4_2",1299},
-                {"rhsusf_acc_ELCAN",2550},
-                {"rhsusf_acc_ELCAN_PIP",2650},
-                {"rhsusf_acc_ACOG",1779},
-                {"rhsusf_acc_ACOG_PIP",1879},
-                {"rhsusf_acc_ACOG2",1979},
-                {"rhsusf_acc_ACOG3",2050},
-                {"rhsusf_acc_ACOG_USMC",5100},
-                {"rhsusf_acc_ACOG2_USMC",5350},
-                {"rhsusf_acc_ACOG3_USMC",5400},
-                {"rhsusf_acc_compm4",829}
             };
             ef[] = {
                 {"ef_optic_mbs",950},
@@ -1098,6 +1075,30 @@ class CfgStore {
                 {"optic_Hamr_sand_lxWS",450},
                 {"optic_Hamr_snake_lxWS",450}
             };
+            rhs[] = {
+                {"rhs_acc_1p29",650},
+                {"rhs_acc_1p63",500},
+                {"rhs_acc_1pn93_1",3000},
+                {"rhs_acc_1pn93_2",3600},
+                {"rhs_acc_ekp1",300},
+                {"rhs_acc_pgo7v",300},
+                {"rhs_acc_pkas",300},
+                {"rhs_acc_pso1m2",320},
+                {"rhsusf_acc_EOTECH",629},
+                {"rhsusf_acc_eotech_552",579},
+                {"rhsusf_acc_LEUPOLDMK4",940},
+                {"rhsusf_acc_LEUPOLDMK4_2",1299},
+                {"rhsusf_acc_ELCAN",2550},
+                {"rhsusf_acc_ELCAN_PIP",2650},
+                {"rhsusf_acc_ACOG",1779},
+                {"rhsusf_acc_ACOG_PIP",1879},
+                {"rhsusf_acc_ACOG2",1979},
+                {"rhsusf_acc_ACOG3",2050},
+                {"rhsusf_acc_ACOG_USMC",5100},
+                {"rhsusf_acc_ACOG2_USMC",5350},
+                {"rhsusf_acc_ACOG3_USMC",5400},
+                {"rhsusf_acc_compm4",829}
+            };
         };
         class A3M_Rifles {
             a3[] = {
@@ -1126,78 +1127,6 @@ class CfgStore {
                 {"srifle_EBR_F",13500},
                 {"srifle_GM6_F",18800},
                 {"srifle_LRR_F",21500}
-            };
-            rhs[] = {
-                {"rhs_weap_pkm",12500},
-                {"rhs_weap_ak103",6160},
-                {"rhs_weap_ak103_npz",6180},
-                {"rhs_weap_ak103_1",6175},
-                {"rhs_weap_ak103_2",6185},
-                {"rhs_weap_ak74m",6175},
-                {"rhs_weap_ak74m_plummag",6225},
-                {"rhs_weap_ak74m_npz",6200},
-                {"rhs_weap_ak74m_folded",6375},
-                {"rhs_weap_ak74m_camo",6400},
-                {"rhs_weap_ak74m_desert",6410},
-                {"rhs_weap_ak74m_2mag",6220},
-                {"rhs_weap_ak74m_2mag_npz",6235},
-                {"rhs_weap_ak74m_2mag_camo",6435},
-                {"rhs_weap_ak74m_gp25",6675},
-                {"rhs_weap_ak74m_gp25_npz",6725},
-                {"rhs_weap_svdp",4799},
-                {"rhs_weap_svdp_wd",5100},
-                {"rhs_weap_svds",5500},
-                {"rhs_weap_svdp_npz",5750},
-                {"rhs_weap_svdp_wd_npz",5850},
-                {"rhs_weap_svds_npz",5500},
-                {"rhs_weap_m14ebrri",3499},
-                {"rhs_weap_m16a4",7500},
-                {"rhs_weap_m16a4_grip",7650},
-                {"rhs_weap_m16a4_carryhandle",7500},
-                {"rhs_weap_m16a4_carryhandle_pmag",7700},
-                {"rhs_weap_m16a4_carryhandle_M203",8400},
-                {"rhs_weap_XM2010",18000},
-                {"rhs_weap_XM2010_wd",18500},
-                {"rhs_weap_XM2010_d",18700},
-                {"rhs_weap_XM2010_sa",18750},
-                {"rhs_weap_m240B",19200},
-                {"rhs_weap_m249_pip",8174},
-                {"rhs_weap_M320",7000},
-                {"rhs_weap_m4",8500},
-                {"rhs_weap_m4_grip",8650},
-                {"rhs_weap_m4_grip2",8675},
-                {"rhs_weap_m4_bipod",8900},
-                {"rhs_weap_m4_carryhandle",8500},
-                {"rhs_weap_m4_carryhandle_pmag",8650},
-                {"rhs_weap_m4_m203",9350},
-                {"rhs_weap_m4_m203S",9750},
-                {"rhs_m4_m320",10400},
-                {"rhs_weap_m4a1",15000},
-                {"rhs_weap_m4a1_grip",15150},
-                {"rhs_weap_m4a1_grip2",15175},
-                {"rhs_weap_m4a1_bipod",15350},
-                {"rhs_weap_m4a1_carryhandle",15000},
-                {"rhs_weap_m4a1_carryhandle_grip",15150},
-                {"rhs_weap_m4a1_carryhandle_grip2",15175},
-                {"rhs_weap_m4a1_carryhandle_bipod",15350},
-                {"rhs_weap_m4a1_m203",16000},
-                {"rhs_weap_m4a1_m203s",16150},
-                {"rhs_weap_m4a1_carryhandle_m203",16000},
-                {"rhs_weap_m4a1_carryhandle_m203s",16150},
-                {"rhs_m4a1_m320",16550},
-                {"rhs_weap_m4a1_blockII",15500},
-                {"rhs_weap_m4a1_blockII_grip2",15750},
-                {"rhs_weap_m4a1_blockII_KAC",15650},
-                {"rhs_weap_m4a1_blockII_grip2_KAC",15750},
-                {"rhs_weap_m4a1_blockII_M203",15950},
-                {"rhs_weap_M590_5RD",539},
-                {"rhs_weap_M590_8RD",439},
-                {"rhs_weap_mk18",21749},
-                {"rhs_weap_mk18_grip2",21849},
-                {"rhs_weap_mk18_KAC",21879},
-                {"rhs_weap_mk18_grip2_KAC",22000},
-                {"rhs_weap_sr25",8508},
-                {"rhs_weap_sr25_ec",10508}
             };
             ef[] = {
                 {"EF_smg_Diplomat",4500},
@@ -1297,6 +1226,78 @@ class CfgStore {
                 {"arifle_XMS_M_Sand_lxWS",16000},
                 {"arifle_XMS_M_Camo_lxWS",16000}
             };
+            rhs[] = {
+                {"rhs_weap_pkm",12500},
+                {"rhs_weap_ak103",6160},
+                {"rhs_weap_ak103_npz",6180},
+                {"rhs_weap_ak103_1",6175},
+                {"rhs_weap_ak103_2",6185},
+                {"rhs_weap_ak74m",6175},
+                {"rhs_weap_ak74m_plummag",6225},
+                {"rhs_weap_ak74m_npz",6200},
+                {"rhs_weap_ak74m_folded",6375},
+                {"rhs_weap_ak74m_camo",6400},
+                {"rhs_weap_ak74m_desert",6410},
+                {"rhs_weap_ak74m_2mag",6220},
+                {"rhs_weap_ak74m_2mag_npz",6235},
+                {"rhs_weap_ak74m_2mag_camo",6435},
+                {"rhs_weap_ak74m_gp25",6675},
+                {"rhs_weap_ak74m_gp25_npz",6725},
+                {"rhs_weap_svdp",4799},
+                {"rhs_weap_svdp_wd",5100},
+                {"rhs_weap_svds",5500},
+                {"rhs_weap_svdp_npz",5750},
+                {"rhs_weap_svdp_wd_npz",5850},
+                {"rhs_weap_svds_npz",5500},
+                {"rhs_weap_m14ebrri",3499},
+                {"rhs_weap_m16a4",7500},
+                {"rhs_weap_m16a4_grip",7650},
+                {"rhs_weap_m16a4_carryhandle",7500},
+                {"rhs_weap_m16a4_carryhandle_pmag",7700},
+                {"rhs_weap_m16a4_carryhandle_M203",8400},
+                {"rhs_weap_XM2010",18000},
+                {"rhs_weap_XM2010_wd",18500},
+                {"rhs_weap_XM2010_d",18700},
+                {"rhs_weap_XM2010_sa",18750},
+                {"rhs_weap_m240B",19200},
+                {"rhs_weap_m249_pip",8174},
+                {"rhs_weap_M320",7000},
+                {"rhs_weap_m4",8500},
+                {"rhs_weap_m4_grip",8650},
+                {"rhs_weap_m4_grip2",8675},
+                {"rhs_weap_m4_bipod",8900},
+                {"rhs_weap_m4_carryhandle",8500},
+                {"rhs_weap_m4_carryhandle_pmag",8650},
+                {"rhs_weap_m4_m203",9350},
+                {"rhs_weap_m4_m203S",9750},
+                {"rhs_m4_m320",10400},
+                {"rhs_weap_m4a1",15000},
+                {"rhs_weap_m4a1_grip",15150},
+                {"rhs_weap_m4a1_grip2",15175},
+                {"rhs_weap_m4a1_bipod",15350},
+                {"rhs_weap_m4a1_carryhandle",15000},
+                {"rhs_weap_m4a1_carryhandle_grip",15150},
+                {"rhs_weap_m4a1_carryhandle_grip2",15175},
+                {"rhs_weap_m4a1_carryhandle_bipod",15350},
+                {"rhs_weap_m4a1_m203",16000},
+                {"rhs_weap_m4a1_m203s",16150},
+                {"rhs_weap_m4a1_carryhandle_m203",16000},
+                {"rhs_weap_m4a1_carryhandle_m203s",16150},
+                {"rhs_m4a1_m320",16550},
+                {"rhs_weap_m4a1_blockII",15500},
+                {"rhs_weap_m4a1_blockII_grip2",15750},
+                {"rhs_weap_m4a1_blockII_KAC",15650},
+                {"rhs_weap_m4a1_blockII_grip2_KAC",15750},
+                {"rhs_weap_m4a1_blockII_M203",15950},
+                {"rhs_weap_M590_5RD",539},
+                {"rhs_weap_M590_8RD",439},
+                {"rhs_weap_mk18",21749},
+                {"rhs_weap_mk18_grip2",21849},
+                {"rhs_weap_mk18_KAC",21879},
+                {"rhs_weap_mk18_grip2_KAC",22000},
+                {"rhs_weap_sr25",8508},
+                {"rhs_weap_sr25_ec",10508}
+            };
         };
         class A3M_Pistols {
             a3[] = {
@@ -1308,10 +1309,6 @@ class CfgStore {
                 {"hgun_Rook40_F",650},
                 {"SMG_01_F",6500},
                 {"SMG_02_F",5500}
-            };
-            rhs[] = {
-                {"rhs_weap_makarov_pmm",300},
-                {"rhs_weap_pya",740}
             };
             ef[] = {
                 {"ef_hgun_Pistol_heavy_01_coy",1200},
@@ -1331,6 +1328,10 @@ class CfgStore {
                 {"hgun_Glock19_auto_khk_RF",900},
                 {"hgun_Glock19_auto_tan_RF",900}
             };
+            rhs[] = {
+                {"rhs_weap_makarov_pmm",300},
+                {"rhs_weap_pya",740}
+            };
         };
         class A3M_Launchers {
             a3[] = {
@@ -1346,26 +1347,6 @@ class CfgStore {
                 {"Titan_AA",3100},
                 {"RPG32_F",200},
                 {"RPG32_HE_F",600}
-            };
-            rhs[] = {
-                {"rhs_weap_igla",75000},
-                {"rhs_weap_rpg26",85000},
-                {"rhs_weap_rpg7",25000},
-                {"rhs_weap_rshg2",23500},
-                {"rhs_weap_fgm148",107000},
-                {"rhs_weap_fim92",38000},
-                {"rhs_fim92_mag",9400},
-                {"rhs_weap_M136",1480},
-                {"rhs_weap_M136_hedp",1480},
-                {"rhs_weap_M136_hp",1480}
-            };
-            rhsm[] = {
-                {"rhs_mag_9k38_rocket",20000},
-                {"rhs_rpg7_PG7VL_mag",2600},
-                {"rhs_rpg7_PG7VR_mag",4800},
-                {"rhs_rpg7_OG7V_mag",1200},
-                {"rhs_rpg7_TBG7V_mag",1900},
-                {"rhs_fgm148_magazine_AT",40000}
             };
             ef[] = {
                 {"EF_launch_B_Titan_Coy",25000}
@@ -1386,6 +1367,26 @@ class CfgStore {
             };
             ws[] = {
                 {"launch_RPG32_tan_lxWS",2100}
+            };
+            rhs[] = {
+                {"rhs_weap_igla",75000},
+                {"rhs_weap_rpg26",85000},
+                {"rhs_weap_rpg7",25000},
+                {"rhs_weap_rshg2",23500},
+                {"rhs_weap_fgm148",107000},
+                {"rhs_weap_fim92",38000},
+                {"rhs_fim92_mag",9400},
+                {"rhs_weap_M136",1480},
+                {"rhs_weap_M136_hedp",1480},
+                {"rhs_weap_M136_hp",1480}
+            };
+            rhsm[] = {
+                {"rhs_mag_9k38_rocket",20000},
+                {"rhs_rpg7_PG7VL_mag",2600},
+                {"rhs_rpg7_PG7VR_mag",4800},
+                {"rhs_rpg7_OG7V_mag",1200},
+                {"rhs_rpg7_TBG7V_mag",1900},
+                {"rhs_fgm148_magazine_AT",40000}
             };
         };
         class A3M_Magazine {
@@ -1417,42 +1418,6 @@ class CfgStore {
                 {"150Rnd_762x51_Box_Tracer",229},
                 {"5Rnd_127x108_APDS_Mag",40},
                 {"5Rnd_127x108_Mag",28}
-            };
-            rhs[] = {
-                {"rhs_mag_9x19_17",20},
-                {"rhs_100Rnd_762x54mmR",129},
-                {"rhs_100Rnd_762x54mmR_green",169},
-                {"rhs_30Rnd_762x39mm",50},
-                {"rhs_30Rnd_762x39mm_tracer",75},
-                {"rhs_30Rnd_762x39mm_89",50},
-                {"rhs_30Rnd_545x39_AK",50},
-                {"rhs_30Rnd_545x39_AK_green",75},
-                {"rhs_30Rnd_545x39_7n10_AK",50},
-                {"rhs_30Rnd_545x39_7n22_AK",50},
-                {"rhs_45Rnd_545X39_AK",50},
-                {"rhs_45Rnd_545X39_AK_Green",75},
-                {"rhs_45Rnd_545X39_7N10_AK",50},
-                {"rhs_45Rnd_545X39_7N22_AK",50},
-                {"rhs_10Rnd_762x54mmR_7N1",50},
-                {"rhsusf_20Rnd_762x51_m118_special_Mag",45},
-                {"rhsusf_20Rnd_762x51_m993_Mag",25},
-                {"rhs_mag_30Rnd_556x45_Mk262_Stanag",70},
-                {"rhs_mag_30Rnd_556x45_Mk318_Stanag",65},
-                {"rhs_mag_30Rnd_556x45_M855A1_Stanag",50},
-                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",45},
-                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",75},
-                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",75},
-                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",75},
-                {"rhs_mag_30Rnd_556x45_M200_Stanag",20},
-                {"rhsusf_5Rnd_300winmag_xm2010",50},
-                {"rhsusf_100Rnd_762x51",159},
-                {"rhsusf_100Rnd_556x45_soft_pouch",189},
-                {"rhsusf_100Rnd_556x45_M200_soft_pouch",199},
-                {"rhsusf_200Rnd_556x45_soft_pouch",259},
-                {"rhsusf_5Rnd_00Buck",7},
-                {"rhsusf_8Rnd_00Buck",9},
-                {"rhsusf_20Rnd_762x51_m118_special_Mag",50},
-                {"rhsusf_20Rnd_762x51_m993_Mag",65}
             };
             ef[] = {
                 {"EF_100Rnd_65x39_caseless_coy_mag",159},
@@ -1614,6 +1579,42 @@ class CfgStore {
                 {"8Rnd_12Gauge_AA40_Smoke_Snake_lxWS",45},
                 {"8Rnd_12Gauge_AA40_Smoke_Tan_lxWS",45}
             };
+            rhs[] = {
+                {"rhs_mag_9x19_17",20},
+                {"rhs_100Rnd_762x54mmR",129},
+                {"rhs_100Rnd_762x54mmR_green",169},
+                {"rhs_30Rnd_762x39mm",50},
+                {"rhs_30Rnd_762x39mm_tracer",75},
+                {"rhs_30Rnd_762x39mm_89",50},
+                {"rhs_30Rnd_545x39_AK",50},
+                {"rhs_30Rnd_545x39_AK_green",75},
+                {"rhs_30Rnd_545x39_7n10_AK",50},
+                {"rhs_30Rnd_545x39_7n22_AK",50},
+                {"rhs_45Rnd_545X39_AK",50},
+                {"rhs_45Rnd_545X39_AK_Green",75},
+                {"rhs_45Rnd_545X39_7N10_AK",50},
+                {"rhs_45Rnd_545X39_7N22_AK",50},
+                {"rhs_10Rnd_762x54mmR_7N1",50},
+                {"rhsusf_20Rnd_762x51_m118_special_Mag",45},
+                {"rhsusf_20Rnd_762x51_m993_Mag",25},
+                {"rhs_mag_30Rnd_556x45_Mk262_Stanag",70},
+                {"rhs_mag_30Rnd_556x45_Mk318_Stanag",65},
+                {"rhs_mag_30Rnd_556x45_M855A1_Stanag",50},
+                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",45},
+                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",75},
+                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",75},
+                {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",75},
+                {"rhs_mag_30Rnd_556x45_M200_Stanag",20},
+                {"rhsusf_5Rnd_300winmag_xm2010",50},
+                {"rhsusf_100Rnd_762x51",159},
+                {"rhsusf_100Rnd_556x45_soft_pouch",189},
+                {"rhsusf_100Rnd_556x45_M200_soft_pouch",199},
+                {"rhsusf_200Rnd_556x45_soft_pouch",259},
+                {"rhsusf_5Rnd_00Buck",7},
+                {"rhsusf_8Rnd_00Buck",9},
+                {"rhsusf_20Rnd_762x51_m118_special_Mag",50},
+                {"rhsusf_20Rnd_762x51_m993_Mag",65}
+            };
         };
         class A3M_Grenade {
             a3[] = {
@@ -1629,6 +1630,10 @@ class CfgStore {
                 {"MiniGrenade",120},
                 {"HandGrenade",140},
                 {"HandGrenade_Stone",140}
+            };
+            ws[] = {
+                {"1Rnd_Pellet_Grenade_shell_lxWS",75},
+                {"1Rnd_40mm_HE_lxWS",120}
             };
             rhs[] = {
                 {"rhs_VOG25",75},
@@ -1649,10 +1654,6 @@ class CfgStore {
                 {"rhs_mag_m7a3_cs",100},
                 {"rhs_mag_mk3a2",80},
                 {"rhs_mag_m69",20}
-            };
-            ws[] = {
-                {"1Rnd_Pellet_Grenade_shell_lxWS",75},
-                {"1Rnd_40mm_HE_lxWS",120}
             };
         };
         class A3M_SmokeGrenades {

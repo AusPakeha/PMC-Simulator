@@ -30,7 +30,7 @@ A3M_svr_VIPEscort = {
 
     // Create Cadre on Random Chance (Contains Leights Opfor)
     if (EnPres == 1) then {
-        _HVTen = [getMarkerPos "PublicDestination", EAST, ["A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_Rifleman_AT"]] call BIS_fnc_spawnGroup;
+        _HVTen = [getMarkerPos "PublicDestination", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer"]] call BIS_fnc_spawnGroup;
         [_HVTen, getMarkerPos "PublicDestination"] call BIS_fnc_taskDefend;
     };
 
@@ -79,7 +79,7 @@ A3M_svr_TRKEscort = {
     EnPres = EnChance select floor random count EnChance;
 
     if (EnPres == 1) then {
-        _HVTen = [getMarkerPos "PubDelDestination", EAST, ["A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_Rifleman_AT"]] call BIS_fnc_spawnGroup;
+        _HVTen = [getMarkerPos "PubDelDestination", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer"]] call BIS_fnc_spawnGroup;
         [_HVTen, getMarkerPos "PubDelDestination"] call BIS_fnc_taskDefend;
     };
 
@@ -165,20 +165,20 @@ A3M_svr_SandE = {
     sleep 1;
 
     // Create Hostage Takers / Captors (Contains Leights Opfor)
-    _HSTF = [getPos SAR1, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+    _HSTF = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_HSTF, getPos SAR1] call BIS_fnc_taskDefend;
 
     _bluNums = west countSide allPlayers;
 
     if (_bluNums > 10) then {
-        _HSTF2 = [getPos SAR1, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _HSTF2 = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_HSTF2, getPos SAR1, 200] call BIS_fnc_taskPatrol;
 
-        _HSTF3 = [getPos SAR1, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _HSTF3 = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_HSTF3, getPos SAR1, 200] call BIS_fnc_taskPatrol;
     };
     if (_bluNums > 20) then {
-        _HSTF4 = [getPos SAR1, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _HSTF4 = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_HSTF4, getPos SAR1] call BIS_fnc_taskDefend;
     };
 
@@ -198,24 +198,24 @@ A3M_svr_Raid1 = {
     _bluNums = west countSide allPlayers;
 
     // Create Enemy Presence (Contains Leights Opfor)
-    _GH1tm = [getMarkerPos "GH1", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+    _GH1tm = [getMarkerPos "GH1", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH1tm, getMarkerPos "GH1"] call BIS_fnc_taskDefend;
 
-    _GH2tm = [getMarkerPos "GH2", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+    _GH2tm = [getMarkerPos "GH2", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH2tm, getMarkerPos "GH2"] call BIS_fnc_taskDefend;
 
     if (_bluNums > 10) then {
-        _GH3tm = [getMarkerPos "GH3", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH3tm = [getMarkerPos "GH3", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH3tm, getMarkerPos "GH3"] call BIS_fnc_taskDefend;
 
-        _GH4tm = [getMarkerPos "GH4", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH4tm = [getMarkerPos "GH4", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH4tm, getMarkerPos "sg1"] call BIS_fnc_taskDefend;
     };
     if (_bluNums > 20) then {
-        _GH5tm = [getMarkerPos "GH5", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH5tm = [getMarkerPos "GH5", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH5tm, getMarkerPos "GH5", 200] call BIS_fnc_taskPatrol;
 
-        _GH6tm = [getMarkerPos "GH6", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH6tm = [getMarkerPos "GH6", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH6tm, getMarkerPos "GH6", 200] call BIS_fnc_taskPatrol;
     };
 
@@ -239,24 +239,24 @@ A3M_svr_Raid2 = {
     _bluNums = west countSide allPlayers;
 
     // Create Enemy Presence (Contains Leights Opfor)
-    _GH1tm = [getMarkerPos "RO1", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+    _GH1tm = [getMarkerPos "RO1", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH1tm, getMarkerPos "RO1"] call BIS_fnc_taskDefend;
 
-    _GH2tm = [getMarkerPos "RO2", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+    _GH2tm = [getMarkerPos "RO2", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH2tm, getMarkerPos "RO2"] call BIS_fnc_taskDefend;
 
     if (_bluNums > 10) then {
-        _GH3tm = [getMarkerPos "RO3", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH3tm = [getMarkerPos "RO3", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH3tm, getMarkerPos "RO3"] call BIS_fnc_taskDefend;
 
-        _GH4tm = [getMarkerPos "RO4", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH4tm = [getMarkerPos "RO4", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH4tm, getMarkerPos "sg2"] call BIS_fnc_taskDefend;
     };
     if (_bluNums > 20) then {
-        _GH5tm = [getMarkerPos "RO5", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH5tm = [getMarkerPos "RO5", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH5tm, getMarkerPos "RO5"] call BIS_fnc_taskDefend;
 
-        _GH6tm = [getMarkerPos "RO6", EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT", "A3M_APFC_ME_Rifleman_2"]] call BIS_fnc_spawnGroup;
+        _GH6tm = [getMarkerPos "RO6", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH6tm, getMarkerPos "RO6"] call BIS_fnc_taskDefend;
     };
 
@@ -341,7 +341,7 @@ A3M_fnc_AttackT9 = {
     T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3", "T9_HostL4"];
     T9EnSource = T9HostArray select floor random count T9HostArray;
 
-    T9EF = [getMarkerPos T9EnSource, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT"]] call BIS_fnc_spawnGroup;
+    T9EF = [getMarkerPos T9EnSource, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer"]] call BIS_fnc_spawnGroup;
     _wpE1 = T9EF addWaypoint [getMarkerPos "T9", 0];
     _wpE1 setWaypointType "SAD";
     _wpE1 setWaypointFormation "DIAMOND";
@@ -359,7 +359,7 @@ A3M_fnc_dblAttackT9 = {
     T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3", "T9_HostL4"];
     T9EnSource = T9HostArray select floor random count T9HostArray;
 
-    T9EF2 = [getMarkerPos T9EnSource, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT"]] call BIS_fnc_spawnGroup;
+    T9EF2 = [getMarkerPos T9EnSource, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer"]] call BIS_fnc_spawnGroup;
     _wpE2 = T9EF2 addWaypoint [getMarkerPos "T9", 0];
     _wpE2 setWaypointType "SAD";
     _wpE2 setWaypointFormation "DIAMOND";
@@ -373,7 +373,7 @@ A3M_fnc_dblAttackT9 = {
     T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3", "T9_HostL4"];
     T9EnSource = T9HostArray select floor random count T9HostArray;
 
-    T9EF3 = [getMarkerPos T9EnSource, EAST, ["A3M_APFC_ME_Rifleman_2", "A3M_APFC_ME_AutoRifleman", "A3M_APFC_ME_Rifleman_1", "A3M_APFC_ME_Rifleman_Elite", "A3M_APFC_ME_Rifleman_AT"]] call BIS_fnc_spawnGroup;
+    T9EF3 = [getMarkerPos T9EnSource, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer"]] call BIS_fnc_spawnGroup;
     _wpE3 = T9EF3 addWaypoint [getMarkerPos "T9", 0];
     _wpE3 setWaypointType "SAD";
     _wpE3 setWaypointFormation "DIAMOND";
