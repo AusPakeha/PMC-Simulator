@@ -28,8 +28,8 @@ class CfgFunctions {
         };
         class homepage {
             class initLaptopClass { preInit = 1; };
-            class openUI {};
-            class handleUIEvents {};
+            class openHUI {};
+            class handleHUIEvents {};
         };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"

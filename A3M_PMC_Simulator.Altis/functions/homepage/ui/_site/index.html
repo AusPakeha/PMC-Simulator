@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPSG Homepage</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-        <script>
+    <script>
         Promise.all([
             A3API.RequestFile(
                 "functions\\homepage\\ui\\_site\\style.css",
@@ -25,20 +26,114 @@
     </script>
 
 </head>
+
 <body>
-    <div class="container">
-        <div class="background-image">
-            <img src="images\OPSG_Home.paa" alt="OPSG Home Background">
+    <div class="browser-window">
+        <!-- Address Bar -->
+        <div class="browser-header">
+            <div class="nav-buttons">
+                <div class="nav-btn">&lt;</div>
+                <div class="nav-btn">&gt;</div>
+            </div>
+            <div class="address-bar">
+                secure.orionsecurity.mil
+            </div>
+            <div class="window-controls">
+                <div class="close-btn" id="btn-exit">X</div>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="btn" id="btn-bank">Pursuit Bank</button>
-            <button class="btn" id="btn-fleet">Lazarus Fleet Management</button>
-            <button class="btn" id="btn-arms">Lazarus Security Supply</button>
-            <button class="btn" id="btn-admin">Administrator Login</button>
-            <button class="btn" id="btn-mail">Access Email</button>
-            <button class="btn" id="btn-exit">Exit Browser</button>
+
+        <!-- Main Content -->
+        <div class="content-container">
+            <!-- Logo Header -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <!-- UTF-8 Symbol for Target/Globe feel -->
+                    <span class="logo-icon">&#8853;</span>
+                    Orion Private Security Group
+                </div>
+            </div>
+
+            <div class="layout-grid">
+                <!-- Left Column -->
+                <div class="main-column">
+                    <h1>Welcome!</h1>
+                    <p>You are currently accessing the secure operations intranet system owned and operated by Orion
+                        Private Security Group, together with our primary client Astral Corporation.</p>
+                    <p>Please navigate to one of our many interfaces by clicking the advertisement or link that applies
+                        to you. For security reasons, only approved vendors will be allowed to access the intranet store
+                        system. All approved vendors may be transacted with via this system.</p>
+
+                    <!-- Fleet Ad -->
+                    <div id="btn-fleet" class="ad-banner ad-fleet">
+                        <div class="ad-content">
+                            <div class="ad-title">Lazarus Military Fleet Surplus</div>
+                            <div class="ad-subtitle">"Run their asses over with the best!"</div>
+                        </div>
+                    </div>
+
+                    <!-- Login Section -->
+                    <div class="login-section">
+                        <div class="login-header">Secure E-Mail Login</div>
+                        <div>Log in here for assignments</div>
+
+                        <!-- Email Button -->
+                        <div id="btn-mail" class="login-btn">
+                            <span>&#9993;</span> Access Email
+                        </div>
+
+                        <!-- Admin Button -->
+                        <div id="btn-admin" class="login-btn" style="margin-top: 10px; background: rgba(0,0,0,0.3);">
+                            <span>&#128274;</span> Administrator Login
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="sidebar-column">
+                    <!-- Bank Ad -->
+                    <div id="btn-bank" class="ad-banner ad-bank">
+                        <div class="ad-content">
+                            <div class="ad-title">Pursuit Bank</div>
+                            <div class="ad-subtitle">Banking on your survival.</div>
+                        </div>
+                    </div>
+
+                    <!-- Arms Ad -->
+                    <div id="btn-arms" class="ad-banner ad-arms">
+                        <div class="ad-content">
+                            <div class="ad-title">Lazarus Security Supply</div>
+                            <div class="ad-subtitle">International Class 3 Weapons Broker</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Bulletins -->
+                    <div class="bulletin-board">
+                        <div class="bulletin-header">Employee Bulletins:</div>
+                        <div class="bulletin-content">
+                            <div class="bulletin-title">From HR Division:</div>
+                            <p>Attention all Orion operatives:</p>
+                            <p>HR has made it clear numerous times that our limited HR staff is already highly strained
+                                when it comes to processing all of your time and expense reports in a timely and
+                                efficient fashion. For this reason, we must once again request that all operatives
+                                access the T&E system via our private banking interface, and turn in time and expense
+                                reports on a regular basis. THIS IS HOW YOU GET PAID!!</p>
+                            <p>If you have any questions or concerns, please feel free to contact a member of HR staff.
+                            </p>
+                            <div class="hr-contact">
+                                Thank you,<br>
+                                Cecilia Martinez<br>
+                                Orion Private Security Group<br>
+                                Human Resources Coordinator<br>
+                                (555) 777-6969
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <script src="script.js"></script> -->
 </body>
+
 </html>

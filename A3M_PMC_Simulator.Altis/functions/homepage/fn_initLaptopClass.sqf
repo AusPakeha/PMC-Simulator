@@ -6,7 +6,7 @@ private _holdActionParams = [
     "_caller distance _target < 3",
     {},
     {},
-    {[] call A3M_fnc_homepage_openUI;},
+    {[] call A3M_fnc_openHUI;},
     {},
     [],
     2,
