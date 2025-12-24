@@ -332,7 +332,7 @@ A3M_MP_HackerRaid1 = {
     ["TaskAssigned", ["Raid Hacker's Den. See map."]] call BIS_fnc_showNotification;
 };
 
-A3M_MP_HackOption= {
+A3M_MP_HackOption = {
     MPSrack addAction ["Hack Console",{[] spawn A3M_fnc_Hack;}];
 };
 

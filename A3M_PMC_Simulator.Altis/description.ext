@@ -81,6 +81,7 @@ class Extended_DisplayLoad_EventHandlers {
 #include "dialogs\WpnLkr.hpp"
 #include "dialogs\A3M_AIR.hpp"
 #include "dialogs\PrgBar.hpp"
+#include "dialogs\RscEmail.hpp"
 #include "dialogs\RscHomepage.hpp"
 #include "dialogs\RscTravelMenu.hpp"
 

@@ -29,7 +29,7 @@ switch (_event) do {
         [] spawn A3M_fnc_AdminPanel;
     };
     case "access::mail": {
-        execVM 'scripts\handleTasks.sqf';
+        [] spawn A3M_fnc_openEmailUI;
     };
     default { hint format ["Unhandled homepage UI event: %1", _event]; };
 };

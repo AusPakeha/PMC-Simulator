@@ -31,6 +31,11 @@ class CfgFunctions {
             class openHUI {};
             class handleHUIEvents {};
         };
+        class email {
+            class initEmailClass { preInit = 1; };
+            class openEmailUI {};
+            class handleEmailUIEvents {};
+        };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"
 };

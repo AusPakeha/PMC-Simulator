@@ -7,7 +7,6 @@ playMusic "gearup";
 
 _ctrl ctrlAddEventHandler ["JSDialog", {
     params ["_control", "_isConfirmDialog", "_message"];
-
     [_control, _isConfirmDialog, _message] call A3M_fnc_handleHUIEvents;
 }];
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPSG Secure Mail</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <script src="missions.js"></script> -->
+    <script>
+        console.log("Starting Promise.all for resources...");
+        Promise.all([
+            A3API.RequestFile("functions\\email\\ui\\_site\\style.css"),
+            A3API.RequestFile("functions\\email\\ui\\_site\\missions.js"),
+            A3API.RequestFile("functions\\email\\ui\\_site\\script.js"),
+            A3API.RequestFile("functions\\email\\ui\\_site\\public\\astral_ca.png.b64"),
+            A3API.RequestFile("functions\\email\\ui\\_site\\public\\aaf_ca.png.b64"),
+            A3API.RequestFile("functions\\email\\ui\\_site\\public\\nato_ca.png.b64")
+        ]).then(([css, missionsData, js, astralB64, aafB64, natoB64]) => {
+            console.log("All resources loaded successfully.");
+            
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+            console.log("CSS injected.");
+
+            const missionsScript = document.createElement("script");
+            missionsScript.text = missionsData;
+            document.head.appendChild(missionsScript);
+            console.log("Missions data injected. window.MISSION_DATA:", window.MISSION_DATA);
+
+            // Initialize Logo Data
+            window.LOGO_DATA = {
+                astral: "data:image/png;base64," + astralB64.trim(),
+                aaf: "data:image/png;base64," + aafB64.trim(),
+                nato: "data:image/png;base64," + natoB64.trim()
+            };
+            console.log("Logo data initialized.");
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+            console.log("Main script injected.");
+        }).catch(err => {
+            console.error("Error loading resources:", err);
+        });
+    </script>
+</head>
+<body>
+    <div class="browser-window">
+        <!-- Address Bar -->
+        <div class="browser-header">
+            <div class="nav-buttons">
+                <div class="nav-btn">&lt;</div>
+                <div class="nav-btn">&gt;</div>
+            </div>
+            <div class="address-bar">
+                secure.orionsecurity.mil/mail
+            </div>
+            <div class="window-controls">
+                <div class="close-btn" id="btn-exit">X</div>
+            </div>
+        </div>
+
+        <!-- Main Interface -->
+        <div class="email-container">
+            <!-- Sidebar Inbox -->
+            <div class="sidebar">
+                <div class="sidebar-header">Inbox</div>
+                <div id="email-list" class="email-list">
+                    <!-- Loaded via JS -->
+                </div>
+            </div>
+
+            <!-- Reading Pane -->
+            <div id="email-content" class="email-content">
+                <div class="placeholder-text">
+                    Select a message to view details.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
