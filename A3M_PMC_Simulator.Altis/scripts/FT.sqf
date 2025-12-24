@@ -12,5 +12,5 @@ private _taxi = [
     _x addAction ["Fast Travel", {
         params ["_target", "_caller", "_actionId", "_arguments"];
         [] call A3M_fnc_openUI;
-    }, [], 0, true, false];
+    }, [], 0, true, false, "", "", 5];
 } forEach _taxi;

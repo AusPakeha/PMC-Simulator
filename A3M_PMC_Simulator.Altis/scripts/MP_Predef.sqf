@@ -2382,7 +2382,7 @@ A3M_fnc_AIR = {
                 if ((B_DefenseBudget<Operator0) OR ( _prat2 != B_MaxRankAIR)) then {
                     hint format ["You do not have sufficient rank (Min Rank %1) or money (Costs $%2) to do this.", B_MaxRankAIR,Operator0]
                 } else {
-                    "B_G_Soldier_F" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.6];
+                    "A3M_OPSG_Op_B" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.6];
 
                     removeAllWeapons CurAIRUnit;
                     removeAllItems CurAIRUnit;
@@ -2398,7 +2398,7 @@ A3M_fnc_AIR = {
                     CurAIRUnit addVest "V_PlateCarrier1_blk";
                     CurAIRUnit addItemToVest "NVGoggles_INDEP";
                     CurAIRUnit addItemToVest "30Rnd_9x21_Mag";
-                    CurAIRUnit addHeadgear "H_MilCap_blue";
+                    CurAIRUnit addHeadgear "H_PASGT_basic_black_F";
 
                     CurAIRUnit addWeapon "SMG_02_F";
                     CurAIRUnit addPrimaryWeaponItem "acc_pointer_IR";
@@ -2428,7 +2428,7 @@ A3M_fnc_AIR = {
                 if ((B_DefenseBudget<Operator1) OR ( _prat2 != B_MaxRankAIR)) then {
                     hint format ["You do not have sufficient rank (Min Rank %1) or money (Costs $%2) to do this.", B_MaxRankAIR,Operator1]
                 } else {
-                    "B_G_Soldier_F" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.8];
+                    "A3M_OPSG_Op_B" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.8];
 
                     removeAllWeapons CurAIRUnit;
                     removeAllItems CurAIRUnit;
@@ -2447,7 +2447,7 @@ A3M_fnc_AIR = {
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "HandGrenade"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "SmokeShell"; };
-                    CurAIRUnit addHeadgear "H_Booniehat_oli";
+                    CurAIRUnit addHeadgear "H_PASGT_basic_black_F";
 
                     CurAIRUnit addWeapon "srifle_DMR_05_blk_F";
                     CurAIRUnit addPrimaryWeaponItem "optic_AMS_khk";
@@ -2470,7 +2470,7 @@ A3M_fnc_AIR = {
                 if ((B_DefenseBudget<Operator2) OR ( _prat2 != B_MaxRankAIR)) then {
                     hint format ["You do not have sufficient rank (Min Rank %1) or money (Costs $%2) to do this.", B_MaxRankAIR,Operator2]
                 } else {
-                    "B_G_Soldier_F" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.8];
+                    "A3M_OPSG_Op_B" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.8];
 
                     removeAllWeapons CurAIRUnit;
                     removeAllItems CurAIRUnit;
@@ -2489,7 +2489,7 @@ A3M_fnc_AIR = {
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "SmokeShell"; };
                     for "_i" from 1 to 6 do { CurAIRUnit addItemToVest "30Rnd_65x39_caseless_mag"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
-                    CurAIRUnit addHeadgear "rhsusf_ach_bare_wood_ess";
+                    CurAIRUnit addHeadgear "H_PASGT_basic_black_F";
 
                     CurAIRUnit addWeapon "arifle_MX_Black_F";
                     CurAIRUnit addPrimaryWeaponItem "acc_pointer_IR";
@@ -2499,7 +2499,6 @@ A3M_fnc_AIR = {
                     CurAIRUnit linkItem "ItemMap";
                     CurAIRUnit linkItem "ItemCompass";
                     CurAIRUnit linkItem "ACE_Altimeter";
-                    CurAIRUnit linkItem "tf_anprc152_3";
                     CurAIRUnit linkItem "ItemGPS";
 
                     CurAIRUnit setFace "WhiteHead_08";
@@ -2518,7 +2517,7 @@ A3M_fnc_AIR = {
                 if ((B_DefenseBudget<Operator3) OR ( _prat2 != B_MaxRankAIR)) then {
                     hint format ["You do not have sufficient rank (Min Rank %1) or money (Costs $%2) to do this.", B_MaxRankAIR,Operator3]
                 } else {
-                    "B_G_Soldier_F" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.9];
+                    "A3M_OPSG_Op_B" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.9];
 
                     removeAllWeapons CurAIRUnit;
                     removeAllItems CurAIRUnit;
@@ -2539,7 +2538,7 @@ A3M_fnc_AIR = {
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
                     for "_i" from 1 to 3 do { CurAIRUnit addItemToVest "30Rnd_65x39_caseless_mag"; };
                     for "_i" from 1 to 5 do { CurAIRUnit addItemToVest "3Rnd_HE_Grenade_shell"; };
-                    CurAIRUnit addHeadgear "rhsusf_ach_bare_wood_ess";
+                    CurAIRUnit addHeadgear "H_PASGT_basic_black_F";
 
                     CurAIRUnit addWeapon "arifle_MX_GL_Black_F";
                     CurAIRUnit addPrimaryWeaponItem "acc_pointer_IR";
@@ -2549,7 +2548,6 @@ A3M_fnc_AIR = {
                     CurAIRUnit linkItem "ItemMap";
                     CurAIRUnit linkItem "ItemCompass";
                     CurAIRUnit linkItem "ACE_Altimeter";
-                    CurAIRUnit linkItem "tf_anprc152_3";
                     CurAIRUnit linkItem "ItemGPS";
 
                     CurAIRUnit setFace "WhiteHead_08";
@@ -2568,7 +2566,7 @@ A3M_fnc_AIR = {
                 if ((B_DefenseBudget<Operator4) OR ( _prat2 != B_MaxRankAIR)) then {
                     hint format ["You do not have sufficient rank (Min Rank %1) or money (Costs $%2) to do this.", B_MaxRankAIR,Operator4]
                 } else {
-                    "B_G_Soldier_F" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.99];
+                    "A3M_OPSG_Op_B" createUnit [ getMarkerPos "AIR_spawn", group player, "CurAIRUnit = This;", 0.99];
 
                     removeAllWeapons CurAIRUnit;
                     removeAllItems CurAIRUnit;
@@ -2584,7 +2582,7 @@ A3M_fnc_AIR = {
                     CurAIRUnit addVest "V_PlateCarrier1_blk";
                     for "_i" from 1 to 2 do { CurAIRUnit addItemToVest "16Rnd_9x21_Mag"; };
                     for "_i" from 1 to 7 do { CurAIRUnit addItemToVest "20Rnd_762x51_Mag"; };
-                    CurAIRUnit addHeadgear "rhsusf_ach_bare_wood_ess";
+                    CurAIRUnit addHeadgear "H_PASGT_basic_black_F";
 
                     CurAIRUnit addWeapon "srifle_DMR_03_F";
                     CurAIRUnit addPrimaryWeaponItem "acc_pointer_IR";
@@ -2594,7 +2592,6 @@ A3M_fnc_AIR = {
                     CurAIRUnit linkItem "ItemMap";
                     CurAIRUnit linkItem "ItemCompass";
                     CurAIRUnit linkItem "ACE_Altimeter";
-                    CurAIRUnit linkItem "tf_anprc152_3";
                     CurAIRUnit linkItem "ItemGPS";
 
                     CurAIRUnit setFace "WhiteHead_08";

@@ -76,7 +76,7 @@ for "_i" from 1 to 8 do {
     {},
     {},
     {
-	[] call A3M_fnc_homepage_openUI;
+	[] call A3M_fnc_openHUI;
     },
     {},
     [],

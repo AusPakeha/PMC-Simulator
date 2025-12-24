@@ -28,11 +28,11 @@
 -[x] create fn_buyItem.sqf and copy/modify fn_buyVehicle.sqf code
 -[x] modify files to use new coding style
 -[x] Fix weapons
--[] Item store - hide categories if CDLC/mod not present
+-[x] Item store - hide categories if CDLC/mod not present
 -
 -// Vehicles
 -[x] convert all fleet files to new coding style
--[] Fix Supported Modification section of FleetMgmt.sqf
+-[x] Fix Supported Modification section of FleetMgmt.sqf
 -
 -// Various
 -[x] removed Incon Undercover
@@ -53,6 +53,7 @@
 --[] Admin
 --[] Bank
 --[] Recuitment
+- image size recommended 128x256
 -
 -// Far down the track
 -[] switch out missions to be dynamic

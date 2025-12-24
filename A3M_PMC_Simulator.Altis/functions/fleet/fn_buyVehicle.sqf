@@ -1,6 +1,7 @@
 params [["_vehicleClass", "", [""]], ["_displayName", "", [""]], ["_price", 0, [0]], ["_spawnMarker", "vehspawn", [""]]];
 
 private _pos = getMarkerPos _spawnMarker;
+private _dir = markerDir _spawnMarker;
 private _finalPrice = [_price] call A3M_handle_number;
 private _rank = rank player;
 
@@ -11,6 +12,7 @@ if ((B_DefenseBudget < _price) or (_rank != B_MaxRank)) then {
     ];
 } else {
     private _vehicle = _vehicleClass createVehicle _pos;
+    _vehicle setDir _dir;
 
     B_DefenseBudget = (B_DefenseBudget - _price);
     publicVariable "B_DefenseBudget";

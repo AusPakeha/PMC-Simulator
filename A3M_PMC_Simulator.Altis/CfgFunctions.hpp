@@ -27,7 +27,7 @@ class CfgFunctions {
             class handleUIEvents {};
         };
         class homepage {
-            class initLaptopClass { preInit = 1; };
+            class initLaptopClass {};
             class openHUI {};
             class handleHUIEvents {};
         };
