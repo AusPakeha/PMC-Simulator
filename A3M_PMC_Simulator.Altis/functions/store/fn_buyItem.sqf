@@ -1,4 +1,5 @@
 params [["_item", "", [""]], ["_displayName", "", [""]], ["_price", 0, [0]], ["_type", "", [""]]];
+diag_log format ["[A3M] %1", _this];
 
 if (Wallet < _price) then {
     hint format [
@@ -6,6 +7,25 @@ if (Wallet < _price) then {
         _price
     ];
 } else {
+    private _deliveriesBoxes = allMissionObjects "All" select {
+        private _varName = vehicleVarName _x;
+        _varName find "deliveries" == 0
+    };
+
+    if (_deliveriesBoxes isEqualTo []) exitWith { hint "No delivery boxes found on the map."; };
+
+    private _nearestBox = _deliveriesBoxes select 0;
+    private _nearestDistance = player distance _nearestBox;
+
+    {
+        private _dist = player distance _x;
+        if (_dist < _nearestDistance) then {
+            _nearestBox = _x;
+            _nearestDistance = _dist;
+        };
+    } forEach _deliveriesBoxes;
+    diag_log format ["[A3M] delivery box selected: %1", _nearestBox];
+
     Wallet = (Wallet - _price);
     profileNamespace setVariable ["SavedMoney", Wallet];
     saveProfileNamespace;
@@ -17,26 +37,26 @@ if (Wallet < _price) then {
     switch (_type) do {
         // All Items, Uniforms, Vests, Headgear, etc.
         case "item": {
-            deliveries addItemCargoGlobal [_item, 1];
+            _nearestBox addItemCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         // All Weapons
         case "weapon": {
-            deliveries addWeaponCargoGlobal [_item, 1];
+            _nearestBox addWeaponCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         // All Magazines
         case "magazine": {
-            deliveries addMagazineCargoGlobal [_item, 1];
+            _nearestBox addMagazineCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         // All Backpacks
         case "backpack": {
-            deliveries addBackpackCargoGlobal [_item, 1];
+            _nearestBox addBackpackCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
         default {
-            deliveries addItemCargoGlobal [_item, 1];
+            _nearestBox addItemCargoGlobal [_item, 1];
             hint format ["Mail Call: Your %1 has arrived in the deliveries box", _displayName];
         };
     };
