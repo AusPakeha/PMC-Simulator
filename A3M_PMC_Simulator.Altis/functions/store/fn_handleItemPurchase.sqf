@@ -32,7 +32,7 @@ if (_strData == "") exitWith {
 
 // Parse the data string into an array
 private _parsedData = parseSimpleArray _strData;
-_parsedData params ["_vehicleClass", "_displayName", "_price", "_typeOfItem"];
+_parsedData params ["_className", "_displayName", "_price", "_typeOfItem"];
 
 // Call the buy function with the extracted data
-[_vehicleClass, _displayName, _price, _box] spawn A3M_fnc_buyItem;
+[_className, _displayName, _price, _typeOfItem] spawn A3M_fnc_buyItem;
