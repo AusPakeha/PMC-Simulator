@@ -32,12 +32,6 @@ A3M_JR2_Raid2 = {
         _x setMarkerPos _randomPos;
     } forEach _markers;
 
-    MissionStatus = "M6";
-    publicVariable "MissionStatus";
-
-    Raid2Active = 1;
-    publicVariable "Raid2Active";
-
     _bluNums = west countSide allPlayers;
 
     private _safePosRO1 = [getMarkerPos "RO1", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
@@ -96,31 +90,103 @@ A3M_JR2_Raid2 = {
         "Land_Wreck_Offroad2_F"
         ];
 
-    for "_i" from 1 to _numBarricades do {
+        for "_i" from 1 to _numBarricades do {
         if (count _roads > 0) then {
-            private _road = selectRandom _roads;
+            private _roadIndex = floor random count _roads;
+            private _road = _roads select _roadIndex;
+            _roads deleteAt _roadIndex;
             private _pos = getPos _road;
-            private _wreckType = selectRandom _wreckTypes;
-            private _veh = createVehicle [_wreckType, _pos, [], 0, "NONE"];
-            _veh setDir random 360;
-            _barricades pushBack _veh;
+
+            // Check if the spot is relatively flat and empty (prevents spawning inside buildings or rocks)
+            if ([_pos, 2, 360, false, false] call BIS_fnc_isFlatEmpty) then {
+                private _wreckType = selectRandom _wreckTypes;
+                private _barricadeType = selectRandom _barricades;
+
+                private _veh = createVehicle [_wreckType, _pos, [], 0, "NONE"];
+                private _bar = createVehicle [_barricadeType, _pos, [], 0, "NONE"];
+
+                _bars pushBack _bar;
+                _veh setDir random 360;
+                _bar setDir random 360;
+
+                private _posATL = trashCan modelToWorld [0,0,0.3];
+                // Small fire effect
+                private _fire = "#particlesource" createVehicleLocal _posATL;
+                _fire setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32],
+                "", "Billboard", 1, 0.5,
+                [0, 0, 0.1], [0, 0, 0.3], 1, 0.5, 0.4, 0.1,
+                [0.3, 0.4],
+                [[1, 0.8, 0.6, 0.8], [0.8, 0.5, 0.3, 0.5], [0.6, 0.3, 0.1, 0.0]],
+                [1], 0, 0, "", "", _fire
+                ];
+                _fire setParticleRandom [0.1, [0.1, 0.1, 0], [0.1, 0.1, 0.2], 0, 0.2, [0, 0, 0, 0], 0, 0];
+                _fire setDropInterval 0.05;
+                Raid1Fires pushBack _fire;
+                // Small smoke
+                private _smoke = "#particlesource" createVehicleLocal _posATL;
+                _smoke setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1],
+                "", "Billboard", 1, 3,
+                [0, 0, 0.2], [0, 0, 0.8], 0, 0.5, 0.4, 0.1,
+                [0.5, 1, 1.5],
+                [[0.3, 0.3, 0.3, 0.4], [0.5, 0.5, 0.5, 0.3], [0.6, 0.6, 0.6, 0.0]],
+                [1], 0, 0, "", "", _smoke
+                ];
+                _smoke setParticleRandom [0.1, [0.1, 0.1, 0], [0.1, 0.1, 0.2], 0, 0.1, [0, 0, 0, 0], 0, 0];
+                _smoke setDropInterval 0.15;
+                Raid1Fires pushBack _smoke;
+
+                // Optional: Attach one fire instantly upon creation to a few random ones
+                if (random 1 < 0.4) then { // 40% chance to start burning right away
+                    // Larger fire effect
+                    private _largeFire = "#particlesource" createVehicleLocal _posATL;
+                    _largeFire setParticleParams [
+                    ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32],
+                    "", "Billboard", 1, 1,
+                    [0, 0, 0.2], [0, 0, 0.5], 1, 0.5, 0.4, 0.1,
+                    [0.5, 0.7],
+                    [[1, 0.8, 0.6, 1], [0.8, 0.5, 0.3, 0.8], [0.6, 0.3, 0.1, 0.0]],
+                    [1], 0, 0, "", "", _largeFire
+                    ];
+                    _largeFire setParticleRandom [0.2, [0.2, 0.2, 0], [0.2, 0.2, 0.3], 0, 0.3, [0, 0, 0, 0], 0, 0];
+                    _largeFire setDropInterval 0.03;
+                    Raid1Fires pushBack _largeFire;
+                    // Larger smoke
+                    private _largeSmoke = "#particlesource" createVehicleLocal _posATL;
+                    _largeSmoke setParticleParams [
+                    ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1],
+                    "", "Billboard", 1, 5,
+                    [0, 0, 0.3], [0, 0, 1], 0, 0.5, 0.4, 0.1,
+                    [0.7, 1.2, 2],
+                    [[0.2, 0.2, 0.2, 0.5], [0.4, 0.4, 0.4, 0.4], [0.5, 0.5, 0.5, 0.0]],
+                    [1], 0, 0, "", "", _largeSmoke
+                    ];
+                    _largeSmoke setParticleRandom [0.2, [0.2, 0.2, 0], [0.2, 0.2, 0.3], 0, 0.2, [0, 0, 0, 0], 0, 0];
+                    _largeSmoke setDropInterval 0.1;
+                    Raid1Fires pushBack _largeSmoke;
+                };
+
+                private _clutterTypes = ["Land_Barrel_empty_F", "Land_Pallet_F", "Land_Crate_wooden_F"];
+                private _clutter = createVehicle [selectRandom _clutterTypes, _pos, [], 0, "CAN_COLLIDE"];
+                _clutter setPos ([_pos, 1, random 360] call BIS_fnc_relPos); // Move slightly away from main object
+                _clutter setDir random 360;
+            };
         };
     };
-
-    // Spawn fire on 3-5 random barricades
-    private _numFires = 3 + floor random 3; // 3-5 fires
-    private _fires = _barricades select [0, _numFires];
-    {
-        [_x, 1, time, false, false] spawn BIS_fnc_fireEffect;
-    } forEach _fires;
 
     Raid2Win = createTrigger ["EmptyDetector", (getMarkerPos "sg2")];
     Raid2Win setTriggerArea [250, 250, 0, false];
     Raid2Win setTriggerActivation ["WEST SEIZED", "EAST D", false];
     Raid2Win setTriggerType "NONE";
-    Raid2Win setTriggerStatements ["this", "remoteExecCall ['A3M_JR2_Raid2Clear', 2];", ""];
+    Raid2Win setTriggerStatements ["{side _x == east} count thisList == 0 && {side _x == west} count thisList > 0", "remoteExecCall ['A3M_JR2_Raid2Clear', 2];", ""];
 
-    // [ '','A3M_MP_Raid2',true,false] spawn BIS_fnc_MP;
+    MissionStatus = "M6";
+    publicVariable "MissionStatus";
+
+    Raid2Active = 1;
+    publicVariable "Raid2Active";
+
     remoteExec ["A3M_MP_JR2_Raid2"];
 };
 
@@ -137,6 +203,7 @@ A3M_MP_JR2_Raid2 = {
 A3M_JR2_Raid2Clear = {
     // [ '','A3M_MP_RaidClear',true,false] spawn BIS_fnc_MP;
     remoteExec ["A3M_MP_JR2_Raid2Clear"];
+    { deleteVehicle _x; } forEach Raid2Fires;
 
     B_DefenseBudget = (B_DefenseBudget + 2000000);
     publicVariable "B_DefenseBudget";

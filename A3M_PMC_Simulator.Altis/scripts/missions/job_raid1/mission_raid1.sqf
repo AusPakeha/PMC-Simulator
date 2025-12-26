@@ -39,7 +39,7 @@ A3M_JR1_Raid1 = {
     private _bluNums = west countSide allPlayers;
 
     private _safePosGH1 = [getMarkerPos "GH1", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-    _GH1tm = [_safePosGH1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    private _GH1tm = [_safePosGH1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH1tm, getMarkerPos "GH1"] call BIS_fnc_taskDefend;
 
     private _safePos = [getMarkerPos "GH2", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
@@ -69,7 +69,7 @@ A3M_JR1_Raid1 = {
     // Spawn barricades or wrecks on roads within 400m of sg1 with random rotations
     private _roads = _villagePos nearRoads 400;
     private _bars = [];
-    private _fires = [];
+    Raid1Fires = [];
     private _numBarricades = 5 + floor random 6; // 5-10 barricades
     private _barricades = [
         "Land_GarbageHeap_01_F",
@@ -95,7 +95,7 @@ A3M_JR1_Raid1 = {
         "Land_Wreck_UAZ_F",
         "Land_Wreck_Offroad_F",
         "Land_Wreck_Offroad2_F"
-        ];
+    ];
 
     for "_i" from 1 to _numBarricades do {
         if (count _roads > 0) then {
@@ -116,10 +116,62 @@ A3M_JR1_Raid1 = {
                 _veh setDir random 360;
                 _bar setDir random 360;
 
+                private _posATL = _bar modelToWorld [0,0,0.3];
+                // Small fire effect
+                private _fire = "#particlesource" createVehicleLocal _posATL;
+                _fire setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32],
+                "", "Billboard", 1, 0.5,
+                [0, 0, 0.1], [0, 0, 0.3], 1, 0.5, 0.4, 0.1,
+                [0.3, 0.4],
+                [[1, 0.8, 0.6, 0.8], [0.8, 0.5, 0.3, 0.5], [0.6, 0.3, 0.1, 0.0]],
+                [1], 0, 0, "", "", _fire
+                ];
+                _fire setParticleRandom [0.1, [0.1, 0.1, 0], [0.1, 0.1, 0.2], 0, 0.2, [0, 0, 0, 0], 0, 0];
+                _fire setDropInterval 0.05;
+                Raid1Fires pushBack _fire;
+                // Small smoke
+                private _smoke = "#particlesource" createVehicleLocal _posATL;
+                _smoke setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1],
+                "", "Billboard", 1, 3,
+                [0, 0, 0.2], [0, 0, 0.8], 0, 0.5, 0.4, 0.1,
+                [0.5, 1, 1.5],
+                [[0.3, 0.3, 0.3, 0.4], [0.5, 0.5, 0.5, 0.3], [0.6, 0.6, 0.6, 0.0]],
+                [1], 0, 0, "", "", _smoke
+                ];
+                _smoke setParticleRandom [0.1, [0.1, 0.1, 0], [0.1, 0.1, 0.2], 0, 0.1, [0, 0, 0, 0], 0, 0];
+                _smoke setDropInterval 0.15;
+                Raid1Fires pushBack _smoke;
+
                 // Optional: Attach one fire instantly upon creation to a few random ones
                 if (random 1 < 0.4) then { // 40% chance to start burning right away
-                    private _fire = [_bar, 1 + random 1, time, false, false] spawn BIS_fnc_fireEffect;
-                    _fires pushBack _fire;
+                    // Larger fire effect
+                    private _largeFire = "#particlesource" createVehicleLocal _posATL;
+                    _largeFire setParticleParams [
+                    ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32],
+                    "", "Billboard", 1, 1,
+                    [0, 0, 0.2], [0, 0, 0.5], 1, 0.5, 0.4, 0.1,
+                    [0.5, 0.7],
+                    [[1, 0.8, 0.6, 1], [0.8, 0.5, 0.3, 0.8], [0.6, 0.3, 0.1, 0.0]],
+                    [1], 0, 0, "", "", _largeFire
+                    ];
+                    _largeFire setParticleRandom [0.2, [0.2, 0.2, 0], [0.2, 0.2, 0.3], 0, 0.3, [0, 0, 0, 0], 0, 0];
+                    _largeFire setDropInterval 0.03;
+                    Raid1Fires pushBack _largeFire;
+                    // Larger smoke
+                    private _largeSmoke = "#particlesource" createVehicleLocal _posATL;
+                    _largeSmoke setParticleParams [
+                    ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1],
+                    "", "Billboard", 1, 5,
+                    [0, 0, 0.3], [0, 0, 1], 0, 0.5, 0.4, 0.1,
+                    [0.7, 1.2, 2],
+                    [[0.2, 0.2, 0.2, 0.5], [0.4, 0.4, 0.4, 0.4], [0.5, 0.5, 0.5, 0.0]],
+                    [1], 0, 0, "", "", _largeSmoke
+                    ];
+                    _largeSmoke setParticleRandom [0.2, [0.2, 0.2, 0], [0.2, 0.2, 0.3], 0, 0.2, [0, 0, 0, 0], 0, 0];
+                    _largeSmoke setDropInterval 0.1;
+                    Raid1Fires pushBack _largeSmoke;
                 };
 
                 private _clutterTypes = ["Land_Barrel_empty_F", "Land_Pallet_F", "Land_Crate_wooden_F"];
@@ -136,7 +188,7 @@ A3M_JR1_Raid1 = {
     Raid1Win setTriggerArea [250, 250, 0, false];
     Raid1Win setTriggerActivation ["WEST SEIZED", "EAST D", false];
     Raid1Win setTriggerType "NONE";
-    Raid1Win setTriggerStatements ["this", "remoteExecCall ['A3M_JR1_Raid1Clear', 2];", ""];
+    Raid1Win setTriggerStatements ["{side _x == east} count thisList == 0 && {side _x == west} count thisList > 0", "remoteExecCall ['A3M_JR1_Raid1Clear', 2];", ""];
 
     MissionStatus = "M5";
     publicVariable "MissionStatus";
@@ -144,7 +196,6 @@ A3M_JR1_Raid1 = {
     Raid1Active = 1;
     publicVariable "Raid1Active";
 
-    // [ '','A3M_MP_Raid1',true,false] spawn BIS_fnc_MP;
     remoteExecCall ["A3M_MP_JR1_Raid1"];
     diag_log format ["[A3M] Raid 1 - Task activated"],
 };
@@ -160,9 +211,8 @@ A3M_MP_JR1_Raid1 = {
 };
 
 A3M_JR1_Raid1Clear = {
-    // [ '','A3M_MP_RaidClear',true,false] spawn BIS_fnc_MP;
     remoteExecCall ["A3M_MP_JR1_Raid1Clear"];
-    { terminate _x; } foreach _fires;
+    { deleteVehicle _x; } forEach Raid1Fires;
 
     B_DefenseBudget = (B_DefenseBudget + 2000000);
     publicVariable "B_DefenseBudget";

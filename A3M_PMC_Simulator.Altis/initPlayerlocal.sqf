@@ -14,7 +14,7 @@ for "_i" from 1 to 8 do {
 			{},
 			{},
 			{
-			_this execVM "scripts\homepage.sqf"
+			[] call A3M_fnc_openHUI;
 			},
 			{},
 			[],
@@ -36,7 +36,7 @@ for "_i" from 1 to 8 do {
     {},
     {},
     {
-	_this execVM "scripts\homepage.sqf"
+	[] call A3M_fnc_openHUI;
     },
     {},
     [],
@@ -48,26 +48,6 @@ for "_i" from 1 to 8 do {
 
 [
     laptopS,
-    "Access Internet",
-    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
-    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
-    "_this distance _target < 3",
-    "_caller distance _target < 3",
-    {},
-    {},
-    {
-	_this execVM "scripts\homepage.sqf"
-    },
-    {},
-    [],
-    2,
-    0,
-    false,
-    false
-] call BIS_fnc_holdActionAdd;
-
-[
-    AOdesk,
     "Access Internet",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
