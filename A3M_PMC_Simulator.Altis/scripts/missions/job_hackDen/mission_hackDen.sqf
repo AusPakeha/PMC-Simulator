@@ -5,7 +5,7 @@ A3M_JHD_HackerRaid1 = {
     private _mapSize = worldSize * sqrt 2 / 2;
 	private _houseClassname = "Land_i_House_Big_02_V1_F"; // Target house className
 	private _markerName = "hack1"; // Marker name
-	private _compositionFile = "scripts\missions\composition\hackDen.sqe"; // The composition file path
+	private _compositionFile = "scripts/missions/composition/hackDen.sqe"; // The composition file path
 	private _houses = nearestObjects [_center, [_houseClassname], _mapSize];
     diag_log "[A3M] hackDen - configuration completed";
 
@@ -27,8 +27,8 @@ A3M_JHD_HackerRaid1 = {
         diag_log ["[A3M] hackDen - House position: ATL: %1, Dir: %2", str _housePosATL, str _houseDir];
 
 		// format: [position, Azimuth, Composition_Code] call BIS_fnc_objectsMapper
-        _spawnedObjects = ["hackDen", _spawnPosASL, 0, _houseDir, false, false, true] call LARs_fnc_spawnComp;
-		// _spawnedObjects = [_spawnPosASL, _houseDir, ((call compile preprocessFileLineNumbers _compositionFile) select 0)] call BIS_fnc_objectsMapper;
+        //_spawnedObjects = ["hackDen", _spawnPosASL, 0, _houseDir, false, false, true] call LARs_fnc_spawnComp;
+		_spawnedObjects = [_spawnPosASL, _houseDir, ((call compile preprocessFileLineNumbers _compositionFile) select 0)] call BIS_fnc_objectsMapper;
         missionNamespace setVariable ["A3M_HackDen_Comp", _spawnedObjects];
         diag_log "[A3M] hackDen - composition spawned";
 
@@ -78,7 +78,7 @@ A3M_JHD_HackerRaid1 = {
 		newUnitF = newGroupF createUnit ['A3M_Lieutenant_Enforcer', _selectedPositions select 5, [], 0, 'CAN_COLLIDE'];
 		newUnitF setPosATL (_selectedPositions select 5);
 
-		remoteExecCall ["A3M_MP_HackOption", 0];
+		remoteExecCall ["A3M_JHD_HackOption", 0];
 
 		diag_log format ["Composition spawned on a random house at position %1 with direction %2", _spawnPosASL, _houseDir];
 		//missionNamespace setVariable ["myMission_SpawnedCompObjects", _spawnedObjects];
@@ -86,6 +86,16 @@ A3M_JHD_HackerRaid1 = {
 		diag_log format ["No houses found with classname %1", _houseClassname];
 		missionNamespace setVariable ["myMission_SpawnedCompObjects", []];
 	};
+};
+
+A3M_MP_JHD_HackerRaid1 = {
+    HackDen = player createSimpleTask ["Raid Hacker Den"];
+    HackDen setSimpleTaskDescription ["Find and Raid the hacker den, download the hacker's logs, and exfil.", "Raid Hacker Den", "Hacker Den"];
+    HackDen setSimpleTaskDestination (getMarkerPos "Hack1");
+    HackDen setTaskState "Assigned";
+    player setCurrentTask HackDen;
+    playMusic "Assigned";
+    ["TaskAssigned", ["Raid Hacker's Den. See map."]] call BIS_fnc_showNotification;
 };
 
 A3M_JHD_HackOption= {
@@ -111,6 +121,19 @@ A3M_JHD_Hack = {
 	remoteExecCall ["A3M_JHD_HackerRaid1_3"];
 };
 
+A3M_JHD_HackerRaid1_2 = {
+    HackDen setTaskState "Succeeded";
+    player addRating 100;
+    ["TaskDone", ["Raid Performed"]] call BIS_fnc_showNotification;
+    ["ScoreAdded",["Part 1 Complete", 100]] call BIS_fnc_showNotification;
+    HackDen2 = player createSimpleTask ["Defend Position"];
+    HackDen2 setSimpleTaskDescription ["Defend the position while the logs upload.", "Defend Position", "Defend"];
+    HackDen2 setSimpleTaskDestination (getMarkerPos "Hack1");
+    HackDen2 setTaskState "Assigned";
+    player setCurrentTask HackDen2;
+    ["TaskAssigned", ["Defend until upload completes."]] call BIS_fnc_showNotification;
+};
+
 A3M_JHD_Hack_1 = {
 	_bluNums = west countSide allPlayers;
 
@@ -133,6 +156,7 @@ A3M_JHD_Hack_1 = {
 		[PC_QRFinf3, getMarkerPos "hack1"] call BIS_fnc_taskAttack;
 	};
 };
+
 
 A3M_JHD_Hack_2 = {
 	HRaidActive = 0;
@@ -180,4 +204,16 @@ A3M_JHD_Hack_2 = {
 	};
 
 	    // Dead bodies will be cleaned up by garbage collector
+};
+
+A3M_JHD_HackerRaid1_3 = {
+    HackDen2 setTaskState "Succeeded";
+    player addRating 950;
+    ["TaskDone", ["Hacker Den Raided, Data Recovered."]] call BIS_fnc_showNotification;
+    ["ScoreAdded", ["Hacker Den Raided", 950]] call BIS_fnc_showNotification;
+    ["InformationGreen", ["Budget Increase Secured. OPSG has been allotted $750,000.00"]] call BIS_fnc_showNotification;
+    CO1 setTaskState "Assigned";
+    player setCurrentTask CO1;
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
 };

@@ -1,0 +1,120 @@
+/*
+  /$$$$$$   /$$$$$$  /$$      /$$       /$$$$$$$  /$$      /$$  /$$$$$$         /$$$$$$  /$$                         /$$             /$$
+ /$$__  $$ /$$__  $$| $$$    /$$$      | $$__  $$| $$$    /$$$ /$$__  $$       /$$__  $$|__/                        | $$            | $$
+| $$  \ $$|__/  \ $$| $$$$  /$$$$      | $$  \ $$| $$$$  /$$$$| $$  \__/      | $$  \__/ /$$ /$$$$$$/$$$$  /$$   /$$| $$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$
+| $$$$$$$$   /$$$$$/| $$ $$/$$ $$      | $$$$$$$/| $$ $$/$$ $$| $$            |  $$$$$$ | $$| $$_  $$_  $$| $$  | $$| $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
+| $$__  $$  |___  $$| $$  $$$| $$      | $$____/ | $$  $$$| $$| $$             \____  $$| $$| $$ \ $$ \ $$| $$  | $$| $$  /$$$$$$$  | $$    | $$  \ $$| $$  \__/
+| $$  | $$ /$$  \ $$| $$\  $ | $$      | $$      | $$\  $ | $$| $$    $$       /$$  \ $$| $$| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$  | $$| $$
+| $$  | $$|  $$$$$$/| $$ \/  | $$      | $$      | $$ \/  | $$|  $$$$$$/      |  $$$$$$/| $$| $$ | $$ | $$|  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$
+|__/  |__/ \______/ |__/     |__/      |__/      |__/     |__/ \______/        \______/ |__/|__/ |__/ |__/ \______/ |__/ \_______/   \___/   \______/ |__/
+
+
+
+NATO "Lost & Scared" Mission 1.0 by Cody Salazar AKA Fr33d0m
+www.A3MilSim.com
+
+License:
+You can do whatever you were going to do anyway. Just give me the credit i'm due, and don't steal my shit. I'll be pissed.
+If you want to repay me for all my hard work, come and play arma with me! I hang out at a MilSim unit known as A3M (A3 MilSim)
+Come and visit us at ts3.a3milsim.com:1911
+
+WE LOVE JOINT OPS WITH OTHER UNITS!!
+
+www.A3MilSim.com (A3 MilSim)
+All Rights Reserved
+
+For Information and Inquiries, EMAIL: salazar@a3milsim.com
+
+Credits & Thanks:
+
+My wife, for not only supporting my modding ventures, but actually jumping in and helping with mods when she can. What a gal!
+
+And last, but definitely not least, the A3 community, who through over 250+ encouraging messages highly encouraged me to continue this project. I'm glad you like it,
+and I hope you enjoy the things I have in the works!
+
+################################## LET US BEGIN #################################### */
+
+NSARpt2 = 0;
+publicVariable "NSARpt2";
+
+NSARrandNo = ["NSAR1","NSAR2","NSAR3","NSAR4","NSAR5","NSAR6","NSAR7","NSAR8","NSAR9","NSAR10"];
+NSARPickedNo = NSARrandNo select floor random count NSARrandNo;
+publicVariable "NSARPickedNo";
+
+NSARDestNo1 = ["NSARD1","NSARD2","NSARD3","NSARD4","NSARD5"];
+NSARDestNo = NSARDestNo1 select floor random count NSARDestNo1;
+publicVariable "NSARDestNo";
+
+NSARdest = createTrigger ["EmptyDetector", getMarkerPos NSARPickedNo];
+NSARdest setTriggerArea [20, 20, 0, false];
+NSARdest setTriggerActivation ["ANY", "PRESENT", true];
+NSARdest setTriggerType "NONE";
+NSARdest setTriggerStatements ["player in thisList", "[] call A3M_fnc_JNSAR_SARfound", ""];
+
+remoteExecCall ["A3M_MP_JNSAR_StartTaskNSAR"];
+
+NSAR = [getMarkerPos NSARPickedNo, west, ["B_Soldier_F", "B_Soldier_F", "B_Soldier_F", "B_Soldier_A_F"]] call BIS_fnc_spawnGroup;
+sleep 1;
+
+NSARlead = NSAR createUnit ["B_officer_F", getMarkerPos NSARPickedNo, [], 0, "FORM"];
+sleep 1;
+
+NSARen = [getMarkerPos "oreo", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+[NSARen, getMarkerPos NSARPickedNo] call BIS_fnc_taskAttack;
+
+while { (NSARActive == 1) } do {
+    if (!alive NSARlead) then { [] call A3M_fnc_NSARFailed };
+};
+
+A3M_fnc_JNSAR_SARSuccess = {
+    B_DefenseBudget = (B_DefenseBudget + 1500000);
+    publicVariable "B_DefenseBudget";
+
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
+
+    NSARActive = 0;
+    publicVariable "NSARActive";
+
+    { deleteVehicle _x } forEach (units SARWen);
+
+    EESurvivors = { alive _X } count units NSAR;
+    publicVariable "EESurvivors";
+
+    remoteExecCall ["A3M_MP_JNSAR_SARSuccess"];
+
+    sleep 20;
+    { deleteVehicle _x } forEach (units NSAR);
+};
+
+A3M_fnc_JNSAR_NSARFailed = {
+    remoteExecCall ["A3M_MP_JNSAR_SARfailed"];
+
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
+
+    NSARActive = 0;
+    publicVariable "NSARActive";
+};
+
+A3M_fnc_JNSAR_SARfound = {
+    remoteExecCall ["A3M_MP_JNSAR_SARfound"];
+
+    NSARpt2 = 1;
+    publicVariable "NSARpt2";
+
+    NSAR move Getmarkerpos NSARDestNo;
+
+    EnChance = [1, 0, 0, 0, 0, 0, 0, 1, 0, 0];
+    EnPres = EnChance select floor random count EnChance;
+    if (EnPres == 1) then {
+        SARWen = [getMarkerPos NSARDestNo, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        [SARWen, getPos NSARlead] call BIS_fnc_taskAttack;
+    };
+
+    NSARdest2= createTrigger ["EmptyDetector", getMarkerPos NSARDestNo];
+    NSARdest2 setTriggerArea [20, 20, 0, false];
+    NSARdest2 setTriggerActivation ["ANY", "PRESENT", true];
+    NSARdest2 setTriggerType "NONE";
+    NSARdest2 setTriggerStatements ["NSARlead in thislist", "remoteExecCall ['A3M_fnc_JNSAR_SARSuccess', 2];", ""];
+};

@@ -149,9 +149,12 @@ if (isDedicated) then {
         _MPpreDef = execVM "scripts\MP_Predef.sqf";
         waitUntil { scriptDone _MPpreDef };
 
+        // Handle Task predef
+        _handleTasks = execVM "scripts\handleTasks.sqf";
+
         // mission script loads
-        _missionHackDen = execVM "scripts\missions\job_hackDen\mission_hackDen.sqf";
-        waitUntil { scriptDone _missionHackDen };
+        _missionSet = execVM "scripts\missions\missionSet.sqf";
+        waitUntil { scriptDone _missionSet };
 
 
         // Load the Common Predefines OLD METHOD, OUTDATED, DO NOT USE!
@@ -295,12 +298,6 @@ if (paramsArray select 23 == 1) then { execVM "scripts\Enhancment_Pack\EP_Suppre
 
 [] execVM "scripts\GF_Cleanup\GF_Cleanup.sqf";
 [] execVM "scripts\FT.sqf";
-
-
-if (isServer) then {
-    PFrun = false;
-    []spawn compileFinal(preprocessFile "scripts\PF\init.sqf")
-};
 
 //	GF Cleanup script , Call with radio alpha , hit in game 0,0,1
 _radio_1 = createTrigger["EmptyDetector",[0,0]];

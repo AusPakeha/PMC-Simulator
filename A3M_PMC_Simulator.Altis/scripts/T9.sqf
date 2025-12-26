@@ -34,16 +34,16 @@ and I hope you enjoy the things I have in the works!
 ################################## LET US BEGIN #################################### */
 
 // [ '','A3M_MP_StartTaskT9',true,false] call BIS_fnc_MP;
-remoteExecCall ["A3M_MP_StartTaskT9"];
+remoteExecCall ["A3M_MP_JT9sec_StartTaskT9"];
 
 T9trg= createTrigger ["EmptyDetector", getMarkerPos "T9"];
 T9trg setTriggerArea [10, 10, 0, false];
 T9trg setTriggerActivation ["WEST", "PRESENT", false];
 T9trg setTriggerType "NONE";
-T9trg setTriggerStatements ["player in ThisList", "remoteExecCall ['A3M_MP_T9Shift']; nul2 = [] call A3M_fnc_SelectIncident;", ""];
+T9trg setTriggerStatements ["player in ThisList", "remoteExecCall ['A3M_MP_JT9sec_T9Shift']; nul2 = [] call A3M_fnc_JT9sec_SelectIncident;", ""];
 
 // Protestors Incident
-A3M_fnc_Protest = {
+A3M_fnc_JT9sec_Protest = {
     T9Pros = [getMarkerPos "Prostart", civilian, ["C_man_1", "C_man_1", "C_man_1", "C_man_1", "C_man_1", "C_man_1"]] call BIS_fnc_spawnGroup;
     "C_Nikos_aged" createUnit [getMarkerPos "Prostart", T9Pros, "ProtestLeader = this", 0.9, "COLONEL" ];
     _wp1 = T9Pros addWaypoint [getMarkerPos "protest", 0];
@@ -52,17 +52,17 @@ A3M_fnc_Protest = {
     [] call A3M_fnc_ProtestTrg;
 };
 
-A3M_fnc_ProtestTrg = {
+A3M_fnc_JT9sec_ProtestTrg = {
     T9ProsTrg = createTrigger ["EmptyDetector", getMarkerPos "Protest"];
     T9ProsTrg setTriggerArea [30, 30, 0, false];
     T9ProsTrg setTriggerActivation ["CIV", "PRESENT", true];
     T9ProsTrg setTriggerType "NONE";
-    T9ProsTrg setTriggerStatements ["ProtestLeader in thisList", "remoteExecCall ['A3M_MP_T9ProtestChant'];", ""];
+    T9ProsTrg setTriggerStatements ["ProtestLeader in thisList", "remoteExecCall ['A3M_MP_JT9sec_T9ProtestChant'];", ""];
 };
 
 // Hostile Attack
-A3M_fnc_AttackT9 = {
-    T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3", "T9_HostL4"];
+A3M_fnc_JT9sec_AttackT9 = {
+    T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3"];
     T9EnSource = T9HostArray select floor random count T9HostArray;
 
     _T9EF = [getMarkerPos T9EnSource, EAST, ["B_G_Soldier_A_F", "B_G_Soldier_A_F", "B_G_Soldier_A_F", "B_G_Soldier_A_F", "B_G_Soldier_AR_F", "B_G_Soldier_AR_F","B_G_Soldier_A_F", "B_G_Soldier_AR_F", "B_G_Soldier_A_F", "B_G_Soldier_AR_F"]] call BIS_fnc_spawnGroup;
@@ -74,12 +74,12 @@ A3M_fnc_AttackT9 = {
     T9wpE1 setTriggerArea [30, 30, 0, false];
     T9wpE1 setTriggerActivation ["CIV", "PRESENT", true];
     T9wpE1 setTriggerType "NONE";
-    T9wpE1 setTriggerStatements ["({ alive _x } count units _T9EF) < 1", "remoteExecCall ['A3M_MP_T9EnemyElim'];", ""];
+    T9wpE1 setTriggerStatements ["({ alive _x } count units _T9EF) < 1", "remoteExecCall ['A3M_MP_JT9sec_T9EnemyElim'];", ""];
 };
 
 // Double Hostile Attack
-A3M_fnc_dblAttackT9 = {
-    T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3", "T9_HostL4"];
+A3M_fnc_JT9sec_dblAttackT9 = {
+    T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3"];
     T9EnSource= T9HostArray select floor random count T9HostArray;
 
     _T9EF2 = [getMarkerPos T9EnSource, EAST, ["B_G_Soldier_A_F", "B_G_engineer_F", "B_G_Soldier_A_F", "B_G_medic_F", "B_G_Soldier_AR_F", "B_G_Soldier_AR_F","B_G_Soldier_A_F", "B_G_Soldier_GL_F", "B_G_Soldier_A_F", "B_G_Soldier_LAT_F"]] call BIS_fnc_spawnGroup;
@@ -91,9 +91,9 @@ A3M_fnc_dblAttackT9 = {
     T9wpE2 setTriggerArea [30, 30, 0, false];
     T9wpE2 setTriggerActivation ["ANY", "PRESENT", true];
     T9wpE2 setTriggerType "NONE";
-    T9wpE2 setTriggerStatements ["({ alive _x } count units _T9EF2) < 1", "remoteExecCall ['A3M_MP_T9EnemyElim'];", ""];
+    T9wpE2 setTriggerStatements ["({ alive _x } count units _T9EF2) < 1", "remoteExecCall ['A3M_MP_JT9sec_T9EnemyElim'];", ""];
 
-    T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3", "T9_HostL4"];
+    T9HostArray = ["T9_HostL1", "T9_HostL2", "T9_HostL3"];
     T9EnSource= T9HostArray select floor random count T9HostArray;
 
     _T9EF3 = [getMarkerPos T9EnSource, EAST, ["B_G_Soldier_A_F", "B_G_engineer_F", "B_G_Soldier_A_F", "B_G_medic_F", "B_G_Soldier_AR_F", "B_G_Soldier_AR_F","B_G_Soldier_A_F", "B_G_Soldier_GL_F", "B_G_Soldier_A_F", "B_G_Soldier_LAT_F"]] call BIS_fnc_spawnGroup;
@@ -105,31 +105,31 @@ A3M_fnc_dblAttackT9 = {
     T9wpE3 setTriggerArea [30, 30, 0, false];
     T9wpE3 setTriggerActivation ["ANY", "PRESENT", true];
     T9wpE3 setTriggerType "NONE";
-    T9wpE3 setTriggerStatements ["({ alive _x } count units _T9EF3) < 1", "remoteExecCall ['A3M_MP_T9EnemyElim'];", ""];
+    T9wpE3 setTriggerStatements ["({ alive _x } count units _T9EF3) < 1", "remoteExecCall ['A3M_MP_JT9sec_T9EnemyElim'];", ""];
 };
 
 // Incident Randomizer
-A3M_fnc_SelectIncident= {
+A3M_fnc_JT9sec_SelectIncident= {
     T9IncidentArray = ["I1","I2","I3"];
     T9Incident = T9IncidentArray select floor random count T9IncidentArray;
 
     switch (T9Incident) do {
         case "I1": {
-            [] call A3M_fnc_Protest;
-            [] Spawn A3M_fnc_Incident_Causer;
+            [] call A3M_fnc_JT9sec_Protest;
+            [] Spawn A3M_fnc_JT9sec_Incident_Causer;
         };
         case "I2": {
-            [] call A3M_fnc_AttackT9;
-            [] Spawn A3M_fnc_Incident_Causer;
+            [] call A3M_fnc_JT9sec_AttackT9;
+            [] Spawn A3M_fnc_JT9sec_Incident_Causer;
         };
         case "I3": {
-            [] call A3M_fnc_dblAttackT9;
-            [] Spawn A3M_fnc_Incident_Causer;
+            [] call A3M_fnc_JT9sec_dblAttackT9;
+            [] Spawn A3M_fnc_JT9sec_Incident_Causer;
         };
     };
 };
 
-A3M_fnc_Incident_Causer = {
+A3M_fnc_JT9sec_Incident_Causer = {
     TimeArray = [30, 45, 60, 75, 90, 120, 130, 150, 180];
     RandomTime = TimeArray select floor random count TimeArray;
 
@@ -137,10 +137,10 @@ A3M_fnc_Incident_Causer = {
 
     if (TimeArrayCounter < 1200) then {
         sleep RandomTime;
-        [] call A3M_fnc_SelectIncident;
+        [] call A3M_fnc_JT9sec_SelectIncident;
     } else {
         // ['','A3M_MP_T9Success',true,false] call BIS_fnc_MP;
-        remoteExecCall ["A3M_MP_T9Success"];
+        remoteExecCall ["A3M_MP_JT9sec_T9Success"];
         MissionStatus = "M0";
         publicVariable "MissionStatus";
         T9Active = 0;

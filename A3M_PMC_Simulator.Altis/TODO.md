@@ -5,22 +5,12 @@
 -
 - {"",},
 -
-- case # : {["", "", "vehspawn"] call A3M_fnc_buyVehicle; };
--
-- case # : {["", "", "TypeOfItem"] call A3M_fnc_buyItem; };
--
-- ### TypeOfItem Categories:
-- - item
-- - weapon
-- - magazine
-- - backpack
--
 - Consitant scripting params
 -- scripts layout for Fleet and Store
---- Vanilla at the top, CDLC's next then mods.
+-- Vanilla at the top, CDLC's next then mods.
 -- Can probally be used for other scripts
 -
--// Errors MrPakeha cant figure out
+-//
 -
 -// items
 -[x] separate each function to its own file
@@ -40,7 +30,6 @@
 -[x] global deliveries hold add action
 -[x] add funds to player account for completed missions
 -
--
 -// EP scripts
 - Modify to disable the on/off functions
 -
@@ -49,14 +38,11 @@
 --[/] Homepage - Started, need to verify working
 --[] Fleet Store - files made
 --[] Item Store
---[] Email
+--[x] Email
 --[] Admin
 --[] Bank
 --[] Recuitment
 - image size recommended 128x256
--
--// Far down the track
--[] switch out missions to be dynamic
 -
 -// Base Upgrade System
 -[] Code base system
@@ -64,7 +50,5 @@
 --[] Code purchase system
 -
 -
--// Mission HackDen Update
--[x] Modify A3M_svr_HackerRaid1 in mission_hackDen.sqf
---[] mission_hackDen.sqf is working but will not spawn items on hack1 marker
--[] Finish it
+-// Mission system
+- Do not delete any lines in TODO.md, only add to the file.

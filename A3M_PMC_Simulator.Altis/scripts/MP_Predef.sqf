@@ -96,6 +96,8 @@ A3M_MP_EscortFailed = {
     player setCurrentTask CO1;
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_ConvoyTask = {
     DELEscort = player createSimpleTask ["Deliver Astral Corp Supplies to Destination"];
     DELEscort setSimpleTaskDescription ["Escort the Astral Corp Supplies to their Destination. Protect them at all costs.", "Deliver Supplies", "Supply Destination"];
@@ -124,6 +126,8 @@ A3M_MP_ConvoyFailed = {
     player setCurrentTask CO1;
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_SEFailed = {
     ["TaskFailed", ["The Hostage was Killed."]] call BIS_fnc_showNotification;
     hint format ["Message: \n \n Our Vital Monitors indicate that the Astral Corp Executive you were commissioned to rescue has been killed. The mission is FUBAR. Return to Base."];
@@ -151,6 +155,8 @@ A3M_MP_ChangeSARDest = {
     ["InformationGreen", ["The Package has been secured. Move to HQ immediately!"]] call BIS_fnc_showNotification;
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_Raid1 = {
     A3MRaid1 = player createSimpleTask ["Move to the Enemy Terrorist Compound and eliminate the enemy forces."];
     A3MRaid1 setSimpleTaskDescription ["The Altian Government requests assistance in dealing with a foreign terrorist cell that has taken over a compound. The Altian Government cannot risk an international incident by stepping in, but the Altian police forces are unprepared and ill equipped to handle this situation. OPSG is hereby contracted to eliminate all terror cells operating in Altis.", "Eliminate Terror Cell", "Terrorist Compound"];
@@ -182,6 +188,8 @@ A3M_MP_RaidClear = {
     player setCurrentTask CO1;
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_StartTaskNSAR = {
     NSARTask = player createSimpleTask ["Assist the stranded NATO forces."];
     NSARTask setSimpleTaskDescription ["A distress call from a NATO unit in the mountains was received by an AAF telecommunications center. The message attached indicated that the unit is currently combat ineffective and awaiting an extraction that failed. The United States has contracted OPSG to insert and assist the NATO operatives in their extract.", "Assist NATO Operatives", "NATO Operatives"];
@@ -242,6 +250,8 @@ A3M_MP_T9EnemyElim = {
     ["ScoreAdded", ["Attacking Cell Eliminated!", 500]] call BIS_fnc_showNotification;
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_T9TrkInPos = {
     ["InformationRed", ["A delivery is at the gate."]] call BIS_fnc_showNotification;
 };
@@ -322,6 +332,8 @@ A3M_MP_T9failed = {
     player setCurrentTask CO1;
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_HackerRaid1 = {
     HackDen = player createSimpleTask ["Raid Hacker Den"];
     HackDen setSimpleTaskDescription ["Find and Raid the hacker den, download the hacker's logs, and exfil.", "Raid Hacker Den", "Hacker Den"];
@@ -376,6 +388,8 @@ A3M_fnc_Hack = {
     remoteExecCall ["A3M_MP_HackerRaid1_3"];
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_MP_VIPActions = {
     APAct1 = SpeechVIP addAction ["Get Down!", {
         // if (SpeechInterrupt == 0) then { ["","A3M_MP_SpeechInterrupt",true,false] call BIS_fnc_MP; };
@@ -2860,7 +2874,7 @@ MP_Roadblock_Attitude = {
             RBveh addAction ["Greeting", { Bad1 = createGroup East; [RBVeh] joinSilent Bad1; hint "Allahu Akbar"; remoteExecCall ["RemAllAct"]; sleep 3; if (alive RBVehD) then { ManType = "M5"; publicVariable "ManType"; bomb = 'Bo_GBU12_LGB' createVehicle getPos RBVeh; hint "TERRORIST ATTACK"; }; }];
             RBveh addAction ["Search", { Bad1 = createGroup East; [RBVeh] joinSilent Bad1; hint "Allahu Akbar"; remoteExecCall ["RemAllAct"];  sleep 5; if (alive RBVehD) then { ManType = "M5"; publicVariable "ManType"; bomb = 'Bo_GBU12_LGB' createVehicle getPos RBVeh; hint "TERRORIST ATTACK"; }; }];
             RBveh addAction ["Allow to Proceed", { Bad1 = createGroup East; [RBVeh] joinSilent Bad1; hint "Allahu Akbar"; remoteExecCall ["RemAllAct"]; sleep 2; if (alive RBVehD) then { ManType = "M5"; publicVariable "ManType"; bomb = 'Bo_GBU12_LGB' createVehicle getPos RBVeh; hint "TERRORIST ATTACK"; }; }];
-            RBveh addAction ["Order To Turn Around", { Bad1 = createGroup East; [RBVeh] joinSilent Bad1; hint "Allahu Akbar"; remoteExecCall ["RemAllAct"];  sleep 2:  if (alive RBVehD) then { ManType = "M5"; publicVariable "ManType"; bomb = 'Bo_GBU12_LGB' createVehicle getPos RBVeh; hint "TERRORIST ATTACK"; }; }];
+            RBveh addAction ["Order To Turn Around", { Bad1 = createGroup East; [RBVeh] joinSilent Bad1; hint "Allahu Akbar"; remoteExecCall ["RemAllAct"];  sleep 2; if (alive RBVehD) then { ManType = "M5"; publicVariable "ManType"; bomb = 'Bo_GBU12_LGB' createVehicle getPos RBVeh; hint "TERRORIST ATTACK"; }; }];
         };
 
         // Innocent 2

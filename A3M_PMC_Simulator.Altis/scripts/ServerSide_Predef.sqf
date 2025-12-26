@@ -3,7 +3,9 @@
 A3MBudgetPush = {
     ["P_DefenseBudget", B_DefenseBudget] call A3M_fnc_setData;
 };
-
+// Next Mission Set
+// *********************#################***********************
+/*
 A3M_svr_VIPEscort = {
     // JIP Handler Mission Status
     MissionStatus = "M1";
@@ -58,6 +60,8 @@ A3M_svr_VIPEscort = {
     while { EscortActive == 1 } do { "VIP1ICO" setMarkerPos getpos VIP1; sleep 0.5; };
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_TRKEscort = {
     // JIP Handler Mission Status
     MissionStatus = "M2";
@@ -113,6 +117,8 @@ A3M_svr_TRKEscort = {
     remoteExec ["A3M_MP_ConvoyTask"];
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_SandE = {
     SEActive = 1;
     publicVariable "SEActive";
@@ -188,6 +194,8 @@ A3M_svr_SandE = {
     while { SEActive == 1 } do { "SAR1ICO" setMarkerPos getPos SAR1; sleep 0.5; };
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_Raid1 = {
     MissionStatus = "M5";
     publicVariable "MissionStatus";
@@ -287,6 +295,8 @@ A3M_svr_RaidClear = {
     if (!isNull Raid2Win) then {deleteVehicle Raid2Win};
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_reinforce = {
     MissionStatus = "M7";
     publicVariable "MissionStatus";
@@ -298,6 +308,8 @@ A3M_svr_reinforce = {
     execVM "scripts\nsar.sqf";
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_T9sec = {
     MissionStatus = "M8";
     publicVariable "MissionStatus";
@@ -514,6 +526,8 @@ A3M_fnc_Incident_Causer = {
     };
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_Hack_1 = {
     _bluNums = west countSide allPlayers;
 
@@ -717,6 +731,8 @@ A3M_svr_HackerRaid1 = {
     remoteExecCall ["A3M_MP_HackOption"];
 };
 
+// Next Mission Set
+// *********************#################***********************
 A3M_svr_EscortFailed = {
     // ['','A3M_MP_EscortFailed',true,false] call BIS_fnc_MP;
     remoteExecCall ["A3M_MP_EscortFailed"];
@@ -1427,45 +1443,7 @@ A3M_svr_EscortSuccess = {
 
     deleteVehicle VIP1;
 };
-
-A3M_svr_ConvoyFailed = {
-    // ['','A3M_MP_ConvoyFailed',true,false] call BIS_fnc_MP;
-    remoteExecCall ["A3M_MP_ConvoyFailed"];
-    deleteVehicle DelDest;
-    deleteVehicle DelDead;
-    sleep 10.0;
-    deleteVehicle DEL1;
-    ConvoyActive = 0;
-    publicVariable "ConvoyActive";
-    MissionStatus = "M0";
-    publicVariable "MissionStatus";
-};
-
-A3M_svr_SEFailed = {
-    // ['','A3M_MP_SEFailed',true,false] call BIS_fnc_MP;
-    remoteExecCall ["A3M_MP_SEFailed"];
-    SEActive = 0;
-    publicVariable "SEActive";
-    "SAR1ICO" setMarkerPos (getMarkerpos "offmap");
-    deleteVehicle SAR1;
-    MissionStatus = "M0";
-    publicVariable "MissionStatus";
-};
-
-A3M_svr_SESucceeded = {
-    // ['','A3M_MP_SESucceeded',true,false] call BIS_fnc_MP;
-    remoteExecCall ["A3M_MP_SESucceeded"];
-    SEActive = 0;
-    publicVariable "SEActive";
-    "SAR1ICO" setMarkerPos (getMarkerpos "offmap");
-    deleteVehicle SARDead;
-    B_DefenseBudget = (B_DefenseBudget+ 1500000);
-    publicVariable "B_DefenseBudget";
-    deleteVehicle SAR1;
-    MissionStatus = "M0";
-    publicVariable "MissionStatus";
-};
-
+*/
 A3M_svr_PopAthira = {
     Athira_Camera_AIATP_1 = createVehicle ['Camera1', [13858.6,18588.9,0.0172138], [], 0, 'CAN_COLLIDE'];
     Athira_Camera_AIATP_1 setPosASL [13858.6,18588.9,19.7972];
@@ -1708,6 +1686,7 @@ A3M_svr_PopZaros = {
     SpeechVIP0 setSkill 0.5;
     SpeechVIP0 setRank 'PRIVATE';
     SpeechVIP0 setFormDir 95.9623;
+
     SpeechVIP0 setDir 95.9623;
     SpeechVIP0 setPosASL [9258.54,11953.3,15.162];
     ZP_Speech_Group_10 setFormation 'WEDGE';
@@ -2063,6 +2042,21 @@ A3M_svr_PopPyrgos = {
 
     [] spawn A3M_svr_VIPFiredEH;
 };
+/*
+// Next Mission Set
+// *********************#################***********************
+A3M_svr_ConvoyFailed = {
+    // ['','A3M_MP_ConvoyFailed',true,false] call BIS_fnc_MP;
+    remoteExecCall ["A3M_MP_ConvoyFailed"];
+    deleteVehicle DelDest;
+    deleteVehicle DelDead;
+    sleep 10.0;
+    deleteVehicle DEL1;
+    ConvoyActive = 0;
+    publicVariable "ConvoyActive";
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
+};
 
 A3M_svr_ConvoySuccess = {
     // ['','A3M_MP_ConvoySuccess',true,false] call BIS_fnc_MP;
@@ -2078,6 +2072,37 @@ A3M_svr_ConvoySuccess = {
     B_DefenseBudget = (B_DefenseBudget+ 75000);
     publicVariable "B_DefenseBudget";
 };
+
+// Next Mission Set
+// *********************#################***********************
+A3M_svr_SEFailed = {
+    // ['','A3M_MP_SEFailed',true,false] call BIS_fnc_MP;
+    remoteExecCall ["A3M_MP_SEFailed"];
+    SEActive = 0;
+    publicVariable "SEActive";
+    "SAR1ICO" setMarkerPos (getMarkerpos "offmap");
+    deleteVehicle SAR1;
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
+};
+
+A3M_svr_SESucceeded = {
+    // ['','A3M_MP_SESucceeded',true,false] call BIS_fnc_MP;
+    remoteExecCall ["A3M_MP_SESucceeded"];
+    SEActive = 0;
+    publicVariable "SEActive";
+    "SAR1ICO" setMarkerPos (getMarkerpos "offmap");
+    deleteVehicle SARDead;
+    B_DefenseBudget = (B_DefenseBudget+ 1500000);
+    publicVariable "B_DefenseBudget";
+    deleteVehicle SAR1;
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
+};
+*/
+
+// Next Mission Set
+// *********************#################***********************
 
 // Roadblock Mission - This one works differently, and, pending a total re-write, transcends the rules of _svr_ and _MP_ names, as every call is a hybrid of server and client calls. Ignore naming rules below...
 A3M_fnc_RoadBlock = {
