@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPSG Fleet Store</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\fleet\\ui\\_site\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\fleet\\ui\\_site\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="browser-window">
+        <!-- Address Bar -->
+        <div class="browser-header">
+            <div class="nav-buttons">
+                <div class="nav-btn">&lt;</div>
+                <div class="nav-btn">&gt;</div>
+            </div>
+            <div class="address-bar">
+                secure.orionsecurity.mil/store/fleet
+            </div>
+            <div class="window-controls">
+                <div class="close-btn" id="btn-exit">X</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-container">
+            <!-- Logo Header -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <!-- UTF-8 Symbol for Target/Globe feel -->
+                    <span class="logo-icon">&#8853;</span>
+                    Orion Fleet Store
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <div id="btn-cars" class="category-btn">Cars</div>
+                <div id="btn-armor" class="category-btn">Armor</div>
+                <div id="btn-heli" class="category-btn">Heli</div>
+                <div id="btn-plane" class="category-btn">Plane</div>
+                <div id="btn-naval" class="category-btn">Naval</div>
+                <div id="btn-drone" class="category-btn">Drone</div>
+                <div id="btn-support" class="category-btn">Support</div>
+                <div id="btn-upgrades" class="category-btn">Upgrades</div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

@@ -13,6 +13,9 @@ class CfgFunctions {
             class buyVehicle {};
             class handleFleetPurchase {};
             class handleVModClick {};
+            class handleFleetUIEvents {};
+            class initFleetClass { preInit = 1; };
+            class openFleetUI {};
             class vBuyButton {};
         };
         class store {

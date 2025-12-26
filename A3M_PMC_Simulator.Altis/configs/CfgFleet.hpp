@@ -159,6 +159,18 @@ class CfgFleet {
                 {"B_ION_Heli_Light_02_unarmed_lxWS",13000000}
             };
         };
+        class A3M_Naval {
+            a3[] = {
+                {"B_Boat_Armed_01_minigun_F",1275000},
+                {"B_Boat_Transport_01_F",1275}
+            };
+            ef[] = {
+                {"EF_B_CombatBoat_Unarmed_MJTF_Wdl",1275000},
+                {"EF_B_CombatBoat_HMG_MJTF_Wdl",1500000},
+                {"EF_B_CombatBoat_AT_MJTF_Wdl",1750000},
+                {"EF_B_LCC_MJTF_Wdl",2000000}
+            };
+        };
         class A3M_Drone {
             a3[] = {
                 {"B_UAV_01_F",369},
