@@ -12,7 +12,7 @@ A3M_JR1_Raid1 = {
     // Move sg1 to village center
     "sg1" setMarkerPos _villagePos;
     private _safePos = [getMarkerPos "sg1", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-    _SG1tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    private _SG1tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_SG1tm, getMarkerPos "sg1", random [50, 75, 100]] call BIS_fnc_taskPatrol;
 
     private _VehPatrol = [
@@ -24,7 +24,7 @@ A3M_JR1_Raid1 = {
     private _selectedVeh = selectRandom _VehPatrol;
     private _veh = createVehicle [_selectedVeh, _safePos, [], 0, "NONE"];
     createVehicleCrew _veh;
-    _SG1vm = [_veh, EAST] call BIS_fnc_spawnGroup;
+    private _SG1vm = [_veh, EAST] call BIS_fnc_spawnGroup;
     [_SG1vm, getMarkerPos "sg1", random [50, 75, 100]] call BIS_fnc_taskPatrol;
     diag_log format ["[A3M] Raid 1 - EI and Veh patrol spawned"];
 
@@ -36,32 +36,32 @@ A3M_JR1_Raid1 = {
     } forEach _markers;
     diag_log format ["[A3M] Raid 1 - Defender markers moved"];
 
-    _bluNums = west countSide allPlayers;
+    private _bluNums = west countSide allPlayers;
 
     private _safePosGH1 = [getMarkerPos "GH1", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
     _GH1tm = [_safePosGH1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH1tm, getMarkerPos "GH1"] call BIS_fnc_taskDefend;
 
     private _safePos = [getMarkerPos "GH2", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-    _GH2tm = [_safePosGH2, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    private _GH2tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
     [_GH2tm, getMarkerPos "GH2"] call BIS_fnc_taskDefend;
 
     if (_bluNums > 10) then {
         private _safePos = [getMarkerPos "GH3", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-        _GH3tm = [_safePosGH3, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        private _GH3tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH3tm, getMarkerPos "GH3"] call BIS_fnc_taskDefend;
 
         private _safePos = [getMarkerPos "GH4", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-        _GH4tm = [_safePosGH4, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        private _GH4tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH4tm, getMarkerPos "GH4"] call BIS_fnc_taskDefend;
     };
     if (_bluNums > 20) then {
         private _safePos = [getMarkerPos "GH5", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-        _GH5tm = [_safePosGH5, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        private _GH5tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH5tm, getMarkerPos "GH5", 200] call BIS_fnc_taskPatrol;
 
         private _safePos = [getMarkerPos "GH6", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-        _GH6tm = [_safePosGH6, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        private _GH6tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
         [_GH6tm, getMarkerPos "GH6", 200] call BIS_fnc_taskPatrol;
     };
     diag_log format ["[A3M] Raid 1 - Defenders spawned"];
@@ -69,6 +69,7 @@ A3M_JR1_Raid1 = {
     // Spawn barricades or wrecks on roads within 400m of sg1 with random rotations
     private _roads = _villagePos nearRoads 400;
     private _bars = [];
+    private _fires = [];
     private _numBarricades = 5 + floor random 6; // 5-10 barricades
     private _barricades = [
         "Land_GarbageHeap_01_F",
@@ -98,7 +99,9 @@ A3M_JR1_Raid1 = {
 
     for "_i" from 1 to _numBarricades do {
         if (count _roads > 0) then {
-            private _road = selectRandom _roads;
+            private _roadIndex = floor random count _roads;
+            private _road = _roads select _roadIndex;
+            _roads deleteAt _roadIndex;
             private _pos = getPos _road;
 
             // Check if the spot is relatively flat and empty (prevents spawning inside buildings or rocks)
@@ -115,7 +118,8 @@ A3M_JR1_Raid1 = {
 
                 // Optional: Attach one fire instantly upon creation to a few random ones
                 if (random 1 < 0.4) then { // 40% chance to start burning right away
-                    [_bar, 1 + random 1, time, false, false] spawn BIS_Effects_Burn;
+                    private _fire = [_bar, 1 + random 1, time, false, false] spawn BIS_fnc_fireEffect;
+                    _fires pushBack _fire;
                 };
 
                 private _clutterTypes = ["Land_Barrel_empty_F", "Land_Pallet_F", "Land_Crate_wooden_F"];
@@ -126,12 +130,13 @@ A3M_JR1_Raid1 = {
         };
     };
 
+    diag_log format ["[A3M] Raid 1 - Trash spawned"];
+
     Raid1Win = createTrigger ["EmptyDetector", (getMarkerPos "sg1")];
     Raid1Win setTriggerArea [250, 250, 0, false];
     Raid1Win setTriggerActivation ["WEST SEIZED", "EAST D", false];
     Raid1Win setTriggerType "NONE";
     Raid1Win setTriggerStatements ["this", "remoteExecCall ['A3M_JR1_Raid1Clear', 2];", ""];
-    diag_log format ["[A3M] Raid 1 - Trash spawned"],
 
     MissionStatus = "M5";
     publicVariable "MissionStatus";
@@ -140,7 +145,7 @@ A3M_JR1_Raid1 = {
     publicVariable "Raid1Active";
 
     // [ '','A3M_MP_Raid1',true,false] spawn BIS_fnc_MP;
-    remoteExec ["A3M_MP_JR1_Raid1"];
+    remoteExecCall ["A3M_MP_JR1_Raid1"];
     diag_log format ["[A3M] Raid 1 - Task activated"],
 };
 
@@ -156,8 +161,8 @@ A3M_MP_JR1_Raid1 = {
 
 A3M_JR1_Raid1Clear = {
     // [ '','A3M_MP_RaidClear',true,false] spawn BIS_fnc_MP;
-    remoteExec ["A3M_MP_JR1_Raid1Clear"];
-    { deleteVehicle _x; } foreach _fires;
+    remoteExecCall ["A3M_MP_JR1_Raid1Clear"];
+    { terminate _x; } foreach _fires;
 
     B_DefenseBudget = (B_DefenseBudget + 2000000);
     publicVariable "B_DefenseBudget";
