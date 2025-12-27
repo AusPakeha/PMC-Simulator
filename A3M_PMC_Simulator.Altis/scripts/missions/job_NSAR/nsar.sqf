@@ -53,17 +53,26 @@ NSARdest setTriggerStatements ["player in thisList", "[] call A3M_fnc_JNSAR_SARf
 
 remoteExecCall ["A3M_MP_JNSAR_StartTaskNSAR"];
 
-NSAR = [getMarkerPos NSARPickedNo, west, ["B_Soldier_F", "B_Soldier_F", "B_Soldier_F", "B_Soldier_A_F"]] call BIS_fnc_spawnGroup;
+NSAR = [getMarkerPos NSARPickedNo, west, ["B_Soldier_F", "B_Soldier_F", "B_Soldier_F", "B_Soldier_AR_F"]] call BIS_fnc_spawnGroup;
 sleep 1;
 
-NSARlead = NSAR createUnit ["B_officer_F", getMarkerPos NSARPickedNo, [], 0, "FORM"];
+NSARlead = NSAR createUnit ["B_Soldier_SL_F", getMarkerPos NSARPickedNo, [], 0, "FORM"];
 sleep 1;
+
+injuredUnit = selectRandom (units NSAR);
+injuredUnitOriginalHeadgear = headgear injuredUnit;
+injuredUnit setDamage 0.7;
+removeHeadgear injuredUnit;
+injuredUnit addHeadgear "H_HeadBandage_bloody_F";
+publicVariable "injuredUnit";
+
 
 NSARen = [getMarkerPos "oreo", EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
 [NSARen, getMarkerPos NSARPickedNo] call BIS_fnc_taskAttack;
 
 while { (NSARActive == 1) } do {
-    if (!alive NSARlead) then { [] call A3M_fnc_NSARFailed };
+    if (({alive _x} count (units NSAR + [NSARlead])) == 2) then { [] call A3M_fnc_JNSAR_NSARFailed };
+    sleep 1;
 };
 
 A3M_fnc_JNSAR_SARSuccess = {
@@ -80,6 +89,11 @@ A3M_fnc_JNSAR_SARSuccess = {
 
     EESurvivors = { alive _X } count units NSAR;
     publicVariable "EESurvivors";
+
+    if (headgear injuredUnit == "H_HeadBandage_bloody_F") then {
+        removeHeadgear injuredUnit;
+        injuredUnit addHeadgear injuredUnitOriginalHeadgear;
+    };
 
     remoteExecCall ["A3M_MP_JNSAR_SARSuccess"];
 
@@ -116,5 +130,5 @@ A3M_fnc_JNSAR_SARfound = {
     NSARdest2 setTriggerArea [20, 20, 0, false];
     NSARdest2 setTriggerActivation ["ANY", "PRESENT", true];
     NSARdest2 setTriggerType "NONE";
-    NSARdest2 setTriggerStatements ["NSARlead in thislist", "remoteExecCall ['A3M_fnc_JNSAR_SARSuccess', 2];", ""];
+    NSARdest2 setTriggerStatements ["NSARlead in thislist && (damage injuredUnit < 0.5)", "remoteExecCall ['A3M_fnc_JNSAR_SARSuccess', 2];", ""];
 };

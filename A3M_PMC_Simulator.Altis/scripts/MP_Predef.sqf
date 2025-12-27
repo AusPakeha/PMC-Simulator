@@ -36,7 +36,7 @@ and I hope you enjoy the things I have in the works!
 
 A3M_Svr_AnyName = { This is something the server should do, and is executed so. Anything named like this should probably be moved to ServerSide_Predef.sqf };
 A3M_MP_AnyName = { This is something that should be called on all clients. };
-A3M_fnc_AnyName = { This is a function. This is a bit of a blanket term, but should be used sparingly. This is usually called client side, but may be hybrid client / server or serverside but not called by anything but the server itself. };
+A3M_fnc_AnyName = { This is a function. This is a function. This is a bit of a blanket term, but should be used sparingly. This is usually called client side, but may be hybrid client / server or serverside but not called by anything but the server itself. };
 */
 
 // Multiplayer Functions
@@ -62,10 +62,12 @@ A3M_MP_EscVIPCmds = {
 		[Asset] join (group player);
     }];
 
-	waitUntil { !alive Asset };
-
-	Asset removeAction VIPAct1;
-	Asset removeAction VIPAct2;
+	[Asset, VIPAct1, VIPAct2] spawn {
+		params ["_asset", "_act1", "_act2"];
+		waitUntil { !alive _asset };
+		_asset removeAction _act1;
+		_asset removeAction _act2;
+	};
 };
 
 A3M_MP_EscortTask = {
@@ -2158,74 +2160,96 @@ A3M_fnc_AdminPanel = {
             sleep 1;
 
             // Cancel VIP Escort Mission
-            EscortActive = 0;
-            publicVariable "EscortActive";
-            [VIP1] joinSilent grpNull;
-
-            deleteVehicle VIPDest;
-            deleteVehicle VIPDead;
-            deleteVehicle VIP1;
-
-            systemChat "Escort Mission Cancelled.";
-            sleep 1;
+            if (EscortActive == 1) then {
+                EscortActive = 0;
+                publicVariable "EscortActive";
+                [VIP1] joinSilent grpNull;
+                deleteVehicle VIPDest;
+                deleteVehicle VIPDead;
+                deleteVehicle VIP1;
+                systemChat "Escort Mission Cancelled.";
+                call A3M_JVIPEscort_Cleanup;
+                sleep 1;
+            };
 
             // Cancel Convoy (Truck Delivery) Mission
-            ConveyActive = 0;
-            publicVariable "ConvoyActive";
-            deleteVehicle DelDest;
-            deleteVehicle DelDead;
-            deleteVehicle DEL1;
-            systemChat "Convoy Mission Cancelled.";
-            sleep 1;
+            if (ConveyActive == 1) then {
+                ConveyActive = 0;
+                publicVariable "ConvoyActive";
+                deleteVehicle DelDest;
+                deleteVehicle DelDead;
+                deleteVehicle DEL1;
+                systemChat "Convoy Mission Cancelled.";
+                call A3M_JC_ConvoyCleanup;
+                sleep 1;
+            };
 
             // Cancel Checkpoint Mission
-            CheckpointActive = 0;
-            publicVariable "CheckpointActive";
-            systemChat "Checkpoint Shift Ended Early.";
-            sleep 1;
+            if (CheckpointActive == 1) then {
+                CheckpointActive = 0;
+                publicVariable "CheckpointActive";
+                systemChat "Checkpoint Shift Ended Early.";
+                sleep 1;
+            };
 
             // Cancel Snatch and Extract (Hostage Rescue) Mission
-            SEActive = 0;
-            publicVariable "SEActive";
-            "SAR1ICO" setMarkerPos (getMarkerPos "offmap");
-            deleteVehicle SAR1;
-            systemChat "Snatch And Extract Mission Cancelled.";
-            sleep 1;
+            if (SEActive == 1) then {
+                SEActive = 0;
+                publicVariable "SEActive";
+                "SAR1ICO" setMarkerPos (getMarkerPos "offmap");
+                deleteVehicle SAR1;
+                systemChat "Snatch And Extract Mission Cancelled.";
+                sleep 1;
+            };
 
             // Cancel Terrorist Raid I Mission
-            Raid1Active = 0;
-            publicVariable "Raid1Active";
-            systemChat "Raid I Mission Cancelled.";
-            sleep 1;
+            if (Raid1Active == 1) then {
+                Raid1Active = 0;
+                publicVariable "Raid1Active";
+                systemChat "Raid I Mission Cancelled.";
+                call A3M_JR1_Raid1Cleanup;
+                sleep 1;
+            };
 
             // Cancel Terrorist Raid 2 Mission
-            Raid2Active = 0;
-            publicVariable "Raid2Active";
-            systemChat "Raid II Mission Cancelled.";
-            sleep 1;
+            if (Raid2Active == 1) then {
+                Raid2Active = 0;
+                publicVariable "Raid2Active";
+                systemChat "Raid II Mission Cancelled.";
+                call A3M_JR2_Raid2Cleanup;
+                sleep 1;
+            };
 
             // Cancel NATO Search and Rescue (Friendly escort)
-            NSARActive = 0;
-            publicVariable "NSARActive";
-            systemChat "NATO Search And Rescue Mission Cancelled.";
-            sleep 1;
+            if (NSARActive == 1) then {
+                NSARActive = 0;
+                publicVariable "NSARActive";
+                systemChat "NATO Search And Rescue Mission Cancelled.";
+                sleep 1;
+            };
 
             // Cancel T9 Security Shift
-            T9Active = 0;
-            publicVariable "T9Active";
-            systemChat "T9 Security Shift Ended Early.";
-            sleep 1;
+            if (T9Active == 1) then {
+                T9Active = 0;
+                publicVariable "T9Active";
+                systemChat "T9 Security Shift Ended Early.";
+                sleep 1;
+            };
 
             // Cancel Hacker Den Raid
-            HRaidActive = 0;
-            publicVariable "HRaidActive";
-            systemChat "Raid on Hacker Den Aborted.";
-            sleep 1;
+            if (HRaidActive == 1) then {
+                HRaidActive = 0;
+                publicVariable "HRaidActive";
+                systemChat "Raid on Hacker Den Aborted.";
+                sleep 1;
+            };
 
             // Cancel Dignitary Speech Protection Mission
-            SpeechActive = 0;
-            publicVariable "SpeechActive";
-            systemChat "Dignitary Protection Terminated.";
+            if (SpeechActive == 1) then {
+                SpeechActive = 0;
+                publicVariable "SpeechActive";
+                systemChat "Dignitary Protection Terminated.";
+            };
 
             // Notify all players that their mission has been cancelled.
             systemChat "Cancelling all missions for players...";

@@ -1,4 +1,8 @@
 A3M_JR2_Raid2 = {
+    // Initialize global arrays for cleanup
+    Raid2SpawnedGroups = [];
+    Raid2SpawnedVehicles = [];
+
     // --- Configuration ---
     private _center = [worldSize / 2, worldSize / 2];
     private _mapSize = worldSize * sqrt 2 / 2;
@@ -7,12 +11,14 @@ A3M_JR2_Raid2 = {
     private _city = nearestLocations [_center, ["NameCity"], _mapSize];
     private _selectedCity = selectRandom _city;
     private _cityPos = locationPosition _selectedCity;
+    diag_log format ["[A3M] Raid 2 - City Selected"];
 
     // Move sg2 to city center
     "sg2" setMarkerPos _cityPos;
     private _safePos = [getMarkerPos "sg2", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
-    _SG2tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
-    [_SG2tm, getMarkerPos "sg2"] call BIS_fnc_taskDefend;
+    private _SG2tm = [_safePos, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    Raid2SpawnedGroups pushBack _SG2tm;
+    [_SG2tm, getMarkerPos "sg2", random [50, 75, 100]] call BIS_fnc_taskPatrol;
 
     private _VehPatrol = [
         "A3M_Jeep_Wrangler_LMG",
@@ -22,8 +28,11 @@ A3M_JR2_Raid2 = {
     ];
     private _selectedVeh = selectRandom _VehPatrol;
     private _veh = createVehicle [_selectedVeh, _safePos, [], 0, "NONE"];
-    _SG2vm = [_veh, EAST] call BIS_fnc_spawnGroup;
+    Raid2SpawnedVehicles pushBack _veh;
+    private _SG2vm = createVehicleCrew _veh;
+    Raid2SpawnedGroups pushBack _SG2vm;
     [_SG2vm, getMarkerPos "sg2", random [50, 75, 100]] call BIS_fnc_taskPatrol;
+    diag_log format ["[A3M] Raid 2 - EI and Veh patrol spawned"];
 
     // Move RO1-RO6 to random positions around city (200-500m radius)
     private _markers = ["RO1", "RO2", "RO3", "RO4", "RO5", "RO6"];
@@ -31,35 +40,43 @@ A3M_JR2_Raid2 = {
         private _randomPos = _cityPos getPos [random [200, 350, 500], random 360];
         _x setMarkerPos _randomPos;
     } forEach _markers;
+    diag_log format ["[A3M] Raid 2 - Defender markers moved"];
 
     _bluNums = west countSide allPlayers;
 
     private _safePosRO1 = [getMarkerPos "RO1", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
     _RO1tm = [_safePosRO1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    Raid2SpawnedGroups pushBack _RO1tm;
     [_RO1tm, getMarkerPos "RO1"] call BIS_fnc_taskDefend;
 
     private _safePosRO2 = [getMarkerPos "RO2", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
     _RO2tm = [_safePosRO2, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    Raid2SpawnedGroups pushBack _RO2tm;
     [_RO2tm, getMarkerPos "RO2"] call BIS_fnc_taskDefend;
 
     if (_bluNums > 10) then {
         private _safePosRO3 = [getMarkerPos "RO3", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
         _RO3tm = [_safePosRO3, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        Raid2SpawnedGroups pushBack _RO3tm;
         [_RO3tm, getMarkerPos "RO3"] call BIS_fnc_taskDefend;
 
         private _safePosRO4 = [getMarkerPos "RO4", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
         _RO4tm = [_safePosRO4, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        Raid2SpawnedGroups pushBack _RO4tm;
         [_RO4tm, getMarkerPos "RO4"] call BIS_fnc_taskDefend;
     };
     if (_bluNums > 20) then {
         private _safePosRO5 = [getMarkerPos "RO5", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
         _RO5tm = [_safePosRO5, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        Raid2SpawnedGroups pushBack _RO5tm;
         [_RO5tm, getMarkerPos "RO5", 200] call BIS_fnc_taskPatrol;
 
         private _safePosRO6 = [getMarkerPos "RO6", 0, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
         _RO6tm = [_safePosRO6, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        Raid2SpawnedGroups pushBack _RO6tm;
         [_RO6tm, getMarkerPos "RO6", 200] call BIS_fnc_taskPatrol;
     };
+    diag_log format ["[A3M] Raid 2 - Defenders spawned"];
 
     // Spawn barricades or wrecks on roads within 400m of sg2 with random rotations
     private _roads = _cityPos nearRoads 400;
@@ -103,77 +120,23 @@ A3M_JR2_Raid2 = {
                 private _barricadeType = selectRandom _barricades;
 
                 private _veh = createVehicle [_wreckType, _pos, [], 0, "NONE"];
-                private _bar = createVehicle [_barricadeType, _pos, [], 0, "NONE"];
+                private _bar = createVehicle [_barricadeType, [_pos, 0, 5] call BIS_fnc_relPos, [], 0, "NONE"];
 
-                _bars pushBack _bar;
+                Raid2SpawnedVehicles pushBack _veh;
+                Raid2SpawnedVehicles pushBack _bar;
                 _veh setDir random 360;
                 _bar setDir random 360;
 
-                private _posATL = trashCan modelToWorld [0,0,0.3];
-                // Small fire effect
-                private _fire = "#particlesource" createVehicleLocal _posATL;
-                _fire setParticleParams [
-                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32],
-                "", "Billboard", 1, 0.5,
-                [0, 0, 0.1], [0, 0, 0.3], 1, 0.5, 0.4, 0.1,
-                [0.3, 0.4],
-                [[1, 0.8, 0.6, 0.8], [0.8, 0.5, 0.3, 0.5], [0.6, 0.3, 0.1, 0.0]],
-                [1], 0, 0, "", "", _fire
-                ];
-                _fire setParticleRandom [0.1, [0.1, 0.1, 0], [0.1, 0.1, 0.2], 0, 0.2, [0, 0, 0, 0], 0, 0];
-                _fire setDropInterval 0.05;
-                Raid1Fires pushBack _fire;
-                // Small smoke
-                private _smoke = "#particlesource" createVehicleLocal _posATL;
-                _smoke setParticleParams [
-                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1],
-                "", "Billboard", 1, 3,
-                [0, 0, 0.2], [0, 0, 0.8], 0, 0.5, 0.4, 0.1,
-                [0.5, 1, 1.5],
-                [[0.3, 0.3, 0.3, 0.4], [0.5, 0.5, 0.5, 0.3], [0.6, 0.6, 0.6, 0.0]],
-                [1], 0, 0, "", "", _smoke
-                ];
-                _smoke setParticleRandom [0.1, [0.1, 0.1, 0], [0.1, 0.1, 0.2], 0, 0.1, [0, 0, 0, 0], 0, 0];
-                _smoke setDropInterval 0.15;
-                Raid1Fires pushBack _smoke;
-
-                // Optional: Attach one fire instantly upon creation to a few random ones
-                if (random 1 < 0.4) then { // 40% chance to start burning right away
-                    // Larger fire effect
-                    private _largeFire = "#particlesource" createVehicleLocal _posATL;
-                    _largeFire setParticleParams [
-                    ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32],
-                    "", "Billboard", 1, 1,
-                    [0, 0, 0.2], [0, 0, 0.5], 1, 0.5, 0.4, 0.1,
-                    [0.5, 0.7],
-                    [[1, 0.8, 0.6, 1], [0.8, 0.5, 0.3, 0.8], [0.6, 0.3, 0.1, 0.0]],
-                    [1], 0, 0, "", "", _largeFire
-                    ];
-                    _largeFire setParticleRandom [0.2, [0.2, 0.2, 0], [0.2, 0.2, 0.3], 0, 0.3, [0, 0, 0, 0], 0, 0];
-                    _largeFire setDropInterval 0.03;
-                    Raid1Fires pushBack _largeFire;
-                    // Larger smoke
-                    private _largeSmoke = "#particlesource" createVehicleLocal _posATL;
-                    _largeSmoke setParticleParams [
-                    ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1],
-                    "", "Billboard", 1, 5,
-                    [0, 0, 0.3], [0, 0, 1], 0, 0.5, 0.4, 0.1,
-                    [0.7, 1.2, 2],
-                    [[0.2, 0.2, 0.2, 0.5], [0.4, 0.4, 0.4, 0.4], [0.5, 0.5, 0.5, 0.0]],
-                    [1], 0, 0, "", "", _largeSmoke
-                    ];
-                    _largeSmoke setParticleRandom [0.2, [0.2, 0.2, 0], [0.2, 0.2, 0.3], 0, 0.2, [0, 0, 0, 0], 0, 0];
-                    _largeSmoke setDropInterval 0.1;
-                    Raid1Fires pushBack _largeSmoke;
-                };
-
                 private _clutterTypes = ["Land_Barrel_empty_F", "Land_Pallet_F", "Land_Crate_wooden_F"];
                 private _clutter = createVehicle [selectRandom _clutterTypes, _pos, [], 0, "CAN_COLLIDE"];
+                Raid2SpawnedVehicles pushBack _clutter;
                 _clutter setPos ([_pos, 1, random 360] call BIS_fnc_relPos); // Move slightly away from main object
                 _clutter setDir random 360;
             };
         };
     };
+
+    diag_log format ["[A3M] Raid 2 - Trash spawned"];
 
     Raid2Win = createTrigger ["EmptyDetector", (getMarkerPos "sg2")];
     Raid2Win setTriggerArea [250, 250, 0, false];
@@ -187,7 +150,7 @@ A3M_JR2_Raid2 = {
     Raid2Active = 1;
     publicVariable "Raid2Active";
 
-    remoteExec ["A3M_MP_JR2_Raid2"];
+    remoteExecCall ["A3M_MP_JR2_Raid2"];
 };
 
 A3M_MP_JR2_Raid2 = {
@@ -197,13 +160,39 @@ A3M_MP_JR2_Raid2 = {
     A3MRaid2 setTaskState "Assigned";
     player setCurrentTask A3MRaid2;
     playMusic "Assigned";
-    ["TaskAssigned", ["Eliminate the rogue military unit. Clear the area. See map."]] call BIS_fnc_showNotification;
+    ["TaskAssigned", ["Eliminate the foreign terrorist cell. Clear the area. See map."]] call BIS_fnc_showNotification;
+};
+
+A3M_JR2_Raid2Cleanup = {
+    // Delete all spawned groups
+    {
+        if (!isNull _x) then {
+            { deleteVehicle _x; } forEach units _x;
+            deleteGroup _x;
+        };
+    } forEach Raid2SpawnedGroups;
+
+    // Delete all spawned vehicles
+    {
+        if (!isNull _x) then {
+            deleteVehicle _x;
+        };
+    } forEach Raid2SpawnedVehicles;
+
+    // Clear the arrays
+    Raid2SpawnedGroups = [];
+    Raid2SpawnedVehicles = [];
+
+    diag_log format ["[A3M] Raid 2 - Cleanup completed"];
 };
 
 A3M_JR2_Raid2Clear = {
-    // [ '','A3M_MP_RaidClear',true,false] spawn BIS_fnc_MP;
-    remoteExec ["A3M_MP_JR2_Raid2Clear"];
-    { deleteVehicle _x; } forEach Raid2Fires;
+    // Call cleanup function first
+    call A3M_JR2_Raid2Cleanup;
+
+    remoteExecCall ["A3M_MP_JR2_Raid2Clear"];
+    "sg12" setMarkerPos (getMarkerpos "offmap");
+    _markers setMarkerPos (getMarkerpos "offmap");
 
     B_DefenseBudget = (B_DefenseBudget + 2000000);
     publicVariable "B_DefenseBudget";

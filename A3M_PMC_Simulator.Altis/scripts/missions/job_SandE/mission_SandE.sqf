@@ -8,6 +8,11 @@ A3M_svr_SandE = {
     MissionStatus = "M4";
     publicVariable "MissionStatus";
 
+    // Initialize global arrays for cleanup
+    SandESpawnedGroups = [];
+    SandESpawnedUnits = [];
+    SandESpawnedTriggers = [];
+
     // Find random location with <=3 buildings within 50m and >1km from C12
     private _validPos = [];
     while {count _validPos == 0} do {
@@ -31,6 +36,7 @@ A3M_svr_SandE = {
         SARDead setTriggerActivation ["ANY", "PRESENT", true];
         SARDead setTriggerType "NONE";
         SARDead setTriggerStatements ["!alive SAR1", "[] call A3M_JSandE_SEFailed;", ""];
+        SandESpawnedTriggers pushBack SARDead;
     };
 
     A3M_fnc_SEVIPSaved = {
@@ -39,13 +45,16 @@ A3M_svr_SandE = {
         SAResc setTriggerActivation ["ANY", "PRESENT", true];
         SAResc setTriggerType "NONE";
         SAResc setTriggerStatements ["SAR1 in thisList", "[] call A3M_JSandE_SESucceeded;", ""];
+        SandESpawnedTriggers pushBack SAResc;
     };
 
     // Random Select Hostage
-    RandomVIP2 = ["Astral_VIP_0","C_Nikos_aged","C_scientist_F" ];
+    RandomVIP2 = ["A3M_astral_VIP_1","A3M_astral_VIP_2","A3M_astral_VIP_3","A3M_astral_VIP_4","C_journalist_F","C_scientist_F" ];
     RandomVIPSel2 = RandomVIP2 select floor random count RandomVIP2;
     CO = createGroup civilian;
     RandomVIPSel2 createUnit [getMarkerPos PublicLoc, CO, "SAR1 = this", 0.9, "COLONEL" ];
+    SandESpawnedGroups pushBack CO;
+    SandESpawnedUnits pushBack SAR1;
     sleep 1;
     CO setBehaviour "CARELESS";
     sleep 0.5;
@@ -64,9 +73,22 @@ A3M_svr_SandE = {
     SAR1 disableAI "ANIM";
     SAR1 playMoveNow "Acts_AidlPsitMstpSsurWnonDnon_loop";
 
+    removeGoggles SAR1;
+    SAR1 addGoggles "G_Blindfold_01_white_F";
+
     RescueAction = SAR1 addAction ["Rescue" , {
         [SAR1] remoteExecCall ["A3M_MP_EscVIPCmds"];
         remoteExec ["A3M_MP_JSandE_ChangeSARDest"];
+    }];
+
+    SAR1 addAction ["Remove Blindfold", {
+        params ["_target", "_caller", "_actionId", "_arguments"];
+        if (goggles _target == "G_Blindfold_01_white_F") then {
+            removeGoggles _target;
+            private _holder = createVehicle ["GroundWeaponHolder", getPos _target, [], 0, "CAN_COLLIDE"];
+            _holder addItemCargo ["G_Blindfold_01_white_F", 1];
+            _target removeAction _actionId;
+        };
     }];
 
     [] call A3M_fnc_SEVIPDead;
@@ -75,30 +97,66 @@ A3M_svr_SandE = {
     sleep 1;
 
     _HSTF = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+    SandESpawnedGroups pushBack _HSTF;
     [_HSTF, getPos SAR1] call BIS_fnc_taskDefend;
 
     _bluNums = west countSide allPlayers;
 
     if (_bluNums > 10) then {
         _HSTF2 = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        SandESpawnedGroups pushBack _HSTF2;
         [_HSTF2, getPos SAR1, 200] call BIS_fnc_taskPatrol;
 
         _HSTF3 = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        SandESpawnedGroups pushBack _HSTF3;
         [_HSTF3, getPos SAR1, 200] call BIS_fnc_taskPatrol;
     };
     if (_bluNums > 20) then {
         _HSTF4 = [getPos SAR1, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer","A3M_Falcon_Snatcher","A3M_Falcon_Smuggler"]] call BIS_fnc_spawnGroup;
+        SandESpawnedGroups pushBack _HSTF4;
         [_HSTF4, getPos SAR1] call BIS_fnc_taskDefend;
     };
 
-    // [ '','A3M_mp_SARmission',true,false] spawn BIS_fnc_MP;
     remoteExec ["A3M_MP_JSandE_SARmission"];
 
     while { SEActive == 1 } do { "SAR1ICO" setMarkerPos getPos SAR1; sleep 0.5; };
 };
 
+A3M_JSandE_SandECleanup = {
+    // Delete all spawned groups
+    {
+        if (!isNull _x) then {
+            { deleteVehicle _x; } forEach units _x;
+            deleteGroup _x;
+        };
+    } forEach SandESpawnedGroups;
+
+    // Delete all spawned units
+    {
+        if (!isNull _x) then {
+            deleteVehicle _x;
+        };
+    } forEach SandESpawnedUnits;
+
+    // Delete all spawned triggers
+    {
+        if (!isNull _x) then {
+            deleteVehicle _x;
+        };
+    } forEach SandESpawnedTriggers;
+
+    // Clear the arrays
+    SandESpawnedGroups = [];
+    SandESpawnedUnits = [];
+    SandESpawnedTriggers = [];
+
+    diag_log format ["[A3M] SandE - Cleanup completed"];
+};
+
 A3M_JSandE_SEFailed = {
-    // ['','A3M_MP_SEFailed',true,false] call BIS_fnc_MP;
+    // Call cleanup function first
+    call A3M_JSandE_SandECleanup;
+
     remoteExecCall ["A3M_MP_JSandE_SEFailed"];
     SEActive = 0;
     publicVariable "SEActive";
@@ -109,6 +167,9 @@ A3M_JSandE_SEFailed = {
 };
 
 A3M_JSandE_SESucceeded = {
+    // Call cleanup function first
+    call A3M_JSandE_SandECleanup;
+
     remoteExecCall ["A3M_MP_JSandE_SESucceeded"];
     SEActive = 0;
     publicVariable "SEActive";

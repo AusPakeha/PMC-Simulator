@@ -1,6 +1,12 @@
 A3M_JC_TRKEscort = {
+    // Initialize global arrays for cleanup
+    ConvoySpawnedGroups = [];
+    ConvoySpawnedVehicles = [];
+    ConvoySpawnedTriggers = [];
+
     private _center = [worldSize / 2, worldSize / 2];
     private _mapSize = worldSize * sqrt 2 / 2;
+    private _spwnDir = markerDir "deltruck";
 
     // JIP Handler Mission Status
     MissionStatus = "M2";
@@ -11,7 +17,7 @@ A3M_JC_TRKEscort = {
     publicVariable "ConvoyActive";
 
     // Random Selection of Destination, and public broadcast of destination to all players
-    _allLocations = nearestLocations [_center, ["NameCity", "NameVillage", "NameTown", "NameLocal"], _mapSize];
+    _allLocations = nearestLocations [_center, ["NameCity", "NameVillage"], _mapSize];
     _randomLocation = selectRandom _allLocations;
     _selectedPos = locationPosition _randomLocation;
     "DELpos" setMarkerPos _selectedPos;
@@ -25,12 +31,14 @@ A3M_JC_TRKEscort = {
 
     if (EnPres == 1) then {
         _HVTen = [getMarkerPos PubDelDestination, EAST, ["A3M_Lieutenant_Enforcer","A3M_Falcon_Scout_Rifle","A3M_Falcon_Hireling_Launcher","A3M_Falcon_Dealer"]] call BIS_fnc_spawnGroup;
+        ConvoySpawnedGroups pushBack _HVTen;
         [_HVTen, getMarkerPos PubDelDestination] call BIS_fnc_taskDefend;
     };
 
     // Create Trigger to Handle Mission Success
     A3M_fnc_DelDestinationTrigger = {
         DelDest = createTrigger ["EmptyDetector", getMarkerPos PubDelDestination];
+        ConvoySpawnedTriggers pushBack DelDest;
         DelDest setTriggerArea [10, 10, 0, false];
         DelDest setTriggerActivation ["ANY", "PRESENT", true];
         DelDest setTriggerType "NONE";
@@ -40,6 +48,7 @@ A3M_JC_TRKEscort = {
     // Create Trigger to handle mission failure
     A3M_fnc_DelDeathTrigger = {
         DelDead = createTrigger ["EmptyDetector", getMarkerPos PubDelDestination];
+        ConvoySpawnedTriggers pushBack DelDead;
         DelDead setTriggerArea [0, 0, 0, false];
         DelDead setTriggerActivation ["ANY", "PRESENT", true];
         DelDead setTriggerType "NONE";
@@ -48,6 +57,8 @@ A3M_JC_TRKEscort = {
 
     // Create Box Truck for Delivery
     DEL1 = "C_Van_01_box_F" createVehicle (getMarkerPos "deltruck");
+    DEL1 setDir _spwnDir;
+    ConvoySpawnedVehicles pushBack DEL1;
 
     // Call creation of triggers
     call A3M_fnc_DelDestinationTrigger;
@@ -86,13 +97,39 @@ A3M_MP_JC_ConvoySuccess = {
     player setCurrentTask CO1;
 };
 
+A3M_JC_ConvoyCleanup = {
+    // Delete all spawned groups
+    {
+        if (!isNull _x) then {
+            { deleteVehicle _x; } forEach units _x;
+            deleteGroup _x;
+        };
+    } forEach ConvoySpawnedGroups;
+
+    // Delete all spawned vehicles
+    {
+        if (!isNull _x) then {
+            deleteVehicle _x;
+        };
+    } forEach ConvoySpawnedVehicles;
+
+    // Delete all spawned triggers
+    {
+        if (!isNull _x) then {
+            deleteVehicle _x;
+        };
+    } forEach ConvoySpawnedTriggers;
+
+    // Clear the arrays
+    ConvoySpawnedGroups = [];
+    ConvoySpawnedVehicles = [];
+    ConvoySpawnedTriggers = [];
+};
+
 A3M_JC_ConvoyFailed = {
-    // ['','A3M_MP_ConvoyFailed',true,false] call BIS_fnc_MP;
-    remoteExecCall ["A3M_MP_ConvoyFailed"];
-    deleteVehicle DelDest;
-    deleteVehicle DelDead;
-    sleep 10.0;
-    deleteVehicle DEL1;
+    remoteExecCall ["A3M_MP_JC_ConvoyFailed"];
+    call A3M_JC_ConvoyCleanup;
+    "DELpos" setMarkerPos (getMarkerpos "offmap");
     ConvoyActive = 0;
     publicVariable "ConvoyActive";
     MissionStatus = "M0";
@@ -100,12 +137,9 @@ A3M_JC_ConvoyFailed = {
 };
 
 A3M_JC_ConvoySuccess = {
-    // ['','A3M_MP_ConvoySuccess',true,false] call BIS_fnc_MP;
-    remoteExecCall ["A3M_MP_ConvoySuccess"];
-    deleteVehicle DelDest;
-    deleteVehicle DelDead;
-    sleep 5.0;
-    deleteVehicle DEL1;
+    remoteExecCall ["A3M_MP_JC_ConvoySuccess"];
+    call A3M_JC_ConvoyCleanup;
+    "DELpos" setMarkerPos (getMarkerpos "offmap");
     ConvoyActive = 0;
     publicVariable "ConvoyActive";
     MissionStatus = "M0";

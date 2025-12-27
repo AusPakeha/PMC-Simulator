@@ -90,7 +90,7 @@ A3M_fnc_JT9sec_Delivery = {
 
     T9DelGrp = createGroup Civilian;
 
-    T9DelTrk = "C_Van_01_box_F" createVehicle getMarkerPos "T9Stage1";
+    T9DelTrk = "A3M_astral_van" createVehicle getMarkerPos "T9Stage1";
     T9DelTrk_crew = [T9DelTrk, T9DelGrp] call BIS_fnc_spawnCrew;
 
     _wpT1 = T9DelGrp addWaypoint [getMarkerPos "T9Stop1", 1];
@@ -195,7 +195,6 @@ A3M_fnc_JT9sec_Incident_Causer = {
         sleep RandomTime;
         [] call A3M_fnc_JT9sec_SelectIncident;
     } else {
-        // [ '','A3M_MP_T9Success',true,false] call BIS_fnc_MP;
         remoteExecCall ["A3M_MP_JT9sec_T9Success"];
 
         MissionStatus = "M0";

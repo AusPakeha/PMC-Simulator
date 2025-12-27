@@ -2,6 +2,9 @@ A3M_JVIPEscort_VIPEscort = {
     private _center = [worldSize / 2, worldSize / 2];
     private _mapSize = worldSize * sqrt 2 / 2;
 
+    // Initialize global arrays for cleanup
+    VIPEscortSpawnedGroups = [];
+
     // JIP Handler Mission Status
     MissionStatus = "M1";
     publicVariable "MissionStatus";
@@ -11,7 +14,7 @@ A3M_JVIPEscort_VIPEscort = {
     publicVariable "EscortActive";
 
     // Randomly Select HVT's Position from locations, broadcast position to all players
-    _allLocations = nearestLocations [_center, ["NameCity", "NameVillage", "NameTown", "NameLocal"], _mapSize];
+    _allLocations = nearestLocations [_center, ["NameCity", "NameVillage"], _mapSize];
     _randomLocation = selectRandom _allLocations;
     _selectedPos = locationPosition _randomLocation;
     "HVTpos" setMarkerPos _selectedPos;
@@ -30,6 +33,7 @@ A3M_JVIPEscort_VIPEscort = {
     // Create Cadre on Random Chance
     if (EnPres == 1) then {
         _HVTen = [getMarkerPos "PublicDestination", EAST, ["A3M_Lieutenant_Oppressor", "A3M_Falcon_Thug", "A3M_Falcon_Scout_Rifle", "A3M_Falcon_Dealer", "A3M_Falcon_Snatcher", "A3M_Falcon_Guard", "A3M_Falcon_Watcher"]] call BIS_fnc_spawnGroup;
+        VIPEscortSpawnedGroups pushBack _HVTen;
         [_HVTen, getMarkerPos "PublicDestination"] call BIS_fnc_taskDefend;
     };
 
@@ -54,22 +58,77 @@ A3M_JVIPEscort_VIPEscort = {
     [] call A3M_fnc_JVIPEscort_DestinationTrigger;
     [] call A3M_fnc_JVIPEscort_DeathTrigger;
 
-    while { EscortActive == 1 } do { "VIP1ICO" setMarkerPos getpos VIP1; sleep 0.5; };
+    [] spawn {
+        while { EscortActive == 1 } do {
+            "VIP1ICO" setMarkerPos getpos VIP1;
+            sleep 0.5;
+        };
+    };
+};
+
+A3M_JVIPEscort_Cleanup = {
+    // Delete all spawned groups
+    {
+        if (!isNull _x) then {
+            { deleteVehicle _x; } forEach units _x;
+            deleteGroup _x;
+        };
+    } forEach VIPEscortSpawnedGroups;
+
+    // Delete triggers
+    if (!isNull VIPDest) then { deleteVehicle VIPDest; };
+    if (!isNull VIPDead) then { deleteVehicle VIPDead; };
+
+    // Delete VIP
+    if (!isNull VIP1) then { deleteVehicle VIP1; };
+
+    // Clear the array
+    VIPEscortSpawnedGroups = [];
+};
+
+A3M_JVIPEscort_EscortSuccess = {
+    remoteExecCall ["A3M_MP_EscortSuccess"];
+
+    "VIP1ICO" setMarkerPos (getMarkerpos "offmap");
+
+    [VIP1] join grpNull;
+    TAgroup = createGroup Civilian;
+    [VIP1] join TAgroup;
+    TAgroup addWaypoint [ getMarkerPos PublicDestination, 1];
+    [TAgroup, 1] setWPPos getMarkerPos PublicDestination;
+    [TAgroup, 1] setWaypointType "move";
+
+    VIP1 allowDamage false;
+
+    deleteVehicle VIPDest;
+    deleteVehicle VIPDead;
+
+    EscortActive = 0;
+    publicVariable "EscortActive";
+
+    MissionStatus = "M0";
+    publicVariable "MissionStatus";
+
+    B_DefenseBudget = (B_DefenseBudget + 50000);
+    publicVariable "B_DefenseBudget";
+
+    PublicDestination = nil;
+    publicVariable "PublicDestination";
+
+    sleep 30;
+
+    deleteVehicle VIP1;
 };
 
 A3M_JVIPEscort_EscortFailed = {
-    // ['','A3M_MP_EscortFailed',true,false] call BIS_fnc_MP;
     remoteExecCall ["A3M_MP_JVIPEscort_EscortFailed"];
 
     "VIP1ICO" setMarkerPos (getMarkerpos "offmap");
     [VIP1] joinSilent grpNull;
 
-    deleteVehicle VIPDest;
-    deleteVehicle VIPDead;
-
     sleep 10;
 
-    deleteVehicle VIP1;
+    call A3M_JVIPEscort_Cleanup;
 
     EscortActive = 0;
     publicVariable "EscortActive";
