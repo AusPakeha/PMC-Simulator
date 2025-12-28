@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPSG Store Store</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\store\\ui\\_site\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\store\\ui\\_site\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="browser-window">
+        <!-- Address Bar -->
+        <div class="browser-header">
+            <div class="nav-buttons">
+                <div class="nav-btn">&lt;</div>
+                <div class="nav-btn">&gt;</div>
+            </div>
+            <div class="address-bar">
+                secure.orionsecurity.mil/store
+            </div>
+            <div class="window-controls">
+                <div class="close-btn" id="btn-exit">X</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-container">
+            <!-- Logo Header -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <!-- UTF-8 Symbol for Target/Globe feel -->
+                    <span class="logo-icon">&#8853;</span>
+                    Orion Store Store
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <div id="btn-items" class="category-btn">Items</div>
+                <div id="btn-medical" class="category-btn">Medical</div>
+                <div id="btn-electronics" class="category-btn">Electronics</div>
+                <div id="btn-vests" class="category-btn">Vests</div>
+                <div id="btn-uniforms" class="category-btn">Uniforms</div>
+                <div id="btn-headgear" class="category-btn">Headgear</div>
+                <div id="btn-backpacks" class="category-btn">Backpacks</div>
+                <div id="btn-suppressors" class="category-btn">Suppressors</div>
+                <div id="btn-optics" class="category-btn">Optics</div>
+                <div id="btn-rifles" class="category-btn">Rifles</div>
+                <div id="btn-pistols" class="category-btn">Pistols</div>
+                <div id="btn-launchers" class="category-btn">Launchers</div>
+                <div id="btn-magazines" class="category-btn">Magazines</div>
+                <div id="btn-grenades" class="category-btn">Grenades</div>
+                <div id="btn-smoke-grenades" class="category-btn">Smoke Grenades</div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

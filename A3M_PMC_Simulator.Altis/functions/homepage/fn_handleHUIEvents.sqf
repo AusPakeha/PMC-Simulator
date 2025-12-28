@@ -17,13 +17,13 @@ switch (_event) do {
         _control ctrlWebBrowserAction ["ExecJS", format ["window.receiveHomepageData(%1);", toJSON _data]];
     };
     case "access::bank": {
-        [] spawn A3M_fnc_AccessBank;
+        [] spawn A3M_fnc_openBankUI;
     };
     case "access::fleet": {
         [] spawn A3M_fnc_openFleetUI;
     };
     case "access::arms": {
-        execVM 'scripts\ItemStore.sqf';
+        [] spawn A3M_fnc_openStoreUI;
     };
     case "access::admin": {
         [] spawn A3M_fnc_AdminPanel;

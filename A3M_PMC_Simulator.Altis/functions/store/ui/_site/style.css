@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.browser-window {
+    background: #fff;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 1280px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+/* Browser Address Bar */
+.browser-header {
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 1px solid #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #666;
+    cursor: default;
+}
+
+.address-bar {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.close-btn {
+    color: #c00;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.content-container {
+    padding: 20px 30px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.logo-section {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1e3c72;
+    padding-bottom: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    color: #c00; /* Red globe/target */
+    font-size: 32px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.category-btn {
+    background: #1e3c72;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    border: 2px solid #1e3c72;
+}
+
+.category-btn:hover {
+    background: #2a5298;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Item List */
+.item-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.item-row:hover {
+    background: #f5f5f5;
+}
+
+.item-image {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.item-image:hover {
+    transform: scale(2.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transform-origin: left center;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    color: #1e3c72;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.buy-btn {
+    padding: 10px 24px;
+    background: #1e3c72;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-left: auto;
+}
+
+.buy-btn:hover {
+    background: #2a5298;
+    transform: translateY(-1px);
+}
+
+.buy-btn:active {
+    transform: translateY(0);
+}
+
+.mod-selector {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #f5f5f5;
+    border-bottom: 2px solid #ddd;
+    overflow-x: auto;
+}
+
+.mod-btn {
+    padding: 8px 16px;
+    background: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.mod-btn:hover {
+    border-color: #1e3c72;
+    color: #1e3c72;
+}
+
+.mod-btn.active {
+    background: #1e3c72;
+    color: #fff;
+    border-color: #1e3c72;
+}

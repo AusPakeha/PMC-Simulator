@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pursuit Bank</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\bank\\ui\\_site\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\bank\\ui\\_site\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="browser-window">
+        <div class="browser-header">
+            <div class="nav-buttons">
+                <div class="nav-btn">&#8592;</div>
+                <div class="nav-btn">&#8594;</div>
+                <div class="nav-btn">&#8635;</div>
+            </div>
+            <div class="address-bar">
+                <span>&#128274;</span> https://www.pursuitbank.com/secure/login
+            </div>
+            <div class="window-controls">
+                <div class="close-btn" id="btn-exit">X</div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="logo-section">
+                <div class="logo-text">
+                    <span class="logo-icon">&#36;</span> Pursuit Bank <span
+                        style="font-size: 14px; font-weight: normal; margin-left: 10px; color: #666;">Member FDIC</span>
+                </div>
+            </div>
+
+            <div class="bank-container">
+                <!-- Login View -->
+                <div id="view-login" class="login-view">
+                    <h2>Welcome to Pursuit Bank Online</h2>
+                    <p>Please sign in to access your accounts.</p>
+                    <button id="btn-signin" class="action-btn">Sign In</button>
+                </div>
+
+                <!-- Dashboard View -->
+                <div id="view-dashboard" class="hidden">
+                    <div class="balance-card">
+                        <h3>Account Balance</h3>
+                        <div id="account-balance" class="balance-amount">$0.00</div>
+                    </div>
+
+                    <div class="layout-grid">
+                        <div class="balance-card">
+                            <h4>Pending Deposits</h4>
+                            <div id="pending-balance" class="pending-amount">$0.00</div>
+                            <p style="font-size: 12px; color: #666;">Funds available for transfer from rating.</p>
+                            <button id="btn-submit-timesheet" class="action-btn submit-btn">Submit Timesheet</button>
+                        </div>
+                        <div class="balance-card">
+                            <h4>Debits</h4>
+                            <div id="debit-balance" class="debit-amount">$0.00</div>
+                            <p style="font-size: 12px; color: #666;">Recent charges.</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: right; margin-top: 20px;">
+                        <button id="btn-signout" class="action-btn" style="background: #c62828;">Secure Sign
+                            Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

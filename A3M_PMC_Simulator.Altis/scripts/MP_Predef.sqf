@@ -617,7 +617,7 @@ DRI_HQmsg = {
 	] spawn BIS_fnc_typeText2;
 };
 DRI_M4RMsg = {
-[
+    [
 		[
 			["Altis ","align = 'center' shadow = '1' size = '0.7' font='PuristaBold'"],
 			["Rifle Club","align = 'center' shadow = '1' size = '0.7'","#aaaaaa"],
@@ -627,7 +627,7 @@ DRI_M4RMsg = {
 	] spawn BIS_fnc_typeText2;
 };
 DRI_ArmoryMsg = {
-[
+    [
 		[
 			["Orion Private ","align = 'center' shadow = '1' size = '0.7' font='PuristaBold'"],
 			["Security Group","align = 'center' shadow = '1' size = '0.7'","#aaaaaa"],
@@ -637,7 +637,7 @@ DRI_ArmoryMsg = {
 	] spawn BIS_fnc_typeText2;
 };
 DRI_MPHQMsg = {
-[
+    [
 		[
 			["Orion Private ","align = 'center' shadow = '1' size = '0.7' font='PuristaBold'"],
 			["Security Group","align = 'center' shadow = '1' size = '0.7'","#aaaaaa"],
@@ -647,7 +647,7 @@ DRI_MPHQMsg = {
 	] spawn BIS_fnc_typeText2;
 };
 DRI_HspMsg = {
-[
+    [
 		[
 			["Orion Private ","align = 'center' shadow = '1' size = '0.7' font='PuristaBold'"],
 			["Security Group","align = 'center' shadow = '1' size = '0.7'","#aaaaaa"],
@@ -657,7 +657,7 @@ DRI_HspMsg = {
 	] spawn BIS_fnc_typeText2;
 };
 DRI_TRAMsg = {
-[
+    [
 		[
 			["Orion Private ","align = 'center' shadow = '1' size = '0.7' font='PuristaBold'"],
 			["Security Group","align = 'center' shadow = '1' size = '0.7'","#aaaaaa"],
@@ -707,7 +707,7 @@ DRI_ABCT2_DHQTVOFF = {
 DRI_ABCT2_MPTV = {
     MPTVON = 1;
 
-    while {MPTVON == 1} do {
+    while { MPTVON == 1 } do {
         if (MPTVON == 1) then {
             _object = MP_TV;
             _caller = player;
@@ -818,7 +818,7 @@ M4RR_A_300 = {
     sleep 5;
     M4RR_A_7 animate ["terc", 1];
 };
-    M4RR_A_Pop7 = {
+M4RR_A_Pop7 = {
     [] spawn M4RR_A_AllTargetsDown;
     [] spawn M4RR_A_ResetScore;
     sleep 2;
@@ -1711,13 +1711,13 @@ M4RR_C_Pop40 = {
 // Bank Account Pre-Defines
 A3M_fnc_InitBank = {
     Wallet = 0;
-    getdough = profileNamespace getVariable ["SavedMoney", 0];
-    Wallet = (Wallet+getdough);
+    GetDough = profileNamespace getVariable ["SavedMoney", 0];
+    Wallet = (Wallet+GetDough);
     Debits = 0;
-    plyscore = rating player;
-    multiplyer = plyscore * 2;
+    PlyScore = rating player;
+    Multiplyer = PlyScore * 2;
     Payday_TimeSheet = 1;
-    player addRating -plyscore;
+    player addRating -PlyScore;
     SignedIn = 0;
 };
 
@@ -1772,14 +1772,14 @@ A3M_fnc_AccessBank = {
         if (signedin == 1) then {
             PM = paramsArray select 0;
             disableSerialization;
-            plyscore = rating player;
-            multiplyer = plyscore * PM;
+            PlyScore = rating player;
+            Multiplyer = PlyScore * PM;
             Wallet = (Wallet + Multiplyer);
             profileNamespace setVariable ["SavedMoney", Wallet];
-            hint format ["Payday! You were paid $%1.00 for services rendered. The money has been direct deposited to your account.", multiplyer];
+            hint format ["Payday! You were paid $%1.00 for services rendered. The money has been direct deposited to your account.", Multiplyer];
             ["InformationGreen", ["Payday!"]] call BIS_fnc_showNotification;
-            player addRating -plyscore;
-            plyscore = rating player;
+            player addRating -PlyScore;
+            PlyScore = rating player;
             saveProfileNamespace;
             [] call DoBalance;
             [] call DoDebits;
@@ -1792,8 +1792,8 @@ A3M_fnc_AccessBank = {
         if (signedin == 0) then {
             disableSerialization;
             Wallet = 0;
-            getdough = profileNamespace getVariable ["SavedMoney", 0];
-            Wallet = (Wallet+getdough);
+            GetDough = profileNamespace getVariable ["SavedMoney", 0];
+            Wallet = (Wallet+GetDough);
             Pname = profileName;
             hint format ["Welcome %1, You have signed in to the Pursuit Bank Online Banking Interface.", Pname];
             signedin = 1;
@@ -2318,7 +2318,7 @@ A3M_fnc_ResetIdent = {
     sleep 2;
 
     player setDamage 1;
-    hint format ["SACRIFICE! Your player identity has been deleted. Your bank account has been closed. Your rating has been reset to 0. Your stash has been emptied. Your soul has been claimed. Sign in to the bank to start a new persistent identity.", multiplyer];
+    hint format ["SACRIFICE! Your player identity has been deleted. Your bank account has been closed. Your rating has been reset to 0. Your stash has been emptied. Your soul has been claimed. Sign in to the bank to start a new persistent identity.", Multiplyer];
 
     ResetIdentActive = 0;
     player removeAction ResetIdentAct;

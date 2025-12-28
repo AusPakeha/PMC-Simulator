@@ -19,6 +19,9 @@ class CfgFunctions {
             class vBuyButton {};
         };
         class store {
+            class initStoreClass { preInit = 1; };
+            class openStoreUI {};
+            class handleStoreUIEvents {};
             class buyButton {};
             class buyItem {};
             class handleItemPurchase {};
@@ -33,6 +36,11 @@ class CfgFunctions {
             class initLaptopClass {};
             class openHUI {};
             class handleHUIEvents {};
+        };
+        class bank {
+            class initBankClass { preInit = 1; };
+            class openBankUI {};
+            class handleBankUIEvents {};
         };
         class email {
             class initEmailClass { preInit = 1; };
