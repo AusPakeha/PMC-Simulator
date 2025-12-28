@@ -252,6 +252,7 @@ A3M_msn_T9sec = {
 
 // Next Mission Set
 // *********************#################***********************
+
 A3M_msn_Hden1 = {
     if (isNil "HRaidActive") then { HRaidActive = 0; };
     if (HRaidActive == 0) then {
@@ -263,34 +264,6 @@ A3M_msn_Hden1 = {
         // Bells and Whistles to signal mission accepted
         hint "Mission Accepted";
         playSound "A3M_MissionAccepted";
-
-        // Execute Server Side Scripting
-        // ["", "A3M_svr_HackerRaid1", false, false, false] call BIS_fnc_MP;
-        remoteExecCall ["A3M_svr_HackerRaid1", 2];
-
-        // Execute MP Tasking
-        // ["","A3M_MP_HackerRaid1",true,false] call BIS_fnc_MP;
-        remoteExecCall ["A3M_MP_HackerRaid1"];
-    } else {
-        systemChat "A Mission of this type is already active, and cannot be duplicated.";
-    };
-};
-/*
-A3M_msn_Hden1 = {
-    if (isNil "HRaidActive") then { HRaidActive = 0; };
-    if (HRaidActive == 0) then {
-        MissionStatus = "M9";
-        publicVariable "MissionStatus";
-
-        HRaidActive = 1;
-        publicVariable "HRaidActive";
-        // Bells and Whistles to signal mission accepted
-        hint "Mission Accepted";
-        playSound "A3M_MissionAccepted";
-
-        // Execute Server Side Scripting
-        // ["", "A3M_svr_HackerRaid1", false, false, false] call BIS_fnc_MP;
-        remoteExecCall ["A3M_MP_JHD_HackerRaid1", 2];
 
         // Execute mission script
         remoteExecCall ["A3M_JHD_HackerRaid1", 2];
@@ -298,7 +271,6 @@ A3M_msn_Hden1 = {
         systemChat "A Mission of this type is already active, and cannot be duplicated.";
     };
 };
-*/
 
 // Next Mission Set
 // *********************#################***********************
@@ -343,7 +315,7 @@ A3M_msn_DgntrySec = {
         publicVariable "SpeechScene";
 
         // ["", "A3M_Svr_DgntrySec",false,false,false] call BIS_fnc_MP;
-        remoteExecCall ["A3M_JVIPSec_DgntrySec", 2];
+        ["", "A3M_JVIPSec_DgntrySec", 2, false, false] call BIS_fnc_MP;
     } else {
         hint "A Dignitary Speech Security assignment is currently active. You must wait until the current assignment is completed before you can start another.";
     };

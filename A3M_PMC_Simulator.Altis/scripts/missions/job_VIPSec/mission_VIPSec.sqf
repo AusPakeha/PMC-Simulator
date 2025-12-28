@@ -44,7 +44,16 @@ A3M_JVIPSec_SetSniperGroupInit = {
     RSniperGroup setSpeedMode 'NORMAL';
 };
 
+A3M_JVIPSec_HideAllSpeechPos = {
+    [SpeechPos1Hide, [], true] call BIS_fnc_moduleShowHide;
+    [SpeechPos2Hide, [], true] call BIS_fnc_moduleShowHide;
+    [SpeechPos3Hide, [], true] call BIS_fnc_moduleShowHide;
+};
+
 A3M_JVIPSec_DgntrySec = {
+    SpeechActive = 1;
+    publicVariable "SpeechActive";
+
     // Randomly select a Speech Venue...
     SpeechPosArray = ["SpeechPos1","SpeechPos2","SpeechPos3"];
     SpeechPos = SpeechPosArray select floor random count SpeechPosArray;
@@ -52,6 +61,21 @@ A3M_JVIPSec_DgntrySec = {
     //SpeechPos = "SpeechPos3";
     // PV The Speech Position, so task can be created on all machines.
     publicVariable "SpeechPos";
+
+    // Start proximity check loop to hide/show SpeechPos based on player presence
+    [] spawn {
+        while {SpeechActive == 1} do {
+            sleep 30;
+            private _playersNear = { _x distance (getMarkerPos SpeechPos) < 200 } count allPlayers > 0;
+            if (_playersNear) then {
+                // Show the current SpeechPos
+                [missionNamespace getVariable (SpeechPos + "Show"), [], true] call BIS_fnc_moduleShowHide;
+            } else {
+                // Hide all SpeechPos
+                [] call A3M_JVIPSec_HideAllSpeechPos;
+            };
+        };
+    };
 
 
     // Select Random Speech Audio
@@ -67,9 +91,11 @@ A3M_JVIPSec_DgntrySec = {
     // Create the speech venue at the randomly selected position...
     switch (SpeechPos) do {
         case "SpeechPos1": {
+            [SpeechPos2Hide, [], true] call BIS_fnc_moduleShowHide;
+            [SpeechPos3Hide, [], true] call BIS_fnc_moduleShowHide;
+            [SpeechPos1Show, [], true] call BIS_fnc_moduleShowHide;
             // Populate Athira Speech / Stage
-            PopulateAthira = [] spawn A3M_JVIPSec_PopAthira;
-            waitUntil { scriptDone PopulateAthira };
+            [] call A3M_JVIPSec_PopAthira;
 
             // Create Trigger to handle VIP Death
             [] spawn A3M_JVIPSec_VIPLifeMon;
@@ -138,7 +164,7 @@ A3M_JVIPSec_DgntrySec = {
             waitUntil { SpeechScene == 1 };
 
             // Begin Speech Cinematic for all players
-            remoteExecCall ["A3M_MP_JVIPSec_HandleSpeech"];
+            remoteExecCall ["A3M_MP_JVIPSec_HandleSpeech", 2];
 
             // Debug Line - Sniper Present Message
             //if (alive RSniper) then { hint "Sniper present" };
@@ -195,12 +221,16 @@ A3M_JVIPSec_DgntrySec = {
             };
 
             // Cinematic Wait - Cleanup
-            sleep 60;
-            { deleteVehicle _x } forEach AthiraObjArray;
+            [] spawn {
+                sleep 60;
+                { deleteVehicle _x } forEach AthiraObjArray;
+            };
         };
         case "SpeechPos2": {
-            PopulateZaros = [] spawn A3M_JVIPSec_PopZaros;
-            waitUntil { scriptDone PopulateZaros };
+            [SpeechPos1Hide, [], true] call BIS_fnc_moduleShowHide;
+            [SpeechPos3Hide, [], true] call BIS_fnc_moduleShowHide;
+            [SpeechPos2Show, [], true] call BIS_fnc_moduleShowHide;
+            [] call A3M_JVIPSec_PopZaros;
 
             // Create Trigger to handle VIP Death
             [] spawn A3M_JVIPSec_VIPLifeMon;
@@ -269,7 +299,7 @@ A3M_JVIPSec_DgntrySec = {
             waitUntil { SpeechScene == 1 };
 
             // Begin Speech Cinematic for all players
-            remoteExecCall ["A3M_MP_JVIPSec_HandleSpeech"];
+            remoteExecCall ["A3M_MP_JVIPSec_HandleSpeech", 2];
 
             // Debug Line - Sniper Present
             //if (alive RSniper) then { hint "Sniper present" };
@@ -326,12 +356,16 @@ A3M_JVIPSec_DgntrySec = {
             };
 
             // Cinematic Wait - Cleanup
-            sleep 60;
-            { deleteVehicle _x } forEach ZarosObjArray;
+            [] spawn {
+                sleep 60;
+                { deleteVehicle _x } forEach ZarosObjArray;
+            };
         };
         case "SpeechPos3": {
-            PopulatePyrgos = [] spawn A3M_JVIPSec_PopPyrgos;
-            waitUntil { scriptDone PopulatePyrgos };
+            [SpeechPos1Hide, [], true] call BIS_fnc_moduleShowHide;
+            [SpeechPos2Hide, [], true] call BIS_fnc_moduleShowHide;
+            [SpeechPos3Show, [], true] call BIS_fnc_moduleShowHide;
+            [] call A3M_JVIPSec_PopPyrgos;
 
             // Create Trigger to handle VIP Death
             [] spawn A3M_JVIPSec_VIPLifeMon;
@@ -457,8 +491,10 @@ A3M_JVIPSec_DgntrySec = {
             };
 
             // Cinematic Wait - Cleanup
-            sleep 60;
-            { deleteVehicle _x } forEach PyrgosObjArray;
+            [] spawn {
+                sleep 60;
+                { deleteVehicle _x } forEach PyrgosObjArray;
+            };
         };
     };
 };
@@ -500,6 +536,8 @@ A3M_JVIPSec_DignitaryKilled = {
 
     SpeechActive = 0;
     publicVariable "SpeechActive";
+
+    [] call A3M_JVIPSec_HideAllSpeechPos;
 
     deleteVehicle SpeechVIP;
 
@@ -621,6 +659,8 @@ A3M_JVIPSec_SpeechMissionComplete = {
     SpeechActive = 0;
     publicVariable "SpeechActive";
 
+    [] call A3M_JVIPSec_HideAllSpeechPos;
+
     deleteVehicle SpeechVIP;
 
     MissionStatus = "M0";
@@ -705,21 +745,23 @@ A3M_MP_JVIPSec_HandleSpeech = {
 A3M_MP_JVIPSec_HandleSpeechAnims = {
     SpeechTime = _this select 0;
     Interim = (SpeechTime / 2);
-    SpeechVIP disableAI "Anim";
+    if (!isNil "SpeechVIP") then {
+        SpeechVIP disableAI "anim";
 
-    // SpeechVIP say3D SpeechAudio;
-    [SpeechVIP, "Acts_B_out2_briefing"] remoteExecCall ["switchMoveEverywhere"];
-    sleep Interim;
-
-    if ((alive SpeechVIP) AND (SpeechInterrupt == 0)) then {
+        // SpeechVIP say3D SpeechAudio;
         [SpeechVIP, "Acts_B_out2_briefing"] remoteExecCall ["switchMoveEverywhere"];
-    };
-    sleep Interim;
+        sleep Interim;
 
-    if ((alive SpeechVIP) AND (SpeechInterrupt == 0)) then {
-        [SpeechVIP, "Acts_starterPistol_fire"] remoteExecCall ["switchMoveEverywhere"];
-        SpeechScene = 0;
-        publicVariable "SpeechScene";
+        if ((alive SpeechVIP) AND (SpeechInterrupt == 0)) then {
+            [SpeechVIP, "Acts_B_out2_briefing"] remoteExecCall ["switchMoveEverywhere"];
+        };
+        sleep Interim;
+
+        if ((alive SpeechVIP) AND (SpeechInterrupt == 0)) then {
+            [SpeechVIP, "Acts_starterPistol_fire"] remoteExecCall ["switchMoveEverywhere"];
+            SpeechScene = 0;
+            publicVariable "SpeechScene";
+        };
     };
 };
 

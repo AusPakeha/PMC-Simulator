@@ -6,7 +6,7 @@ A3M_JNSAR_reinforce = {
     publicVariable "NSARActive";
 
     sleep 1;
-    execVM "scripts/missions/job_NSAR/nsar.sqf";
+    execVM "scripts\missions\job_NSAR\nsar.sqf";
 };
 
 A3M_MP_JNSAR_StartTaskNSAR = {

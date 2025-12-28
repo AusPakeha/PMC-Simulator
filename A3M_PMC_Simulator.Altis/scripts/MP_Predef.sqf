@@ -1,43 +1,4 @@
-/*
-  /$$$$$$   /$$$$$$  /$$      /$$       /$$$$$$$  /$$      /$$  /$$$$$$         /$$$$$$  /$$                         /$$             /$$
- /$$__  $$ /$$__  $$| $$$    /$$$      | $$__  $$| $$$    /$$$ /$$__  $$       /$$__  $$|__/                        | $$            | $$
-| $$  \ $$|__/  \ $$| $$$$  /$$$$      | $$  \ $$| $$$$  /$$$$| $$  \__/      | $$  \__/ /$$ /$$$$$$/$$$$  /$$   /$$| $$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$
-| $$$$$$$$   /$$$$$/| $$ $$/$$ $$      | $$$$$$$/| $$ $$/$$ $$| $$            |  $$$$$$ | $$| $$_  $$_  $$| $$  | $$| $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
-| $$__  $$  |___  $$| $$  $$$| $$      | $$____/ | $$  $$$| $$| $$             \____  $$| $$| $$ \ $$ \ $$| $$  | $$| $$  /$$$$$$$  | $$    | $$  \ $$| $$  \__/
-| $$  | $$ /$$  \ $$| $$\  $ | $$      | $$      | $$\  $ | $$| $$    $$       /$$  \ $$| $$| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$  | $$| $$
-| $$  | $$|  $$$$$$/| $$ \/  | $$      | $$      | $$ \/  | $$|  $$$$$$/      |  $$$$$$/| $$| $$ | $$ | $$|  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$
-|__/  |__/ \______/ |__/     |__/      |__/      |__/     |__/ \______/        \______/ |__/|__/ |__/ |__/ \______/ |__/ \_______/   \___/   \______/ |__/
 
-
-Multiplayer / Client Side Predefines by Cody Salazar AKA Fr33d0m
-www.A3MilSim.com
-
-License:
-You can do whatever you were going to do anyway. Just give me the credit i'm due, and don't steal my shit. I'll be pissed.
-If you want to repay me for all my hard work, come and play arma with me! I hang out at a MilSim unit known as A3M (A3 MilSim)
-Come and visit us at ts3.a3milsim.com:1911
-
-WE LOVE JOINT OPS WITH OTHER UNITS!!
-
-www.A3MilSim.com (A3 MilSim)
-All Rights Reserved
-
-For Information and Inquiries, EMAIL: salazar@a3milsim.com
-
-Credits & Thanks:
-
-My wife, for not only supporting my modding ventures, but actually jumping in and helping with mods when she can. What a gal!
-
-And last, but definitely not least, the A3 community, who through over 250+ encouraging messages highly encouraged me to continue this project. I'm glad you like it,
-and I hope you enjoy the things I have in the works!
-
-################################## LET US BEGIN #################################### */
-/* Naming Conventions:
-
-A3M_Svr_AnyName = { This is something the server should do, and is executed so. Anything named like this should probably be moved to ServerSide_Predef.sqf };
-A3M_MP_AnyName = { This is something that should be called on all clients. };
-A3M_fnc_AnyName = { This is a function. This is a function. This is a bit of a blanket term, but should be used sparingly. This is usually called client side, but may be hybrid client / server or serverside but not called by anything but the server itself. };
-*/
 
 // Multiplayer Functions
 A3M_MP_EscVIPCmds = {
@@ -2156,10 +2117,20 @@ A3M_fnc_AdminPanel = {
             // Reset JIP Tasker
             MissionStatus = "M0";
             publicVariable "MissionStatus";
-            systemChat "JIP Tasker Module Reset";
-            sleep 1;
-
-            // Cancel VIP Escort Mission
+    systemChat "JIP Tasker Module Reset";
+    sleep 1;
+    // Initialize mission active variables if not set
+    if (isNil "EscortActive") then { EscortActive = 0; };
+    if (isNil "ConveyActive") then { ConveyActive = 0; };
+    if (isNil "CheckpointActive") then { CheckpointActive = 0; };
+    if (isNil "SEActive") then { SEActive = 0; };
+    if (isNil "Raid1Active") then { Raid1Active = 0; };
+    if (isNil "Raid2Active") then { Raid2Active = 0; };
+    if (isNil "NSARActive") then { NSARActive = 0; };
+    if (isNil "T9Active") then { T9Active = 0; };
+    if (isNil "HRaidActive") then { HRaidActive = 0; };
+    if (isNil "SpeechActive") then { SpeechActive = 0; };
+    // Cancel VIP Escort Mission
             if (EscortActive == 1) then {
                 EscortActive = 0;
                 publicVariable "EscortActive";

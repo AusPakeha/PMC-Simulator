@@ -5,7 +5,7 @@ A3M_JHD_HackerRaid1 = {
     private _mapSize = worldSize * sqrt 2 / 2;
 	private _houseClassname = "Land_i_House_Big_02_V1_F"; // Target house className
 	private _markerName = "hack1"; // Marker name
-	private _compositionFile = "scripts/missions/composition/hackDen.sqe"; // The composition file path
+	private _compositionFile = "scripts\missions\composition\hackDen.sqf"; // The composition file path
 	private _houses = nearestObjects [_center, [_houseClassname], _mapSize];
     diag_log "[A3M] hackDen - configuration completed";
 
@@ -13,7 +13,7 @@ A3M_JHD_HackerRaid1 = {
 		private _randomHouse = selectRandom _houses;
         private _finalHouse = _randomHouse;
 
-		_markerName setMarkerPos getPosATL _finalHouse;
+		_markerName setMarkerPos [getPosATL _finalHouse select 0, getPosATL _finalHouse select 1, 0];
         diag_log "[A3M] hackDen - hack1 marker moved";
 
 		private _houseDir = getDir _finalHouse;
@@ -21,15 +21,30 @@ A3M_JHD_HackerRaid1 = {
 
 		private _housePosATL = getPosATL _finalHouse;
 		// Adjust spawn position to align the composition's house with the actual house
-		private _relativeHousePos = [-1.8359375, 2.8839679, -2.1601563];
+		private _relativeHousePos = [-1.8359375, 2.8839679, -1];
 		private _spawnPosATL = _housePosATL vectorAdd _relativeHousePos;
 		private _spawnPosASL = ATLtoASL _spawnPosATL;
         diag_log ["[A3M] hackDen - House position: ATL: %1, Dir: %2", str _housePosATL, str _houseDir];
 
+		// Hide the house to prepare position for composition
+		_finalHouse hideObjectGlobal true;
+		missionNamespace setVariable ["A3M_HiddenHouse", _finalHouse];
+        diag_log "[A3M] hackDen - House hidden for composition placement";
+
 		// format: [position, Azimuth, Composition_Code] call BIS_fnc_objectsMapper
-        //_spawnedObjects = ["hackDen", _spawnPosASL, 0, _houseDir, false, false, true] call LARs_fnc_spawnComp;
-		_spawnedObjects = [_spawnPosASL, _houseDir, ((call compile preprocessFileLineNumbers _compositionFile) select 0)] call BIS_fnc_objectsMapper;
+		_spawnedObjects = [_spawnPosASL, _houseDir, call (compile (preprocessFileLineNumbers _compositionFile))] call BIS_fnc_objectsMapper;
+
+		// Reposition spawned objects relative to house center
+		{
+		    private _objPosATL = getPosATL _x;
+		    private _relativeVector = _objPosATL vectorDiff _spawnPosATL;
+		    private _newPosATL = _housePosATL vectorAdd _relativeVector;
+		    _x setPosATL _newPosATL;
+		} forEach _spawnedObjects;
+		diag_log "[A3M] hackDen - spawned objects repositioned relative to house center";
+
         missionNamespace setVariable ["A3M_HackDen_Comp", _spawnedObjects];
+
         diag_log "[A3M] hackDen - composition spawned";
 
 		private _eqrfPos = [_finalHouse, 700, random 360] call BIS_fnc_relPos;
@@ -41,7 +56,7 @@ A3M_JHD_HackerRaid1 = {
 		};
         diag_log "[A3M] hackDen - EQRF marker moved";
 
-		MPSrack = server_unit_screen;
+		MPSrack = server;
 		publicVariable "MPSrack";
 
         private _hackPos = getMarkerPos "hack1";
@@ -56,27 +71,21 @@ A3M_JHD_HackerRaid1 = {
 
 		newGroupA = createGroup east;
 		newUnitA = newGroupA createUnit ['A3M_DrugLord', _selectedPositions select 0, [], 0, 'CAN_COLLIDE'];
-		newUnitA setPosATL (_selectedPositions select 0);
 
 		newGroupB = createGroup east;
 		newUnitB = newGroupB createUnit ['A3M_Falcon_Smuggler', _selectedPositions select 1, [], 0, 'CAN_COLLIDE'];
-		newUnitB setPosATL (_selectedPositions select 1);
 
 		newGroupC = createGroup east;
 		newUnitC = newGroupC createUnit ['A3M_Falcon_Hireling_Launcher', _selectedPositions select 2, [], 0, 'CAN_COLLIDE'];
-		newUnitC setPosATL (_selectedPositions select 2);
 
 		newGroupD = createGroup east;
 		newUnitD = newGroupD createUnit ['A3M_Falcon_Snatcher', _selectedPositions select 3, [], 0, 'CAN_COLLIDE'];
-		newUnitD setPosATL (_selectedPositions select 3);
 
 		newGroupE = createGroup east;
 		newUnitE = newGroupE createUnit ['A3M_Lieutenant_Oppressor', _selectedPositions select 4, [], 0, 'CAN_COLLIDE'];
-		newUnitE setPosATL (_selectedPositions select 4);
 
 		newGroupF = createGroup east;
 		newUnitF = newGroupF createUnit ['A3M_Lieutenant_Enforcer', _selectedPositions select 5, [], 0, 'CAN_COLLIDE'];
-		newUnitF setPosATL (_selectedPositions select 5);
 
 		remoteExecCall ["A3M_JHD_HackOption", 0];
 
@@ -86,12 +95,15 @@ A3M_JHD_HackerRaid1 = {
 		diag_log format ["No houses found with classname %1", _houseClassname];
 		missionNamespace setVariable ["myMission_SpawnedCompObjects", []];
 	};
+
+    // Execute Server Side Scripting
+        remoteExecCall ["A3M_MP_JHD_HackerRaid1", 2];
 };
 
 A3M_MP_JHD_HackerRaid1 = {
     HackDen = player createSimpleTask ["Raid Hacker Den"];
     HackDen setSimpleTaskDescription ["Find and Raid the hacker den, download the hacker's logs, and exfil.", "Raid Hacker Den", "Hacker Den"];
-    HackDen setSimpleTaskDestination (getMarkerPos "Hack1");
+    HackDen setSimpleTaskDestination (getMarkerPos "hack1");
     HackDen setTaskState "Assigned";
     player setCurrentTask HackDen;
     playMusic "Assigned";
@@ -107,7 +119,7 @@ A3M_JHD_HackOption= {
 A3M_JHD_Hack = {
 	MissionStatus = "M10";
 	publicVariable "MissionStatus";
-	remoteExecCall ["A3M_JHD_HackerRaid1_2"];
+	call A3M_JHD_HackerRaid1_2;
 
 	remoteExecCall ["A3M_JHD_Hack_1", 2];
 	_HackProgress = ["Hacking into system...Please Wait", 300] spawn A3M_fnc_prgBar;
@@ -118,7 +130,7 @@ A3M_JHD_Hack = {
 	MissionStatus = "M0";
 	publicVariable "MissionStatus";
 	remoteExecCall ["A3M_JHD_Hack_2", 2];
-	remoteExecCall ["A3M_JHD_HackerRaid1_3"];
+	call A3M_JHD_HackerRaid1_3;
 };
 
 A3M_JHD_HackerRaid1_2 = {
@@ -128,7 +140,7 @@ A3M_JHD_HackerRaid1_2 = {
     ["ScoreAdded",["Part 1 Complete", 100]] call BIS_fnc_showNotification;
     HackDen2 = player createSimpleTask ["Defend Position"];
     HackDen2 setSimpleTaskDescription ["Defend the position while the logs upload.", "Defend Position", "Defend"];
-    HackDen2 setSimpleTaskDestination (getMarkerPos "Hack1");
+    HackDen2 setSimpleTaskDestination (getMarkerPos "hack1");
     HackDen2 setTaskState "Assigned";
     player setCurrentTask HackDen2;
     ["TaskAssigned", ["Defend until upload completes."]] call BIS_fnc_showNotification;
@@ -161,6 +173,8 @@ A3M_JHD_Hack_1 = {
 A3M_JHD_Hack_2 = {
 	HRaidActive = 0;
 	publicVariable "HRaidActive";
+    "hack1" setMarkerPos (getMarkerpos "offmap");
+    "hack_eqrf" setMarkerPos (getMarkerpos "offmap");
 
 	B_DefenseBudget = (B_DefenseBudget + 750000);
 	publicVariable "B_DefenseBudget";
@@ -176,6 +190,14 @@ A3M_JHD_Hack_2 = {
 		} else {
 			diag_log "Mission Hack Den could not be cleaned. Zues intervention required"
 		};
+	};
+
+	// Unhide the hidden house
+	private _hiddenHouse = missionNamespace getVariable ["A3M_HiddenHouse", nil];
+	if (!isNil "_hiddenHouse") then {
+		_hiddenHouse hideObjectGlobal false;
+		missionNamespace setVariable ["A3M_HiddenHouse", nil];
+		diag_log "Hack Den house unhidden after cleanup.";
 	};
 	// Grab the infantry stragglers, if any
 	if (!isNil "PC_QRFinf1") then {

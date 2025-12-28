@@ -1,3 +1,5 @@
+# TODO Do not delete any lines in TODO.md, only add to the file.
+
 -// legend
 -[x] Complete (probally partially complete if MrPakeha is doing it... lol)
 -[/] half way complete
@@ -35,8 +37,8 @@
 -
 -// UI Changes
 -[] set up files for each dialog
---[/] Homepage - Started, need to verify working
---[] Fleet Store - files made
+--[x] Homepage - Started, need to verify working
+--[x] Fleet Store - files made
 --[] Item Store
 --[x] Email
 --[] Admin
@@ -49,6 +51,9 @@
 --[] Create compositions for each upgrade
 --[] Code purchase system
 -
+-// Seeling point for player to make money from loot
+-[] create code and location in mission to sell weapons, ammo etc for money
 -
-// Mission system
-- Do not delete any lines in TODO.md, only add to the file.
+-
+-// Mission system
+-
