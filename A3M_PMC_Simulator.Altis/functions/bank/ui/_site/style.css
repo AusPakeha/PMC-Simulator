@@ -105,7 +105,8 @@ body {
 }
 
 .logo-icon {
-    color: #c00; /* Red globe/target */
+    color: #c00;
+    /* Red globe/target */
     font-size: 32px;
 }
 

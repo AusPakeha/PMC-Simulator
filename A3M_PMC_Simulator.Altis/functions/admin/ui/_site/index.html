@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPSG Admin Console</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\admin\\ui\\_site\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\admin\\ui\\_site\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="browser-window">
+        <!-- Address Bar -->
+        <div class="browser-header">
+            <div class="nav-buttons">
+                <div class="nav-btn">&lt;</div>
+                <div class="nav-btn">&gt;</div>
+            </div>
+            <div class="address-bar">
+                secure.orionsecurity.mil/admin
+            </div>
+            <div class="window-controls">
+                <div class="close-btn" id="btn-exit">X</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-container">
+            <!-- Logo Header -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <span class="logo-icon">&#8853;</span>
+                    Orion Admin Console
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="admin-tabs">
+                <button class="tab-btn active" onclick="switchTab('dashboard')">Dashboard</button>
+                <button class="tab-btn" onclick="switchTab('players')">Personnel</button>
+                <button class="tab-btn" onclick="switchTab('missions')">Operations</button>
+            </div>
+
+            <!-- Dashboard Tab -->
+            <div id="tab-dashboard" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Budget Balance</h3>
+                        <div id="stat-balance" class="stat-value">$...</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Spent</h3>
+                        <div id="stat-spent" class="stat-value">$...</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Slots</h3>
+                        <div id="stat-slots" class="stat-value">...</div>
+                    </div>
+                </div>
+
+                <div class="section-header">Global Actions</div>
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="adminAction('advanceGlobal')">Global Advance ($10k)</button>
+                    <button class="action-btn warning" onclick="adminAction('cleanup')">Force Cleanup</button>
+                </div>
+            </div>
+
+            <!-- Players Tab -->
+            <div id="tab-players" class="tab-content" style="display:none;">
+                <div class="split-view">
+                    <div class="list-panel">
+                        <div class="panel-header">Active Personnel</div>
+                        <div id="player-list" class="player-list">
+                            <!-- Populated by JS -->
+                            <div class="loading-spinner">Loading players...</div>
+                        </div>
+                    </div>
+                    <div class="details-panel" id="player-details">
+                        <div class="panel-header">Personnel Actions</div>
+                        <div class="empty-state">Select a player to view actions</div>
+
+                        <div id="player-actions-content" style="display:none;">
+                            <h3 id="selected-player-name">Player Name</h3>
+                            <div class="player-id" id="selected-player-id">ID: ...</div>
+
+                            <div class="action-group">
+                                <h4>Financial</h4>
+                                <div class="input-group">
+                                    <input type="number" id="cash-amount" placeholder="Amount" value="1000">
+                                    <button class="small-btn" onclick="playerAction('advance')">Advance</button>
+                                    <button class="small-btn danger" onclick="playerAction('deduct')">Fine</button>
+                                </div>
+                            </div>
+
+                            <div class="action-group">
+                                <h4>Communication</h4>
+                                <div class="input-group">
+                                    <input type="text" id="msg-text" placeholder="Message">
+                                    <button class="small-btn" onclick="playerAction('message')">Send</button>
+                                </div>
+                            </div>
+
+                            <div class="action-group">
+                                <h4>Administrative</h4>
+                                <div class="button-row">
+                                    <button class="action-btn" onclick="playerAction('promote')">Promote</button>
+                                    <button class="action-btn danger"
+                                        onclick="playerAction('incarcerate')">Incarcerate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missions Tab -->
+            <div id="tab-missions" class="tab-content" style="display:none;">
+                <div class="section-header">Mission Control</div>
+                <p>Emergency controls for active operations.</p>
+                <div class="actions-grid">
+                    <button class="action-btn danger large" onclick="adminAction('cancelMissions')">Cancel All Active
+                        Missions</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

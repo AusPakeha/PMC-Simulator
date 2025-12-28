@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
             A3API.RequestFile("functions\\email\\ui\\_site\\public\\nato_ca.png.b64")
         ]).then(([css, missionsData, js, astralB64, aafB64, natoB64]) => {
             console.log("All resources loaded successfully.");
-            
+
             const style = document.createElement("style");
             style.textContent = css;
             document.head.appendChild(style);
@@ -45,6 +46,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="browser-window">
         <!-- Address Bar -->
@@ -81,4 +83,5 @@
     </div>
     <!-- <script src="script.js"></script> -->
 </body>
+
 </html>

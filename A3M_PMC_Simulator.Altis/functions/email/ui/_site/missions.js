@@ -1,17 +1,17 @@
 /**
  * OPSG Email System - Mission Data
- * 
+ *
  * This file contains the mission contracts displayed in the email UI.
- * It is loaded as a global variable 'window.MISSION_DATA' to ensure compatibility 
+ * It is loaded as a global variable 'window.MISSION_DATA' to ensure compatibility
  * with the Arma 3 embedded browser (which restricts local file fetches).
- * 
+ *
  * HOW TO ADD A NEW MISSION:
  * 1. Add a new object to the array below.
  * 2. Ensure the 'id' is unique (e.g., 'contract_M11').
  * 3. Populate all fields.
  * 4. For 'logo', use one of the registered keys: 'astral', 'aaf', 'nato'.
  *    (See index.html for loaded logo definitions).
- * 
+ *
  * FIELDS:
  * - id: Unique identifier for the contract.
  * - sender: Name/Title of the sender.

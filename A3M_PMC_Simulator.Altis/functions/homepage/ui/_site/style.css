@@ -105,7 +105,8 @@ body {
 }
 
 .logo-icon {
-    color: #c00; /* Red globe/target */
+    color: #c00;
+    /* Red globe/target */
     font-size: 32px;
 }
 
@@ -148,7 +149,7 @@ p {
 
 .ad-banner:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-color: #1e3c72;
 }
 
@@ -189,7 +190,10 @@ p {
     color: #fff;
     border: 1px solid #000;
 }
-.ad-arms .ad-subtitle { color: #aaa; }
+
+.ad-arms .ad-subtitle {
+    color: #aaa;
+}
 
 /* Login Box */
 .login-section {
@@ -212,8 +216,8 @@ p {
 }
 
 .login-btn {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
     padding: 10px;
     border-radius: 4px;
@@ -226,12 +230,13 @@ p {
 }
 
 .login-btn:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* HR Bulletins */
 .bulletin-board {
-    background: #00bfff; /* Cyan/Blue */
+    background: #00bfff;
+    /* Cyan/Blue */
     border: 2px solid #000;
     border-radius: 8px;
     padding: 0;
@@ -240,11 +245,11 @@ p {
 }
 
 .bulletin-header {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     font-weight: bold;
     font-size: 18px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .bulletin-content {

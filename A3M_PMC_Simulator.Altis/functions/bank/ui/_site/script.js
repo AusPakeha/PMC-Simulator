@@ -49,7 +49,7 @@ btnExit.addEventListener('click', () => {
 });
 
 // Handle Data from Arma
-window.receiveBankData = function(response) {
+window.receiveBankData = function (response) {
     console.log('Received bank data:', response);
     const event = response.event;
     const data = response.data;

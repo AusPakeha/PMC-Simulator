@@ -82,6 +82,7 @@ class Extended_DisplayLoad_EventHandlers {
 #include "dialogs\A3M_AIR.hpp"
 #include "dialogs\PrgBar.hpp"
 
+#include "dialogs\RscAdmin.hpp"
 #include "dialogs\RscBank.hpp"
 #include "dialogs\RscEmail.hpp"
 #include "dialogs\RscFleet.hpp"

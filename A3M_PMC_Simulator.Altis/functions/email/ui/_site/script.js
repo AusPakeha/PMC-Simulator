@@ -13,7 +13,7 @@ let currentMissions = [];
 function initApp() {
     console.log("Initializing App...");
     loadMissions();
-    
+
     // Setup close button handler
     document.getElementById('btn-exit').addEventListener('click', () => {
         console.log("Exit button clicked");
@@ -82,8 +82,8 @@ function renderEmailList(missions) {
  */
 function renderEmailDetail(mission) {
     const contentContainer = document.getElementById('email-content');
-    
-    // Header Logo logic: 
+
+    // Header Logo logic:
     // Checks window.LOGO_DATA for base64 images loaded from .b64 files
     let headerLogoHtml = '';
     if (window.LOGO_DATA && window.LOGO_DATA[mission.logo]) {
@@ -122,15 +122,15 @@ function renderEmailDetail(mission) {
         <div class="email-header-logo">
             ${headerLogoHtml}
         </div>
-        
+
         ${bodyContent}
-        
+
         <div class="action-bar">
             <button class="btn-accept" onclick="acceptMission('${mission.id}')">ACCEPT CONTRACT</button>
         </div>
 
         <div class="footer-logo">
-            <span style="color: #c00; font-size: 30px;">&#8853;</span> 
+            <span style="color: #c00; font-size: 30px;">&#8853;</span>
             ORION <span style="font-weight:normal;">PRIVATE SECURITY GROUP</span>
         </div>
     `;
@@ -151,7 +151,7 @@ window.acceptMission = function (missionId) {
     };
     // Send event to Arma 3 SQF backend
     A3API.SendAlert(JSON.stringify(alert));
-    
+
     // Visual feedback
     const btn = document.querySelector('.btn-accept');
     btn.textContent = "ACCEPTED";
@@ -162,6 +162,6 @@ window.acceptMission = function (missionId) {
 /**
  * Placeholder for receiving events from Arma 3 (if needed in future)
  */
-window.receiveEmailEvent = function(response) {
+window.receiveEmailEvent = function (response) {
     console.log("Received email event:", response);
 }

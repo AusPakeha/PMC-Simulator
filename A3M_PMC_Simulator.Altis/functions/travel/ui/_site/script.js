@@ -59,7 +59,7 @@ function selectDestination(index, name) {
 }
 
 // This function is called by SQF via ExecJS
-window.receiveDestinations = function(response) {
+window.receiveDestinations = function (response) {
     console.log('Received response from Arma:', response);
     if (response.event === 'get::destinations::response') {
         handleDestinationsResponse(response.data);

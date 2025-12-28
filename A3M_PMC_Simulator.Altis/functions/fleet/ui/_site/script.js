@@ -40,11 +40,11 @@ let fleetData = {
  * Requests available mods from Arma on startup
  */
 function initApp() {
-    
+
     // Request available mods from Arma
     const alert = { event: "get::available::mods", data: {} };
     A3API.SendAlert(JSON.stringify(alert));
-    
+
     // Setup close button handler
     document.getElementById('btn-exit').addEventListener('click', () => {
         A3API.SendAlert(JSON.stringify({
@@ -86,24 +86,24 @@ function showCategory(categoryId) {
     // Request category data from Arma
     const alert = {
         event: "get::fleet::category",
-        data: { 
+        data: {
             category: categoryId,
-            mod: fleetData.currentMod 
+            mod: fleetData.currentMod
         }
     };
     A3API.SendAlert(JSON.stringify(alert));
-    
+
     // Show loading state with mod selector
     const contentContainer = document.querySelector('.content-container');
     const categoryName = fleetData.categories.find(c => c.id === categoryId)?.name || categoryId;
-    
+
     // Filter mods to only show available ones
     const availableModObjects = fleetData.allMods.filter(mod => fleetData.availableMods.includes(mod.id));
-    const modSelector = availableModObjects.map(mod => 
-        `<button class="mod-btn ${mod.id === fleetData.currentMod ? 'active' : ''}" 
+    const modSelector = availableModObjects.map(mod =>
+        `<button class="mod-btn ${mod.id === fleetData.currentMod ? 'active' : ''}"
                  onclick="selectMod('${mod.id}', '${categoryId}')">${mod.name}</button>`
     ).join('');
-    
+
     contentContainer.innerHTML = `
         <div class="logo-section">
             <div class="logo-text">
@@ -126,15 +126,15 @@ function showCategory(categoryId) {
  * @param {string} categoryId - Category ID (cars, armor, heli, etc.)
  * @param {string} jsonData - JSON string containing vehicle data from Arma
  */
-window.displayCategoryItems = function(categoryId, jsonData) {
+window.displayCategoryItems = function (categoryId, jsonData) {
     const contentContainer = document.querySelector('.content-container');
     const categoryName = fleetData.categories.find(c => c.id === categoryId)?.name || categoryId;
-    
+
     // Parse vehicle data from Arma's nested array format
     let items = [];
     try {
         const rawData = JSON.parse(jsonData);
-        
+
         // Convert [["key", "value"], ...] format to {key: value, ...} objects
         items = rawData.map(itemArray => {
             const vehicle = {};
@@ -164,11 +164,11 @@ window.displayCategoryItems = function(categoryId, jsonData) {
     if (items.length === 0) {
         // Filter mods to only show available ones
         const availableModObjects = fleetData.allMods.filter(mod => fleetData.availableMods.includes(mod.id));
-        const modSelector = availableModObjects.map(mod => 
-            `<button class="mod-btn ${mod.id === fleetData.currentMod ? 'active' : ''}" 
+        const modSelector = availableModObjects.map(mod =>
+            `<button class="mod-btn ${mod.id === fleetData.currentMod ? 'active' : ''}"
                      onclick="selectMod('${mod.id}', '${categoryId}')">${mod.name}</button>`
         ).join('');
-        
+
         contentContainer.innerHTML = `
             <div class="logo-section">
                 <div class="logo-text">
@@ -202,11 +202,11 @@ window.displayCategoryItems = function(categoryId, jsonData) {
 
     // Filter mods to only show available ones
     const availableModObjects = fleetData.allMods.filter(mod => fleetData.availableMods.includes(mod.id));
-    const modSelector = availableModObjects.map(mod => 
-        `<button class="mod-btn ${mod.id === fleetData.currentMod ? 'active' : ''}" 
+    const modSelector = availableModObjects.map(mod =>
+        `<button class="mod-btn ${mod.id === fleetData.currentMod ? 'active' : ''}"
                  onclick="selectMod('${mod.id}', '${categoryId}')">${mod.name}</button>`
     ).join('');
-    
+
     contentContainer.innerHTML = `
         <div class="logo-section">
             <div class="logo-text">
@@ -275,7 +275,7 @@ function showStoreFront() {
             <div id="btn-upgrades" class="category-btn">Upgrades</div>
         </div>
     `;
-    
+
     // Re-attach category button handlers
     const categories = ['cars', 'armor', 'heli', 'plane', 'naval', 'drone', 'support', 'upgrades'];
     categories.forEach(cat => {
@@ -296,7 +296,7 @@ function showStoreFront() {
  * Called by Arma on UI initialization
  * @param {Array<string>} mods - Array of available mod IDs (e.g., ["a3", "rhs", "ef"])
  */
-window.setAvailableMods = function(mods) {
+window.setAvailableMods = function (mods) {
     fleetData.availableMods = mods;
 };
 
@@ -310,7 +310,7 @@ window.setAvailableMods = function(mods) {
  * @param {string} modId - Selected mod ID (a3, rhs, ef, rf, ws, ace3)
  * @param {string} categoryId - Current category being viewed
  */
-window.selectMod = function(modId, categoryId) {
+window.selectMod = function (modId, categoryId) {
     fleetData.currentMod = modId;
     showCategory(categoryId);
 };
@@ -322,7 +322,7 @@ window.selectMod = function(modId, categoryId) {
  * @param {string} displayName - Human-readable vehicle name
  * @param {number} price - Vehicle cost in credits
  */
-window.purchaseItem = function(className, displayName, price) {
+window.purchaseItem = function (className, displayName, price) {
     A3API.SendAlert(JSON.stringify({
         event: "purchase::fleet::vehicle",
         data: {

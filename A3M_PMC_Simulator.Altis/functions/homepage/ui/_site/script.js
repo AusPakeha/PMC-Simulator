@@ -49,7 +49,7 @@ function sendEvent(eventType) {
 }
 
 // This function is called by SQF via ExecJS
-window.receiveHomepageData = function(response) {
+window.receiveHomepageData = function (response) {
     console.log('Received response from Arma:', response);
     if (response.event === 'get::homepage::data::response') {
         handleHomepageResponse(response.data);

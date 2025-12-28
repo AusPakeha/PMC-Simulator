@@ -134,7 +134,7 @@ function showCategory(categoryId) {
  * @param {string} categoryId - Category ID (cars, armor, heli, etc.)
  * @param {string} jsonData - JSON string containing item data from Arma
  */
-window.displayCategoryItems = function(categoryId, jsonData) {
+window.displayCategoryItems = function (categoryId, jsonData) {
     const contentContainer = document.querySelector('.content-container');
     const categoryName = itemData.categories.find(c => c.id === categoryId)?.name || categoryId;
 
@@ -308,7 +308,7 @@ function showStoreFront() {
  * Called by Arma on UI initialization
  * @param {Array<string>} mods - Array of available mod IDs (e.g., ["a3", "rhs", "ef"])
  */
-window.setAvailableMods = function(mods) {
+window.setAvailableMods = function (mods) {
     itemData.availableMods = mods;
 };
 
@@ -322,7 +322,7 @@ window.setAvailableMods = function(mods) {
  * @param {string} modId - Selected mod ID (a3, rhs, ef, rf, ws, ace3, tfar)
  * @param {string} categoryId - Current category being viewed
  */
-window.selectMod = function(modId, categoryId) {
+window.selectMod = function (modId, categoryId) {
     itemData.currentMod = modId;
     showCategory(categoryId);
 };
@@ -334,7 +334,7 @@ window.selectMod = function(modId, categoryId) {
  * @param {string} displayName - Human-readable item name
  * @param {number} price - Item cost in credits
  */
-window.purchaseItem = function(className, displayName, price) {
+window.purchaseItem = function (className, displayName, price) {
     A3API.SendAlert(JSON.stringify({
         event: "purchase::store::item",
         data: {

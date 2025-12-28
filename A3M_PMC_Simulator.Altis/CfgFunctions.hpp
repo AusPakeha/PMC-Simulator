@@ -47,6 +47,11 @@ class CfgFunctions {
             class openEmailUI {};
             class handleEmailUIEvents {};
         };
+        class admin {
+            class initAdminClass { preInit = 1; };
+            class openAdminUI {};
+            class handleAdminUIEvents {};
+        };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"
 };
