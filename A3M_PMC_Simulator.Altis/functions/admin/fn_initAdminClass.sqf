@@ -171,7 +171,7 @@ A3M_AdminClass = createHashMapObject [[
      */
     ["forceCleanup", {
         ["InformationRed", ["Cleanup Initiated"]] call BIS_fnc_showNotification;
-        { if (!alive _x) then { deleteVehicle _x } } foreach (nearestObjects [mapCenter, ["Man", "Car", "Tank", "Helicopter"], 7500]);
+        { if (!alive _x) then { deleteVehicle _x } } foreach (nearestObjects [center, ["Man", "Car", "Tank", "Helicopter"], 7500]);
     }],
 
     /*

@@ -26,7 +26,7 @@ switch (_event) do {
         [] spawn A3M_fnc_openStoreUI;
     };
     case "access::admin": {
-        [] spawn A3M_fnc_AdminPanel;
+        [] spawn A3M_fnc_openAdminUI;
     };
     case "access::mail": {
         [] spawn A3M_fnc_openEmailUI;
