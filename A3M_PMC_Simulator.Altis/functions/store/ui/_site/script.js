@@ -246,6 +246,11 @@ window.displayCategoryItems = function (categoryId, jsonData) {
             imagePath = imagePath.substring(1);
         }
 
+        // Ensure path ends with .paa
+        if (!imagePath.toLowerCase().endsWith('.paa')) {
+            imagePath += '.paa';
+        }
+
         // Load image using RequestTexture
         A3API.RequestTexture(imagePath, 512).then(textureData => {
             img.src = textureData;
