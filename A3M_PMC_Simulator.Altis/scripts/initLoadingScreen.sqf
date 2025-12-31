@@ -31,4 +31,4 @@ _text ctrlSetPosition [
     _height
 ];
 _text ctrlCommit 0;
-_text ctrlSetText "PMC Simulator: Originally create by A3M Freedom, Updated By Mrpakeha and J. Schmidt";
+_text ctrlSetText "Originally created by Cody Salazar aka A3M Freedom, Updated By Mrpakeha and J. Schmidt";

@@ -1885,6 +1885,10 @@ A3M_MissionsCanceledMP = {
     RBduty2 setTaskState "Failed";
     SARMission setTaskState "Failed";
     A3MRaid1 setTaskState "Failed";
+    Hackraid setTaskState "Failed";
+    if (HRaidActive == 0) then {
+		call A3M_JHD_Cleanup;
+	};
     sleep 2;
     ["InformationRed", ["Return To Base Immediately!"]] call BIS_fnc_showNotification;
     hint "Your mission was cancelled by the Team Coordinator. Return to Base Immediately for further instructions.";

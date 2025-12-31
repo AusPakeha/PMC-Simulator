@@ -47,7 +47,7 @@ _FreeBed2 = HBed2 emptyPositions "Cargo";
 if (_FreeBed1 == 1) then { player moveInCargo HBed1 } else {
     if (_FreeBed2 == 1) then { player moveInCargo Hbed2 } else {
         systemChat "All Hospital Beds Full, Simulating Recovery...";
-        player setPos getMarkerPos "hospital2";
+        player setPos (getMarkerPos "hospital2");
     };
 };
 

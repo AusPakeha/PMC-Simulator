@@ -1222,7 +1222,6 @@ class CfgStore {
                 {"arifle_XMS_Shot_Camo_lxWS",13000},
                 {"arifle_XMS_M_lxWS",16000},
                 {"arifle_XMS_M_Gray_lxWS",16000},
-                {"arifle_XMS_M_khk_lxWS",16000},
                 {"arifle_XMS_M_Sand_lxWS",16000},
                 {"arifle_XMS_M_Camo_lxWS",16000}
             };

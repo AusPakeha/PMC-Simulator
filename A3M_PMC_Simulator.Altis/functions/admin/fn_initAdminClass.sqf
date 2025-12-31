@@ -198,22 +198,24 @@ A3M_AdminClass = createHashMapObject [[
         if (isNil "SpeechActive") then { SpeechActive = 0; };
 
         // Reset variables
-        if (EscortActive == 1) then { EscortActive = 0; publicVariable "EscortActive"; systemChat "Executive Protection Mission Aborted."; sleep 1; };
-        if (ConveyActive == 1) then { ConveyActive = 0; publicVariable "ConveyActive"; systemChat "Convoy Protection Mission Aborted."; sleep 1; };
-        if (CheckpointActive == 1) then { CheckpointActive = 0; publicVariable "CheckpointActive"; systemChat "Checkpoint Security Mission Aborted."; sleep 1; };
-        if (SEActive == 1) then { SEActive = 0; publicVariable "SEActive"; systemChat "Search and Extract Mission Aborted."; sleep 1; };
-        if (Raid1Active == 1) then { Raid1Active = 0; publicVariable "Raid1Active"; systemChat "Raid on Town Aborted."; sleep 1; };
-        if (Raid2Active == 1) then { Raid2Active = 0; publicVariable "Raid2Active"; systemChat "Raid on Military Installation Aborted."; sleep 1; };
-        if (NSARActive == 1) then { NSARActive = 0; publicVariable "NSARActive"; systemChat "NATO SAR Mission Aborted."; sleep 1; };
-        if (T9Active == 1) then { T9Active = 0; publicVariable "T9Active"; systemChat "T-9 Defense Mission Aborted."; sleep 1; };
-        if (HRaidActive == 1) then { HRaidActive = 0; publicVariable "HRaidActive"; systemChat "Raid on Hacker Den Aborted."; sleep 1; };
-        if (SpeechActive == 1) then { SpeechActive = 0; publicVariable "SpeechActive"; systemChat "Dignitary Protection Terminated."; };
+        [] spawn {
+            if (EscortActive == 1) then { EscortActive = 0; publicVariable "EscortActive"; systemChat "Executive Protection Mission Aborted."; sleep 1; };
+            if (ConveyActive == 1) then { ConveyActive = 0; publicVariable "ConveyActive"; systemChat "Convoy Protection Mission Aborted."; sleep 1; };
+            if (CheckpointActive == 1) then { CheckpointActive = 0; publicVariable "CheckpointActive"; systemChat "Checkpoint Security Mission Aborted."; sleep 1; };
+            if (SEActive == 1) then { SEActive = 0; publicVariable "SEActive"; systemChat "Search and Extract Mission Aborted."; sleep 1; };
+            if (Raid1Active == 1) then { Raid1Active = 0; publicVariable "Raid1Active"; systemChat "Raid on Town Aborted."; sleep 1; };
+            if (Raid2Active == 1) then { Raid2Active = 0; publicVariable "Raid2Active"; systemChat "Raid on Military Installation Aborted."; sleep 1; };
+            if (NSARActive == 1) then { NSARActive = 0; publicVariable "NSARActive"; systemChat "NATO SAR Mission Aborted."; sleep 1; };
+            if (T9Active == 1) then { T9Active = 0; publicVariable "T9Active"; systemChat "T-9 Defense Mission Aborted."; sleep 1; };
+            if (HRaidActive == 1) then { HRaidActive = 0; publicVariable "HRaidActive"; systemChat "Raid on Hacker Den Aborted."; sleep 1; };
+            if (SpeechActive == 1) then { SpeechActive = 0; publicVariable "SpeechActive"; systemChat "Dignitary Protection Terminated."; };
 
-        // Notify all players
-        systemChat "Cancelling all missions for players...";
-        remoteExec ["A3M_MissionsCanceledMP", 0];
+            // Notify all players
+            systemChat "Cancelling all missions for players...";
+            remoteExec ["A3M_MissionsCanceledMP", 0];
 
-        ["InformationRed", ["All Missions Cancelled!"]] call BIS_fnc_showNotification;
-        systemChat "All Missions Force Cancelled Successfully.";
+            ["InformationRed", ["All Missions Cancelled!"]] call BIS_fnc_showNotification;
+            systemChat "All Missions Force Cancelled Successfully.";
+        };
     }]
 ]];
