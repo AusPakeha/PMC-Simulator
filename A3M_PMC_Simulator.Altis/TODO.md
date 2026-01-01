@@ -1,5 +1,5 @@
-# TODO Do not delete any lines in TODO.md, only add to the file.
-
+-# TODO Do not delete any lines in TODO.md, only add to the file.
+-
 -// legend
 -[x] Complete (probally partially complete if MrPakeha is doing it... lol)
 -[/] half way complete
@@ -33,7 +33,7 @@
 -[x] add funds to player account for completed missions
 -
 -// EP scripts
-- Modify to disable the on/off functions
+-[] Modify to disable the on/off functions
 -
 -// UI Changes
 -[] set up files for each dialog
@@ -51,9 +51,17 @@
 --[] Create compositions for each upgrade
 --[] Code purchase system
 -
--// Seeling point for player to make money from loot
+-// Selling point for player to make money from loot
 -[] create code and location in mission to sell weapons, ammo etc for money
 -
 -
 -// Mission system
+-
+-
+-
+-// Refactor treatment.sqf and onPlayerRespawn for medical treatment.
+- [x] Define fnc_quickHeal function for quick heal logic
+- [x] Define fnc_fullTreatment function for full treatment sequence
+- [x] Define fnc_addTreatmentActions function to add Quick Heal and Full Treatment actions
+- [x] Restructure main script to define functions and call fnc_addTreatmentActions, remove automatic sequence
 -

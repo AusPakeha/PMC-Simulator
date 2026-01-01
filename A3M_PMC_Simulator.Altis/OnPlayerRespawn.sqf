@@ -1,51 +1,60 @@
 /*
 
-  /$$$$$$   /$$$$$$  /$$      /$$       /$$$$$$$  /$$      /$$  /$$$$$$         /$$$$$$  /$$                         /$$             /$$
- /$$__  $$ /$$__  $$| $$$    /$$$      | $$__  $$| $$$    /$$$ /$$__  $$       /$$__  $$|__/                        | $$            | $$
-| $$  \ $$|__/  \ $$| $$$$  /$$$$      | $$  \ $$| $$$$  /$$$$| $$  \__/      | $$  \__/ /$$ /$$$$$$/$$$$  /$$   /$$| $$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$
-| $$$$$$$$   /$$$$$/| $$ $$/$$ $$      | $$$$$$$/| $$ $$/$$ $$| $$            |  $$$$$$ | $$| $$_  $$_  $$| $$  | $$| $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
-| $$__  $$  |___  $$| $$  $$$| $$      | $$____/ | $$  $$$| $$| $$             \____  $$| $$| $$ \ $$ \ $$| $$  | $$| $$  /$$$$$$$  | $$    | $$  \ $$| $$  \__/
-| $$  | $$ /$$  \ $$| $$\  $ | $$      | $$      | $$\  $ | $$| $$    $$       /$$  \ $$| $$| $$ | $$ | $$| $$  | $$| $$ /$$__  $$  | $$ /$$| $$  | $$| $$
-| $$  | $$|  $$$$$$/| $$ \/  | $$      | $$      | $$ \/  | $$|  $$$$$$/      |  $$$$$$/| $$| $$ | $$ | $$|  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$
-|__/  |__/ \______/ |__/     |__/      |__/      |__/     |__/ \______/        \______/ |__/|__/ |__/ |__/ \______/ |__/ \_______/   \___/   \______/ |__/
-
-
-
-
-
 Item Store V 3.0 by Cody Salazar AKA Fr33d0m
-www.A3MilSim.com
+Modified by MrPakeha
 
 License:
-You can do whatever you were going to do anyway. Just give me the credit i'm due, and don't steal my shit. I'll be pissed.
-If you want to repay me for all my hard work, come and play arma with me! I hang out at a MilSim unit known as A3M (A3 MilSim)
-Come and visit us at ts3.a3milsim.com:1911
-
-WE LOVE JOINT OPS WITH OTHER UNITS!!
-
-www.A3MilSim.com (A3 MilSim)
-All Rights Reserved
-
-For Information and Inquiries, EMAIL: salazar@a3milsim.com
-
-Credits & Thanks:
-
-My wife, for not only supporting my modding ventures, but actually jumping in and helping with mods when she can. What a gal!
-
-And last, but definitely not least, the A3 community, who through over 250+ encouraging messages highly encouraged me to continue this project. I'm glad you like it,
-and I hope you enjoy the things I have in the works!
-
+You can do whatever you were going to do anyway. Just give credit.
 
 ################################## LET US BEGIN #################################### */
 
 if (isNil "initPhase") then { initPhase == 1 };
 if (initPhase == 1) exitWith { systemChat "Loading PMC Simulator Profile..." };
 
-_FreeBed1 = Hbed1 emptyPositions "Cargo";
-_FreeBed2 = HBed2 emptyPositions "Cargo";
+// Create triggers for stretcher detection if not exist
+if (isNil "HBed1Trigger") then {
+    HBed1Trigger = createTrigger ["EmptyDetector", getPos HBed1, false];
+    HBed1Trigger setTriggerArea [2,2,0,false];
+    HBed1Trigger setTriggerActivation ["ANYPLAYER","PRESENT",true];
+};
+if (isNil "HBed2Trigger") then {
+    HBed2Trigger = createTrigger ["EmptyDetector", getPos HBed2, false];
+    HBed2Trigger setTriggerArea [2,2,0,false];
+    HBed2Trigger setTriggerActivation ["ANYPLAYER","PRESENT",true];
+};
 
-if (_FreeBed1 == 1) then { player moveInCargo HBed1 } else {
-    if (_FreeBed2 == 1) then { player moveInCargo Hbed2 } else {
+if (!triggerActivated HBed1Trigger) then {
+    player attachTo [HBed1, [0,0,0.5]];
+    player playMove "AinjPpneMstpSnonWnonDnon";
+    player setVariable ["onBed", HBed1];
+    player setVariable ["exitPos", HBed1Exit];
+    _id = player addAction ["Exit Bed", {
+        detach player;
+        player switchMove "";
+        player setPos (getPos (player getVariable "exitPos"));
+        player removeAction (player getVariable "exitActionID");
+        player setVariable ["onBed", nil];
+        player setVariable ["exitPos", nil];
+        player setVariable ["exitActionID", nil];
+    }, nil, 6, true, true, "", "player getVariable ['onBed', objNull] != objNull"];
+    player setVariable ["exitActionID", _id];
+} else {
+    if (!triggerActivated HBed2Trigger) then {
+        player attachTo [HBed2, [0,0,0.5]];
+        player playMove "AinjPpneMstpSnonWnonDnon";
+        player setVariable ["onBed", HBed2];
+        player setVariable ["exitPos", HBed2Exit];
+        _id = player addAction ["Exit Bed", {
+            detach player;
+            player switchMove "";
+            player setPos (getPos (player getVariable "exitPos"));
+            player removeAction (player getVariable "exitActionID");
+            player setVariable ["onBed", nil];
+            player setVariable ["exitPos", nil];
+            player setVariable ["exitActionID", nil];
+        }, nil, 6, true, true, "", "player getVariable ['onBed', objNull] != objNull"];
+        player setVariable ["exitActionID", _id];
+    } else {
         systemChat "All Hospital Beds Full, Simulating Recovery...";
         player setPos (getMarkerPos "hospital2");
     };

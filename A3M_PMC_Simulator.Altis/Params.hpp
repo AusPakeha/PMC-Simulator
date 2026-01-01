@@ -60,7 +60,7 @@ class Params {
         title = "Medical Insurance Deductible (Cost for respawning)";
         values[] = {0,100,200,300,400,500};
         texts[] = {"Off ($0.00)","$100.00", "$200.00", "$300.00", "$400.00", "$500.00"};
-        default = 200;
+        default = 100;
     };
     class EP_Core {
         //paramsArray select 9
