@@ -149,6 +149,8 @@ if (isDedicated) then {
         _MPpreDef = execVM "scripts\MP_Predef.sqf";
         waitUntil { scriptDone _MPpreDef };
 
+        [CrewmanV_1] execVM "functions\garageEditor.sqf";
+
         // Handle Task predef
         _handleTasks = execVM "scripts\handleTasks.sqf";
 

@@ -52,6 +52,11 @@ class CfgFunctions {
             class openAdminUI {};
             class handleAdminUIEvents {};
         };
+        class treatment {
+            class initTreatmentClass { preInit = 1; };
+            class openTreatmentUI {};
+            class handleTreatmentUIEvents {};
+        };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"
 };

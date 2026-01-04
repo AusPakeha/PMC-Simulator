@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Treatment</title>
+    <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\treatment\\ui\\_site\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\treatment\\ui\\_site\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Medical Treatment</h1>
+        <div id="treatments-list" class="treatments-list">
+            <div class="loading">Loading treatments...</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1755;
+		nextID=1905;
 	};
 	class Camera
 	{
-		pos[]={22840.158,16.585007,19358.295};
-		dir[]={-0.59909254,-0.55802345,0.57426363};
-		up[]={-0.40285668,0.82981139,0.38616094};
-		aside[]={0.69201213,6.5052882e-07,0.72193712};
+		pos[]={22811.451,20.573891,19323.061};
+		dir[]={-0.77208632,-0.58617771,0.24561143};
+		up[]={-0.55860698,0.8101722,0.17770067};
+		aside[]={0.30315107,1.5785918e-07,0.95296669};
 	};
 };
 binarizationWanted=0;
@@ -1046,6 +1046,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -1065,19 +1078,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=1;
 				};
 			};
 		};
@@ -4448,8 +4448,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22817.115,14.517986,19354.061};
-				angles[]={0.00099483761,4.1094303,0.0012740904};
+				position[]={22803.283,14.218782,19324.496};
+				angles[]={6.2816539,2.2008443,0.00051638298};
 			};
 			side="Empty";
 			flags=4;
@@ -33260,6 +33260,7 @@ class Mission
 												angles[]={0,3.8070946,0};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -33267,7 +33268,7 @@ class Mission
 											};
 											id=11114;
 											type="Land_Can_V3_F";
-											atlOffset=0.81437683;
+											atlOffset=0.038990021;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -33295,6 +33296,7 @@ class Mission
 												angles[]={0,3.8070946,0};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -33302,7 +33304,7 @@ class Mission
 											};
 											id=11115;
 											type="Land_Can_V3_F";
-											atlOffset=0.82151794;
+											atlOffset=0.037872314;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -33898,6 +33900,7 @@ class Mission
 												angles[]={0,0.54285592,0};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -33905,7 +33908,7 @@ class Mission
 											};
 											id=11132;
 											type="Land_Can_V3_F";
-											atlOffset=0.81959629;
+											atlOffset=0.038927078;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -36492,7 +36495,6 @@ class Mission
 												angles[]={0,3.8070946,0};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -36500,7 +36502,7 @@ class Mission
 											};
 											id=11356;
 											type="Land_Can_V3_F";
-											atlOffset=0.0024375916;
+											atlOffset=0.041428566;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -36871,6 +36873,7 @@ class Mission
 												angles[]={0,2.5661747,0};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -36878,7 +36881,7 @@ class Mission
 											};
 											id=11369;
 											type="Land_Can_V3_F";
-											atlOffset=0.82151794;
+											atlOffset=0.037872314;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -72770,14 +72773,14 @@ class Mission
 														};
 														class Attribute1
 														{
-															property="face";
-															expression="_this setface _value;";
+															property="enableStamina";
+															expression="_this enablestamina _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="STRING";
-																	value="WhiteHead_13";
+																	singleType="BOOL";
+																	value=0;
 																};
 															};
 														};
@@ -72822,14 +72825,14 @@ class Mission
 														};
 														class Attribute5
 														{
-															property="enableStamina";
-															expression="_this enablestamina _value;";
+															property="face";
+															expression="_this setface _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="BOOL";
-																	value=0;
+																	singleType="STRING";
+																	value="WhiteHead_13";
 																};
 															};
 														};
@@ -96329,7 +96332,7 @@ class Mission
 						class Item1
 						{
 							dataType="Trigger";
-							position[]={22798.531,13.300432,19321.545};
+							position[]={22776.07,13.04618,19297.072};
 							angle=0.65472591;
 							class Attributes
 							{
@@ -97818,6 +97821,7 @@ class Mission
 							};
 							id=1161;
 							type="Land_PressureWasher_01_F";
+							atlOffset=-7.3432922e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97861,7 +97865,7 @@ class Mission
 						};
 					};
 					id=19112;
-					atlOffset=0.12850761;
+					atlOffset=0.12852192;
 				};
 				class Item11
 				{
@@ -99265,7 +99269,7 @@ class Mission
 				};
 			};
 			id=9338;
-			atlOffset=-0.50165462;
+			atlOffset=-0.50165272;
 		};
 		class Item502
 		{
@@ -147211,7 +147215,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19953;
 			type="Land_PortableDesk_01_black_F";
@@ -147282,7 +147287,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19955;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147317,7 +147323,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19956;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147352,7 +147359,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19957;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147387,7 +147395,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19958;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147422,7 +147431,8 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19959;
 			type="Land_PortableDesk_01_black_F";
@@ -147456,7 +147466,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19960;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147491,7 +147502,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19961;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147562,7 +147574,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19963;
 			type="Land_PortableDesk_01_panel_black_F";
@@ -147597,7 +147610,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="[this, medicall] call BIS_fnc_attachToRelative;";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19964;
 			type="Land_PortableDesk_01_panel_black_F";

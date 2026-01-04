@@ -112,3 +112,24 @@ for "_i" from 1 to 7 do {
     false,
     false
 ] call BIS_fnc_holdActionAdd;
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+[
+    medic,
+    "Access Medical Services",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+    "_this distance _target < 3",
+    "_caller distance _target < 3",
+    {},
+    {},
+    {
+	[] call A3M_fnc_openTreatmentUI;
+    },
+    {},
+    [],
+    2,
+    0,
+    false,
+    false
+] call BIS_fnc_holdActionAdd;

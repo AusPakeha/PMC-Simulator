@@ -39,11 +39,11 @@
 -[] set up files for each dialog
 --[x] Homepage - Started, need to verify working
 --[x] Fleet Store - files made
---[] Item Store
+--[x] Item Store
 --[x] Email
---[] Admin
---[] Bank
---[] Recuitment
+--[x] Admin
+--[x] Bank
+--[x] Recuitment
 - image size recommended 128x256
 -
 -// Base Upgrade System
@@ -57,11 +57,4 @@
 -
 -// Mission system
 -
--
--
--// Refactor treatment.sqf and onPlayerRespawn for medical treatment.
-- [x] Define fnc_quickHeal function for quick heal logic
-- [x] Define fnc_fullTreatment function for full treatment sequence
-- [x] Define fnc_addTreatmentActions function to add Quick Heal and Full Treatment actions
-- [x] Restructure main script to define functions and call fnc_addTreatmentActions, remove automatic sequence
 -
