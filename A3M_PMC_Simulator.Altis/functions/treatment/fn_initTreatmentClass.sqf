@@ -14,7 +14,7 @@ A3M_TreatmentClass = createHashMapObject [[
     ["init", {
         private _medic = missionNamespace getVariable ["medic", objNull];
 
-        if (_medic == objNull) exitWith { hint "No medic found in mission namespace for treatment class."; };
+        if (_medic == objNull) exitWith { hint "No unit named medic found in mission namespace for treatment class."; };
         _self set ["medic", _medic];
     }],
     ["quickHeal", {
@@ -23,10 +23,9 @@ A3M_TreatmentClass = createHashMapObject [[
         [_medic] spawn {
             params [["_medic", objNull, [objNull]]];
 
-            sleep 5;
-
+            titleText ["Getting Treatment", "BLACK FADED", 1];
+            sleep 3;
             if (damage player > 0.5) then { player setDamage 0.5; } else { player setDamage 0; };
-            _medic say3d "holdstill";
 
             private _medicalDeductible = paramsArray select 8;
             private _totalCost = _medicalDeductible / 4;
@@ -37,7 +36,7 @@ A3M_TreatmentClass = createHashMapObject [[
             saveProfileNamespace;
 
             hint format ["Thank you for your business. \n\n Account Debit \n\n $%1.00", round _totalCost];
-            systemChat ["Your personal account has been debited for the company mandated medical insurance deductible."];
+            systemChat "Your personal account has been debited for the company mandated medical insurance deductible.";
         };
     }],
     ["fullHeal", {
@@ -47,17 +46,16 @@ A3M_TreatmentClass = createHashMapObject [[
             params [["_medic", objNull, [objNull]]];
 
             titleText ["Getting Treatment", "BLACK FADED", 1];
-            _medic say3d "holdstill";
             sleep 1;
-            titleText ["Dressing Wounds....5", "BLACK FADED", 0.3];
+            titleText ["Assessing Wounds....5", "BLACK FADED", 0.3];
             sleep 1;
-            titleText ["Dressing Wounds....4", "BLACK FADED", 0.3];
+            titleText ["Cleaning Wounds....4", "BLACK FADED", 0.3];
             sleep 1;
             titleText ["Bandaging....3", "BLACK FADED", 0.3];
             sleep 1;
             titleText ["Bandaging....2", "BLACK FADED", 0.3];
             sleep 1;
-            titleText ["Bandaging....1", "BLACK FADED", 0.3];
+            titleText ["Cleaning up....1", "BLACK FADED", 0.3];
 
             _currentDamage = damage player;
             if (damage player < 0.1) then {
@@ -67,16 +65,16 @@ A3M_TreatmentClass = createHashMapObject [[
                 player setDamage 0;
                 titleText ["You have been treated. Back to work with you...", "PLAIN", 0.3];
 
-            private _medicalDeductible = (paramsArray select 8) / 10;
-            private _totalCost = _currentDamage * _medicalDeductible;
-            private _wallet = profileNamespace getVariable ["SavedMoney", 0];
+                private _medicalDeductible = (paramsArray select 8) / 10;
+                private _totalCost = _currentDamage * _medicalDeductible;
+                private _wallet = profileNamespace getVariable ["SavedMoney", 0];
 
-            _wallet = _wallet - _totalCost;
-            profileNamespace setVariable ["SavedMoney", _wallet];
-            saveProfileNamespace;
+                _wallet = _wallet - _totalCost;
+                profileNamespace setVariable ["SavedMoney", _wallet];
+                saveProfileNamespace;
 
-            hint format ["Thank you for your business. \n\n Account Debit \n\n $%1.00", round _totalCost];
-            systemChat ["Your personal account has been debited for the company mandated medical insurance deductible."];
+                hint format ["Thank you for your business. \n\n Account Debit \n\n $%1.00", round _totalCost];
+                systemChat "Your personal account has been debited for the company mandated medical insurance deductible.";
             };
         };
     }]

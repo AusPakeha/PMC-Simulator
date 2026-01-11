@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Center</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        Promise.all([
+            A3API.RequestFile(
+                "functions\\serviceCenter\\ui\\_site\\style.css",
+            ),
+            A3API.RequestFile(
+                "functions\\serviceCenter\\ui\\_site\\script.js",
+            ),
+        ]).then(([css, js]) => {
+            const style = document.createElement("style");
+            style.textContent = css;
+            document.head.appendChild(style);
+
+            const script = document.createElement("script");
+            script.text = js;
+            document.head.appendChild(script);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Service Center</h1>
+        <div id="services-list" class="services-list">
+            <div class="loading">Loading services...</div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

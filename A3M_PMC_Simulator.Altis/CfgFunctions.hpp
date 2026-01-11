@@ -57,6 +57,16 @@ class CfgFunctions {
             class openTreatmentUI {};
             class handleTreatmentUIEvents {};
         };
+        class player {
+            class playerRespawn {};
+        };
+        class serviceCenter {
+            class initSCClass { preInit = 1; };
+            class openSCUI {};
+            class handleSCUIEvents {};
+            class garageEditor {};
+            class reloadVehicle {};
+        };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"
 };
