@@ -18,31 +18,6 @@ private _ReArmCost = 0;
 private _GasPrice = paramsArray select 4;
 private _RepairPrice = paramsArray select 5;
 
-if (isNil "B_DefenseBudget") then { B_DefenseBudget = paramsArray select 1 };
-if (isNil "B_TotalCost") then { B_TotalCost = 0 };
-
-if (B_DefenseBudget < 5000) exitWith {
-    hint "OPSG does not have the available company funds to service this vehicle.";
-};
-
-private _LastFuelState = fuel _object;
-_object setFuel 0;
-_object vehicleChat format ["Servicing %1... Please stand by...", _type];
-
-// Rearm the vehicle
-_ReArmCost = [_object, _Debug, _ReloadTime] call A3M_fnc_rearmVehicle;
-
-// Repair the vehicle
-private _DmgPrice = [_object, _Debug, _ReloadTime, _RepairPrice] call A3M_fnc_repairVehicle;
-
-// Refuel the vehicle
-_ReFuelCost = [_object, _LastFuelState, _GasPrice, _ReloadTime] call A3M_fnc_refuelVehicle;
-
-// Update budget
-[_ReArmCost, _ReFuelCost, _DmgPrice, _type] call A3M_fnc_updateBudget;
-
-_object vehicleChat format ["%1 is ready...try and treat her right!", _type];
-
 // Function to rearm the vehicle
 A3M_fnc_rearmVehicle = {
     params ["_object", "_Debug", "_ReloadTime"];
@@ -184,3 +159,28 @@ A3M_fnc_updateBudget = {
     publicVariable "B_TotalCost";
     publicVariable "B_DefenseBudget";
 };
+
+if (isNil "B_DefenseBudget") then { B_DefenseBudget = paramsArray select 1 };
+if (isNil "B_TotalCost") then { B_TotalCost = 0 };
+
+if (B_DefenseBudget < 5000) exitWith {
+    hint "OPSG does not have the available company funds to service this vehicle.";
+};
+
+private _LastFuelState = fuel _object;
+_object setFuel 0;
+_object vehicleChat format ["Servicing %1... Please stand by...", _type];
+
+// Rearm the vehicle
+_ReArmCost = [_object, _Debug, _ReloadTime] call A3M_fnc_rearmVehicle;
+
+// Repair the vehicle
+private _DmgPrice = [_object, _Debug, _ReloadTime, _RepairPrice] call A3M_fnc_repairVehicle;
+
+// Refuel the vehicle
+_ReFuelCost = [_object, _LastFuelState, _GasPrice, _ReloadTime] call A3M_fnc_refuelVehicle;
+
+// Update budget
+[_ReArmCost, _ReFuelCost, _DmgPrice, _type] call A3M_fnc_updateBudget;
+
+_object vehicleChat format ["%1 is ready...try and treat her right!", _type];

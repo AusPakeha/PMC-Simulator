@@ -69,6 +69,7 @@ class CfgFunctions {
         };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"
+    #include "vehiclesOverhauling\THY_VO_functions.hpp"
 };
 
 class SimTools_Compositions {

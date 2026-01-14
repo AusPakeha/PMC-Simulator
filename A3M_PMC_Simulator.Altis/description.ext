@@ -90,6 +90,7 @@ class Extended_DisplayLoad_EventHandlers {
 #include "dialogs\RscStore.hpp"
 #include "dialogs\RscTravelMenu.hpp"
 #include "dialogs\RscTreatmentMenu.hpp"
+#include "dialogs\RscServiceCenterMenu.hpp"
 
 #include "params.hpp"
 #include "CfgFunctions.hpp"
