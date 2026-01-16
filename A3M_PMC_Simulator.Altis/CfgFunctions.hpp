@@ -62,14 +62,15 @@ class CfgFunctions {
         };
         class serviceCenter {
             class initSCClass { preInit = 1; };
+            class initSCAClass { preInit = 1; };
             class openSCUI {};
+            class openSCAUI {};
             class handleSCUIEvents {};
-            class garageEditor {};
+            class handleSCAUIEvents {};
             class reloadVehicle {};
         };
     };
     #include "scripts\LARs\LARs_spawnComp.cpp"
-    #include "vehiclesOverhauling\THY_VO_functions.hpp"
 };
 
 class SimTools_Compositions {

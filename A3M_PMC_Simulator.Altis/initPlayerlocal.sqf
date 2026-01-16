@@ -163,22 +163,27 @@ for "_i" from 1 to 7 do {
     false
 ] call BIS_fnc_holdActionAdd;
 
-[
-    airCrewman1,
-    "Access Vehicle Services",
-    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
-    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
-    "_this distance _target < 3",
-    "_caller distance _target < 3",
-    {},
-    {},
-    {
-	[] call A3M_fnc_openSCUI;
-    },
-    {},
-    [],
-    2,
-    0,
-    false,
-    false
-] call BIS_fnc_holdActionAdd;
+for "_i" from 0 to 2 do {
+	_airCrewman = missionNamespace getVariable [format ["_airCrewman%1", _i], objNull];
+	if (!isNull _airCrewman) then {
+		[
+			_airCrewman,
+			"Access Air Services",
+			"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+			"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
+			"_this distance _target < 3",
+			"_caller distance _target < 3",
+			{},
+			{},
+			{
+			[] call A3M_fnc_openSCAUI;
+			},
+			{},
+			[],
+			2,
+			0,
+			false,
+			false
+		] call BIS_fnc_holdActionAdd;
+	};
+};

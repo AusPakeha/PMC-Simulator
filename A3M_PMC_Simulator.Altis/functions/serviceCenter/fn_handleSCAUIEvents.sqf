@@ -5,8 +5,8 @@ private _event = _alert get "event";
 private _data = _alert get "data";
 private _display = displayChild findDisplay 46;
 
-private _services = A3M_ServiceCenterClass get "services";
-private _crewman = A3M_ServiceCenterClass get "crewman";
+private _services = A3M_ServiceCenterAirClass get "services";
+private _airCrewman = A3M_ServiceCenterAirClass get "airCrewman";
 
 diag_log format ["[A3M] Handling UI event: %1 with data: %2", _event, _data];
 
@@ -23,7 +23,7 @@ switch (_event) do {
     case "set::service": {
         private _index = _data get "index";
 
-        if (_index == 0) then {A3M_ServiceCenterClass call ["vehicleServicing", []]; };
+        if (_index == 1) then {A3M_ServiceCenterAirClass call ["aircraftServicing", []]; };
     };
     default { hint format ["Unhandled UI event: %1", _event]; };
 };
